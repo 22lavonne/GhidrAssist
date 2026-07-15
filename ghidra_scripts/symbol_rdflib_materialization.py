@@ -14,7 +14,7 @@ from rdflib import OWL, RDF, RDFS, XSD, TIME
 name_space = "https://kastle-lab.org/"
 pfs = {
 "mkg": Namespace("https://mkg.com/data#"),
-"ont": Namespace("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology"),
+"ont": Namespace("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology"),
 "rdf": RDF,
 "rdfs": RDFS,
 "xsd": XSD,
@@ -32,47 +32,47 @@ def init_kg(prefixes=pfs):
 a = pfs["rdf"]["type"]
 
 # Object Properties
-definedIn = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/definedIn")
-calls = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/calls")
-hasParameter = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasParameter")
-passesInto = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/passesInto")
-returns = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/returns")
-containsInstruction = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/containsInstruction")
-atAddress = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/atAddress")
-hasSourceAddress = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasSourceAddress")
-hasDestinationAddress = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasDestinationAddress")
-hasReference = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasReference")
-hasPrimaryReference = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasPrimaryReference")
-hasSourceOperand = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasSourceOperand")
-hasDestinationOperand = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasDestinationOperand")
-defines = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/defines")
+definedIn = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/definedIn")
+calls = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/calls")
+hasParameter = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasParameter")
+passesInto = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/passesInto")
+returns = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/returns")
+containsInstruction = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/containsInstruction")
+atAddress = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/atAddress")
+hasSourceAddress = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasSourceAddress")
+hasDestinationAddress = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasDestinationAddress")
+hasReference = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasReference")
+hasPrimaryReference = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasPrimaryReference")
+hasSourceOperand = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasSourceOperand")
+hasDestinationOperand = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasDestinationOperand")
+defines = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/defines")
 
 # Data Properties
-hasOperandIndex = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasOperandIndex")
-hasReferenceType = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasReferenceType")
-hasOpcode = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasOpcode")
-hasOperandType = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasOperandType")
-hasOperandValue = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasOperandValue")
-hasName = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasName")
-hasDataType = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasDataType")
-hasReturnType = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasReturnType")
+hasOperandIndex = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasOperandIndex")
+hasReferenceType = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasReferenceType")
+hasOpcode = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasOpcode")
+hasOperandType = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasOperandType")
+hasOperandValue = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasOperandValue")
+hasName = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasName")
+hasDataType = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasDataType")
+hasReturnType = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasReturnType")
 
 # Classes
-SYMBOL = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Symbol")
-LABEL = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Label")
-NAMESPACE_SYMBOL = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/NamespaceSymbol")
-STRUCTURAL_NAMESPACE_SYMBOL = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/StructuralNamespaceSymbol")
-NAMESPACE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Namespace")
-CLASS_ = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Class")
-DLL = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/DLL")
-FUNCTION = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Function")
-VARIABLE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Variable")
-LOCAL_VARIABLE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/LocalVariable")
-PARAMETER = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Parameter")
-ADDRESS = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Address")
-REFERENCE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Reference")
-INSTRUCTION = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Instruction")
-OPERAND = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Operand")
+SYMBOL = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Symbol")
+LABEL = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Label")
+NAMESPACE_SYMBOL = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/NamespaceSymbol")
+STRUCTURAL_NAMESPACE_SYMBOL = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/StructuralNamespaceSymbol")
+NAMESPACE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Namespace")
+CLASS_ = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Class")
+DLL = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/DLL")
+FUNCTION = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Function")
+VARIABLE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Variable")
+LOCAL_VARIABLE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/LocalVariable")
+PARAMETER = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Parameter")
+ADDRESS = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Address")
+REFERENCE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Reference")
+INSTRUCTION = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Instruction")
+OPERAND = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Operand")
 
 # used to map the string version of a symbol name to the URIRef variable for that object
 class_dict = {
@@ -97,7 +97,7 @@ class_dict = {
 graph = init_kg()
 
 # parse the ontology file
-ontology = "ontology/symbol-ontology.ttl"
+ontology = "ontology/combined-ontology.ttl"
 with open(ontology, "r") as f:
     graph.parse(f)
     

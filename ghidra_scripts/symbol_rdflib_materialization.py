@@ -3,7 +3,7 @@
 
 import sys
 
-from symbol_data_parser import *
+from data_parser import *
 from pathlib import Path
 from urllib.parse import quote
 
@@ -35,11 +35,9 @@ a = pfs["rdf"]["type"]
 definedIn = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/definedIn")
 calls = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/calls")
 hasParameter = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasParameter")
-hasReturnType = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasReturnType")
 passesInto = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/passesInto")
 returns = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/returns")
 containsInstruction = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/containsInstruction")
-hasDataType = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasDataType")
 atAddress = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/atAddress")
 hasSourceAddress = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasSourceAddress")
 hasDestinationAddress = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasDestinationAddress")
@@ -56,6 +54,8 @@ hasOpcode = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-on
 hasOperandType = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasOperandType")
 hasOperandValue = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasOperandValue")
 hasName = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasName")
+hasDataType = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasDataType")
+hasReturnType = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasReturnType")
 
 # Classes
 SYMBOL = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Symbol")
@@ -69,15 +69,10 @@ FUNCTION = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ont
 VARIABLE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Variable")
 LOCAL_VARIABLE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/LocalVariable")
 PARAMETER = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Parameter")
-DATA_TYPE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/DataType")
 ADDRESS = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Address")
 REFERENCE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Reference")
 INSTRUCTION = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Instruction")
-IMMEDIATE_OPERAND = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/ImmediateOperand")
-REGISTER = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Register")
 OPERAND = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Operand")
-DYNAMIC = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Dynamic")
-SCALAR = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Scalar")
 
 # used to map the string version of a symbol name to the URIRef variable for that object
 class_dict = {
@@ -92,67 +87,45 @@ class_dict = {
     "VARIABLE": VARIABLE,
     "LOCAL_VARIABLE": LOCAL_VARIABLE,
     "PARAMETER": PARAMETER,
-    "DATA_TYPE": DATA_TYPE,
     "ADDRESS": ADDRESS,
     "REFERENCE": REFERENCE,
     "INSTRUCTION": INSTRUCTION,
-    "IMMEDIATE_OPERAND": IMMEDIATE_OPERAND,
-    "REGISTER": REGISTER,
     "OPERAND": OPERAND,
-    "DYNAMIC": DYNAMIC,
-    "SCALAR": SCALAR
 }
 
 # Initialize an empty graph
 graph = init_kg()
 
 # parse the ontology file
-
-ontology_path = "../ontology/combined-ontology.ttl"
-with open(ontology_path, "r") as f:
+ontology = "ontology/symbol-ontology.ttl"
+with open(ontology, "r") as f:
     graph.parse(f)
     
-scripting_dir = "ghidra_scripts"
 # ask the user from what file name they want to make a knowledge graph for
-# dir_name = input("What directory do you want to make a knowledge graph from? (needs to exist in the ghidra_scripts directory): ")
-# dir_path = Path(scripting_dir + "/" + dir_name)
-
-script_dir = Path(__file__).resolve().parent
-dir_name = input("What directory do you want to make a knowledge graph from? (needs to exist in the ghidra_scripts directory): ")
-dir_path = script_dir / dir_name
-
-print(dir_path)
+dir_name = input("What directory do you want to make a knowledge graph from? (needs to exist in the ghidra-scripting directory): ")
+dir_path = Path("ghidra-scripting/" + dir_name)
 if dir_path.is_dir():
     print("Directory exists, generating knowledge graph from the files in that directory...")
 else:
     print("Directory does not exist. Exiting...")
     sys.exit()
 
-
-
 # Data files, and lists of dictionaries containing the data based on the directory given
-parameter_file = dir_path / "parameter-output.txt"
+parameter_file = "ghidra-scripting/" + dir_name + "/parameter-output.txt"
 parameters_list = parse_parameters(parameter_file)
-
-local_file = dir_path / "local-variable-output.txt"
+local_file = "ghidra-scripting/" + dir_name + "/local-variable-output.txt"
 local_var_list = parse_local(local_file)
-
-function_file = dir_path / "function-output.txt"
+function_file = "ghidra-scripting/" + dir_name + "/function-output.txt"
 function_list = parse_functions(function_file)
-
-label_file = dir_path / "label-output.txt"
+label_file = "ghidra-scripting/" + dir_name + "/label-output.txt"
 label_list = parse_labels(label_file)
-
-class_file = dir_path / "class-output.txt"
+class_file = "ghidra-scripting/" + dir_name + "/class-output.txt"
 class_list = parse_classes(class_file)
-
-dll_file = dir_path / "dll-output.txt"
+dll_file = "ghidra-scripting/" + dir_name + "/dll-output.txt"
 dll_list = parse_dlls(dll_file)
-
-namespace_file = dir_path / "namespace-output.txt"
+namespace_file = "ghidra-scripting/" + dir_name + "/namespace-output.txt"
 namespace_list = parse_namespaces(namespace_file)
-
-instruction_file = dir_path / "instruction-output.txt"
+instruction_file = "ghidra-scripting/" + dir_name + "/instruction-output.txt"
 instruction_list = parse_instructions(instruction_file)    
 
 # method to add references triples for multiple kinds of objects
@@ -193,24 +166,21 @@ def quote_for_turtle(obj_string):
 for l in local_var_list:
     
     local_var = pfs["mkg"][quote_for_turtle(l['var'])]
-    data_type = pfs["mkg"][quote_for_turtle(l['datatype'])]
     parent_func = pfs["mkg"][quote_for_turtle(l['parent'])]
     
     graph.add((local_var, a, LOCAL_VARIABLE))
-    graph.add((data_type, a, DATA_TYPE))
     graph.add((parent_func, a, FUNCTION))
     # get the name of the function and add that relation
     graph.add((parent_func, hasName, Literal(str(l['parent']))))
     
     graph.add((parent_func, defines, local_var))
-    graph.add((local_var, hasDataType, data_type))
+    graph.add((local_var, hasDataType, Literal(str(l['datatype']))))
     
     
 # Parameter format example:
 # {'var': 'hModule', 'datatype': 'typedef HMODULE HINSTANCE', 'parent': 'GetProcAddress'}
 for p in parameters_list:
     param = pfs["mkg"][quote_for_turtle(p['var'])]
-    data_type = pfs["mkg"][quote_for_turtle(p['datatype'])]
     parent_func = pfs["mkg"][quote_for_turtle(p['parent'])]
     
     graph.add((param, a, PARAMETER))
@@ -218,7 +188,7 @@ for p in parameters_list:
     graph.add((parent_func, hasName, Literal(str(p['parent']))))
     
     graph.add((param, passesInto, parent_func))
-    graph.add((param, hasDataType, data_type))
+    graph.add((param, hasDataType, Literal(str(p['datatype']))))
 
 
 # Namespace format example:
@@ -340,9 +310,7 @@ for f in function_list:
             graph.add((f_instance, calls, func_called))
             
     # return type
-    f_return_type = pfs["mkg"][quote_for_turtle(f['returntype'])]
-    graph.add((f_return_type, a, DATA_TYPE))
-    graph.add((f_instance, hasReturnType, f_return_type))
+    graph.add((f_instance, hasReturnType, Literal(str(f['returntype']))))
     
     # return value (as a parameter)
     f_return_value = pfs["mkg"][quote_for_turtle(f['returnvalue'])]
@@ -428,6 +396,5 @@ for i in instruction_list:
     graph.add((func, containsInstruction, i_instance))    
 
 # then serialize the graph
-output_file = dir_path / "output.ttl"
+output_file = "ghidra-scripting/" + dir_name + "/output.ttl"
 temp = graph.serialize(format="turtle", encoding="utf-8", destination=output_file)
-print("Done serializing. Exiting...")

@@ -1,18 +1,28 @@
-@prefix : <http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/> .
+@prefix : <http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/> .
+@base <http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/> .
 
-<http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology> rdf:type owl:Ontology .
+<http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology> rdf:type owl:Ontology .
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#belongsToBinary
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/atAddress
+:atAddress rdf:type owl:ObjectProperty ;
+           owl:inverseOf :memoryContainsInstruction ;
+           rdf:type owl:FunctionalProperty ;
+           rdfs:domain :Instruction ;
+           rdfs:range :Address ;
+           rdfs:comment "specifies where an instruction is located in memory" ;
+           rdfs:label "atAddress" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/belongsToBinary
 :belongsToBinary rdf:type owl:ObjectProperty ;
                  owl:inverseOf :containsModule ;
                  rdfs:domain :ModuleNode ;
@@ -21,7 +31,7 @@
                  rdfs:label "belongsToBinary" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#belongsToModule
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/belongsToModule
 :belongsToModule rdf:type owl:ObjectProperty ;
                  owl:inverseOf :containsFunction ;
                  rdfs:domain :FunctionNode ;
@@ -30,7 +40,7 @@
                  rdfs:label "belongsToModule" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#bequeaths
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/bequeaths
 :bequeaths rdf:type owl:ObjectProperty ;
            owl:inverseOf :inherits ;
            rdfs:domain :KnowledgeNode ;
@@ -39,7 +49,25 @@
            rdfs:label "bequeaths" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#callsVulnerable
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/calledBy
+:calledBy rdf:type owl:ObjectProperty ;
+          owl:inverseOf :calls ;
+          rdfs:domain :FunctionNode ;
+          rdfs:range :FunctionNode ;
+          rdfs:comment "inverse of calls" ;
+          rdfs:label "calledBy" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/calls
+:calls rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf owl:topObjectProperty ;
+       rdfs:domain :FunctionNode ;
+       rdfs:range :FunctionNode ;
+       rdfs:comment "specifies a calling relation between a function and another function" ;
+       rdfs:label "calls" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/callsVulnerable
 :callsVulnerable rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :calls ;
                  owl:inverseOf :vulnerableVia ;
@@ -49,7 +77,16 @@
                  rdfs:label "callsVulnerable" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#containsFunction
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/containedIn
+:containedIn rdf:type owl:ObjectProperty ;
+             owl:inverseOf :containsInstruction ;
+             rdfs:domain :Instruction ;
+             rdfs:range :FunctionNode ;
+             rdfs:comment "inverse of containsInstruction (function containsInstruction instruction)" ;
+             rdfs:label "containedIn" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/containsFunction
 :containsFunction rdf:type owl:ObjectProperty ;
                   rdfs:domain :ModuleNode ;
                   rdfs:range :FunctionNode ;
@@ -57,7 +94,15 @@
                   rdfs:label "containsFunction" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#containsModule
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/containsInstruction
+:containsInstruction rdf:type owl:ObjectProperty ;
+                     rdfs:domain :FunctionNode ;
+                     rdfs:range :Instruction ;
+                     rdfs:comment "specifies the instructions contained in a specific function" ;
+                     rdfs:label "containsInstruction" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/containsModule
 :containsModule rdf:type owl:ObjectProperty ;
                 rdfs:domain :BinaryNode ;
                 rdfs:range :ModuleNode ;
@@ -65,14 +110,29 @@
                 rdfs:label "containsModule" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#contentFor
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/contentFor
 :contentFor rdf:type owl:ObjectProperty ;
             owl:inverseOf :hasContent ;
             rdfs:domain :Content ;
             rdfs:range :KnowledgeNode .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#definedInNamespace
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/definedIn
+:definedIn rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           owl:inverseOf :defines ;
+           rdf:type owl:FunctionalProperty ;
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( :FunctionNode
+                                       :Label
+                                     )
+                       ] ;
+           rdfs:range :StructuralNamespaceSymbol ;
+           rdfs:comment "specifies the namespace symbol that the function is defined in" ;
+           rdfs:label "definedIn" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/definedInNamespace
 :definedInNamespace rdf:type owl:ObjectProperty ;
                     owl:inverseOf :namespaceDefines ;
                     rdf:type owl:FunctionalProperty ;
@@ -86,9 +146,8 @@
                     rdfs:label "definedInNamespace" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#defines
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/defines
 :defines rdf:type owl:ObjectProperty ;
-         owl:inverseOf :definedIn ;
          rdfs:domain :StructuralNamespaceSymbol ;
          rdfs:range [ rdf:type owl:Class ;
                       owl:unionOf ( :FunctionNode
@@ -99,7 +158,7 @@
          rdfs:label "defines" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#definesLocal
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/definesLocal
 :definesLocal rdf:type owl:ObjectProperty ;
               owl:inverseOf :localDefinedIn ;
               rdfs:domain :FunctionNode ;
@@ -108,12 +167,12 @@
               rdfs:label "definesLocal" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#dependsOnFunction
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/dependsOnFunction
 :dependsOnFunction rdf:type owl:ObjectProperty ;
                    owl:inverseOf :providesDependencyTo ;
                    rdfs:domain [ rdf:type owl:Class ;
-                                 owl:unionOf ( :ModuleNode
-                                               :FunctionNode
+                                 owl:unionOf ( :FunctionNode
+                                               :ModuleNode
                                              )
                                ] ;
                    rdfs:range :FunctionNode ;
@@ -121,7 +180,7 @@
                    rdfs:label "dependsOnFunction" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#dependsOnModule
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/dependsOnModule
 :dependsOnModule rdf:type owl:ObjectProperty ;
                  owl:inverseOf :moduleDependencyTo ;
                  rdfs:domain :ModuleNode ;
@@ -130,20 +189,20 @@
                  rdfs:label "dependsOnModule" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#functionRelatedTo
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/functionRelatedTo
 :functionRelatedTo rdf:type owl:ObjectProperty ;
                    owl:inverseOf :relatedToFunction ;
                    rdfs:domain :FunctionNode ;
                    rdfs:range [ rdf:type owl:Class ;
-                                owl:unionOf ( :ModuleNode
-                                              :FunctionNode
+                                owl:unionOf ( :FunctionNode
+                                              :ModuleNode
                                             )
                               ] ;
                    rdfs:comment "inverse of relatedToFunction" ;
                    rdfs:label "functionRelatedTo" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#functionalSibling
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/functionalSibling
 :functionalSibling rdf:type owl:ObjectProperty ,
                             owl:SymmetricProperty ;
                    rdfs:domain :FunctionNode ;
@@ -152,247 +211,23 @@
                    rdfs:label "sibling" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasContent
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasAddress
+:hasAddress rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            owl:inverseOf :hasSymbol ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain :Metadata ,
+                        :Symbol ;
+            rdfs:range :Address .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasContent
 :hasContent rdf:type owl:ObjectProperty ;
             rdfs:domain :KnowledgeNode ;
             rdfs:range :Content .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasFeatures
-:hasFeatures rdf:type owl:ObjectProperty ;
-             rdfs:domain :KnowledgeNode ;
-             rdfs:range :Content .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasMetadata
-:hasMetadata rdf:type owl:ObjectProperty ;
-             owl:inverseOf :metadataFor ;
-             rdfs:domain :KnowledgeNode ;
-             rdfs:range :Metadata .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#inferredCalledBy
-:inferredCalledBy rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf :calledBy ;
-                  owl:inverseOf :inferredCalls ;
-                  rdfs:domain :FunctionNode ;
-                  rdfs:range :FunctionNode ;
-                  rdfs:comment "inverse of inferredCalls" ;
-                  rdfs:label "inferredCalledBy" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#inferredCalls
-:inferredCalls rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf :calls ;
-               rdfs:domain :FunctionNode ;
-               rdfs:range :FunctionNode ;
-               rdfs:comment "heuristic function call relationship inferred from decompiled content" ;
-               rdfs:label "inferredCalls" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#inherits
-:inherits rdf:type owl:ObjectProperty ;
-          rdfs:domain :KnowledgeNode ;
-          rdfs:range :KnowledgeNode ;
-          rdfs:comment "type/class inheritance relationships" ;
-          rdfs:label "inherits" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#localDefinedIn
-:localDefinedIn rdf:type owl:ObjectProperty ;
-                rdfs:domain :LocalVariable ;
-                rdfs:range :FunctionNode ;
-                rdfs:comment "specifies which function an local variable is defined in" ;
-                rdfs:label "localDefinedIn" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#metadataFor
-:metadataFor rdf:type owl:ObjectProperty ;
-             rdfs:domain :Metadata ;
-             rdfs:range :KnowledgeNode .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#moduleDependencyTo
-:moduleDependencyTo rdf:type owl:ObjectProperty ;
-                    rdfs:domain :ModuleNode ;
-                    rdfs:range :ModuleNode ;
-                    rdfs:comment "inverse of dependsOnModule" ;
-                    rdfs:label "moduleDependencyTo" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#networkRecv
-:networkRecv rdf:type owl:ObjectProperty ;
-             owl:inverseOf :networkSend ;
-             rdfs:domain :FunctionNode ;
-             rdfs:range :FunctionNode ;
-             rdfs:comment "inverse of networkSend" ;
-             rdfs:label "networkRecv" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#networkSend
-:networkSend rdf:type owl:ObjectProperty ;
-             rdfs:domain :FunctionNode ;
-             rdfs:range :FunctionNode ;
-             rdfs:comment "connection from caller to network send API" ;
-             rdfs:label "networkSend" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#providesDependencyTo
-:providesDependencyTo rdf:type owl:ObjectProperty ;
-                      rdfs:domain :FunctionNode ;
-                      rdfs:range [ rdf:type owl:Class ;
-                                   owl:unionOf ( :ModuleNode
-                                                 :FunctionNode
-                                               )
-                                 ] ;
-                      rdfs:comment "inverse of dependsOnFunction" ;
-                      rdfs:label "functionDependencyTo" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#referencedBy
-:referencedBy rdf:type owl:ObjectProperty ;
-              owl:inverseOf :references ;
-              rdfs:domain :KnowledgeNode ;
-              rdfs:range :KnowledgeNode ;
-              rdfs:comment "inverse of references" ;
-              rdfs:label "referencedBy" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#references
-:references rdf:type owl:ObjectProperty ;
-            rdfs:domain :KnowledgeNode ;
-            rdfs:range :KnowledgeNode ;
-            rdfs:comment "cross-references" ;
-            rdfs:label "references" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#relatedToFunction
-:relatedToFunction rdf:type owl:ObjectProperty ;
-                   rdfs:domain [ rdf:type owl:Class ;
-                                 owl:unionOf ( :ModuleNode
-                                               :FunctionNode
-                                             )
-                               ] ;
-                   rdfs:range :FunctionNode ;
-                   rdfs:comment "related functionality without a direct call relationship from a module to a function" ;
-                   rdfs:label "relatedToFunction" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#relatedToModule
-:relatedToModule rdf:type owl:ObjectProperty ,
-                          owl:SymmetricProperty ;
-                 rdfs:domain :ModuleNode ;
-                 rdfs:range :ModuleNode ;
-                 rdfs:comment "related functionality without direct call relationship between modules" ;
-                 rdfs:label "relatedToModule" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#similarPurpose
-:similarPurpose rdf:type owl:ObjectProperty ,
-                         owl:SymmetricProperty ;
-                rdfs:domain :FunctionNode ;
-                rdfs:range :FunctionNode ;
-                rdfs:comment "represent functions with similar semantic purpose" ;
-                rdfs:label "similarPurpose" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#taintFlowsFrom
-:taintFlowsFrom rdf:type owl:ObjectProperty ;
-                owl:inverseOf :taintFlowsTo ;
-                rdfs:domain :FunctionNode ;
-                rdfs:range :FunctionNode ;
-                rdfs:comment "inverse of taintFlowsTo" ;
-                rdfs:label "taintFlowsFrom" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#taintFlowsTo
-:taintFlowsTo rdf:type owl:ObjectProperty ;
-              rdfs:domain :FunctionNode ;
-              rdfs:range :FunctionNode ;
-              rdfs:comment "taint propagation path, directed from taint source through intermediates to sink" ;
-              rdfs:label "taintFlowsTo" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#vulnerableVia
-:vulnerableVia rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf :calledBy ;
-               rdfs:domain :FunctionNode ;
-               rdfs:range :FunctionNode ;
-               rdfs:comment "represents potential vulnerability path, directed from source to sink in taint analysis" ;
-               rdfs:label "vulnerableVia" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/atAddress
-:atAddress rdf:type owl:ObjectProperty ;
-           owl:inverseOf :memoryContainsInstruction ;
-           rdf:type owl:FunctionalProperty ;
-           rdfs:domain :Instruction ;
-           rdfs:range :Address ;
-           rdfs:comment "specifies where an instruction is located in memory" ;
-           rdfs:label "atAddress" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/calledBy
-:calledBy rdf:type owl:ObjectProperty ;
-          owl:inverseOf :calls ;
-          rdfs:domain :FunctionNode ;
-          rdfs:range :FunctionNode ;
-          rdfs:comment "inverse of calls" ;
-          rdfs:label "calledBy" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/calls
-:calls rdf:type owl:ObjectProperty ;
-       rdfs:subPropertyOf owl:topObjectProperty ;
-       rdfs:domain :FunctionNode ;
-       rdfs:range :FunctionNode ;
-       rdfs:comment "specifies a calling relation between a function and another function" ;
-       rdfs:label "calls" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/containedIn
-:containedIn rdf:type owl:ObjectProperty ;
-             owl:inverseOf :containsInstruction ;
-             rdfs:domain :Instruction ;
-             rdfs:range :FunctionNode ;
-             rdfs:comment "inverse of containsInstruction (function containsInstruction instruction)" ;
-             rdfs:label "containedIn" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/containsInstruction
-:containsInstruction rdf:type owl:ObjectProperty ;
-                     rdfs:domain :FunctionNode ;
-                     rdfs:range :Instruction ;
-                     rdfs:comment "specifies the instructions contained in a specific function" ;
-                     rdfs:label "containsInstruction" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/definedIn
-:definedIn rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf owl:topObjectProperty ;
-           rdf:type owl:FunctionalProperty ;
-           rdfs:domain [ rdf:type owl:Class ;
-                         owl:unionOf ( :FunctionNode
-                                       :Label
-                                     )
-                       ] ;
-           rdfs:range :StructuralNamespaceSymbol ;
-           rdfs:comment "specifies the namespace symbol that the function is defined in" ;
-           rdfs:label "definedIn" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasAddress
-:hasAddress rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf owl:topObjectProperty ;
-            owl:inverseOf :hasSymbol ;
-            rdf:type owl:FunctionalProperty ;
-            rdfs:domain :Symbol ;
-            rdfs:range :Address ;
-            rdfs:comment "specifies where a given symbol is located in memory" ;
-            rdfs:label "symbolHasAddress" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasDestinationAddress
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasDestinationAddress
 :hasDestinationAddress rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf owl:topObjectProperty ;
                        owl:inverseOf :isDestinationAddressFor ;
@@ -403,7 +238,7 @@
                        rdfs:label "hasDestinationAddress" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasDestinationOperand
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasDestinationOperand
 :hasDestinationOperand rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf owl:topObjectProperty ;
                        owl:inverseOf :isDestionationOperandFor ;
@@ -414,7 +249,20 @@
                        rdfs:label "hasDestinationOperand" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasPrimaryReference
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasFeatures
+:hasFeatures rdf:type owl:ObjectProperty ;
+             rdfs:domain :KnowledgeNode ;
+             rdfs:range :Content .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasMetadata
+:hasMetadata rdf:type owl:ObjectProperty ;
+             owl:inverseOf :metadataFor ;
+             rdfs:domain :KnowledgeNode ;
+             rdfs:range :Metadata .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasPrimaryReference
 :hasPrimaryReference rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf owl:topObjectProperty ;
                      owl:inverseOf :isPrimaryReferenceOf ;
@@ -425,7 +273,7 @@
                      rdfs:label "hasPrimaryReference" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasReference
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasReference
 :hasReference rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf owl:topObjectProperty ;
               owl:inverseOf :isReferenceFor ;
@@ -435,7 +283,7 @@
               rdfs:label "hasReference" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasSourceAddress
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasSourceAddress
 :hasSourceAddress rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf owl:topObjectProperty ;
                   owl:inverseOf :isSourceAddressFor ;
@@ -446,7 +294,7 @@
                   rdfs:label "hasSourceAddress" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasSourceOperand
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasSourceOperand
 :hasSourceOperand rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf owl:topObjectProperty ;
                   owl:inverseOf :isSourceOperandFor ;
@@ -456,7 +304,7 @@
                   rdfs:label "hasSourceOperand" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasSymbol
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasSymbol
 :hasSymbol rdf:type owl:ObjectProperty ;
            rdfs:domain :Address ;
            rdfs:range :Symbol ;
@@ -464,7 +312,34 @@
            rdfs:label "hasSymbol" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/isDestinationAddressFor
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/inferredCalledBy
+:inferredCalledBy rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :calledBy ;
+                  owl:inverseOf :inferredCalls ;
+                  rdfs:domain :FunctionNode ;
+                  rdfs:range :FunctionNode ;
+                  rdfs:comment "inverse of inferredCalls" ;
+                  rdfs:label "inferredCalledBy" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/inferredCalls
+:inferredCalls rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :calls ;
+               rdfs:domain :FunctionNode ;
+               rdfs:range :FunctionNode ;
+               rdfs:comment "heuristic function call relationship inferred from decompiled content" ;
+               rdfs:label "inferredCalls" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/inherits
+:inherits rdf:type owl:ObjectProperty ;
+          rdfs:domain :KnowledgeNode ;
+          rdfs:range :KnowledgeNode ;
+          rdfs:comment "type/class inheritance relationships" ;
+          rdfs:label "inherits" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/isDestinationAddressFor
 :isDestinationAddressFor rdf:type owl:ObjectProperty ;
                          rdfs:domain :Address ;
                          rdfs:range :Reference ;
@@ -472,7 +347,7 @@
                          rdfs:label "isDestinationAddressFor" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/isDestionationOperandFor
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/isDestionationOperandFor
 :isDestionationOperandFor rdf:type owl:ObjectProperty ;
                           rdfs:domain :Operand ;
                           rdfs:range :Instruction ;
@@ -480,7 +355,7 @@
                           rdfs:label "isDestinationOperandFor" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/isPrimaryReferenceOf
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/isPrimaryReferenceOf
 :isPrimaryReferenceOf rdf:type owl:ObjectProperty ;
                       rdfs:domain :Reference ;
                       rdfs:range :Symbol ;
@@ -488,7 +363,7 @@
                       rdfs:label "isPrimaryReferenceFor" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/isReferenceFor
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/isReferenceFor
 :isReferenceFor rdf:type owl:ObjectProperty ;
                 rdfs:domain :Reference ;
                 rdfs:range :Symbol ;
@@ -496,7 +371,7 @@
                 rdfs:label "isReferenceFor" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/isReturnedBy
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/isReturnedBy
 :isReturnedBy rdf:type owl:ObjectProperty ;
               owl:inverseOf :returns ;
               rdfs:domain :Parameter ;
@@ -505,7 +380,7 @@
               rdfs:label "retrunedBy" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/isSourceAddressFor
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/isSourceAddressFor
 :isSourceAddressFor rdf:type owl:ObjectProperty ;
                     rdfs:domain :Address ;
                     rdfs:range :Reference ;
@@ -513,7 +388,7 @@
                     rdfs:label "isSourceAddressFor" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/isSourceOperandFor
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/isSourceOperandFor
 :isSourceOperandFor rdf:type owl:ObjectProperty ;
                     rdfs:domain :Operand ;
                     rdfs:range :Instruction ;
@@ -521,7 +396,15 @@
                     rdfs:label "isSourceOperandFor" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/memoryContainsInstruction
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/localDefinedIn
+:localDefinedIn rdf:type owl:ObjectProperty ;
+                rdfs:domain :LocalVariable ;
+                rdfs:range :FunctionNode ;
+                rdfs:comment "specifies which function an local variable is defined in" ;
+                rdfs:label "localDefinedIn" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/memoryContainsInstruction
 :memoryContainsInstruction rdf:type owl:ObjectProperty ;
                            rdfs:domain :Address ;
                            rdfs:range :Instruction ;
@@ -529,7 +412,21 @@
                            rdfs:label "memoryContainsInstruction" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/namespaceDefines
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/metadataFor
+:metadataFor rdf:type owl:ObjectProperty ;
+             rdfs:domain :Metadata ;
+             rdfs:range :KnowledgeNode .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/moduleDependencyTo
+:moduleDependencyTo rdf:type owl:ObjectProperty ;
+                    rdfs:domain :ModuleNode ;
+                    rdfs:range :ModuleNode ;
+                    rdfs:comment "inverse of dependsOnModule" ;
+                    rdfs:label "moduleDependencyTo" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/namespaceDefines
 :namespaceDefines rdf:type owl:ObjectProperty ;
                   rdfs:domain :Namespace ;
                   rdfs:range [ rdf:type owl:Class ;
@@ -541,7 +438,24 @@
                   rdfs:label "namespaceDefines" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/passesInto
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/networkRecv
+:networkRecv rdf:type owl:ObjectProperty ;
+             owl:inverseOf :networkSend ;
+             rdfs:domain :FunctionNode ;
+             rdfs:range :FunctionNode ;
+             rdfs:comment "inverse of networkSend" ;
+             rdfs:label "networkRecv" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/networkSend
+:networkSend rdf:type owl:ObjectProperty ;
+             rdfs:domain :FunctionNode ;
+             rdfs:range :FunctionNode ;
+             rdfs:comment "connection from caller to network send API" ;
+             rdfs:label "networkSend" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/passesInto
 :passesInto rdf:type owl:ObjectProperty ;
             owl:inverseOf :takesArgument ;
             rdfs:domain :Parameter ;
@@ -550,7 +464,57 @@
             rdfs:label "passesInto" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/returns
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/providesDependencyTo
+:providesDependencyTo rdf:type owl:ObjectProperty ;
+                      rdfs:domain :FunctionNode ;
+                      rdfs:range [ rdf:type owl:Class ;
+                                   owl:unionOf ( :FunctionNode
+                                                 :ModuleNode
+                                               )
+                                 ] ;
+                      rdfs:comment "inverse of dependsOnFunction" ;
+                      rdfs:label "functionDependencyTo" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/referencedBy
+:referencedBy rdf:type owl:ObjectProperty ;
+              owl:inverseOf :references ;
+              rdfs:domain :KnowledgeNode ;
+              rdfs:range :KnowledgeNode ;
+              rdfs:comment "inverse of references" ;
+              rdfs:label "referencedBy" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/references
+:references rdf:type owl:ObjectProperty ;
+            rdfs:domain :KnowledgeNode ;
+            rdfs:range :KnowledgeNode ;
+            rdfs:comment "cross-references" ;
+            rdfs:label "references" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/relatedToFunction
+:relatedToFunction rdf:type owl:ObjectProperty ;
+                   rdfs:domain [ rdf:type owl:Class ;
+                                 owl:unionOf ( :FunctionNode
+                                               :ModuleNode
+                                             )
+                               ] ;
+                   rdfs:range :FunctionNode ;
+                   rdfs:comment "related functionality without a direct call relationship from a module to a function" ;
+                   rdfs:label "relatedToFunction" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/relatedToModule
+:relatedToModule rdf:type owl:ObjectProperty ,
+                          owl:SymmetricProperty ;
+                 rdfs:domain :ModuleNode ;
+                 rdfs:range :ModuleNode ;
+                 rdfs:comment "related functionality without direct call relationship between modules" ;
+                 rdfs:label "relatedToModule" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/returns
 :returns rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf owl:topObjectProperty ;
          rdf:type owl:FunctionalProperty ;
@@ -560,7 +524,33 @@
          rdfs:label "returns" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/takesArgument
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/similarPurpose
+:similarPurpose rdf:type owl:ObjectProperty ,
+                         owl:SymmetricProperty ;
+                rdfs:domain :FunctionNode ;
+                rdfs:range :FunctionNode ;
+                rdfs:comment "represent functions with similar semantic purpose" ;
+                rdfs:label "similarPurpose" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/taintFlowsFrom
+:taintFlowsFrom rdf:type owl:ObjectProperty ;
+                owl:inverseOf :taintFlowsTo ;
+                rdfs:domain :FunctionNode ;
+                rdfs:range :FunctionNode ;
+                rdfs:comment "inverse of taintFlowsTo" ;
+                rdfs:label "taintFlowsFrom" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/taintFlowsTo
+:taintFlowsTo rdf:type owl:ObjectProperty ;
+              rdfs:domain :FunctionNode ;
+              rdfs:range :FunctionNode ;
+              rdfs:comment "taint propagation path, directed from taint source through intermediates to sink" ;
+              rdfs:label "taintFlowsTo" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/takesArgument
 :takesArgument rdf:type owl:ObjectProperty ;
                rdfs:domain :FunctionNode ;
                rdfs:range :Parameter ;
@@ -568,11 +558,20 @@
                rdfs:label "takesArgument" .
 
 
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/vulnerableVia
+:vulnerableVia rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :calledBy ;
+               rdfs:domain :FunctionNode ;
+               rdfs:range :FunctionNode ;
+               rdfs:comment "represents potential vulnerability path, directed from source to sink in taint analysis" ;
+               rdfs:label "vulnerableVia" .
+
+
 #################################################################
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#createdAt
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/createdAt
 :createdAt rdf:type owl:DatatypeProperty ,
                     owl:FunctionalProperty ;
            rdfs:domain :Metadata ;
@@ -581,7 +580,7 @@
            rdfs:label "createdAt" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasActivityProfile
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasActivityProfile
 :hasActivityProfile rdf:type owl:DatatypeProperty ,
                              owl:FunctionalProperty ;
                     rdfs:domain :Content ;
@@ -590,16 +589,13 @@
                     rdfs:label "hasActivityProfile" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasAddress
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasAddress
 :hasAddress rdf:type owl:DatatypeProperty ,
                      owl:FunctionalProperty ;
-            rdfs:domain :Metadata ;
-            rdfs:range xsd:long ;
-            rdfs:comment "indicates the memory address the node is located at" ;
-            rdfs:label "hasAddress" .
+            rdfs:range xsd:long .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasAnalysisDepth
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasAnalysisDepth
 :hasAnalysisDepth rdf:type owl:DatatypeProperty ,
                            owl:FunctionalProperty ;
                   rdfs:domain :Metadata ;
@@ -608,7 +604,7 @@
                   rdfs:label "hasAnalysisDepth" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasBinaryID
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasBinaryID
 :hasBinaryID rdf:type owl:DatatypeProperty ,
                       owl:FunctionalProperty ;
              rdfs:domain :Metadata ;
@@ -617,7 +613,7 @@
              rdfs:label "hasBinaryID" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasCategory
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasCategory
 :hasCategory rdf:type owl:DatatypeProperty ,
                       owl:FunctionalProperty ;
              rdfs:domain :Content ;
@@ -626,178 +622,7 @@
              rdfs:label "hasCategory" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasDecompiledCode
-:hasDecompiledCode rdf:type owl:DatatypeProperty ,
-                            owl:FunctionalProperty ;
-                   rdfs:domain :Content ;
-                   rdfs:range xsd:string ;
-                   rdfs:comment "contains all the decompiled code for a function/node" ;
-                   rdfs:label "hasDecompiledCode" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasDisassembly
-:hasDisassembly rdf:type owl:DatatypeProperty ,
-                         owl:FunctionalProperty ;
-                rdfs:domain :Content ;
-                rdfs:range xsd:string ;
-                rdfs:comment "contains all the disassembly for the given function/node" ;
-                rdfs:label "hasDisassembly" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasDomain
-:hasDomain rdf:type owl:DatatypeProperty ;
-           rdfs:domain :Content ;
-           rdfs:range xsd:string ;
-           rdfs:comment "indicates detected domain names as strings in the function" ;
-           rdfs:label "hasDomain" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasFileIOAPI
-:hasFileIOAPI rdf:type owl:DatatypeProperty ;
-              rdfs:domain :Content ;
-              rdfs:range xsd:string ;
-              rdfs:comment "indicates file IO API calls in the given function" ;
-              rdfs:label "hasFileIOAPI" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasFilePath
-:hasFilePath rdf:type owl:DatatypeProperty ;
-             rdfs:domain :Content ;
-             rdfs:range xsd:string ;
-             rdfs:comment "indicates detected file paths as strings in the function" ;
-             rdfs:label "hasFilePath" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasID
-:hasID rdf:type owl:DatatypeProperty ,
-                owl:FunctionalProperty ;
-       rdfs:domain :Metadata ;
-       rdfs:range xsd:string ;
-       rdfs:comment "indicates the UUID for the given node" ;
-       rdfs:label "hasID" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasIPAddress
-:hasIPAddress rdf:type owl:DatatypeProperty ;
-              rdfs:domain :Content ;
-              rdfs:range xsd:string ;
-              rdfs:comment "indicates detected IP addresses from strings in the function" ;
-              rdfs:label "hasIPAddress" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasLLMSummary
-:hasLLMSummary rdf:type owl:DatatypeProperty ,
-                        owl:FunctionalProperty ;
-               rdfs:domain :Content ;
-               rdfs:range xsd:string ;
-               rdfs:comment "contains the LLM summary for the given function/node" ;
-               rdfs:label "hasLLMSummary" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasNetworkAPI
-:hasNetworkAPI rdf:type owl:DatatypeProperty ;
-               rdfs:domain :Content ;
-               rdfs:range xsd:string ;
-               rdfs:comment "indicates network api calls present in the given function" ;
-               rdfs:label "hasNetworkAPI" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasRawContent
-:hasRawContent rdf:type owl:DatatypeProperty ,
-                        owl:FunctionalProperty ;
-               rdfs:domain :Content ;
-               rdfs:range xsd:string ;
-               rdfs:comment "contains the raw content of the node, which can be decompiled code, assembly, description, etc." ;
-               rdfs:label "hasRawContent" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasRegistryKey
-:hasRegistryKey rdf:type owl:DatatypeProperty ;
-                rdfs:domain :Content ;
-                rdfs:range xsd:string ;
-                rdfs:comment "indicates detected registry keys as strings in the function" ;
-                rdfs:label "hasRegistryKey" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasRiskLevel
-:hasRiskLevel rdf:type owl:DatatypeProperty ,
-                       owl:FunctionalProperty ;
-              rdfs:domain :Content ;
-              rdfs:range xsd:string ;
-              rdfs:comment "indicates computed risk level (low, medium, or high)" ;
-              rdfs:label "hasRiskLevel" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasSecurityFlag
-:hasSecurityFlag rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :Content ;
-                 rdfs:range xsd:string ;
-                 rdfs:comment "indicates security annotations given as certain flags for a function" ;
-                 rdfs:label "hasSecurityFlag" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasSignature
-:hasSignature rdf:type owl:DatatypeProperty ,
-                       owl:FunctionalProperty ;
-              rdfs:domain :Content ;
-              rdfs:range xsd:string ;
-              rdfs:comment "indicates the reverse engineering byte signature" ;
-              rdfs:label "hasSignature" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasSummaryConfidence
-:hasSummaryConfidence rdf:type owl:DatatypeProperty ,
-                               owl:FunctionalProperty ;
-                      rdfs:domain :Content ;
-                      rdfs:range xsd:string ;
-                      rdfs:comment "indicates the confidence level from the LLM summary" ;
-                      rdfs:label "hasSummaryConfidence" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasURL
-:hasURL rdf:type owl:DatatypeProperty ;
-        rdfs:domain :Content ;
-        rdfs:range xsd:string ;
-        rdfs:comment "indicates detected URLs in strings in the function" ;
-        rdfs:label "hasURL" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasVectorEmbedding
-:hasVectorEmbedding rdf:type owl:DatatypeProperty ;
-                    rdfs:domain :Content ;
-                    rdfs:range xsd:float ;
-                    rdfs:comment "indicates any vector embeddings from the node" ;
-                    rdfs:label "hasVectorEmbedding" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#isStale
-:isStale rdf:type owl:DatatypeProperty ,
-                  owl:FunctionalProperty ;
-         rdfs:domain :Metadata ;
-         rdfs:range xsd:boolean ;
-         rdfs:comment "indicates if the given node's summarization is stale" ;
-         rdfs:label "isStale" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#updatedAt
-:updatedAt rdf:type owl:DatatypeProperty ,
-                    owl:FunctionalProperty ;
-           rdfs:domain :Metadata ;
-           rdfs:range xsd:dateTimeStamp ;
-           rdfs:comment "indicates the last time the node was updated" ;
-           rdfs:label "updatedAt" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#userEdited
-:userEdited rdf:type owl:DatatypeProperty ,
-                     owl:FunctionalProperty ;
-            rdfs:domain :Metadata ;
-            rdfs:range xsd:boolean ;
-            rdfs:comment "indicates if the user edited the LLM summary" ;
-            rdfs:label "userEdited" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasDataType
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasDataType
 :hasDataType rdf:type owl:DatatypeProperty ,
                       owl:FunctionalProperty ;
              rdfs:domain :Variable ;
@@ -806,12 +631,80 @@
              rdfs:label "hasDataType" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasName
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasDecompiledCode
+:hasDecompiledCode rdf:type owl:DatatypeProperty ,
+                            owl:FunctionalProperty ;
+                   rdfs:domain :Content ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "contains all the decompiled code for a function/node" ;
+                   rdfs:label "hasDecompiledCode" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasDisassembly
+:hasDisassembly rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain :Content ;
+                rdfs:range xsd:string ;
+                rdfs:comment "contains all the disassembly for the given function/node" ;
+                rdfs:label "hasDisassembly" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasDomain
+:hasDomain rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Content ;
+           rdfs:range xsd:string ;
+           rdfs:comment "indicates detected domain names as strings in the function" ;
+           rdfs:label "hasDomain" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasFileIOAPI
+:hasFileIOAPI rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Content ;
+              rdfs:range xsd:string ;
+              rdfs:comment "indicates file IO API calls in the given function" ;
+              rdfs:label "hasFileIOAPI" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasFilePath
+:hasFilePath rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Content ;
+             rdfs:range xsd:string ;
+             rdfs:comment "indicates detected file paths as strings in the function" ;
+             rdfs:label "hasFilePath" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasID
+:hasID rdf:type owl:DatatypeProperty ,
+                owl:FunctionalProperty ;
+       rdfs:domain :Metadata ;
+       rdfs:range xsd:string ;
+       rdfs:comment "indicates the UUID for the given node" ;
+       rdfs:label "hasID" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasIPAddress
+:hasIPAddress rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Content ;
+              rdfs:range xsd:string ;
+              rdfs:comment "indicates detected IP addresses from strings in the function" ;
+              rdfs:label "hasIPAddress" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasLLMSummary
+:hasLLMSummary rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain :Content ;
+               rdfs:range xsd:string ;
+               rdfs:comment "contains the LLM summary for the given function/node" ;
+               rdfs:label "hasLLMSummary" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasName
 :hasName rdf:type owl:DatatypeProperty ,
                   owl:FunctionalProperty ;
          rdfs:domain [ rdf:type owl:Class ;
-                       owl:unionOf ( :Metadata
-                                     :FunctionNode
+                       owl:unionOf ( :FunctionNode
+                                     :Metadata
                                    )
                      ] ;
          rdfs:range xsd:string ;
@@ -819,7 +712,15 @@
          rdfs:label "hasName" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasOpcode
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasNetworkAPI
+:hasNetworkAPI rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Content ;
+               rdfs:range xsd:string ;
+               rdfs:comment "indicates network api calls present in the given function" ;
+               rdfs:label "hasNetworkAPI" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasOpcode
 :hasOpcode rdf:type owl:DatatypeProperty ,
                     owl:FunctionalProperty ;
            rdfs:domain :Instruction ;
@@ -828,7 +729,7 @@
            rdfs:label "hasOpcode" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasOperandIndex
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasOperandIndex
 :hasOperandIndex rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf owl:topDataProperty ;
                  rdf:type owl:FunctionalProperty ;
@@ -838,7 +739,7 @@
                  rdfs:label "hasOperandIndex" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasOperandType
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasOperandType
 :hasOperandType rdf:type owl:DatatypeProperty ,
                          owl:FunctionalProperty ;
                 rdfs:domain :Operand ;
@@ -847,7 +748,7 @@
                 rdfs:label "hasOperandType" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasOperandValue
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasOperandValue
 :hasOperandValue rdf:type owl:DatatypeProperty ,
                           owl:FunctionalProperty ;
                  rdfs:domain :Operand ;
@@ -856,7 +757,16 @@
                  rdfs:label "hasOperandValue" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasReferenceType
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasRawContent
+:hasRawContent rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain :Content ;
+               rdfs:range xsd:string ;
+               rdfs:comment "contains the raw content of the node, which can be decompiled code, assembly, description, etc." ;
+               rdfs:label "hasRawContent" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasReferenceType
 :hasReferenceType rdf:type owl:DatatypeProperty ,
                            owl:FunctionalProperty ;
                   rdfs:domain :Reference ;
@@ -865,7 +775,15 @@
                   rdfs:label "hasReferenceType" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasReturnType
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasRegistryKey
+:hasRegistryKey rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Content ;
+                rdfs:range xsd:string ;
+                rdfs:comment "indicates detected registry keys as strings in the function" ;
+                rdfs:label "hasRegistryKey" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasReturnType
 :hasReturnType rdf:type owl:DatatypeProperty ,
                         owl:FunctionalProperty ;
                rdfs:domain :FunctionNode ;
@@ -874,18 +792,114 @@
                rdfs:label "hasReturnType" .
 
 
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasRiskLevel
+:hasRiskLevel rdf:type owl:DatatypeProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain :Content ;
+              rdfs:range xsd:string ;
+              rdfs:comment "indicates computed risk level (low, medium, or high)" ;
+              rdfs:label "hasRiskLevel" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasSecurityFlag
+:hasSecurityFlag rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Content ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "indicates security annotations given as certain flags for a function" ;
+                 rdfs:label "hasSecurityFlag" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasSignature
+:hasSignature rdf:type owl:DatatypeProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain :Content ;
+              rdfs:range xsd:string ;
+              rdfs:comment "indicates the reverse engineering byte signature" ;
+              rdfs:label "hasSignature" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasSummaryConfidence
+:hasSummaryConfidence rdf:type owl:DatatypeProperty ,
+                               owl:FunctionalProperty ;
+                      rdfs:domain :Content ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "indicates the confidence level from the LLM summary" ;
+                      rdfs:label "hasSummaryConfidence" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasURL
+:hasURL rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Content ;
+        rdfs:range xsd:string ;
+        rdfs:comment "indicates detected URLs in strings in the function" ;
+        rdfs:label "hasURL" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasVectorEmbedding
+:hasVectorEmbedding rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Content ;
+                    rdfs:range xsd:float ;
+                    rdfs:comment "indicates any vector embeddings from the node" ;
+                    rdfs:label "hasVectorEmbedding" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/isStale
+:isStale rdf:type owl:DatatypeProperty ,
+                  owl:FunctionalProperty ;
+         rdfs:domain :Metadata ;
+         rdfs:range xsd:boolean ;
+         rdfs:comment "indicates if the given node's summarization is stale" ;
+         rdfs:label "isStale" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/updatedAt
+:updatedAt rdf:type owl:DatatypeProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain :Metadata ;
+           rdfs:range xsd:dateTimeStamp ;
+           rdfs:comment "indicates the last time the node was updated" ;
+           rdfs:label "updatedAt" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/userEdited
+:userEdited rdf:type owl:DatatypeProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain :Metadata ;
+            rdfs:range xsd:boolean ;
+            rdfs:comment "indicates if the user edited the LLM summary" ;
+            rdfs:label "userEdited" .
+
+
 #################################################################
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#BinaryNode
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Address
+:Address rdf:type owl:Class ;
+         owl:disjointWith :Reference ;
+         rdfs:comment "Physical address in memory" ;
+         rdfs:label "Address" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/BinaryNode
 :BinaryNode rdf:type owl:Class ;
             rdfs:subClassOf :KnowledgeNode ;
             rdfs:comment "represents overall program semantics and attack surface" ;
             rdfs:label "BinaryNode" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#Content
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Class
+:Class rdf:type owl:Class ;
+       rdfs:subClassOf :StructuralNamespaceSymbol ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :definedIn ;
+                         owl:someValuesFrom :Namespace
+                       ] ;
+       rdfs:comment "represents a class in a program (for object oriented programming)" ;
+       rdfs:label "Class" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Content
 :Content rdf:type owl:Class ;
          rdfs:subClassOf [ rdf:type owl:Restriction ;
                            owl:onProperty :hasDecompiledCode ;
@@ -917,7 +931,85 @@
                          ] .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#KnowledgeNode
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/DLL
+:DLL rdf:type owl:Class ;
+     rdfs:subClassOf :FunctionNode ,
+                     :StructuralNamespaceSymbol ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :definedIn ;
+                       owl:someValuesFrom :Namespace
+                     ] ;
+     rdfs:comment "represents an function defined externally of the given binary" ;
+     rdfs:label "ExternalFunctionNode" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/FunctionNode
+:FunctionNode rdf:type owl:Class ;
+              rdfs:subClassOf :KnowledgeNode ,
+                              :NamespaceSymbol ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :calls ;
+                                owl:someValuesFrom :FunctionNode
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :containsInstruction ;
+                                owl:someValuesFrom :Instruction
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :definedIn ;
+                                owl:someValuesFrom :StructuralNamespaceSymbol
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :definesLocal ;
+                                owl:someValuesFrom :LocalVariable
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :returns ;
+                                owl:someValuesFrom :Parameter
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :returns ;
+                                owl:someValuesFrom :Variable
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasName ;
+                                owl:someValuesFrom xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasReturnType ;
+                                owl:someValuesFrom xsd:string
+                              ] ;
+              rdfs:comment "a function defined by the ghidra decompilation" ;
+              rdfs:label "FunctionNode" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Instruction
+:Instruction rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty :atAddress ;
+                               owl:someValuesFrom :Address
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasDestinationOperand ;
+                               owl:someValuesFrom :Operand
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasSourceOperand ;
+                               owl:someValuesFrom :Operand
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasOpcode ;
+                               owl:someValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasReturnType ;
+                               owl:someValuesFrom xsd:string
+                             ] ;
+             rdfs:comment "assembly instruction gotten from the disassembly in ghidra" ;
+             rdfs:label "Instruction" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/KnowledgeNode
 :KnowledgeNode rdf:type owl:Class ;
                rdfs:subClassOf [ rdf:type owl:Restriction ;
                                  owl:onProperty :hasContent ;
@@ -935,7 +1027,27 @@
                rdfs:label "KnowledgeNode" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#Metadata
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Label
+:Label rdf:type owl:Class ;
+       rdfs:subClassOf :Symbol ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :definedIn ;
+                         owl:someValuesFrom :StructuralNamespaceSymbol
+                       ] ;
+       owl:disjointWith :NamespaceSymbol ;
+       rdfs:comment "a string name given to a memory address, acts like a global variable in the context of this ontology" ;
+       rdfs:label "Label" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/LocalVariable
+:LocalVariable rdf:type owl:Class ;
+               rdfs:subClassOf :Variable ;
+               owl:disjointWith :Parameter ;
+               rdfs:comment "the variables defined within a function and only used locally" ;
+               rdfs:label "LocalVariable" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Metadata
 :Metadata rdf:type owl:Class ;
           rdfs:subClassOf [ rdf:type owl:Restriction ;
                             owl:onProperty :createdAt ;
@@ -958,6 +1070,10 @@
                             owl:someValuesFrom xsd:string
                           ] ,
                           [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasName ;
+                            owl:someValuesFrom xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
                             owl:onProperty :isStale ;
                             owl:someValuesFrom xsd:boolean
                           ] ,
@@ -968,23 +1084,80 @@
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :userEdited ;
                             owl:someValuesFrom xsd:boolean
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :hasName ;
-                            owl:someValuesFrom xsd:string
                           ] ;
           rdfs:comment "contains the properties of metadata for the given node" ;
           rdfs:label "Metadata" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#ModuleNode
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/ModuleNode
 :ModuleNode rdf:type owl:Class ;
             rdfs:subClassOf :KnowledgeNode ;
             rdfs:comment "represents subsystems and logial groupings" ;
             rdfs:label "ModuleNode" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#ReverseEngineeringFeatures
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Namespace
+:Namespace rdf:type owl:Class ;
+           rdfs:subClassOf :StructuralNamespaceSymbol ;
+           rdfs:comment "a namespace defined by the ghidra decompilation" ;
+           rdfs:label "Namespace" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/NamespaceSymbol
+:NamespaceSymbol rdf:type owl:Class ;
+                 rdfs:subClassOf :Symbol ;
+                 rdfs:comment "a type of symbol that can hold other kinds of symbols" ;
+                 rdfs:label "NamespaceSymbol" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Operand
+:Operand rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasOperandType ;
+                           owl:someValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasOperandValue ;
+                           owl:someValuesFrom xsd:string
+                         ] ;
+         rdfs:comment "operand for an instruction, tells the CPU where to use or put the data from an instruction" ;
+         rdfs:label "Operand" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Parameter
+:Parameter rdf:type owl:Class ;
+           rdfs:subClassOf :Variable ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :passesInto ;
+                             owl:someValuesFrom :FunctionNode
+                           ] ;
+           rdfs:comment "the variables that hold data that are either passed into a function or returned from a function" ;
+           rdfs:label "Parameter" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Reference
+:Reference rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasDestinationAddress ;
+                             owl:someValuesFrom :Address
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasSourceAddress ;
+                             owl:someValuesFrom :Address
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasOperandIndex ;
+                             owl:someValuesFrom xsd:integer
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasReferenceType ;
+                             owl:someValuesFrom xsd:string
+                           ] ;
+           rdfs:comment "This class represents an identifier to a symbol, that uses a source address and destination address to do so." ;
+           rdfs:label "Reference" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/ReverseEngineeringFeatures
 :ReverseEngineeringFeatures rdf:type owl:Class ;
                             rdfs:subClassOf [ rdf:type owl:Restriction ;
                                               owl:onProperty :hasActivityProfile ;
@@ -1034,191 +1207,14 @@
                             rdfs:label "ReverseEngineeringFeatures" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Address
-:Address rdf:type owl:Class ;
-         owl:disjointWith :Reference ;
-         rdfs:comment "Physical address in memory" ;
-         rdfs:label "Address" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Class
-:Class rdf:type owl:Class ;
-       rdfs:subClassOf :StructuralNamespaceSymbol ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :definedIn ;
-                         owl:someValuesFrom :Namespace
-                       ] ;
-       rdfs:comment "represents a class in a program (for object oriented programming)" ;
-       rdfs:label "Class" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/DLL
-:DLL rdf:type owl:Class ;
-     rdfs:subClassOf :FunctionNode ,
-                     :StructuralNamespaceSymbol ,
-                     [ rdf:type owl:Restriction ;
-                       owl:onProperty :definedIn ;
-                       owl:someValuesFrom :Namespace
-                     ] ;
-     rdfs:comment "represents an function defined externally of the given binary" ;
-     rdfs:label "ExternalFunctionNode" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/FunctionNode
-:FunctionNode rdf:type owl:Class ;
-              rdfs:subClassOf :KnowledgeNode ,
-                              :NamespaceSymbol ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :definesLocal ;
-                                owl:someValuesFrom :LocalVariable
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :calls ;
-                                owl:someValuesFrom :FunctionNode
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :containsInstruction ;
-                                owl:someValuesFrom :Instruction
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :definedIn ;
-                                owl:someValuesFrom :StructuralNamespaceSymbol
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :returns ;
-                                owl:someValuesFrom :Parameter
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :returns ;
-                                owl:someValuesFrom :Variable
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasName ;
-                                owl:someValuesFrom xsd:string
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasReturnType ;
-                                owl:someValuesFrom xsd:string
-                              ] ;
-              rdfs:comment "a function defined by the ghidra decompilation" ;
-              rdfs:label "FunctionNode" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Instruction
-:Instruction rdf:type owl:Class ;
-             rdfs:subClassOf [ rdf:type owl:Restriction ;
-                               owl:onProperty :atAddress ;
-                               owl:someValuesFrom :Address
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty :hasDestinationOperand ;
-                               owl:someValuesFrom :Operand
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty :hasSourceOperand ;
-                               owl:someValuesFrom :Operand
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty :hasOpcode ;
-                               owl:someValuesFrom xsd:string
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty :hasReturnType ;
-                               owl:someValuesFrom xsd:string
-                             ] ;
-             rdfs:comment "assembly instruction gotten from the disassembly in ghidra" ;
-             rdfs:label "Instruction" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Label
-:Label rdf:type owl:Class ;
-       rdfs:subClassOf :Symbol ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :definedIn ;
-                         owl:someValuesFrom :StructuralNamespaceSymbol
-                       ] ;
-       owl:disjointWith :NamespaceSymbol ;
-       rdfs:comment "a string name given to a memory address, acts like a global variable in the context of this ontology" ;
-       rdfs:label "Label" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/LocalVariable
-:LocalVariable rdf:type owl:Class ;
-               rdfs:subClassOf :Variable ;
-               owl:disjointWith :Parameter ;
-               rdfs:comment "the variables defined within a function and only used locally" ;
-               rdfs:label "LocalVariable" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Namespace
-:Namespace rdf:type owl:Class ;
-           rdfs:subClassOf :StructuralNamespaceSymbol ;
-           rdfs:comment "a namespace defined by the ghidra decompilation" ;
-           rdfs:label "Namespace" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/NamespaceSymbol
-:NamespaceSymbol rdf:type owl:Class ;
-                 rdfs:subClassOf :Symbol ;
-                 rdfs:comment "a type of symbol that can hold other kinds of symbols" ;
-                 rdfs:label "NamespaceSymbol" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Operand
-:Operand rdf:type owl:Class ;
-         rdfs:subClassOf [ rdf:type owl:Restriction ;
-                           owl:onProperty :hasOperandType ;
-                           owl:someValuesFrom xsd:string
-                         ] ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :hasOperandValue ;
-                           owl:someValuesFrom xsd:string
-                         ] ;
-         rdfs:comment "operand for an instruction, tells the CPU where to use or put the data from an instruction" ;
-         rdfs:label "Operand" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Parameter
-:Parameter rdf:type owl:Class ;
-           rdfs:subClassOf :Variable ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :passesInto ;
-                             owl:someValuesFrom :FunctionNode
-                           ] ;
-           rdfs:comment "the variables that hold data that are either passed into a function or returned from a function" ;
-           rdfs:label "Parameter" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Reference
-:Reference rdf:type owl:Class ;
-           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                             owl:onProperty :hasDestinationAddress ;
-                             owl:someValuesFrom :Address
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :hasSourceAddress ;
-                             owl:someValuesFrom :Address
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :hasOperandIndex ;
-                             owl:someValuesFrom xsd:integer
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :hasReferenceType ;
-                             owl:someValuesFrom xsd:string
-                           ] ;
-           rdfs:comment "This class represents an identifier to a symbol, that uses a source address and destination address to do so." ;
-           rdfs:label "Reference" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/StructuralNamespaceSymbol
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/StructuralNamespaceSymbol
 :StructuralNamespaceSymbol rdf:type owl:Class ;
                            rdfs:subClassOf :NamespaceSymbol ;
                            rdfs:comment "A type of namespace symbol that can define non-local symbols (all namespace symbols that are not functions since they operate differently)" ;
                            rdfs:label "StructuralNamespaceSymbol" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Symbol
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Symbol
 :Symbol rdf:type owl:Class ;
         rdfs:subClassOf [ rdf:type owl:Restriction ;
                           owl:onProperty :atAddress ;
@@ -1236,7 +1232,7 @@
         rdfs:label "Symbol" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Variable
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Variable
 :Variable rdf:type owl:Class ;
           rdfs:subClassOf [ rdf:type owl:Restriction ;
                             owl:onProperty :hasDataType ;
@@ -1244,6 +1240,16 @@
                           ] ;
           rdfs:comment "a type of object that holds data within a function" ;
           rdfs:label "Variable" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:hasAddress rdfs:comment "indicates the memory address the node is located at" ,
+                         "specifies where a given symbol is located in memory" ;
+            rdfs:label "hasAddress" ,
+                       "symbolHasAddress" .
 
 
 #################################################################

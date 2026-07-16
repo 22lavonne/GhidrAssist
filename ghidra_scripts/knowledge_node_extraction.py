@@ -6,10 +6,14 @@
 #@toolbar 
 #@runtime PyGhidra
 
+import json
+from pathlib import Path
+
 
 from ghidrassist import AnalysisDB
 from ghidrassist.graphrag import BinaryKnowledgeGraph
 from ghidrassist.graphrag.nodes import KnowledgeNode, NodeType, EdgeType
+
 
 # nested class, imported off the outer class
 GraphEdge = BinaryKnowledgeGraph.GraphEdge
@@ -44,7 +48,7 @@ module_list = []
 # Iterate through each node, add all the necessary data about it, then put it in its respective list
 for node in all_nodes:
     # create new dictionary for node
-    print(node.getDisplayLabel(), node.getType(), node.getId())
+    # print(node.getDisplayLabel(), node.getType(), node.getId())
     new_node = {"name": node.getName(), "id": node.getId()}
     # dict for all the edges of the current node. The key is the target node id, the value is the type of edge
     # this is to allow for multiple edges of the same type for a node
@@ -57,16 +61,16 @@ for node in all_nodes:
         edge_type = edge.getType()  # EdgeType enum
         # if the target node exists, use that id
         if target_node:
-            edge_dict.update({str(target_node): str(edge_type)})
+            edge_dict.update({str(target_node.getId()): str(edge_type)})
         # if not, get the id from the edge
         else:
-            edge_dict.update(edge.getTargetId())
+            edge_dict.update({str(edge.getTargetId()): str(edge_type)})
             
-        print("{}  --[{}]-->  {}".format(
-            node.getDisplayLabel(),
-            edge_type.getDisplayName(),
-            target_node.getDisplayLabel() if target_node else edge.getTargetId(),
-        ))
+        # print("{}  --[{}]-->  {}".format(
+        #     node.getDisplayLabel(),
+        #     edge_type.getDisplayName(),
+        #     target_node.getDisplayLabel() if target_node else edge.getTargetId(),
+        # ))
         
     new_node.update({"edges": edge_dict})
     # then add the new node to whichever list it belongs in (based on the type of node)
@@ -80,3 +84,13 @@ for node in all_nodes:
         module_list.append(new_node)
     else:
         print("ERROR: found a node not expected:", node.getDisplayLabel(), "type:", node.getType())
+        
+node_list = [binary_list, func_list, ext_list, module_list]
+# for node in node_list:
+#     for item in node:
+#         print(item)
+# # print(node_list)
+# put all the list/dictionary data into a json file that will be used later
+script_dir_str = str(Path(getSourceFile().getAbsolutePath()).parent)
+with open(script_dir_str + "/nodes.json", "w") as f:
+    json.dump(node_list, f, indent=2)

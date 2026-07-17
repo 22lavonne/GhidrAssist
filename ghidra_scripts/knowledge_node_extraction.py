@@ -66,11 +66,12 @@ for node in all_nodes:
         else:
             edge_dict.update({str(edge.getTargetId()): str(edge_type)})
             
-        # print("{}  --[{}]-->  {}".format(
-        #     node.getDisplayLabel(),
-        #     edge_type.getDisplayName(),
-        #     target_node.getDisplayLabel() if target_node else edge.getTargetId(),
-        # ))
+        print("{} (id of {})  --[{}]-->  {}".format(
+            node.getDisplayLabel(),
+            node.getId(),
+            edge_type.getDisplayName(),
+            target_node.getDisplayLabel() if target_node else edge.getTargetId(),
+        ))
         
     new_node.update({"edges": edge_dict})
     # then add the new node to whichever list it belongs in (based on the type of node)
@@ -85,12 +86,22 @@ for node in all_nodes:
     else:
         print("ERROR: found a node not expected:", node.getDisplayLabel(), "type:", node.getType())
         
-node_list = [binary_list, func_list, ext_list, module_list]
 # for node in node_list:
 #     for item in node:
 #         print(item)
 # # print(node_list)
 # put all the list/dictionary data into a json file that will be used later
+
+#TODO: make 4 separate json files to separate the types of knowledge nodes
 script_dir_str = str(Path(getSourceFile().getAbsolutePath()).parent)
-with open(script_dir_str + "/nodes.json", "w") as f:
-    json.dump(node_list, f, indent=2)
+with open(script_dir_str + "/binaries.json", "w") as f:
+    json.dump(binary_list, f, indent=2)
+    
+with open(script_dir_str + "/functions.json", "w") as f:
+    json.dump(func_list, f, indent=2)
+    
+with open(script_dir_str + "/externals.json", "w") as f:
+    json.dump(ext_list, f, indent=2)
+    
+with open(script_dir_str + "/modules.json", "w") as f:
+    json.dump(module_list, f, indent=2)

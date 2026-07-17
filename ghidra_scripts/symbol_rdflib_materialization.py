@@ -100,10 +100,8 @@ graph = init_kg()
 # ontology = "ontology/combined-ontology.ttl"
 script_dir = Path(__file__).resolve().parent
 ontology_path = "../ontology/combined-ontology.ttl"
-print("before parsing")
 with open(ontology_path, "r") as f:
     graph.parse(f, format="turtle")
-print("after parsing")
 
 # ask the user from what file name they want to make a knowledge graph for
 dir_name = input("What directory do you want to make a knowledge graph from? (needs to exist in the ghidra-scripts directory): ")
@@ -400,5 +398,5 @@ for i in instruction_list:
     graph.add((func, containsInstruction, i_instance))    
 
 # then serialize the graph
-output_file = dir_name + "/output.ttl"
+output_file = dir_name + "/symbol-output.ttl"
 temp = graph.serialize(format="turtle", encoding="utf-8", destination=output_file)

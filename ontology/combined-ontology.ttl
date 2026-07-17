@@ -571,6 +571,14 @@
 #    Data properties
 #################################################################
 
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/belongsTo
+:belongsTo rdf:type owl:DatatypeProperty ;
+           rdfs:domain :FunctionNode ;
+           rdfs:range xsd:string ;
+           rdfs:comment "represents the relation of a function belonging to a community. The function that gets this relation in the extension does not have the target node as an object so instead it's id (which is tracked by the edge itself) is used as the target)." ;
+           rdfs:label "belongsToCommunity" .
+
+
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/createdAt
 :createdAt rdf:type owl:DatatypeProperty ,
                     owl:FunctionalProperty ;
@@ -703,7 +711,7 @@
 :hasName rdf:type owl:DatatypeProperty ,
                   owl:FunctionalProperty ;
          rdfs:domain [ rdf:type owl:Class ;
-                       owl:unionOf ( :FunctionNode
+                       owl:unionOf ( :KnowledgeNode
                                      :Metadata
                                    )
                      ] ;

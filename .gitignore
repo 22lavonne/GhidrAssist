@@ -19,3 +19,4 @@ CLAUDE.md
 
 __pycache__
 .venv
+ghidra_scripts/.json

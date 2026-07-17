@@ -1,1262 +1,3149 @@
-@prefix : <http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/> .
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology">
+    <Prefix name="" IRI="http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="/Address"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/BinaryNode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Class"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Content"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/DLL"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/FunctionNode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Instruction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/KnowledgeNode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Label"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/LocalVariable"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Metadata"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/ModuleNode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Namespace"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/NamespaceSymbol"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Operand"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Parameter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Reference"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/ReverseEngineeringFeatures"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/StructuralNamespaceSymbol"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Symbol"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Variable"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#dependencyTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#dependsOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasNode"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#nodeHasAddress"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#relatedTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#symbolHasAddress"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/atAddress"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/belongsToBinary"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/belongsToModule"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/bequeaths"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/calledBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/calls"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/callsVulnerable"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/containedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/containsFunction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/containsInstruction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/containsModule"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/contentFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/definedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/definedInNamespace"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/defines"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/definesLocal"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/dependsOnFunction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/dependsOnModule"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/functionalSibling"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasContent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasDestinationAddress"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasDestinationOperand"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasMetadata"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasPrimaryReference"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasReference"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasSourceAddress"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasSourceOperand"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasSymbol"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/inferredCalledBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/inferredCalls"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/inherits"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isDestinationAddressFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isDestionationOperandFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isPrimaryReferenceOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isReferenceFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isReturnedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isSourceAddressFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isSourceOperandFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/localDefinedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/memoryContainsInstruction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/metadataFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/moduleDependencyTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/namespaceDefines"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/networkRecv"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/networkSend"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/passesInto"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/providesDependencyTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/referencedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/references"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/relatedToFunction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/relatedToModule"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/returns"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/similarPurpose"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/taintFlowsFrom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/taintFlowsTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/takesArgument"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/vulnerableVia"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/belongsTo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/createdAt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasActivityProfile"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasAnalysisDepth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasBinaryID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasCategory"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasDataType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasDecompiledCode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasDisassembly"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasDomain"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasFileIOAPI"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasFilePath"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasIPAddress"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasLLMSummary"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasNetworkAPI"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasOpcode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasOperandIndex"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasOperandType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasOperandValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasRawContent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasReferenceType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasRegistryKey"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasReturnType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasRiskLevel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasSecurityFlag"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasSignature"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasSummaryConfidence"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasURL"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/hasVectorEmbedding"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/isStale"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/symbolHasAddress"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/updatedAt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/userEdited"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="/BinaryNode"/>
+        <Class IRI="/KnowledgeNode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Class"/>
+        <Class IRI="/StructuralNamespaceSymbol"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Class"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/definedIn"/>
+            <Class IRI="/Namespace"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Content"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasDecompiledCode"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Content"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasDisassembly"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Content"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasLLMSummary"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Content"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasRawContent"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Content"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasSignature"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Content"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasSummaryConfidence"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Content"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasVectorEmbedding"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/DLL"/>
+        <Class IRI="/FunctionNode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/DLL"/>
+        <Class IRI="/StructuralNamespaceSymbol"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/DLL"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/definedIn"/>
+            <Class IRI="/Namespace"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/FunctionNode"/>
+        <Class IRI="/KnowledgeNode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/FunctionNode"/>
+        <Class IRI="/NamespaceSymbol"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/FunctionNode"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/calls"/>
+            <Class IRI="/FunctionNode"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/FunctionNode"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/containsInstruction"/>
+            <Class IRI="/Instruction"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/FunctionNode"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/definedIn"/>
+            <Class IRI="/StructuralNamespaceSymbol"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/FunctionNode"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/definesLocal"/>
+            <Class IRI="/LocalVariable"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/FunctionNode"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/returns"/>
+            <Class IRI="/Parameter"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/FunctionNode"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/returns"/>
+            <Class IRI="/Variable"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/FunctionNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/FunctionNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasReturnType"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Instruction"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/atAddress"/>
+            <Class IRI="/Address"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Instruction"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/hasDestinationOperand"/>
+            <Class IRI="/Operand"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Instruction"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/hasSourceOperand"/>
+            <Class IRI="/Operand"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Instruction"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasOpcode"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Instruction"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasReturnType"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/KnowledgeNode"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/hasContent"/>
+            <Class IRI="/Content"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/KnowledgeNode"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/hasMetadata"/>
+            <Class IRI="/Metadata"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Label"/>
+        <Class IRI="/Symbol"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Label"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/definedIn"/>
+            <Class IRI="/StructuralNamespaceSymbol"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/LocalVariable"/>
+        <Class IRI="/Variable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Metadata"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/createdAt"/>
+            <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Metadata"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasAnalysisDepth"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Metadata"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasBinaryID"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Metadata"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasID"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Metadata"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Metadata"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/isStale"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Metadata"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/updatedAt"/>
+            <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Metadata"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/userEdited"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ModuleNode"/>
+        <Class IRI="/KnowledgeNode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Namespace"/>
+        <Class IRI="/StructuralNamespaceSymbol"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/NamespaceSymbol"/>
+        <Class IRI="/Symbol"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Operand"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasOperandType"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Operand"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasOperandValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Parameter"/>
+        <Class IRI="/Variable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Parameter"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/passesInto"/>
+            <Class IRI="/FunctionNode"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Reference"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/hasDestinationAddress"/>
+            <Class IRI="/Address"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Reference"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/hasSourceAddress"/>
+            <Class IRI="/Address"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Reference"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasOperandIndex"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Reference"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasReferenceType"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ReverseEngineeringFeatures"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasActivityProfile"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ReverseEngineeringFeatures"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasCategory"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ReverseEngineeringFeatures"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasDomain"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ReverseEngineeringFeatures"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasFileIOAPI"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ReverseEngineeringFeatures"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasFilePath"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ReverseEngineeringFeatures"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasIPAddress"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ReverseEngineeringFeatures"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasNetworkAPI"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ReverseEngineeringFeatures"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasRegistryKey"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ReverseEngineeringFeatures"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasRiskLevel"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ReverseEngineeringFeatures"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasSecurityFlag"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ReverseEngineeringFeatures"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasURL"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/StructuralNamespaceSymbol"/>
+        <Class IRI="/NamespaceSymbol"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Symbol"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/atAddress"/>
+            <Class IRI="/Address"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Symbol"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/hasPrimaryReference"/>
+            <Class IRI="/Reference"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Symbol"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/hasReference"/>
+            <Class IRI="/Reference"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Variable"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasDataType"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="/Address"/>
+        <Class IRI="/Reference"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="/Class"/>
+        <Class IRI="/DLL"/>
+        <Class IRI="/FunctionNode"/>
+        <Class IRI="/Namespace"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="/Label"/>
+        <Class IRI="/NamespaceSymbol"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="/LocalVariable"/>
+        <Class IRI="/Parameter"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/calls"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/callsVulnerable"/>
+        <ObjectProperty IRI="/calls"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/definedIn"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/dependsOnFunction"/>
+        <ObjectProperty IRI="#dependsOn"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/dependsOnModule"/>
+        <ObjectProperty IRI="#dependsOn"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/hasDestinationAddress"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/hasDestinationOperand"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/hasPrimaryReference"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/hasReference"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/hasSourceAddress"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/hasSourceOperand"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/inferredCalledBy"/>
+        <ObjectProperty IRI="/calledBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/inferredCalls"/>
+        <ObjectProperty IRI="/calls"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/moduleDependencyTo"/>
+        <ObjectProperty IRI="#dependencyTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/providesDependencyTo"/>
+        <ObjectProperty IRI="#dependencyTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/relatedToFunction"/>
+        <ObjectProperty IRI="#relatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/relatedToModule"/>
+        <ObjectProperty IRI="#relatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/returns"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/vulnerableVia"/>
+        <ObjectProperty IRI="/calledBy"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#dependencyTo"/>
+        <ObjectProperty IRI="#dependsOn"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasNode"/>
+        <ObjectProperty IRI="#nodeHasAddress"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#symbolHasAddress"/>
+        <ObjectProperty IRI="/hasSymbol"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/atAddress"/>
+        <ObjectProperty IRI="/memoryContainsInstruction"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/belongsToBinary"/>
+        <ObjectProperty IRI="/containsModule"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/belongsToModule"/>
+        <ObjectProperty IRI="/containsFunction"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/bequeaths"/>
+        <ObjectProperty IRI="/inherits"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/calledBy"/>
+        <ObjectProperty IRI="/calls"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/callsVulnerable"/>
+        <ObjectProperty IRI="/vulnerableVia"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/containedIn"/>
+        <ObjectProperty IRI="/containsInstruction"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/contentFor"/>
+        <ObjectProperty IRI="/hasContent"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/definedIn"/>
+        <ObjectProperty IRI="/defines"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/definedInNamespace"/>
+        <ObjectProperty IRI="/namespaceDefines"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/definesLocal"/>
+        <ObjectProperty IRI="/localDefinedIn"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/dependsOnFunction"/>
+        <ObjectProperty IRI="/providesDependencyTo"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/dependsOnModule"/>
+        <ObjectProperty IRI="/moduleDependencyTo"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasDestinationAddress"/>
+        <ObjectProperty IRI="/isDestinationAddressFor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasDestinationOperand"/>
+        <ObjectProperty IRI="/isDestionationOperandFor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasMetadata"/>
+        <ObjectProperty IRI="/metadataFor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasPrimaryReference"/>
+        <ObjectProperty IRI="/isPrimaryReferenceOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasReference"/>
+        <ObjectProperty IRI="/isReferenceFor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasSourceAddress"/>
+        <ObjectProperty IRI="/isSourceAddressFor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasSourceOperand"/>
+        <ObjectProperty IRI="/isSourceOperandFor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/inferredCalledBy"/>
+        <ObjectProperty IRI="/inferredCalls"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/isReturnedBy"/>
+        <ObjectProperty IRI="/returns"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/networkRecv"/>
+        <ObjectProperty IRI="/networkSend"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/passesInto"/>
+        <ObjectProperty IRI="/takesArgument"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/referencedBy"/>
+        <ObjectProperty IRI="/references"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/taintFlowsFrom"/>
+        <ObjectProperty IRI="/taintFlowsTo"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="/atAddress"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="/contentFor"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="/definedIn"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="/definedInNamespace"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="/hasContent"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="/hasDestinationAddress"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="/hasDestinationOperand"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="/hasMetadata"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="/hasPrimaryReference"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="/hasSourceAddress"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="/metadataFor"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="/returns"/>
+    </FunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#relatedTo"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="/functionalSibling"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="/relatedToFunction"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="/relatedToModule"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="/similarPurpose"/>
+    </SymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#dependencyTo"/>
+        <Class IRI="/KnowledgeNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#dependsOn"/>
+        <Class IRI="/KnowledgeNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasNode"/>
+        <Class IRI="/Address"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#nodeHasAddress"/>
+        <Class IRI="/Metadata"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#relatedTo"/>
+        <Class IRI="/KnowledgeNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#symbolHasAddress"/>
+        <Class IRI="/Symbol"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/atAddress"/>
+        <Class IRI="/Instruction"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/belongsToBinary"/>
+        <Class IRI="/ModuleNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/belongsToModule"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/bequeaths"/>
+        <Class IRI="/KnowledgeNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/calledBy"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/calls"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/callsVulnerable"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/containedIn"/>
+        <Class IRI="/Instruction"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/containsFunction"/>
+        <Class IRI="/ModuleNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/containsInstruction"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/containsModule"/>
+        <Class IRI="/BinaryNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/contentFor"/>
+        <Class IRI="/Content"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/definedIn"/>
+        <ObjectUnionOf>
+            <Class IRI="/FunctionNode"/>
+            <Class IRI="/Label"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/definedInNamespace"/>
+        <ObjectUnionOf>
+            <Class IRI="/Class"/>
+            <Class IRI="/DLL"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/defines"/>
+        <Class IRI="/StructuralNamespaceSymbol"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/definesLocal"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/dependsOnFunction"/>
+        <ObjectUnionOf>
+            <Class IRI="/FunctionNode"/>
+            <Class IRI="/ModuleNode"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/dependsOnModule"/>
+        <Class IRI="/ModuleNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/functionalSibling"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasContent"/>
+        <Class IRI="/KnowledgeNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasDestinationAddress"/>
+        <Class IRI="/Reference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasDestinationOperand"/>
+        <Class IRI="/Instruction"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasMetadata"/>
+        <Class IRI="/KnowledgeNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasPrimaryReference"/>
+        <Class IRI="/Symbol"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasReference"/>
+        <Class IRI="/Symbol"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasSourceAddress"/>
+        <Class IRI="/Reference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasSourceOperand"/>
+        <Class IRI="/Instruction"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasSymbol"/>
+        <Class IRI="/Address"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/inferredCalledBy"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/inferredCalls"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/inherits"/>
+        <Class IRI="/KnowledgeNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isDestinationAddressFor"/>
+        <Class IRI="/Address"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isDestionationOperandFor"/>
+        <Class IRI="/Operand"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isPrimaryReferenceOf"/>
+        <Class IRI="/Reference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isReferenceFor"/>
+        <Class IRI="/Reference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isReturnedBy"/>
+        <Class IRI="/Parameter"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isSourceAddressFor"/>
+        <Class IRI="/Address"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isSourceOperandFor"/>
+        <Class IRI="/Operand"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/localDefinedIn"/>
+        <Class IRI="/LocalVariable"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/memoryContainsInstruction"/>
+        <Class IRI="/Address"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/metadataFor"/>
+        <Class IRI="/Metadata"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/moduleDependencyTo"/>
+        <Class IRI="/ModuleNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/namespaceDefines"/>
+        <Class IRI="/Namespace"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/networkRecv"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/networkSend"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/passesInto"/>
+        <Class IRI="/Parameter"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/providesDependencyTo"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/referencedBy"/>
+        <Class IRI="/KnowledgeNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/references"/>
+        <Class IRI="/KnowledgeNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/relatedToFunction"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/relatedToModule"/>
+        <Class IRI="/ModuleNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/returns"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/similarPurpose"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/taintFlowsFrom"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/taintFlowsTo"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/takesArgument"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/vulnerableVia"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#dependencyTo"/>
+        <Class IRI="/KnowledgeNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#dependsOn"/>
+        <Class IRI="/KnowledgeNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasNode"/>
+        <Class IRI="/Metadata"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#nodeHasAddress"/>
+        <Class IRI="/Address"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#relatedTo"/>
+        <Class IRI="/KnowledgeNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#symbolHasAddress"/>
+        <Class IRI="/Address"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/atAddress"/>
+        <Class IRI="/Address"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/belongsToBinary"/>
+        <Class IRI="/BinaryNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/belongsToModule"/>
+        <Class IRI="/ModuleNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/bequeaths"/>
+        <Class IRI="/KnowledgeNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/calledBy"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/calls"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/callsVulnerable"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/containedIn"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/containsFunction"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/containsInstruction"/>
+        <Class IRI="/Instruction"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/containsModule"/>
+        <Class IRI="/ModuleNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/contentFor"/>
+        <Class IRI="/KnowledgeNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/definedIn"/>
+        <Class IRI="/StructuralNamespaceSymbol"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/definedInNamespace"/>
+        <Class IRI="/Namespace"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/defines"/>
+        <ObjectUnionOf>
+            <Class IRI="/FunctionNode"/>
+            <Class IRI="/Label"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/definesLocal"/>
+        <Class IRI="/LocalVariable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/dependsOnFunction"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/dependsOnModule"/>
+        <Class IRI="/ModuleNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/functionalSibling"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasContent"/>
+        <Class IRI="/Content"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasDestinationAddress"/>
+        <Class IRI="/Address"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasDestinationOperand"/>
+        <Class IRI="/Operand"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasMetadata"/>
+        <Class IRI="/Metadata"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasPrimaryReference"/>
+        <Class IRI="/Reference"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasReference"/>
+        <Class IRI="/Reference"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasSourceAddress"/>
+        <Class IRI="/Address"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasSourceOperand"/>
+        <Class IRI="/Operand"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasSymbol"/>
+        <Class IRI="/Symbol"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/inferredCalledBy"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/inferredCalls"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/inherits"/>
+        <Class IRI="/KnowledgeNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isDestinationAddressFor"/>
+        <Class IRI="/Reference"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isDestionationOperandFor"/>
+        <Class IRI="/Instruction"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isPrimaryReferenceOf"/>
+        <Class IRI="/Symbol"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isReferenceFor"/>
+        <Class IRI="/Symbol"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isReturnedBy"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isSourceAddressFor"/>
+        <Class IRI="/Reference"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isSourceOperandFor"/>
+        <Class IRI="/Instruction"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/localDefinedIn"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/memoryContainsInstruction"/>
+        <Class IRI="/Instruction"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/metadataFor"/>
+        <Class IRI="/KnowledgeNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/moduleDependencyTo"/>
+        <Class IRI="/ModuleNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/namespaceDefines"/>
+        <ObjectUnionOf>
+            <Class IRI="/Class"/>
+            <Class IRI="/DLL"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/networkRecv"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/networkSend"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/passesInto"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/providesDependencyTo"/>
+        <ObjectUnionOf>
+            <Class IRI="/FunctionNode"/>
+            <Class IRI="/ModuleNode"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/referencedBy"/>
+        <Class IRI="/KnowledgeNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/references"/>
+        <Class IRI="/KnowledgeNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/relatedToFunction"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/relatedToModule"/>
+        <Class IRI="/ModuleNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/returns"/>
+        <Class IRI="/Parameter"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/similarPurpose"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/taintFlowsFrom"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/taintFlowsTo"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/takesArgument"/>
+        <Class IRI="/Parameter"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/vulnerableVia"/>
+        <Class IRI="/FunctionNode"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/hasOperandIndex"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/createdAt"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/hasActivityProfile"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/hasAnalysisDepth"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/hasBinaryID"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/hasCategory"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/hasDataType"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/hasDecompiledCode"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/hasDisassembly"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/hasID"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/hasLLMSummary"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/hasName"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/hasOpcode"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/hasOperandIndex"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/hasOperandType"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/hasOperandValue"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/hasRawContent"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/hasReferenceType"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/hasReturnType"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/hasRiskLevel"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/hasSignature"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/hasSummaryConfidence"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/isStale"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/symbolHasAddress"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/updatedAt"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/userEdited"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="/belongsTo"/>
+        <Class IRI="/FunctionNode"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/createdAt"/>
+        <Class IRI="/Metadata"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasActivityProfile"/>
+        <Class IRI="/Content"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasAnalysisDepth"/>
+        <Class IRI="/Metadata"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasBinaryID"/>
+        <Class IRI="/Metadata"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasCategory"/>
+        <Class IRI="/Content"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasDataType"/>
+        <Class IRI="/Variable"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasDecompiledCode"/>
+        <Class IRI="/Content"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasDisassembly"/>
+        <Class IRI="/Content"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasDomain"/>
+        <Class IRI="/Content"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasFileIOAPI"/>
+        <Class IRI="/Content"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasFilePath"/>
+        <Class IRI="/Content"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasID"/>
+        <Class IRI="/Metadata"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasIPAddress"/>
+        <Class IRI="/Content"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasLLMSummary"/>
+        <Class IRI="/Content"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasName"/>
+        <ObjectUnionOf>
+            <Class IRI="/KnowledgeNode"/>
+            <Class IRI="/Metadata"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasNetworkAPI"/>
+        <Class IRI="/Content"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasOpcode"/>
+        <Class IRI="/Instruction"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasOperandIndex"/>
+        <Class IRI="/Reference"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasOperandType"/>
+        <Class IRI="/Operand"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasOperandValue"/>
+        <Class IRI="/Operand"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasRawContent"/>
+        <Class IRI="/Content"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasReferenceType"/>
+        <Class IRI="/Reference"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasRegistryKey"/>
+        <Class IRI="/Content"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasReturnType"/>
+        <Class IRI="/FunctionNode"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasRiskLevel"/>
+        <Class IRI="/Content"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasSecurityFlag"/>
+        <Class IRI="/Content"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasSignature"/>
+        <Class IRI="/Content"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasSummaryConfidence"/>
+        <Class IRI="/Content"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasURL"/>
+        <Class IRI="/Content"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/hasVectorEmbedding"/>
+        <Class IRI="/Content"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/isStale"/>
+        <Class IRI="/Metadata"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/symbolHasAddress"/>
+        <Class IRI="/Symbol"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/updatedAt"/>
+        <Class IRI="/Metadata"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/userEdited"/>
+        <Class IRI="/Metadata"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="/belongsTo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/createdAt"/>
+        <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasActivityProfile"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasAnalysisDepth"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasBinaryID"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasCategory"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasDataType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasDecompiledCode"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasDisassembly"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasDomain"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasFileIOAPI"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasFilePath"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasID"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasIPAddress"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasLLMSummary"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasNetworkAPI"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasOpcode"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasOperandIndex"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasOperandType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasOperandValue"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasRawContent"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasReferenceType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasRegistryKey"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasReturnType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasRiskLevel"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasSecurityFlag"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasSignature"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasSummaryConfidence"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasURL"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/hasVectorEmbedding"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/isStale"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/symbolHasAddress"/>
+        <Datatype abbreviatedIRI="xsd:long"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/updatedAt"/>
+        <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/userEdited"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#dependencyTo</IRI>
+        <Literal>inverse of dependsOn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dependencyTo</IRI>
+        <Literal>dependencyTo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#dependsOn</IRI>
+        <Literal>local dependency between components</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dependsOn</IRI>
+        <Literal>dependsOn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasNode</IRI>
+        <Literal>inverse of nodeHasAddress</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasNode</IRI>
+        <Literal>hasNode</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#nodeHasAddress</IRI>
+        <Literal>indicates the memory address the node is located at</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#nodeHasAddress</IRI>
+        <Literal>nodeHasAddress</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#relatedTo</IRI>
+        <Literal>signifies related functionality without a direct call relationship</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#relatedTo</IRI>
+        <Literal>relatedTo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#symbolHasAddress</IRI>
+        <Literal>specifies the memory address the symbol is located in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#symbolHasAddress</IRI>
+        <Literal>symbolHasAddress</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Address</IRI>
+        <Literal>Physical address in memory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Address</IRI>
+        <Literal>Address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/BinaryNode</IRI>
+        <Literal>represents overall program semantics and attack surface</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/BinaryNode</IRI>
+        <Literal>BinaryNode</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Class</IRI>
+        <Literal>represents a class in a program (for object oriented programming)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Class</IRI>
+        <Literal>Class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Content</IRI>
+        <Literal>object that includes all the content related properties for one knowledge node</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Content</IRI>
+        <Literal>Content</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/DLL</IRI>
+        <Literal>represents an function defined externally of the given binary</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/DLL</IRI>
+        <Literal>ExternalFunctionNode</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/FunctionNode</IRI>
+        <Literal>a function defined by the ghidra decompilation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/FunctionNode</IRI>
+        <Literal>FunctionNode</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Instruction</IRI>
+        <Literal>assembly instruction gotten from the disassembly in ghidra</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Instruction</IRI>
+        <Literal>Instruction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/KnowledgeNode</IRI>
+        <Literal>represents the semantic graph nodes from GhidrAssist</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/KnowledgeNode</IRI>
+        <Literal>KnowledgeNode</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Label</IRI>
+        <Literal>a string name given to a memory address, acts like a global variable in the context of this ontology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Label</IRI>
+        <Literal>Label</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/LocalVariable</IRI>
+        <Literal>the variables defined within a function and only used locally</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/LocalVariable</IRI>
+        <Literal>LocalVariable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Metadata</IRI>
+        <Literal>contains the properties of metadata for the given node</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Metadata</IRI>
+        <Literal>Metadata</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/ModuleNode</IRI>
+        <Literal>represents subsystems and logial groupings</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/ModuleNode</IRI>
+        <Literal>ModuleNode</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Namespace</IRI>
+        <Literal>a namespace defined by the ghidra decompilation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Namespace</IRI>
+        <Literal>Namespace</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/NamespaceSymbol</IRI>
+        <Literal>a type of symbol that can hold other kinds of symbols</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/NamespaceSymbol</IRI>
+        <Literal>NamespaceSymbol</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Operand</IRI>
+        <Literal>operand for an instruction, tells the CPU where to use or put the data from an instruction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Operand</IRI>
+        <Literal>Operand</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Parameter</IRI>
+        <Literal>the variables that hold data that are either passed into a function or returned from a function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Parameter</IRI>
+        <Literal>Parameter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Reference</IRI>
+        <Literal>This class represents an identifier to a symbol, that uses a source address and destination address to do so.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Reference</IRI>
+        <Literal>Reference</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/ReverseEngineeringFeatures</IRI>
+        <Literal>indicates the reverse engineering feature data properties for a given node (only applies to FunctionNodes)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/ReverseEngineeringFeatures</IRI>
+        <Literal>ReverseEngineeringFeatures</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/StructuralNamespaceSymbol</IRI>
+        <Literal>A type of namespace symbol that can define non-local symbols (all namespace symbols that are not functions since they operate differently)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/StructuralNamespaceSymbol</IRI>
+        <Literal>StructuralNamespaceSymbol</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Symbol</IRI>
+        <Literal>an association between a memory address and name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Symbol</IRI>
+        <Literal>Symbol</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Variable</IRI>
+        <Literal>a type of object that holds data within a function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Variable</IRI>
+        <Literal>Variable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/atAddress</IRI>
+        <Literal>specifies where an instruction is located in memory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/atAddress</IRI>
+        <Literal>atAddress</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/belongsTo</IRI>
+        <Literal>represents the relation of a function belonging to a community. The function that gets this relation in the extension does not have the target node as an object so instead it&apos;s id (which is tracked by the edge itself) is used as the target).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/belongsTo</IRI>
+        <Literal>belongsToCommunity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/belongsToBinary</IRI>
+        <Literal>inverse of containsModule</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/belongsToBinary</IRI>
+        <Literal>belongsToBinary</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/belongsToModule</IRI>
+        <Literal>where a node (function) belongs to a module / community cluster</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/belongsToModule</IRI>
+        <Literal>belongsToCommunity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/bequeaths</IRI>
+        <Literal>inverse of inherits</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/bequeaths</IRI>
+        <Literal>bequeaths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/calledBy</IRI>
+        <Literal>inverse of calls</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/calledBy</IRI>
+        <Literal>calledBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/calls</IRI>
+        <Literal>specifies a calling relation between a function and another function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/calls</IRI>
+        <Literal>calls</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/callsVulnerable</IRI>
+        <Literal>where one fuction calls or uses another vulnerable function, directed from caller to vulnerable callee</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/callsVulnerable</IRI>
+        <Literal>callsVulnerable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/containedIn</IRI>
+        <Literal>inverse of containsInstruction (function containsInstruction instruction)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/containedIn</IRI>
+        <Literal>containedIn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/containsFunction</IRI>
+        <Literal>hierarchical containment between module and function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/containsFunction</IRI>
+        <Literal>containsFunction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/containsInstruction</IRI>
+        <Literal>specifies the instructions contained in a specific function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/containsInstruction</IRI>
+        <Literal>containsInstruction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/containsModule</IRI>
+        <Literal>hierarchical containment from binary to module</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/containsModule</IRI>
+        <Literal>containsModule</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/contentFor</IRI>
+        <Literal>inverse of hasContent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/contentFor</IRI>
+        <Literal>contentFor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/createdAt</IRI>
+        <Literal>indicates when the node was created</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/createdAt</IRI>
+        <Literal>createdAt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/definedIn</IRI>
+        <Literal>specifies the namespace symbol that the function is defined in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/definedIn</IRI>
+        <Literal>definedIn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/definedInNamespace</IRI>
+        <Literal>specifys the objects that can be defined within a given namespace</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/definedInNamespace</IRI>
+        <Literal>definedInNamespace</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/defines</IRI>
+        <Literal>specifies a function or label that the given namespace defines (specifically the structural namespace symbol)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/defines</IRI>
+        <Literal>defines</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/definesLocal</IRI>
+        <Literal>Specifies a local variable that a function defines locally</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/definesLocal</IRI>
+        <Literal>definesLocal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/dependsOnFunction</IRI>
+        <Literal>logical dependency between functions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/dependsOnFunction</IRI>
+        <Literal>dependsOnFunction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/dependsOnModule</IRI>
+        <Literal>logical dependency between modules</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/dependsOnModule</IRI>
+        <Literal>dependsOnModule</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/functionalSibling</IRI>
+        <Literal>functions that are siblings in the same module</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/functionalSibling</IRI>
+        <Literal>sibling</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasActivityProfile</IRI>
+        <Literal>indicates the computed activity profile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasActivityProfile</IRI>
+        <Literal>hasActivityProfile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasAnalysisDepth</IRI>
+        <Literal>indicates how many times the given node has been analyzed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasAnalysisDepth</IRI>
+        <Literal>hasAnalysisDepth</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasBinaryID</IRI>
+        <Literal>indicates the program hash</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasBinaryID</IRI>
+        <Literal>hasBinaryID</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasCategory</IRI>
+        <Literal>indicates the semantic category for the function, aka the general purpose/category of the function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasCategory</IRI>
+        <Literal>hasCategory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasContent</IRI>
+        <Literal>specifies content related properties for the given node</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasContent</IRI>
+        <Literal>hasContent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasDataType</IRI>
+        <Literal>The data type of the given variable expressed as a string</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasDataType</IRI>
+        <Literal>hasDataType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasDecompiledCode</IRI>
+        <Literal>contains all the decompiled code for a function/node</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasDecompiledCode</IRI>
+        <Literal>hasDecompiledCode</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasDestinationAddress</IRI>
+        <Literal>specifies where the destination address of a given reference is</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasDestinationAddress</IRI>
+        <Literal>hasDestinationAddress</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasDestinationOperand</IRI>
+        <Literal>specifies the destination operand of a given instruction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasDestinationOperand</IRI>
+        <Literal>hasDestinationOperand</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasDisassembly</IRI>
+        <Literal>contains all the disassembly for the given function/node</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasDisassembly</IRI>
+        <Literal>hasDisassembly</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasDomain</IRI>
+        <Literal>indicates detected domain names as strings in the function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasDomain</IRI>
+        <Literal>hasDomain</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasFileIOAPI</IRI>
+        <Literal>indicates file IO API calls in the given function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasFileIOAPI</IRI>
+        <Literal>hasFileIOAPI</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasFilePath</IRI>
+        <Literal>indicates detected file paths as strings in the function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasFilePath</IRI>
+        <Literal>hasFilePath</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasID</IRI>
+        <Literal>indicates the UUID for the given node</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasID</IRI>
+        <Literal>hasID</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasIPAddress</IRI>
+        <Literal>indicates detected IP addresses from strings in the function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasIPAddress</IRI>
+        <Literal>hasIPAddress</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasLLMSummary</IRI>
+        <Literal>contains the LLM summary for the given function/node</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasLLMSummary</IRI>
+        <Literal>hasLLMSummary</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasMetadata</IRI>
+        <Literal>specifies metadata related properties of the given node</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasMetadata</IRI>
+        <Literal>hasMetadata</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasName</IRI>
+        <Literal>gets the name of a given function/symbol</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasName</IRI>
+        <Literal>hasName</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasNetworkAPI</IRI>
+        <Literal>indicates network api calls present in the given function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasNetworkAPI</IRI>
+        <Literal>hasNetworkAPI</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasOpcode</IRI>
+        <Literal>specifies the opcode as a string of a given instruction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasOpcode</IRI>
+        <Literal>hasOpcode</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasOperandIndex</IRI>
+        <Literal>specifies the operand index of a reference</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasOperandIndex</IRI>
+        <Literal>hasOperandIndex</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasOperandType</IRI>
+        <Literal>specify the type of a given operand as a string</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasOperandType</IRI>
+        <Literal>hasOperandType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasOperandValue</IRI>
+        <Literal>specifies the literal value of an operand as a string</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasOperandValue</IRI>
+        <Literal>hasOperandValue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasPrimaryReference</IRI>
+        <Literal>specifies the primary reference of a given symbol (since a symbol can have multiple reference, but only one can be designated as the primary)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasPrimaryReference</IRI>
+        <Literal>hasPrimaryReference</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasRawContent</IRI>
+        <Literal>contains the raw content of the node, which can be decompiled code, assembly, description, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasRawContent</IRI>
+        <Literal>hasRawContent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasReference</IRI>
+        <Literal>specifies a reference that the symbol has</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasReference</IRI>
+        <Literal>hasReference</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasReferenceType</IRI>
+        <Literal>specifies the reference type given as a string</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasReferenceType</IRI>
+        <Literal>hasReferenceType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasRegistryKey</IRI>
+        <Literal>indicates detected registry keys as strings in the function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasRegistryKey</IRI>
+        <Literal>hasRegistryKey</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasReturnType</IRI>
+        <Literal>The data type of the variable returned by a function expressed as a string</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasReturnType</IRI>
+        <Literal>hasReturnType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasRiskLevel</IRI>
+        <Literal>indicates computed risk level (low, medium, or high)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasRiskLevel</IRI>
+        <Literal>hasRiskLevel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasSecurityFlag</IRI>
+        <Literal>indicates security annotations given as certain flags for a function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasSecurityFlag</IRI>
+        <Literal>hasSecurityFlag</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasSignature</IRI>
+        <Literal>indicates the reverse engineering byte signature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasSignature</IRI>
+        <Literal>hasSignature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasSourceAddress</IRI>
+        <Literal>specifies the source address of a given reference</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasSourceAddress</IRI>
+        <Literal>hasSourceAddress</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasSourceOperand</IRI>
+        <Literal>specifies a source operand of a given instruction (can have 0 or more)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasSourceOperand</IRI>
+        <Literal>hasSourceOperand</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasSummaryConfidence</IRI>
+        <Literal>indicates the confidence level from the LLM summary</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasSummaryConfidence</IRI>
+        <Literal>hasSummaryConfidence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasSymbol</IRI>
+        <Literal>inverse of symbolHasAddress</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasSymbol</IRI>
+        <Literal>hasSymbol</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasURL</IRI>
+        <Literal>indicates detected URLs in strings in the function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasURL</IRI>
+        <Literal>hasURL</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasVectorEmbedding</IRI>
+        <Literal>indicates any vector embeddings from the node</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasVectorEmbedding</IRI>
+        <Literal>hasVectorEmbedding</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/inferredCalledBy</IRI>
+        <Literal>inverse of inferredCalls</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/inferredCalledBy</IRI>
+        <Literal>inferredCalledBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/inferredCalls</IRI>
+        <Literal>heuristic function call relationship inferred from decompiled content</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/inferredCalls</IRI>
+        <Literal>inferredCalls</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/inherits</IRI>
+        <Literal>type/class inheritance relationships</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/inherits</IRI>
+        <Literal>inherits</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isDestinationAddressFor</IRI>
+        <Literal>inverse of hasDestinationAddress</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isDestinationAddressFor</IRI>
+        <Literal>isDestinationAddressFor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isDestionationOperandFor</IRI>
+        <Literal>inverse of hasDestinationOperand</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isDestionationOperandFor</IRI>
+        <Literal>isDestinationOperandFor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isPrimaryReferenceOf</IRI>
+        <Literal>inverse of hasPrimaryReference</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isPrimaryReferenceOf</IRI>
+        <Literal>isPrimaryReferenceFor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isReferenceFor</IRI>
+        <Literal>inverse of hasReference</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isReferenceFor</IRI>
+        <Literal>isReferenceFor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isReturnedBy</IRI>
+        <Literal>inverse of returns</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isReturnedBy</IRI>
+        <Literal>retrunedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isSourceAddressFor</IRI>
+        <Literal>inverse of hasSourceAddress</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isSourceAddressFor</IRI>
+        <Literal>isSourceAddressFor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isSourceOperandFor</IRI>
+        <Literal>inverse of hasSourceOperand</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isSourceOperandFor</IRI>
+        <Literal>isSourceOperandFor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isStale</IRI>
+        <Literal>indicates if the given node&apos;s summarization is stale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isStale</IRI>
+        <Literal>isStale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/localDefinedIn</IRI>
+        <Literal>specifies which function an local variable is defined in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/localDefinedIn</IRI>
+        <Literal>localDefinedIn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/memoryContainsInstruction</IRI>
+        <Literal>inverse of atAddress</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/memoryContainsInstruction</IRI>
+        <Literal>memoryContainsInstruction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/metadataFor</IRI>
+        <Literal>inverse of hasMetadata</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/metadataFor</IRI>
+        <Literal>metadataFor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/moduleDependencyTo</IRI>
+        <Literal>inverse of dependsOnModule</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/moduleDependencyTo</IRI>
+        <Literal>moduleDependencyTo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/namespaceDefines</IRI>
+        <Literal>inverse of definedIn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/namespaceDefines</IRI>
+        <Literal>namespaceDefines</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/networkRecv</IRI>
+        <Literal>inverse of networkSend</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/networkRecv</IRI>
+        <Literal>networkRecv</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/networkSend</IRI>
+        <Literal>connection from caller to network send API</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/networkSend</IRI>
+        <Literal>networkSend</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/passesInto</IRI>
+        <Literal>specifies what parameters or data are passed into a function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/passesInto</IRI>
+        <Literal>passesInto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/providesDependencyTo</IRI>
+        <Literal>inverse of dependsOnFunction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/providesDependencyTo</IRI>
+        <Literal>functionDependencyTo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/referencedBy</IRI>
+        <Literal>inverse of references</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/referencedBy</IRI>
+        <Literal>referencedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/references</IRI>
+        <Literal>cross-references</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/references</IRI>
+        <Literal>references</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/relatedToFunction</IRI>
+        <Literal>related functionality without a direct call relationship from a module to a function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/relatedToFunction</IRI>
+        <Literal>relatedToFunction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/relatedToModule</IRI>
+        <Literal>related functionality without direct call relationship between modules</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/relatedToModule</IRI>
+        <Literal>relatedToModule</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/returns</IRI>
+        <Literal>specifies the variable or data returned from a function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/returns</IRI>
+        <Literal>returns</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/similarPurpose</IRI>
+        <Literal>represent functions with similar semantic purpose</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/similarPurpose</IRI>
+        <Literal>similarPurpose</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/symbolHasAddress</IRI>
+        <Literal>specifies where a given symbol is located in memory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/symbolHasAddress</IRI>
+        <Literal>symbolHasAddress</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/taintFlowsFrom</IRI>
+        <Literal>inverse of taintFlowsTo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/taintFlowsFrom</IRI>
+        <Literal>taintFlowsFrom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/taintFlowsTo</IRI>
+        <Literal>taint propagation path, directed from taint source through intermediates to sink</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/taintFlowsTo</IRI>
+        <Literal>taintFlowsTo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/takesArgument</IRI>
+        <Literal>inverse of passesInto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/takesArgument</IRI>
+        <Literal>takesArgument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/updatedAt</IRI>
+        <Literal>indicates the last time the node was updated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/updatedAt</IRI>
+        <Literal>updatedAt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/userEdited</IRI>
+        <Literal>indicates if the user edited the LLM summary</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/userEdited</IRI>
+        <Literal>userEdited</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/vulnerableVia</IRI>
+        <Literal>represents potential vulnerability path, directed from source to sink in taint analysis</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/vulnerableVia</IRI>
+        <Literal>vulnerableVia</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
 
-<http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology> rdf:type owl:Ontology .
-
-#################################################################
-#    Object Properties
-#################################################################
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#belongsToBinary
-:belongsToBinary rdf:type owl:ObjectProperty ;
-                 owl:inverseOf :containsModule ;
-                 rdfs:domain :ModuleNode ;
-                 rdfs:range :BinaryNode ;
-                 rdfs:comment "inverse of containsModule" ;
-                 rdfs:label "belongsToBinary" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#belongsToModule
-:belongsToModule rdf:type owl:ObjectProperty ;
-                 owl:inverseOf :containsFunction ;
-                 rdfs:domain :FunctionNode ;
-                 rdfs:range :ModuleNode ;
-                 rdfs:comment "where a node (function) belongs to a module / community cluster" ;
-                 rdfs:label "belongsToModule" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#bequeaths
-:bequeaths rdf:type owl:ObjectProperty ;
-           owl:inverseOf :inherits ;
-           rdfs:domain :KnowledgeNode ;
-           rdfs:range :KnowledgeNode ;
-           rdfs:comment "inverse of inherits" ;
-           rdfs:label "bequeaths" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#callsVulnerable
-:callsVulnerable rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf :calls ;
-                 owl:inverseOf :vulnerableVia ;
-                 rdfs:domain :FunctionNode ;
-                 rdfs:range :FunctionNode ;
-                 rdfs:comment "where one fuction calls or uses another vulnerable function, directed from caller to vulnerable callee" ;
-                 rdfs:label "callsVulnerable" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#containsFunction
-:containsFunction rdf:type owl:ObjectProperty ;
-                  rdfs:domain :ModuleNode ;
-                  rdfs:range :FunctionNode ;
-                  rdfs:comment "hierarchical containment between module and function" ;
-                  rdfs:label "containsFunction" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#containsModule
-:containsModule rdf:type owl:ObjectProperty ;
-                rdfs:domain :BinaryNode ;
-                rdfs:range :ModuleNode ;
-                rdfs:comment "hierarchical containment from binary to module" ;
-                rdfs:label "containsModule" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#contentFor
-:contentFor rdf:type owl:ObjectProperty ;
-            owl:inverseOf :hasContent ;
-            rdfs:domain :Content ;
-            rdfs:range :KnowledgeNode .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#definedInNamespace
-:definedInNamespace rdf:type owl:ObjectProperty ;
-                    owl:inverseOf :namespaceDefines ;
-                    rdf:type owl:FunctionalProperty ;
-                    rdfs:domain [ rdf:type owl:Class ;
-                                  owl:unionOf ( :Class
-                                                :DLL
-                                              )
-                                ] ;
-                    rdfs:range :Namespace ;
-                    rdfs:comment "specifys the objects that can be defined within a given namespace" ;
-                    rdfs:label "definedInNamespace" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#defines
-:defines rdf:type owl:ObjectProperty ;
-         owl:inverseOf :definedIn ;
-         rdfs:domain :StructuralNamespaceSymbol ;
-         rdfs:range [ rdf:type owl:Class ;
-                      owl:unionOf ( :FunctionNode
-                                    :Label
-                                  )
-                    ] ;
-         rdfs:comment "specifies a function or label that the given namespace defines (specifically the structural namespace symbol)" ;
-         rdfs:label "defines" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#definesLocal
-:definesLocal rdf:type owl:ObjectProperty ;
-              owl:inverseOf :localDefinedIn ;
-              rdfs:domain :FunctionNode ;
-              rdfs:range :LocalVariable ;
-              rdfs:comment "Specifies a local variable that a function defines locally" ;
-              rdfs:label "definesLocal" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#dependsOnFunction
-:dependsOnFunction rdf:type owl:ObjectProperty ;
-                   owl:inverseOf :providesDependencyTo ;
-                   rdfs:domain [ rdf:type owl:Class ;
-                                 owl:unionOf ( :ModuleNode
-                                               :FunctionNode
-                                             )
-                               ] ;
-                   rdfs:range :FunctionNode ;
-                   rdfs:comment "logical dependency between functions" ;
-                   rdfs:label "dependsOnFunction" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#dependsOnModule
-:dependsOnModule rdf:type owl:ObjectProperty ;
-                 owl:inverseOf :moduleDependencyTo ;
-                 rdfs:domain :ModuleNode ;
-                 rdfs:range :ModuleNode ;
-                 rdfs:comment "logical dependency between modules" ;
-                 rdfs:label "dependsOnModule" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#functionRelatedTo
-:functionRelatedTo rdf:type owl:ObjectProperty ;
-                   owl:inverseOf :relatedToFunction ;
-                   rdfs:domain :FunctionNode ;
-                   rdfs:range [ rdf:type owl:Class ;
-                                owl:unionOf ( :ModuleNode
-                                              :FunctionNode
-                                            )
-                              ] ;
-                   rdfs:comment "inverse of relatedToFunction" ;
-                   rdfs:label "functionRelatedTo" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#functionalSibling
-:functionalSibling rdf:type owl:ObjectProperty ,
-                            owl:SymmetricProperty ;
-                   rdfs:domain :FunctionNode ;
-                   rdfs:range :FunctionNode ;
-                   rdfs:comment "functions that are siblings in the same module" ;
-                   rdfs:label "sibling" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasContent
-:hasContent rdf:type owl:ObjectProperty ;
-            rdfs:domain :KnowledgeNode ;
-            rdfs:range :Content .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasFeatures
-:hasFeatures rdf:type owl:ObjectProperty ;
-             rdfs:domain :KnowledgeNode ;
-             rdfs:range :Content .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasMetadata
-:hasMetadata rdf:type owl:ObjectProperty ;
-             owl:inverseOf :metadataFor ;
-             rdfs:domain :KnowledgeNode ;
-             rdfs:range :Metadata .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#inferredCalledBy
-:inferredCalledBy rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf :calledBy ;
-                  owl:inverseOf :inferredCalls ;
-                  rdfs:domain :FunctionNode ;
-                  rdfs:range :FunctionNode ;
-                  rdfs:comment "inverse of inferredCalls" ;
-                  rdfs:label "inferredCalledBy" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#inferredCalls
-:inferredCalls rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf :calls ;
-               rdfs:domain :FunctionNode ;
-               rdfs:range :FunctionNode ;
-               rdfs:comment "heuristic function call relationship inferred from decompiled content" ;
-               rdfs:label "inferredCalls" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#inherits
-:inherits rdf:type owl:ObjectProperty ;
-          rdfs:domain :KnowledgeNode ;
-          rdfs:range :KnowledgeNode ;
-          rdfs:comment "type/class inheritance relationships" ;
-          rdfs:label "inherits" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#localDefinedIn
-:localDefinedIn rdf:type owl:ObjectProperty ;
-                rdfs:domain :LocalVariable ;
-                rdfs:range :FunctionNode ;
-                rdfs:comment "specifies which function an local variable is defined in" ;
-                rdfs:label "localDefinedIn" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#metadataFor
-:metadataFor rdf:type owl:ObjectProperty ;
-             rdfs:domain :Metadata ;
-             rdfs:range :KnowledgeNode .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#moduleDependencyTo
-:moduleDependencyTo rdf:type owl:ObjectProperty ;
-                    rdfs:domain :ModuleNode ;
-                    rdfs:range :ModuleNode ;
-                    rdfs:comment "inverse of dependsOnModule" ;
-                    rdfs:label "moduleDependencyTo" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#networkRecv
-:networkRecv rdf:type owl:ObjectProperty ;
-             owl:inverseOf :networkSend ;
-             rdfs:domain :FunctionNode ;
-             rdfs:range :FunctionNode ;
-             rdfs:comment "inverse of networkSend" ;
-             rdfs:label "networkRecv" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#networkSend
-:networkSend rdf:type owl:ObjectProperty ;
-             rdfs:domain :FunctionNode ;
-             rdfs:range :FunctionNode ;
-             rdfs:comment "connection from caller to network send API" ;
-             rdfs:label "networkSend" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#providesDependencyTo
-:providesDependencyTo rdf:type owl:ObjectProperty ;
-                      rdfs:domain :FunctionNode ;
-                      rdfs:range [ rdf:type owl:Class ;
-                                   owl:unionOf ( :ModuleNode
-                                                 :FunctionNode
-                                               )
-                                 ] ;
-                      rdfs:comment "inverse of dependsOnFunction" ;
-                      rdfs:label "functionDependencyTo" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#referencedBy
-:referencedBy rdf:type owl:ObjectProperty ;
-              owl:inverseOf :references ;
-              rdfs:domain :KnowledgeNode ;
-              rdfs:range :KnowledgeNode ;
-              rdfs:comment "inverse of references" ;
-              rdfs:label "referencedBy" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#references
-:references rdf:type owl:ObjectProperty ;
-            rdfs:domain :KnowledgeNode ;
-            rdfs:range :KnowledgeNode ;
-            rdfs:comment "cross-references" ;
-            rdfs:label "references" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#relatedToFunction
-:relatedToFunction rdf:type owl:ObjectProperty ;
-                   rdfs:domain [ rdf:type owl:Class ;
-                                 owl:unionOf ( :ModuleNode
-                                               :FunctionNode
-                                             )
-                               ] ;
-                   rdfs:range :FunctionNode ;
-                   rdfs:comment "related functionality without a direct call relationship from a module to a function" ;
-                   rdfs:label "relatedToFunction" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#relatedToModule
-:relatedToModule rdf:type owl:ObjectProperty ,
-                          owl:SymmetricProperty ;
-                 rdfs:domain :ModuleNode ;
-                 rdfs:range :ModuleNode ;
-                 rdfs:comment "related functionality without direct call relationship between modules" ;
-                 rdfs:label "relatedToModule" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#similarPurpose
-:similarPurpose rdf:type owl:ObjectProperty ,
-                         owl:SymmetricProperty ;
-                rdfs:domain :FunctionNode ;
-                rdfs:range :FunctionNode ;
-                rdfs:comment "represent functions with similar semantic purpose" ;
-                rdfs:label "similarPurpose" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#taintFlowsFrom
-:taintFlowsFrom rdf:type owl:ObjectProperty ;
-                owl:inverseOf :taintFlowsTo ;
-                rdfs:domain :FunctionNode ;
-                rdfs:range :FunctionNode ;
-                rdfs:comment "inverse of taintFlowsTo" ;
-                rdfs:label "taintFlowsFrom" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#taintFlowsTo
-:taintFlowsTo rdf:type owl:ObjectProperty ;
-              rdfs:domain :FunctionNode ;
-              rdfs:range :FunctionNode ;
-              rdfs:comment "taint propagation path, directed from taint source through intermediates to sink" ;
-              rdfs:label "taintFlowsTo" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#vulnerableVia
-:vulnerableVia rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf :calledBy ;
-               rdfs:domain :FunctionNode ;
-               rdfs:range :FunctionNode ;
-               rdfs:comment "represents potential vulnerability path, directed from source to sink in taint analysis" ;
-               rdfs:label "vulnerableVia" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/atAddress
-:atAddress rdf:type owl:ObjectProperty ;
-           owl:inverseOf :memoryContainsInstruction ;
-           rdf:type owl:FunctionalProperty ;
-           rdfs:domain :Instruction ;
-           rdfs:range :Address ;
-           rdfs:comment "specifies where an instruction is located in memory" ;
-           rdfs:label "atAddress" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/calledBy
-:calledBy rdf:type owl:ObjectProperty ;
-          owl:inverseOf :calls ;
-          rdfs:domain :FunctionNode ;
-          rdfs:range :FunctionNode ;
-          rdfs:comment "inverse of calls" ;
-          rdfs:label "calledBy" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/calls
-:calls rdf:type owl:ObjectProperty ;
-       rdfs:subPropertyOf owl:topObjectProperty ;
-       rdfs:domain :FunctionNode ;
-       rdfs:range :FunctionNode ;
-       rdfs:comment "specifies a calling relation between a function and another function" ;
-       rdfs:label "calls" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/containedIn
-:containedIn rdf:type owl:ObjectProperty ;
-             owl:inverseOf :containsInstruction ;
-             rdfs:domain :Instruction ;
-             rdfs:range :FunctionNode ;
-             rdfs:comment "inverse of containsInstruction (function containsInstruction instruction)" ;
-             rdfs:label "containedIn" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/containsInstruction
-:containsInstruction rdf:type owl:ObjectProperty ;
-                     rdfs:domain :FunctionNode ;
-                     rdfs:range :Instruction ;
-                     rdfs:comment "specifies the instructions contained in a specific function" ;
-                     rdfs:label "containsInstruction" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/definedIn
-:definedIn rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf owl:topObjectProperty ;
-           rdf:type owl:FunctionalProperty ;
-           rdfs:domain [ rdf:type owl:Class ;
-                         owl:unionOf ( :FunctionNode
-                                       :Label
-                                     )
-                       ] ;
-           rdfs:range :StructuralNamespaceSymbol ;
-           rdfs:comment "specifies the namespace symbol that the function is defined in" ;
-           rdfs:label "definedIn" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasAddress
-:hasAddress rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf owl:topObjectProperty ;
-            owl:inverseOf :hasSymbol ;
-            rdf:type owl:FunctionalProperty ;
-            rdfs:domain :Symbol ;
-            rdfs:range :Address ;
-            rdfs:comment "specifies where a given symbol is located in memory" ;
-            rdfs:label "symbolHasAddress" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasDestinationAddress
-:hasDestinationAddress rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf owl:topObjectProperty ;
-                       owl:inverseOf :isDestinationAddressFor ;
-                       rdf:type owl:FunctionalProperty ;
-                       rdfs:domain :Reference ;
-                       rdfs:range :Address ;
-                       rdfs:comment "specifies where the destination address of a given reference is" ;
-                       rdfs:label "hasDestinationAddress" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasDestinationOperand
-:hasDestinationOperand rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf owl:topObjectProperty ;
-                       owl:inverseOf :isDestionationOperandFor ;
-                       rdf:type owl:FunctionalProperty ;
-                       rdfs:domain :Instruction ;
-                       rdfs:range :Operand ;
-                       rdfs:comment "specifies the destination operand of a given instruction" ;
-                       rdfs:label "hasDestinationOperand" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasPrimaryReference
-:hasPrimaryReference rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf owl:topObjectProperty ;
-                     owl:inverseOf :isPrimaryReferenceOf ;
-                     rdf:type owl:FunctionalProperty ;
-                     rdfs:domain :Symbol ;
-                     rdfs:range :Reference ;
-                     rdfs:comment "specifies the primary reference of a given symbol (since a symbol can have multiple reference, but only one can be designated as the primary)" ;
-                     rdfs:label "hasPrimaryReference" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasReference
-:hasReference rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf owl:topObjectProperty ;
-              owl:inverseOf :isReferenceFor ;
-              rdfs:domain :Symbol ;
-              rdfs:range :Reference ;
-              rdfs:comment "specifies a reference that the symbol has" ;
-              rdfs:label "hasReference" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasSourceAddress
-:hasSourceAddress rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf owl:topObjectProperty ;
-                  owl:inverseOf :isSourceAddressFor ;
-                  rdf:type owl:FunctionalProperty ;
-                  rdfs:domain :Reference ;
-                  rdfs:range :Address ;
-                  rdfs:comment "specifies the source address of a given reference" ;
-                  rdfs:label "hasSourceAddress" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasSourceOperand
-:hasSourceOperand rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf owl:topObjectProperty ;
-                  owl:inverseOf :isSourceOperandFor ;
-                  rdfs:domain :Instruction ;
-                  rdfs:range :Operand ;
-                  rdfs:comment "specifies a source operand of a given instruction (can have 0 or more)" ;
-                  rdfs:label "hasSourceOperand" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasSymbol
-:hasSymbol rdf:type owl:ObjectProperty ;
-           rdfs:domain :Address ;
-           rdfs:range :Symbol ;
-           rdfs:comment "inverse of hasAddress" ;
-           rdfs:label "hasSymbol" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/isDestinationAddressFor
-:isDestinationAddressFor rdf:type owl:ObjectProperty ;
-                         rdfs:domain :Address ;
-                         rdfs:range :Reference ;
-                         rdfs:comment "inverse of hasDestinationAddress" ;
-                         rdfs:label "isDestinationAddressFor" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/isDestionationOperandFor
-:isDestionationOperandFor rdf:type owl:ObjectProperty ;
-                          rdfs:domain :Operand ;
-                          rdfs:range :Instruction ;
-                          rdfs:comment "inverse of hasDestinationOperand" ;
-                          rdfs:label "isDestinationOperandFor" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/isPrimaryReferenceOf
-:isPrimaryReferenceOf rdf:type owl:ObjectProperty ;
-                      rdfs:domain :Reference ;
-                      rdfs:range :Symbol ;
-                      rdfs:comment "inverse of hasPrimaryReference" ;
-                      rdfs:label "isPrimaryReferenceFor" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/isReferenceFor
-:isReferenceFor rdf:type owl:ObjectProperty ;
-                rdfs:domain :Reference ;
-                rdfs:range :Symbol ;
-                rdfs:comment "inverse of hasReference" ;
-                rdfs:label "isReferenceFor" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/isReturnedBy
-:isReturnedBy rdf:type owl:ObjectProperty ;
-              owl:inverseOf :returns ;
-              rdfs:domain :Parameter ;
-              rdfs:range :FunctionNode ;
-              rdfs:comment "inverse of returns" ;
-              rdfs:label "retrunedBy" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/isSourceAddressFor
-:isSourceAddressFor rdf:type owl:ObjectProperty ;
-                    rdfs:domain :Address ;
-                    rdfs:range :Reference ;
-                    rdfs:comment "inverse of hasSourceAddress" ;
-                    rdfs:label "isSourceAddressFor" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/isSourceOperandFor
-:isSourceOperandFor rdf:type owl:ObjectProperty ;
-                    rdfs:domain :Operand ;
-                    rdfs:range :Instruction ;
-                    rdfs:comment "inverse of hasSourceOperand" ;
-                    rdfs:label "isSourceOperandFor" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/memoryContainsInstruction
-:memoryContainsInstruction rdf:type owl:ObjectProperty ;
-                           rdfs:domain :Address ;
-                           rdfs:range :Instruction ;
-                           rdfs:comment "inverse of atAddress" ;
-                           rdfs:label "memoryContainsInstruction" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/namespaceDefines
-:namespaceDefines rdf:type owl:ObjectProperty ;
-                  rdfs:domain :Namespace ;
-                  rdfs:range [ rdf:type owl:Class ;
-                               owl:unionOf ( :Class
-                                             :DLL
-                                           )
-                             ] ;
-                  rdfs:comment "inverse of definedIn" ;
-                  rdfs:label "namespaceDefines" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/passesInto
-:passesInto rdf:type owl:ObjectProperty ;
-            owl:inverseOf :takesArgument ;
-            rdfs:domain :Parameter ;
-            rdfs:range :FunctionNode ;
-            rdfs:comment "specifies what parameters or data are passed into a function" ;
-            rdfs:label "passesInto" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/returns
-:returns rdf:type owl:ObjectProperty ;
-         rdfs:subPropertyOf owl:topObjectProperty ;
-         rdf:type owl:FunctionalProperty ;
-         rdfs:domain :FunctionNode ;
-         rdfs:range :Parameter ;
-         rdfs:comment "specifies the variable or data returned from a function" ;
-         rdfs:label "returns" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/takesArgument
-:takesArgument rdf:type owl:ObjectProperty ;
-               rdfs:domain :FunctionNode ;
-               rdfs:range :Parameter ;
-               rdfs:comment "inverse of passesInto" ;
-               rdfs:label "takesArgument" .
-
-
-#################################################################
-#    Data properties
-#################################################################
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#createdAt
-:createdAt rdf:type owl:DatatypeProperty ,
-                    owl:FunctionalProperty ;
-           rdfs:domain :Metadata ;
-           rdfs:range xsd:dateTimeStamp ;
-           rdfs:comment "indicates when the node was created" ;
-           rdfs:label "createdAt" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasActivityProfile
-:hasActivityProfile rdf:type owl:DatatypeProperty ,
-                             owl:FunctionalProperty ;
-                    rdfs:domain :Content ;
-                    rdfs:range xsd:string ;
-                    rdfs:comment "indicates the computed activity profile" ;
-                    rdfs:label "hasActivityProfile" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasAddress
-:hasAddress rdf:type owl:DatatypeProperty ,
-                     owl:FunctionalProperty ;
-            rdfs:domain :Metadata ;
-            rdfs:range xsd:long ;
-            rdfs:comment "indicates the memory address the node is located at" ;
-            rdfs:label "hasAddress" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasAnalysisDepth
-:hasAnalysisDepth rdf:type owl:DatatypeProperty ,
-                           owl:FunctionalProperty ;
-                  rdfs:domain :Metadata ;
-                  rdfs:range xsd:int ;
-                  rdfs:comment "indicates how many times the given node has been analyzed" ;
-                  rdfs:label "hasAnalysisDepth" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasBinaryID
-:hasBinaryID rdf:type owl:DatatypeProperty ,
-                      owl:FunctionalProperty ;
-             rdfs:domain :Metadata ;
-             rdfs:range xsd:string ;
-             rdfs:comment "indicates the program hash" ;
-             rdfs:label "hasBinaryID" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasCategory
-:hasCategory rdf:type owl:DatatypeProperty ,
-                      owl:FunctionalProperty ;
-             rdfs:domain :Content ;
-             rdfs:range xsd:string ;
-             rdfs:comment "indicates the semantic category for the function, aka the general purpose/category of the function" ;
-             rdfs:label "hasCategory" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasDecompiledCode
-:hasDecompiledCode rdf:type owl:DatatypeProperty ,
-                            owl:FunctionalProperty ;
-                   rdfs:domain :Content ;
-                   rdfs:range xsd:string ;
-                   rdfs:comment "contains all the decompiled code for a function/node" ;
-                   rdfs:label "hasDecompiledCode" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasDisassembly
-:hasDisassembly rdf:type owl:DatatypeProperty ,
-                         owl:FunctionalProperty ;
-                rdfs:domain :Content ;
-                rdfs:range xsd:string ;
-                rdfs:comment "contains all the disassembly for the given function/node" ;
-                rdfs:label "hasDisassembly" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasDomain
-:hasDomain rdf:type owl:DatatypeProperty ;
-           rdfs:domain :Content ;
-           rdfs:range xsd:string ;
-           rdfs:comment "indicates detected domain names as strings in the function" ;
-           rdfs:label "hasDomain" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasFileIOAPI
-:hasFileIOAPI rdf:type owl:DatatypeProperty ;
-              rdfs:domain :Content ;
-              rdfs:range xsd:string ;
-              rdfs:comment "indicates file IO API calls in the given function" ;
-              rdfs:label "hasFileIOAPI" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasFilePath
-:hasFilePath rdf:type owl:DatatypeProperty ;
-             rdfs:domain :Content ;
-             rdfs:range xsd:string ;
-             rdfs:comment "indicates detected file paths as strings in the function" ;
-             rdfs:label "hasFilePath" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasID
-:hasID rdf:type owl:DatatypeProperty ,
-                owl:FunctionalProperty ;
-       rdfs:domain :Metadata ;
-       rdfs:range xsd:string ;
-       rdfs:comment "indicates the UUID for the given node" ;
-       rdfs:label "hasID" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasIPAddress
-:hasIPAddress rdf:type owl:DatatypeProperty ;
-              rdfs:domain :Content ;
-              rdfs:range xsd:string ;
-              rdfs:comment "indicates detected IP addresses from strings in the function" ;
-              rdfs:label "hasIPAddress" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasLLMSummary
-:hasLLMSummary rdf:type owl:DatatypeProperty ,
-                        owl:FunctionalProperty ;
-               rdfs:domain :Content ;
-               rdfs:range xsd:string ;
-               rdfs:comment "contains the LLM summary for the given function/node" ;
-               rdfs:label "hasLLMSummary" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasNetworkAPI
-:hasNetworkAPI rdf:type owl:DatatypeProperty ;
-               rdfs:domain :Content ;
-               rdfs:range xsd:string ;
-               rdfs:comment "indicates network api calls present in the given function" ;
-               rdfs:label "hasNetworkAPI" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasRawContent
-:hasRawContent rdf:type owl:DatatypeProperty ,
-                        owl:FunctionalProperty ;
-               rdfs:domain :Content ;
-               rdfs:range xsd:string ;
-               rdfs:comment "contains the raw content of the node, which can be decompiled code, assembly, description, etc." ;
-               rdfs:label "hasRawContent" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasRegistryKey
-:hasRegistryKey rdf:type owl:DatatypeProperty ;
-                rdfs:domain :Content ;
-                rdfs:range xsd:string ;
-                rdfs:comment "indicates detected registry keys as strings in the function" ;
-                rdfs:label "hasRegistryKey" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasRiskLevel
-:hasRiskLevel rdf:type owl:DatatypeProperty ,
-                       owl:FunctionalProperty ;
-              rdfs:domain :Content ;
-              rdfs:range xsd:string ;
-              rdfs:comment "indicates computed risk level (low, medium, or high)" ;
-              rdfs:label "hasRiskLevel" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasSecurityFlag
-:hasSecurityFlag rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :Content ;
-                 rdfs:range xsd:string ;
-                 rdfs:comment "indicates security annotations given as certain flags for a function" ;
-                 rdfs:label "hasSecurityFlag" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasSignature
-:hasSignature rdf:type owl:DatatypeProperty ,
-                       owl:FunctionalProperty ;
-              rdfs:domain :Content ;
-              rdfs:range xsd:string ;
-              rdfs:comment "indicates the reverse engineering byte signature" ;
-              rdfs:label "hasSignature" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasSummaryConfidence
-:hasSummaryConfidence rdf:type owl:DatatypeProperty ,
-                               owl:FunctionalProperty ;
-                      rdfs:domain :Content ;
-                      rdfs:range xsd:string ;
-                      rdfs:comment "indicates the confidence level from the LLM summary" ;
-                      rdfs:label "hasSummaryConfidence" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasURL
-:hasURL rdf:type owl:DatatypeProperty ;
-        rdfs:domain :Content ;
-        rdfs:range xsd:string ;
-        rdfs:comment "indicates detected URLs in strings in the function" ;
-        rdfs:label "hasURL" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#hasVectorEmbedding
-:hasVectorEmbedding rdf:type owl:DatatypeProperty ;
-                    rdfs:domain :Content ;
-                    rdfs:range xsd:float ;
-                    rdfs:comment "indicates any vector embeddings from the node" ;
-                    rdfs:label "hasVectorEmbedding" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#isStale
-:isStale rdf:type owl:DatatypeProperty ,
-                  owl:FunctionalProperty ;
-         rdfs:domain :Metadata ;
-         rdfs:range xsd:boolean ;
-         rdfs:comment "indicates if the given node's summarization is stale" ;
-         rdfs:label "isStale" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#updatedAt
-:updatedAt rdf:type owl:DatatypeProperty ,
-                    owl:FunctionalProperty ;
-           rdfs:domain :Metadata ;
-           rdfs:range xsd:dateTimeStamp ;
-           rdfs:comment "indicates the last time the node was updated" ;
-           rdfs:label "updatedAt" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#userEdited
-:userEdited rdf:type owl:DatatypeProperty ,
-                     owl:FunctionalProperty ;
-            rdfs:domain :Metadata ;
-            rdfs:range xsd:boolean ;
-            rdfs:comment "indicates if the user edited the LLM summary" ;
-            rdfs:label "userEdited" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasDataType
-:hasDataType rdf:type owl:DatatypeProperty ,
-                      owl:FunctionalProperty ;
-             rdfs:domain :Variable ;
-             rdfs:range xsd:string ;
-             rdfs:comment "The data type of the given variable expressed as a string" ;
-             rdfs:label "hasDataType" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasName
-:hasName rdf:type owl:DatatypeProperty ,
-                  owl:FunctionalProperty ;
-         rdfs:domain [ rdf:type owl:Class ;
-                       owl:unionOf ( :Metadata
-                                     :FunctionNode
-                                   )
-                     ] ;
-         rdfs:range xsd:string ;
-         rdfs:comment "gets the name of a given function/symbol" ;
-         rdfs:label "hasName" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasOpcode
-:hasOpcode rdf:type owl:DatatypeProperty ,
-                    owl:FunctionalProperty ;
-           rdfs:domain :Instruction ;
-           rdfs:range xsd:string ;
-           rdfs:comment "specifies the opcode as a string of a given instruction" ;
-           rdfs:label "hasOpcode" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasOperandIndex
-:hasOperandIndex rdf:type owl:DatatypeProperty ;
-                 rdfs:subPropertyOf owl:topDataProperty ;
-                 rdf:type owl:FunctionalProperty ;
-                 rdfs:domain :Reference ;
-                 rdfs:range xsd:integer ;
-                 rdfs:comment "specifies the operand index of a reference" ;
-                 rdfs:label "hasOperandIndex" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasOperandType
-:hasOperandType rdf:type owl:DatatypeProperty ,
-                         owl:FunctionalProperty ;
-                rdfs:domain :Operand ;
-                rdfs:range xsd:string ;
-                rdfs:comment "specify the type of a given operand as a string" ;
-                rdfs:label "hasOperandType" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasOperandValue
-:hasOperandValue rdf:type owl:DatatypeProperty ,
-                          owl:FunctionalProperty ;
-                 rdfs:domain :Operand ;
-                 rdfs:range xsd:string ;
-                 rdfs:comment "specifies the literal value of an operand as a string" ;
-                 rdfs:label "hasOperandValue" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasReferenceType
-:hasReferenceType rdf:type owl:DatatypeProperty ,
-                           owl:FunctionalProperty ;
-                  rdfs:domain :Reference ;
-                  rdfs:range xsd:string ;
-                  rdfs:comment "specifies the reference type given as a string" ;
-                  rdfs:label "hasReferenceType" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/hasReturnType
-:hasReturnType rdf:type owl:DatatypeProperty ,
-                        owl:FunctionalProperty ;
-               rdfs:domain :FunctionNode ;
-               rdfs:range xsd:string ;
-               rdfs:comment "The data type of the variable returned by a function expressed as a string" ;
-               rdfs:label "hasReturnType" .
-
-
-#################################################################
-#    Classes
-#################################################################
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#BinaryNode
-:BinaryNode rdf:type owl:Class ;
-            rdfs:subClassOf :KnowledgeNode ;
-            rdfs:comment "represents overall program semantics and attack surface" ;
-            rdfs:label "BinaryNode" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#Content
-:Content rdf:type owl:Class ;
-         rdfs:subClassOf [ rdf:type owl:Restriction ;
-                           owl:onProperty :hasDecompiledCode ;
-                           owl:someValuesFrom xsd:string
-                         ] ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :hasDisassembly ;
-                           owl:someValuesFrom xsd:string
-                         ] ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :hasLLMSummary ;
-                           owl:someValuesFrom xsd:string
-                         ] ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :hasRawContent ;
-                           owl:someValuesFrom xsd:string
-                         ] ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :hasSignature ;
-                           owl:someValuesFrom xsd:string
-                         ] ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :hasSummaryConfidence ;
-                           owl:someValuesFrom xsd:float
-                         ] ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :hasVectorEmbedding ;
-                           owl:someValuesFrom xsd:float
-                         ] .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#KnowledgeNode
-:KnowledgeNode rdf:type owl:Class ;
-               rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasContent ;
-                                 owl:someValuesFrom :Content
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasFeatures ;
-                                 owl:someValuesFrom :ReverseEngineeringFeatures
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasMetadata ;
-                                 owl:someValuesFrom :Metadata
-                               ] ;
-               rdfs:comment "represents the semantic graph nodes from GhidrAssist" ;
-               rdfs:label "KnowledgeNode" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#Metadata
-:Metadata rdf:type owl:Class ;
-          rdfs:subClassOf [ rdf:type owl:Restriction ;
-                            owl:onProperty :createdAt ;
-                            owl:someValuesFrom xsd:dateTimeStamp
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :hasAddress ;
-                            owl:someValuesFrom xsd:long
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :hasAnalysisDepth ;
-                            owl:someValuesFrom xsd:int
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :hasBinaryID ;
-                            owl:someValuesFrom xsd:string
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :hasID ;
-                            owl:someValuesFrom xsd:string
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :isStale ;
-                            owl:someValuesFrom xsd:boolean
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :updatedAt ;
-                            owl:someValuesFrom xsd:dateTimeStamp
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :userEdited ;
-                            owl:someValuesFrom xsd:boolean
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :hasName ;
-                            owl:someValuesFrom xsd:string
-                          ] ;
-          rdfs:comment "contains the properties of metadata for the given node" ;
-          rdfs:label "Metadata" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#ModuleNode
-:ModuleNode rdf:type owl:Class ;
-            rdfs:subClassOf :KnowledgeNode ;
-            rdfs:comment "represents subsystems and logial groupings" ;
-            rdfs:label "ModuleNode" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology#ReverseEngineeringFeatures
-:ReverseEngineeringFeatures rdf:type owl:Class ;
-                            rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                              owl:onProperty :hasActivityProfile ;
-                                              owl:someValuesFrom xsd:string
-                                            ] ,
-                                            [ rdf:type owl:Restriction ;
-                                              owl:onProperty :hasCategory ;
-                                              owl:someValuesFrom xsd:string
-                                            ] ,
-                                            [ rdf:type owl:Restriction ;
-                                              owl:onProperty :hasDomain ;
-                                              owl:someValuesFrom xsd:string
-                                            ] ,
-                                            [ rdf:type owl:Restriction ;
-                                              owl:onProperty :hasFileIOAPI ;
-                                              owl:someValuesFrom xsd:string
-                                            ] ,
-                                            [ rdf:type owl:Restriction ;
-                                              owl:onProperty :hasFilePath ;
-                                              owl:someValuesFrom xsd:string
-                                            ] ,
-                                            [ rdf:type owl:Restriction ;
-                                              owl:onProperty :hasIPAddress ;
-                                              owl:someValuesFrom xsd:string
-                                            ] ,
-                                            [ rdf:type owl:Restriction ;
-                                              owl:onProperty :hasNetworkAPI ;
-                                              owl:someValuesFrom xsd:string
-                                            ] ,
-                                            [ rdf:type owl:Restriction ;
-                                              owl:onProperty :hasRegistryKey ;
-                                              owl:someValuesFrom xsd:string
-                                            ] ,
-                                            [ rdf:type owl:Restriction ;
-                                              owl:onProperty :hasRiskLevel ;
-                                              owl:someValuesFrom xsd:string
-                                            ] ,
-                                            [ rdf:type owl:Restriction ;
-                                              owl:onProperty :hasSecurityFlag ;
-                                              owl:someValuesFrom xsd:string
-                                            ] ,
-                                            [ rdf:type owl:Restriction ;
-                                              owl:onProperty :hasURL ;
-                                              owl:someValuesFrom xsd:string
-                                            ] ;
-                            rdfs:comment "indicates the reverse engineering feature data properties for a given node (only applies to FunctionNodes)" ;
-                            rdfs:label "ReverseEngineeringFeatures" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Address
-:Address rdf:type owl:Class ;
-         owl:disjointWith :Reference ;
-         rdfs:comment "Physical address in memory" ;
-         rdfs:label "Address" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Class
-:Class rdf:type owl:Class ;
-       rdfs:subClassOf :StructuralNamespaceSymbol ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :definedIn ;
-                         owl:someValuesFrom :Namespace
-                       ] ;
-       rdfs:comment "represents a class in a program (for object oriented programming)" ;
-       rdfs:label "Class" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/DLL
-:DLL rdf:type owl:Class ;
-     rdfs:subClassOf :FunctionNode ,
-                     :StructuralNamespaceSymbol ,
-                     [ rdf:type owl:Restriction ;
-                       owl:onProperty :definedIn ;
-                       owl:someValuesFrom :Namespace
-                     ] ;
-     rdfs:comment "represents an function defined externally of the given binary" ;
-     rdfs:label "ExternalFunctionNode" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/FunctionNode
-:FunctionNode rdf:type owl:Class ;
-              rdfs:subClassOf :KnowledgeNode ,
-                              :NamespaceSymbol ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :definesLocal ;
-                                owl:someValuesFrom :LocalVariable
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :calls ;
-                                owl:someValuesFrom :FunctionNode
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :containsInstruction ;
-                                owl:someValuesFrom :Instruction
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :definedIn ;
-                                owl:someValuesFrom :StructuralNamespaceSymbol
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :returns ;
-                                owl:someValuesFrom :Parameter
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :returns ;
-                                owl:someValuesFrom :Variable
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasName ;
-                                owl:someValuesFrom xsd:string
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasReturnType ;
-                                owl:someValuesFrom xsd:string
-                              ] ;
-              rdfs:comment "a function defined by the ghidra decompilation" ;
-              rdfs:label "FunctionNode" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Instruction
-:Instruction rdf:type owl:Class ;
-             rdfs:subClassOf [ rdf:type owl:Restriction ;
-                               owl:onProperty :atAddress ;
-                               owl:someValuesFrom :Address
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty :hasDestinationOperand ;
-                               owl:someValuesFrom :Operand
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty :hasSourceOperand ;
-                               owl:someValuesFrom :Operand
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty :hasOpcode ;
-                               owl:someValuesFrom xsd:string
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty :hasReturnType ;
-                               owl:someValuesFrom xsd:string
-                             ] ;
-             rdfs:comment "assembly instruction gotten from the disassembly in ghidra" ;
-             rdfs:label "Instruction" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Label
-:Label rdf:type owl:Class ;
-       rdfs:subClassOf :Symbol ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :definedIn ;
-                         owl:someValuesFrom :StructuralNamespaceSymbol
-                       ] ;
-       owl:disjointWith :NamespaceSymbol ;
-       rdfs:comment "a string name given to a memory address, acts like a global variable in the context of this ontology" ;
-       rdfs:label "Label" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/LocalVariable
-:LocalVariable rdf:type owl:Class ;
-               rdfs:subClassOf :Variable ;
-               owl:disjointWith :Parameter ;
-               rdfs:comment "the variables defined within a function and only used locally" ;
-               rdfs:label "LocalVariable" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Namespace
-:Namespace rdf:type owl:Class ;
-           rdfs:subClassOf :StructuralNamespaceSymbol ;
-           rdfs:comment "a namespace defined by the ghidra decompilation" ;
-           rdfs:label "Namespace" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/NamespaceSymbol
-:NamespaceSymbol rdf:type owl:Class ;
-                 rdfs:subClassOf :Symbol ;
-                 rdfs:comment "a type of symbol that can hold other kinds of symbols" ;
-                 rdfs:label "NamespaceSymbol" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Operand
-:Operand rdf:type owl:Class ;
-         rdfs:subClassOf [ rdf:type owl:Restriction ;
-                           owl:onProperty :hasOperandType ;
-                           owl:someValuesFrom xsd:string
-                         ] ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :hasOperandValue ;
-                           owl:someValuesFrom xsd:string
-                         ] ;
-         rdfs:comment "operand for an instruction, tells the CPU where to use or put the data from an instruction" ;
-         rdfs:label "Operand" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Parameter
-:Parameter rdf:type owl:Class ;
-           rdfs:subClassOf :Variable ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :passesInto ;
-                             owl:someValuesFrom :FunctionNode
-                           ] ;
-           rdfs:comment "the variables that hold data that are either passed into a function or returned from a function" ;
-           rdfs:label "Parameter" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Reference
-:Reference rdf:type owl:Class ;
-           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                             owl:onProperty :hasDestinationAddress ;
-                             owl:someValuesFrom :Address
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :hasSourceAddress ;
-                             owl:someValuesFrom :Address
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :hasOperandIndex ;
-                             owl:someValuesFrom xsd:integer
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :hasReferenceType ;
-                             owl:someValuesFrom xsd:string
-                           ] ;
-           rdfs:comment "This class represents an identifier to a symbol, that uses a source address and destination address to do so." ;
-           rdfs:label "Reference" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/StructuralNamespaceSymbol
-:StructuralNamespaceSymbol rdf:type owl:Class ;
-                           rdfs:subClassOf :NamespaceSymbol ;
-                           rdfs:comment "A type of namespace symbol that can define non-local symbols (all namespace symbols that are not functions since they operate differently)" ;
-                           rdfs:label "StructuralNamespaceSymbol" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Symbol
-:Symbol rdf:type owl:Class ;
-        rdfs:subClassOf [ rdf:type owl:Restriction ;
-                          owl:onProperty :atAddress ;
-                          owl:someValuesFrom :Address
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasPrimaryReference ;
-                          owl:someValuesFrom :Reference
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasReference ;
-                          owl:someValuesFrom :Reference
-                        ] ;
-        rdfs:comment "an association between a memory address and name" ;
-        rdfs:label "Symbol" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/symbol-ontology/Variable
-:Variable rdf:type owl:Class ;
-          rdfs:subClassOf [ rdf:type owl:Restriction ;
-                            owl:onProperty :hasDataType ;
-                            owl:someValuesFrom xsd:string
-                          ] ;
-          rdfs:comment "a type of object that holds data within a function" ;
-          rdfs:label "Variable" .
-
-
-#################################################################
-#    General axioms
-#################################################################
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :Class
-                :DLL
-                :FunctionNode
-                :Namespace
-              )
-] .
-
-
-###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

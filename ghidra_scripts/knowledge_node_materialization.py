@@ -35,21 +35,34 @@ pfs = {
 }
 
 # Object properties
-# TODO: add rest of object relations here
+#TODO: fix depends on and related to so they better fit the schema
+## Structural Properties
+CONTAINS = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/contains")
 CALLS = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/calls")
 INFERRED_CALLS = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/inferredCalls")
+REFERENCES = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/references")
+INHERITS = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/inherits")
+## Semantic Edges
+SIMILAR_PURPOSE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/similarPurpose")
+DEPENDS_ON = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/dependsOn")
+RELATED_TO = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/relatedTo")
+## Security Edges
 VULNERABLE_VIA = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/vulnerableVia")
 TAINT_FLOWS_TO = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/taintFlowsTo")
-CONTAINS = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/contains")
+CALLS_VULNERABLE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/callsVulnerable")
+NETWORK_SEND = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/networkSend")
+## Community Edges 
+BELONGS_TO_COMMUNITY = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/belongsToCommunity")
+SIBLING = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/sibling")
 
 
 # Data properties 
-# TODO: fill out this section
-BELONGS_TO_COMMUNITY = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/belongsToCommunity")
+# TODO: fill out this section with node properties
 HAS_NAME = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasName")
 
 
 # classes
+# TODO: add classes for content and metadata
 FUNCTION_NODE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/FunctionNode")
 EXTERNAL_FUNCTION_NODE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/ExternalFunctionNode")
 BINARY_NODE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/BinaryNode")
@@ -58,13 +71,26 @@ MODULE_NODE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combine
 
 
 edge_dict = {
+    "CONTAINS": CONTAINS,
     "CALLS" : CALLS,
     "INFERRED_CALLS": INFERRED_CALLS,
+    "REFERENCES": REFERENCES,
+    "INHERITS": INHERITS,
+    
+    "SIMILAR_PURPOSE": SIMILAR_PURPOSE,
+    "DEPENDS_ON": DEPENDS_ON,
+    "RELATED_TO": RELATED_TO,
+    
+    
     "VULNERABLE_VIA": VULNERABLE_VIA,
     "TAINT_FLOWS_TO": TAINT_FLOWS_TO,
-    "CONTAINS": CONTAINS,
-    "BELONGS_TO_COMMUNITY": BELONGS_TO_COMMUNITY
+    "CALLS_VULNERABLE": CALLS_VULNERABLE,
+    "NETWORK_SEND": NETWORK_SEND,
+    
+    "BELONGS_TO_COMMUNITY": BELONGS_TO_COMMUNITY,
+    "SIBLING": SIBLING
     }
+
 
 class_dict = {
     "FUNCTION": FUNCTION_NODE,

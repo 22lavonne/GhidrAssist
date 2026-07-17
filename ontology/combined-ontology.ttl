@@ -12,6 +12,58 @@
 #    Object Properties
 #################################################################
 
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology#dependencyTo
+:dependencyTo rdf:type owl:ObjectProperty ;
+              owl:inverseOf :dependsOn ;
+              rdfs:domain :KnowledgeNode ;
+              rdfs:range :KnowledgeNode ;
+              rdfs:comment "inverse of dependsOn" ;
+              rdfs:label "dependencyTo" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology#dependsOn
+:dependsOn rdf:type owl:ObjectProperty ;
+           rdfs:domain :KnowledgeNode ;
+           rdfs:range :KnowledgeNode ;
+           rdfs:comment "local dependency between components" ;
+           rdfs:label "dependsOn" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology#hasNode
+:hasNode rdf:type owl:ObjectProperty ;
+         owl:inverseOf :nodeHasAddress ;
+         rdfs:domain :Address ;
+         rdfs:range :Metadata ;
+         rdfs:comment "inverse of nodeHasAddress" ;
+         rdfs:label "hasNode" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology#nodeHasAddress
+:nodeHasAddress rdf:type owl:ObjectProperty ;
+                rdfs:domain :Metadata ;
+                rdfs:range :Address ;
+                rdfs:comment "indicates the memory address the node is located at" ;
+                rdfs:label "nodeHasAddress" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology#relatedTo
+:relatedTo rdf:type owl:ObjectProperty ,
+                    owl:SymmetricProperty ;
+           rdfs:domain :KnowledgeNode ;
+           rdfs:range :KnowledgeNode ;
+           rdfs:comment "signifies related functionality without a direct call relationship" ;
+           rdfs:label "relatedTo" .
+
+
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology#symbolHasAddress
+:symbolHasAddress rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :hasSymbol ;
+                  rdfs:domain :Symbol ;
+                  rdfs:range :Address ;
+                  rdfs:comment "specifies the memory address the symbol is located in" ;
+                  rdfs:label "symbolHasAddress" .
+
+
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/atAddress
 :atAddress rdf:type owl:ObjectProperty ;
            owl:inverseOf :memoryContainsInstruction ;
@@ -37,7 +89,7 @@
                  rdfs:domain :FunctionNode ;
                  rdfs:range :ModuleNode ;
                  rdfs:comment "where a node (function) belongs to a module / community cluster" ;
-                 rdfs:label "belongsToModule" .
+                 rdfs:label "belongsToCommunity" .
 
 
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/bequeaths
@@ -113,8 +165,11 @@
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/contentFor
 :contentFor rdf:type owl:ObjectProperty ;
             owl:inverseOf :hasContent ;
+            rdf:type owl:FunctionalProperty ;
             rdfs:domain :Content ;
-            rdfs:range :KnowledgeNode .
+            rdfs:range :KnowledgeNode ;
+            rdfs:comment "inverse of hasContent" ;
+            rdfs:label "contentFor" .
 
 
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/definedIn
@@ -169,6 +224,7 @@
 
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/dependsOnFunction
 :dependsOnFunction rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :dependsOn ;
                    owl:inverseOf :providesDependencyTo ;
                    rdfs:domain [ rdf:type owl:Class ;
                                  owl:unionOf ( :FunctionNode
@@ -182,24 +238,12 @@
 
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/dependsOnModule
 :dependsOnModule rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :dependsOn ;
                  owl:inverseOf :moduleDependencyTo ;
                  rdfs:domain :ModuleNode ;
                  rdfs:range :ModuleNode ;
                  rdfs:comment "logical dependency between modules" ;
                  rdfs:label "dependsOnModule" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/functionRelatedTo
-:functionRelatedTo rdf:type owl:ObjectProperty ;
-                   owl:inverseOf :relatedToFunction ;
-                   rdfs:domain :FunctionNode ;
-                   rdfs:range [ rdf:type owl:Class ;
-                                owl:unionOf ( :FunctionNode
-                                              :ModuleNode
-                                            )
-                              ] ;
-                   rdfs:comment "inverse of relatedToFunction" ;
-                   rdfs:label "functionRelatedTo" .
 
 
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/functionalSibling
@@ -211,20 +255,13 @@
                    rdfs:label "sibling" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasAddress
-:hasAddress rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf owl:topObjectProperty ;
-            owl:inverseOf :hasSymbol ;
-            rdf:type owl:FunctionalProperty ;
-            rdfs:domain :Metadata ,
-                        :Symbol ;
-            rdfs:range :Address .
-
-
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasContent
-:hasContent rdf:type owl:ObjectProperty ;
+:hasContent rdf:type owl:ObjectProperty ,
+                     owl:FunctionalProperty ;
             rdfs:domain :KnowledgeNode ;
-            rdfs:range :Content .
+            rdfs:range :Content ;
+            rdfs:comment "specifies content related properties for the given node" ;
+            rdfs:label "hasContent" .
 
 
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasDestinationAddress
@@ -249,17 +286,14 @@
                        rdfs:label "hasDestinationOperand" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasFeatures
-:hasFeatures rdf:type owl:ObjectProperty ;
-             rdfs:domain :KnowledgeNode ;
-             rdfs:range :Content .
-
-
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasMetadata
 :hasMetadata rdf:type owl:ObjectProperty ;
              owl:inverseOf :metadataFor ;
+             rdf:type owl:FunctionalProperty ;
              rdfs:domain :KnowledgeNode ;
-             rdfs:range :Metadata .
+             rdfs:range :Metadata ;
+             rdfs:comment "specifies metadata related properties of the given node" ;
+             rdfs:label "hasMetadata" .
 
 
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasPrimaryReference
@@ -308,7 +342,7 @@
 :hasSymbol rdf:type owl:ObjectProperty ;
            rdfs:domain :Address ;
            rdfs:range :Symbol ;
-           rdfs:comment "inverse of hasAddress" ;
+           rdfs:comment "inverse of symbolHasAddress" ;
            rdfs:label "hasSymbol" .
 
 
@@ -413,13 +447,17 @@
 
 
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/metadataFor
-:metadataFor rdf:type owl:ObjectProperty ;
+:metadataFor rdf:type owl:ObjectProperty ,
+                      owl:FunctionalProperty ;
              rdfs:domain :Metadata ;
-             rdfs:range :KnowledgeNode .
+             rdfs:range :KnowledgeNode ;
+             rdfs:comment "inverse of hasMetadata" ;
+             rdfs:label "metadataFor" .
 
 
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/moduleDependencyTo
 :moduleDependencyTo rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :dependencyTo ;
                     rdfs:domain :ModuleNode ;
                     rdfs:range :ModuleNode ;
                     rdfs:comment "inverse of dependsOnModule" ;
@@ -466,6 +504,7 @@
 
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/providesDependencyTo
 :providesDependencyTo rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :dependencyTo ;
                       rdfs:domain :FunctionNode ;
                       rdfs:range [ rdf:type owl:Class ;
                                    owl:unionOf ( :FunctionNode
@@ -495,19 +534,18 @@
 
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/relatedToFunction
 :relatedToFunction rdf:type owl:ObjectProperty ;
-                   rdfs:domain [ rdf:type owl:Class ;
-                                 owl:unionOf ( :FunctionNode
-                                               :ModuleNode
-                                             )
-                               ] ;
+                   rdfs:subPropertyOf :relatedTo ;
+                   rdf:type owl:SymmetricProperty ;
+                   rdfs:domain :FunctionNode ;
                    rdfs:range :FunctionNode ;
                    rdfs:comment "related functionality without a direct call relationship from a module to a function" ;
                    rdfs:label "relatedToFunction" .
 
 
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/relatedToModule
-:relatedToModule rdf:type owl:ObjectProperty ,
-                          owl:SymmetricProperty ;
+:relatedToModule rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :relatedTo ;
+                 rdf:type owl:SymmetricProperty ;
                  rdfs:domain :ModuleNode ;
                  rdfs:range :ModuleNode ;
                  rdfs:comment "related functionality without direct call relationship between modules" ;
@@ -595,12 +633,6 @@
                     rdfs:range xsd:string ;
                     rdfs:comment "indicates the computed activity profile" ;
                     rdfs:label "hasActivityProfile" .
-
-
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasAddress
-:hasAddress rdf:type owl:DatatypeProperty ,
-                     owl:FunctionalProperty ;
-            rdfs:range xsd:long .
 
 
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasAnalysisDepth
@@ -860,6 +892,15 @@
          rdfs:label "isStale" .
 
 
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/symbolHasAddress
+:symbolHasAddress rdf:type owl:DatatypeProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:domain :Symbol ;
+                  rdfs:range xsd:long ;
+                  rdfs:comment "specifies where a given symbol is located in memory" ;
+                  rdfs:label "symbolHasAddress" .
+
+
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/updatedAt
 :updatedAt rdf:type owl:DatatypeProperty ,
                     owl:FunctionalProperty ;
@@ -936,7 +977,9 @@
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :hasVectorEmbedding ;
                            owl:someValuesFrom xsd:float
-                         ] .
+                         ] ;
+         rdfs:comment "object that includes all the content related properties for one knowledge node" ;
+         rdfs:label "Content" .
 
 
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/DLL
@@ -1024,10 +1067,6 @@
                                  owl:someValuesFrom :Content
                                ] ,
                                [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasFeatures ;
-                                 owl:someValuesFrom :ReverseEngineeringFeatures
-                               ] ,
-                               [ rdf:type owl:Restriction ;
                                  owl:onProperty :hasMetadata ;
                                  owl:someValuesFrom :Metadata
                                ] ;
@@ -1060,10 +1099,6 @@
           rdfs:subClassOf [ rdf:type owl:Restriction ;
                             owl:onProperty :createdAt ;
                             owl:someValuesFrom xsd:dateTimeStamp
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :hasAddress ;
-                            owl:someValuesFrom xsd:long
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :hasAnalysisDepth ;
@@ -1248,16 +1283,6 @@
                           ] ;
           rdfs:comment "a type of object that holds data within a function" ;
           rdfs:label "Variable" .
-
-
-#################################################################
-#    Annotations
-#################################################################
-
-:hasAddress rdfs:comment "indicates the memory address the node is located at" ,
-                         "specifies where a given symbol is located in memory" ;
-            rdfs:label "hasAddress" ,
-                       "symbolHasAddress" .
 
 
 #################################################################

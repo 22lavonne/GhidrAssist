@@ -68,8 +68,10 @@ for node in all_nodes:
     # get all the data properties for the nodes, adding them only if the getter methods for them return non null or empty
     # new_node["address"] = node.getAddress()
     #TODO: change some of these properties to strings if necessary
-    add_property(new_node, "address", node.getAddress())
-    add_property(new_node, "binaryId", node.getBinaryId())
+    if (node.getAddress() is not None):
+        # if the node has an address, put it in the same hex format Ghidra uses
+        add_property(new_node, "address", "{:08x}".format(node.getAddress()))
+    add_property(new_node, "binaryID", node.getBinaryId())
     add_property(new_node, "rawContent", node.getRawContent())
     add_property(new_node, "signature", node.getSignature())
     add_property(new_node, "decompiledCode", node.getDecompiledCode())

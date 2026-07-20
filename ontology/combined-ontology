@@ -1093,7 +1093,10 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/atAddress"/>
-        <Class IRI="/Instruction"/>
+        <ObjectUnionOf>
+            <Class IRI="/Instruction"/>
+            <Class IRI="/Symbol"/>
+        </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/belongsToBinary"/>
@@ -1513,7 +1516,10 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="/memoryContainsInstruction"/>
-        <Class IRI="/Instruction"/>
+        <ObjectUnionOf>
+            <Class IRI="/Instruction"/>
+            <Class IRI="/Symbol"/>
+        </ObjectUnionOf>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="/metadataFor"/>
@@ -1817,7 +1823,7 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="/createdAt"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
+        <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="/hasActivityProfile"/>
@@ -2224,7 +2230,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/atAddress</IRI>
-        <Literal>specifies where an instruction is located in memory</Literal>
+        <Literal>specifies where an instruction or symbol is located in memory</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2939,7 +2945,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/memoryContainsInstruction</IRI>
-        <Literal>memoryContainsInstruction</Literal>
+        <Literal>memoryContains</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

@@ -58,14 +58,49 @@ NETWORK_SEND = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combin
 BELONGS_TO_COMMUNITY = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/belongsToCommunity")
 SIBLING = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/sibling")
 
+## other
+AT_ADDRESS = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/atAddress")
+
+
 
 # Data properties 
-# TODO: fill out this section with node properties
+# Metadata properties
+CREATED_AT = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/createdAt")
+UPDATED_AT = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/updatedAt")
+USER_EDITED = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/userEdited")
+HAS_ID = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasID")
+# HAS_ADDRESS = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasAddress")
+HAS_BINARY_ID = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasBinaryID")
 HAS_NAME = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasName")
+HAS_ANALYSIS_DEPTH = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasAnalysisDepth")
+IS_STALE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/isStale")
+
+# content properties
+HAS_LLM_SUMMARY = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasLLMSummary")
+HAS_SUMMARY_CONFIDENCE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasSummaryConfidence")
+HAS_RAW_CONTENT = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasRawContent")
+HAS_DECOMPILED_CODE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasDecompiledCode")
+HAS_DISASSEMBLY = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasDisassembly")
+HAS_SIGNATURE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasSignature")
+HAS_VECTOR_EMBEDDING = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasVectorEmbedding")
+
+
+# reverse engineering properties
+HAS_RISK_LEVEL = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasRiskLevel")
+HAS_ACTIVITY_PROFILE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasActivityProfile")
+HAS_CATEGORY = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasCategory")
+HAS_SECURITY_FLAG = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasSecurityFlag")
+HAS_REGISTRY_KEY = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasRegistryKey")
+HAS_NETWORK_API = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasNetworkAPI")
+HAS_DOMAIN = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasDomain")
+HAS_FILE_IO_API = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasFileIOAPI")
+HAS_FILE_PATH = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasFilePath")
+HAS_URL = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasURL")
+HAS_IP_ADDRESS = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasIPAddress")
 
 
 # classes
-# TODO: add classes for content and metadata
+# TODO: add classes for content and metadata (maybe)
 FUNCTION_NODE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/FunctionNode")
 EXTERNAL_FUNCTION_NODE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/ExternalFunctionNode")
 BINARY_NODE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/BinaryNode")
@@ -93,6 +128,38 @@ edge_dict = {
     "SIBLING": SIBLING
     }
 
+property_dict = {
+    "createdAt": CREATED_AT,
+    "updatedAt": UPDATED_AT,
+    "isUserEdited": USER_EDITED,
+    "id": HAS_ID,
+    "address": AT_ADDRESS,
+    "binaryID": HAS_BINARY_ID,
+    "name": HAS_NAME,
+    "analysisDepth": HAS_ANALYSIS_DEPTH,
+    "isStale": IS_STALE,
+     
+    "llmSummary": HAS_LLM_SUMMARY,
+    "summaryConfidence": HAS_SUMMARY_CONFIDENCE,
+    "rawContent": HAS_RAW_CONTENT, 
+    "decompiledCode": HAS_DECOMPILED_CODE, 
+    "disassembly": HAS_DISASSEMBLY, 
+    "signature": HAS_SIGNATURE,
+    #TODO: change the list properties in this dict if needed
+    "vectorEmbeddings": HAS_VECTOR_EMBEDDING,
+    
+    "riskLevel": HAS_RISK_LEVEL,
+    "activityProfile": HAS_ACTIVITY_PROFILE, 
+    "category": HAS_CATEGORY,
+    "securityFlags": HAS_SECURITY_FLAG,
+    "registryKeys": HAS_REGISTRY_KEY, 
+    "networkAPIs": HAS_NETWORK_API,
+    "domains": HAS_DOMAIN,
+    "fileIOAPIs": HAS_FILE_IO_API,
+    "filePaths": HAS_FILE_PATH,
+    "URLs": HAS_URL,
+    "IPAddresses": HAS_IP_ADDRESS,
+    }
 
 class_dict = {
     "FUNCTION": FUNCTION_NODE,
@@ -119,9 +186,6 @@ if not dir_path.is_dir():
 
 script_dir = str(Path(__file__).resolve().parent)
 
-# node_path = script_dir + "/nodes.json"
-# print(node_path)
-# node_list = load_nodes(node_path)
 
 binary_path = script_dir + "/binaries.json"
 binary_list = load_nodes(binary_path)
@@ -160,19 +224,42 @@ except Exception as e:
     print("Error: an unknown exception occurred:", e, "Exiting...")
     exit()
 
+# TODO: change both materialization files to have nodes named by id instead of name if necessary
 def materialize_knowledge_node(node, node_type):
+    
     # add the node object to the KG
-    node_obj = pfs["mkg"][quote_for_turtle(node["id"])]
+    node_obj = pfs["mkg"][quote_for_turtle(node["name"])]
     if node_type in class_dict:
         graph.add( (node_obj, a, class_dict[node_type]))
+
+    # based on key since the key has the type of property
+    for key, value in node.items():
+        if key == "edges":
+            continue
+        # if the current key is address, then add it as an address object/node
+        elif key == "address":
+            addr_obj = pfs["mkg"][quote_for_turtle(str(value))]
+            graph.add( (node_obj, AT_ADDRESS, addr_obj))
+            
+        elif (key in property_dict):
+            # if the current value is a list, then iterate through the list and add all elements of that list to the given node
+            if (isinstance(value, list)):
+                print("do list stuff here")
+                for item in value:
+                    # item_obj = pfs["mkg"][quote_for_turtle(str(item))]
+                    item_obj = Literal(str(item))
+                    graph.add( (node_obj, property_dict[key], item_obj))
+            # if it isn't a list then just add the one property to the node here
+            else:
+                # value_obj = pfs["mkg"][quote_for_turtle(str(value))]
+                value_obj = Literal(str(value))
+                graph.add( (node_obj, property_dict[key], value_obj))
+        else:
+            print("Error: the following property type was not found:", key)
     
-    # add its name to the KG
-    node_name = Literal(str(node["name"]))
-    graph.add( (node_obj, HAS_NAME, node_name))
-    
-    # add the properties for the node here
     
     # add the edge relationships with other nodes
+    # based on value since the value has the type of edge
     for key, value in node["edges"].items():
         if (value in edge_dict):
             key_obj = pfs["mkg"][quote_for_turtle(str(key))]
@@ -181,7 +268,7 @@ def materialize_knowledge_node(node, node_type):
             print("Error: the following edge type was not found:", value)
     
     
-
+# Then add the triples for all 4 kinds of knowledge nodes
 for function in func_list:
     materialize_knowledge_node(function, "FUNCTION")
         
@@ -195,7 +282,6 @@ for module in module_list:
 
 for binary in binary_list:
     materialize_knowledge_node(binary, "BINARY")
-    
     
 
 output_file = dir_name + "/combined-output.ttl"

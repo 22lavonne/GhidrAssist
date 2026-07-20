@@ -68,9 +68,13 @@
 :atAddress rdf:type owl:ObjectProperty ;
            owl:inverseOf :memoryContainsInstruction ;
            rdf:type owl:FunctionalProperty ;
-           rdfs:domain :Instruction ;
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( :Instruction
+                                       :Symbol
+                                     )
+                       ] ;
            rdfs:range :Address ;
-           rdfs:comment "specifies where an instruction is located in memory" ;
+           rdfs:comment "specifies where an instruction or symbol is located in memory" ;
            rdfs:label "atAddress" .
 
 
@@ -441,9 +445,13 @@
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/memoryContainsInstruction
 :memoryContainsInstruction rdf:type owl:ObjectProperty ;
                            rdfs:domain :Address ;
-                           rdfs:range :Instruction ;
+                           rdfs:range [ rdf:type owl:Class ;
+                                        owl:unionOf ( :Instruction
+                                                      :Symbol
+                                                    )
+                                      ] ;
                            rdfs:comment "inverse of atAddress" ;
-                           rdfs:label "memoryContainsInstruction" .
+                           rdfs:label "memoryContains" .
 
 
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/metadataFor
@@ -905,7 +913,7 @@
 :updatedAt rdf:type owl:DatatypeProperty ,
                     owl:FunctionalProperty ;
            rdfs:domain :Metadata ;
-           rdfs:range xsd:dateTimeStamp ;
+           rdfs:range xsd:string ;
            rdfs:comment "indicates the last time the node was updated" ;
            rdfs:label "updatedAt" .
 

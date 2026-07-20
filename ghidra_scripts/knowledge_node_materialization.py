@@ -1,6 +1,9 @@
 # modified code from rdflib-starter.py from: https://github.com/kastle-lab/kastle-drawbridge/blob/master/resources/rdflib-starter.py
 # rdflib documentation: https://rdflib.readthedocs.io/en/stable/
 
+# expected to run symbol materialization before this one 
+# since this file parses from the resulting KG from the symbol materialization
+
 
 import json
 from pathlib import Path
@@ -81,7 +84,6 @@ edge_dict = {
     "DEPENDS_ON": DEPENDS_ON,
     "RELATED_TO": RELATED_TO,
     
-    
     "VULNERABLE_VIA": VULNERABLE_VIA,
     "TAINT_FLOWS_TO": TAINT_FLOWS_TO,
     "CALLS_VULNERABLE": CALLS_VULNERABLE,
@@ -110,11 +112,10 @@ def init_kg(prefixes=pfs):
 
 dir_name = input("What directory do you want to make a knowledge graph from? (needs to exist in the ghidra-scripts directory): ")
 dir_path = Path(dir_name)
-if dir_path.is_dir():
-    print("Directory exists, generating knowledge graph from the files in that directory...")
-else:
+if not dir_path.is_dir():
     print("Directory does not exist. Exiting...")
     exit()
+    
 
 script_dir = str(Path(__file__).resolve().parent)
 
@@ -141,16 +142,23 @@ a = pfs["rdf"]["type"]
 # Initialize an empty graph
 graph = init_kg()
 
-ontology_path = "../ontology/combined-ontology.ttl"
-with open(ontology_path, "r") as f:
-    graph.parse(f, format="turtle")
+# use this to just initialize graph from base ontology
+# ontology_path = "../ontology/combined-ontology.ttl"
+# with open(ontology_path, "r") as f:
+#     graph.parse(f, format="turtle")
 
-
-# kastle_members = ["Cogan", "Andrea", "Brandon"]
-# for x in kastle_members:
-#     # Add a specific triple
-#     # g.add( (subject_node, predicate_node, object_node) )
-#     graph.add( (pfs["ex"][x], a, pfs["ex"]["Person"]) )
+# using this instead to initialize kg based on resulting kg from the symbol materialization script
+ontology_path = dir_name + "/symbol-output.ttl"
+try:
+    with open(ontology_path, "r") as f:
+        graph.parse(f, format="turtle")
+    print("Directory exists, generating knowledge graph from the files in that directory...")
+except FileNotFoundError as e:
+    print("Error: `symbol-output.ttl not found in that directory. Run `symbol_rdflib_materialization.py` first. Exiting...")
+    exit()
+except Exception as e:
+    print("Error: an unknown exception occurred:", e, "Exiting...")
+    exit()
 
 def materialize_knowledge_node(node, node_type):
     # add the node object to the KG
@@ -182,7 +190,6 @@ for external in ext_list:
     materialize_knowledge_node(external, "EXTERNAL")
     
 
-# If there are no modules then this will just not enter the loop and no module nodes will be added
 for module in module_list:
     materialize_knowledge_node(module, "MODULE")
 
@@ -191,6 +198,6 @@ for binary in binary_list:
     
     
 
-output_file = dir_name + "/knowledge-output.ttl"
+output_file = dir_name + "/combined-output.ttl"
 temp = graph.serialize(format="turtle", encoding="utf-8", destination=output_file)
 print("Finished materializing. Exiting...")

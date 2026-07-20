@@ -265,12 +265,12 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Class"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/DLL"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/ExternalFunctionNode"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Namespace"/>
-        <rdfs:comment>specifys the objects that can be defined within a given namespace</rdfs:comment>
+        <rdfs:comment>specifies the objects that can be defined within a given namespace</rdfs:comment>
         <rdfs:label>definedInNamespace</rdfs:label>
     </owl:ObjectProperty>
     
@@ -637,7 +637,7 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Class"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/DLL"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/ExternalFunctionNode"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -1348,9 +1348,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/DLL -->
+    <!-- http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/ExternalFunctionNode -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/DLL">
+    <owl:Class rdf:about="http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/ExternalFunctionNode">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/FunctionNode"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/StructuralNamespaceSymbol"/>
         <rdfs:subClassOf>
@@ -1808,7 +1808,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Class"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/DLL"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/ExternalFunctionNode"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/FunctionNode"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Namespace"/>
         </owl:members>

@@ -193,11 +193,11 @@
                     rdf:type owl:FunctionalProperty ;
                     rdfs:domain [ rdf:type owl:Class ;
                                   owl:unionOf ( :Class
-                                                :DLL
+                                                :ExternalFunctionNode
                                               )
                                 ] ;
                     rdfs:range :Namespace ;
-                    rdfs:comment "specifys the objects that can be defined within a given namespace" ;
+                    rdfs:comment "specifies the objects that can be defined within a given namespace" ;
                     rdfs:label "definedInNamespace" .
 
 
@@ -469,7 +469,7 @@
                   rdfs:domain :Namespace ;
                   rdfs:range [ rdf:type owl:Class ;
                                owl:unionOf ( :Class
-                                             :DLL
+                                             :ExternalFunctionNode
                                            )
                              ] ;
                   rdfs:comment "inverse of definedIn" ;
@@ -982,16 +982,16 @@
          rdfs:label "Content" .
 
 
-###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/DLL
-:DLL rdf:type owl:Class ;
-     rdfs:subClassOf :FunctionNode ,
-                     :StructuralNamespaceSymbol ,
-                     [ rdf:type owl:Restriction ;
-                       owl:onProperty :definedIn ;
-                       owl:someValuesFrom :Namespace
-                     ] ;
-     rdfs:comment "represents an function defined externally of the given binary" ;
-     rdfs:label "ExternalFunctionNode" .
+###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/ExternalFunctionNode
+:ExternalFunctionNode rdf:type owl:Class ;
+                      rdfs:subClassOf :FunctionNode ,
+                                      :StructuralNamespaceSymbol ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :definedIn ;
+                                        owl:someValuesFrom :Namespace
+                                      ] ;
+                      rdfs:comment "represents an function defined externally of the given binary" ;
+                      rdfs:label "ExternalFunctionNode" .
 
 
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/FunctionNode
@@ -1291,7 +1291,7 @@
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( :Class
-                :DLL
+                :ExternalFunctionNode
                 :FunctionNode
                 :Namespace
               )

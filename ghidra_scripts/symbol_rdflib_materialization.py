@@ -64,8 +64,8 @@ NAMESPACE_SYMBOL = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/co
 STRUCTURAL_NAMESPACE_SYMBOL = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/StructuralNamespaceSymbol")
 NAMESPACE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Namespace")
 CLASS_ = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Class")
-DLL = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/DLL")
-FUNCTION = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Function")
+EXTERNAL_FUNCTION_NODE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/ExternalFunctionNode")
+FUNCTION_NODE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/FunctionNode")
 VARIABLE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Variable")
 LOCAL_VARIABLE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/LocalVariable")
 PARAMETER = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/Parameter")
@@ -82,8 +82,8 @@ class_dict = {
     "STRUCTURAL_NAMESPACE_SYMBOL": STRUCTURAL_NAMESPACE_SYMBOL,
     "NAMESPACE": NAMESPACE,
     "CLASS_": CLASS_,
-    "DLL": DLL,
-    "FUNCTION": FUNCTION,
+    "DLL": EXTERNAL_FUNCTION_NODE,
+    "FUNCTION": FUNCTION_NODE,
     "VARIABLE": VARIABLE,
     "LOCAL_VARIABLE": LOCAL_VARIABLE,
     "PARAMETER": PARAMETER,
@@ -171,7 +171,7 @@ for l in local_var_list:
     parent_func = pfs["mkg"][quote_for_turtle(l['parent'])]
     
     graph.add((local_var, a, LOCAL_VARIABLE))
-    graph.add((parent_func, a, FUNCTION))
+    graph.add((parent_func, a, FUNCTION_NODE))
     # get the name of the function and add that relation
     graph.add((parent_func, hasName, Literal(str(l['parent']))))
     
@@ -186,7 +186,7 @@ for p in parameters_list:
     parent_func = pfs["mkg"][quote_for_turtle(p['parent'])]
     
     graph.add((param, a, PARAMETER))
-    graph.add((parent_func, a, FUNCTION))
+    graph.add((parent_func, a, FUNCTION_NODE))
     graph.add((parent_func, hasName, Literal(str(p['parent']))))
     
     graph.add((param, passesInto, parent_func))
@@ -261,7 +261,7 @@ if (class_list):
 # {'dll': 'KERNEL32.DLL', 'address': 'NO ADDRESS parent:Global', 'references': [], 'primary_reference': None}
 for l in dll_list:
     l_instance = pfs["mkg"][quote_for_turtle(l['dll'])]
-    graph.add( (l_instance, a, DLL))
+    graph.add( (l_instance, a, EXTERNAL_FUNCTION_NODE))
     
     if l['address'] != "NO ADDRESS":
         l_address = pfs["mkg"][quote_for_turtle(l['address'])]
@@ -288,7 +288,7 @@ for l in dll_list:
 # 'primary_reference': {'source': '004012f0', 'destination': 'EXTERNAL:00000005', 'operandindex': '-1', 'type': 'COMPUTED_CALL'}} 
 for f in function_list:
     f_instance = pfs["mkg"][quote_for_turtle(f['func'])]
-    graph.add( (f_instance, a, FUNCTION))
+    graph.add( (f_instance, a, FUNCTION_NODE))
     graph.add((f_instance, hasName, Literal(str(f['func']))))
     
     if f['address'] != "NO ADDRESS":
@@ -307,7 +307,7 @@ for f in function_list:
         for fc in f['functions_called']:
             # make the URI of the function since it is seen elsewhere
             func_called = pfs["mkg"][quote_for_turtle(fc['func'])]
-            graph.add((func_called, a, FUNCTION))
+            graph.add((func_called, a, FUNCTION_NODE))
             graph.add((func_called, hasName, Literal(str(fc['func']))))
             graph.add((f_instance, calls, func_called))
             
@@ -393,10 +393,11 @@ for i in instruction_list:
     # get whatever function has this instruction
     func = pfs["mkg"][quote_for_turtle(i['in_function'])]
     # then add the function contains instruction relation with the current instruction
-    graph.add((func, a, FUNCTION))
+    graph.add((func, a, FUNCTION_NODE))
     graph.add((func, hasName, Literal(str(i['in_function']))))
     graph.add((func, containsInstruction, i_instance))    
 
 # then serialize the graph
 output_file = dir_name + "/symbol-output.ttl"
 temp = graph.serialize(format="turtle", encoding="utf-8", destination=output_file)
+print("Finished materializing. Exiting...")

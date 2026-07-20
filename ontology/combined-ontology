@@ -25,7 +25,7 @@
         <Class IRI="/Content"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/DLL"/>
+        <Class IRI="/ExternalFunctionNode"/>
     </Declaration>
     <Declaration>
         <Class IRI="/FunctionNode"/>
@@ -434,15 +434,15 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/DLL"/>
+        <Class IRI="/ExternalFunctionNode"/>
         <Class IRI="/FunctionNode"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/DLL"/>
+        <Class IRI="/ExternalFunctionNode"/>
         <Class IRI="/StructuralNamespaceSymbol"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/DLL"/>
+        <Class IRI="/ExternalFunctionNode"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/definedIn"/>
             <Class IRI="/Namespace"/>
@@ -812,7 +812,7 @@
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="/Class"/>
-        <Class IRI="/DLL"/>
+        <Class IRI="/ExternalFunctionNode"/>
         <Class IRI="/FunctionNode"/>
         <Class IRI="/Namespace"/>
     </DisjointClasses>
@@ -1150,7 +1150,7 @@
         <ObjectProperty IRI="/definedInNamespace"/>
         <ObjectUnionOf>
             <Class IRI="/Class"/>
-            <Class IRI="/DLL"/>
+            <Class IRI="/ExternalFunctionNode"/>
         </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -1527,7 +1527,7 @@
         <ObjectProperty IRI="/namespaceDefines"/>
         <ObjectUnionOf>
             <Class IRI="/Class"/>
-            <Class IRI="/DLL"/>
+            <Class IRI="/ExternalFunctionNode"/>
         </ObjectUnionOf>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -2053,12 +2053,12 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/DLL</IRI>
+        <IRI>/ExternalFunctionNode</IRI>
         <Literal>represents an function defined externally of the given binary</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/DLL</IRI>
+        <IRI>/ExternalFunctionNode</IRI>
         <Literal>ExternalFunctionNode</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -2374,7 +2374,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/definedInNamespace</IRI>
-        <Literal>specifys the objects that can be defined within a given namespace</Literal>
+        <Literal>specifies the objects that can be defined within a given namespace</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

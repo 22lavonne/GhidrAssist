@@ -1817,7 +1817,7 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="/createdAt"/>
-        <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="/hasActivityProfile"/>
@@ -1945,7 +1945,7 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="/updatedAt"/>
-        <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="/userEdited"/>

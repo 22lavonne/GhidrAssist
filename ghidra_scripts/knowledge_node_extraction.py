@@ -34,7 +34,7 @@ nodes_by_id = {n.getId(): n for n in all_nodes}
 
 print("Total nodes: {}".format(len(all_nodes)))
 
-# 2. All edges in one batched query, keyed off every node ID as a source
+# All edges in one batched query, keyed off every node ID as a source
 all_edges = graph.getEdgesForNodes(node_ids)
 print("Total edges: {}".format(len(all_edges)))
 
@@ -44,12 +44,56 @@ func_list = []
 ext_list = []
 module_list = []
 
+# will add the given property to the dictionary if that property exists in the getter method
+def add_property(node_dict, key, value):
+    if value is not None:
+        node_dict[key] = value
+    return node_dict
+
+# will add the given list property to dictionary if the list exists
+def add_list_property(node_dict, key, value):
+    if value:
+        # the list returned by the getter is not json serializable,
+        # so the list method must be used to get it in the correct format
+        value_list = list(value)
+        node_dict[key] = value_list
+    return node_dict
+    
+
 # TODO: modify this to include all the properties needed for knowledge nodes
 # Iterate through each node, add all the necessary data about it, then put it in its respective list
 for node in all_nodes:
     # create new dictionary for node
-    # print(node.getDisplayLabel(), node.getType(), node.getId())
     new_node = {"name": node.getName(), "id": node.getId()}
+    # get all the data properties for the nodes, adding them only if the getter methods for them return non null or empty
+    # new_node["address"] = node.getAddress()
+    #TODO: change some of these properties to strings if necessary
+    add_property(new_node, "address", node.getAddress())
+    add_property(new_node, "binaryId", node.getBinaryId())
+    add_property(new_node, "rawContent", node.getRawContent())
+    add_property(new_node, "signature", node.getSignature())
+    add_property(new_node, "decompiledCode", node.getDecompiledCode())
+    add_property(new_node, "disassembly", node.getDisassembly())
+    add_property(new_node, "llmSummary", node.getLlmSummary())
+    add_property(new_node, "summaryConfidence", node.getConfidence())
+    add_list_property(new_node, "vectorEmbeddings", node.getEmbedding())
+    add_list_property(new_node, "securityFlags", node.getSecurityFlags())
+    add_property(new_node, "analysisDepth", node.getAnalysisDepth())
+    add_property(new_node, "createdAt", str(node.getCreatedAt()))
+    add_property(new_node, "updatedAt", str(node.getUpdatedAt()))
+    add_property(new_node, "isStale", node.isStale())
+    add_property(new_node, "isUserEdited", node.isUserEdited())
+    add_list_property(new_node, "networkAPIs", node.getNetworkAPIs())
+    add_list_property(new_node, "fileIOAPIs", node.getFileIOAPIs())
+    add_list_property(new_node, "ipAddresses", node.getIPAddresses())
+    add_list_property(new_node, "URLs", node.getURLs())
+    add_list_property(new_node, "filePaths", node.getFilePaths())
+    add_list_property(new_node, "domains", node.getDomains())
+    add_list_property(new_node, "registryKeys", node.getRegistryKeys())
+    add_property(new_node, "category", node.getCategory())
+    add_property(new_node, "activityProfile", node.getActivityProfile())
+    add_property(new_node, "riskLevel", node.getRiskLevel())
+    
     # dict for all the edges of the current node. The key is the target node id, the value is the type of edge
     # this is to allow for multiple edges of the same type for a node
     # TODO: might need to change this if there are instances where there are multiple edges to the same target node for a source node
@@ -66,12 +110,12 @@ for node in all_nodes:
         else:
             edge_dict.update({str(edge.getTargetId()): str(edge_type)})
             
-        print("{} (id of {})  --[{}]-->  {}".format(
-            node.getDisplayLabel(),
-            node.getId(),
-            edge_type.getDisplayName(),
-            target_node.getDisplayLabel() if target_node else edge.getTargetId(),
-        ))
+        # print("{} (id of {})  --[{}]-->  {}".format(
+        #     node.getDisplayLabel(),
+        #     node.getId(),
+        #     edge_type.getDisplayName(),
+        #     target_node.getDisplayLabel() if target_node else edge.getTargetId(),
+        # ))
         
     new_node.update({"edges": edge_dict})
     # then add the new node to whichever list it belongs in (based on the type of node)

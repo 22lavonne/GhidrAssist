@@ -14,6 +14,10 @@ from ghidrassist import AnalysisDB
 from ghidrassist.graphrag import BinaryKnowledgeGraph
 from ghidrassist.graphrag.nodes import KnowledgeNode, NodeType, EdgeType
 
+# new_dir_name = input("Enter a name for a new directory where the node data will go")
+# dir_path = Path(new_dir_name)
+new_dir_name = askString("Input Required", "Please enter name to create new directory to store knowledge node information: ")
+# new_dir_path = Path(new_dir_name)
 
 # nested class, imported off the outer class
 GraphEdge = BinaryKnowledgeGraph.GraphEdge
@@ -131,23 +135,26 @@ for node in all_nodes:
         module_list.append(new_node)
     else:
         print("ERROR: found a node not expected:", node.getDisplayLabel(), "type:", node.getType())
-        
-# for node in node_list:
-#     for item in node:
-#         print(item)
-# # print(node_list)
-# put all the list/dictionary data into a json file that will be used later
+
 
 #TODO: make 4 separate json files to separate the types of knowledge nodes
 script_dir_str = str(Path(getSourceFile().getAbsolutePath()).parent)
-with open(script_dir_str + "/binaries.json", "w") as f:
+data_dir = script_dir_str + "/" + new_dir_name
+
+# Define the directory path
+directory = Path(data_dir)
+
+# Create the directory safely
+directory.mkdir(parents=True, exist_ok=True)
+
+with open(data_dir + "/binaries.json", "w") as f:
     json.dump(binary_list, f, indent=2)
     
-with open(script_dir_str + "/functions.json", "w") as f:
+with open(data_dir + "/functions.json", "w") as f:
     json.dump(func_list, f, indent=2)
     
-with open(script_dir_str + "/externals.json", "w") as f:
+with open(data_dir + "/externals.json", "w") as f:
     json.dump(ext_list, f, indent=2)
     
-with open(script_dir_str + "/modules.json", "w") as f:
+with open(data_dir + "/modules.json", "w") as f:
     json.dump(module_list, f, indent=2)

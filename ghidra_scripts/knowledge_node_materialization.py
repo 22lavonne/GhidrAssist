@@ -244,7 +244,6 @@ def materialize_knowledge_node(node, node_type):
         elif (key in property_dict):
             # if the current value is a list, then iterate through the list and add all elements of that list to the given node
             if (isinstance(value, list)):
-                print("do list stuff here")
                 for item in value:
                     # item_obj = pfs["mkg"][quote_for_turtle(str(item))]
                     item_obj = Literal(str(item))

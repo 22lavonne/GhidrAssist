@@ -22,9 +22,6 @@
         <Class IRI="/Class"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/Content"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="/ExternalFunctionNode"/>
     </Declaration>
     <Declaration>
@@ -41,9 +38,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="/LocalVariable"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/Metadata"/>
     </Declaration>
     <Declaration>
         <Class IRI="/ModuleNode"/>
@@ -64,9 +58,6 @@
         <Class IRI="/Reference"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/ReverseEngineeringFeatures"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="/StructuralNamespaceSymbol"/>
     </Declaration>
     <Declaration>
@@ -74,24 +65,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="/Variable"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#dependencyTo"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#dependsOn"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasNode"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#nodeHasAddress"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#relatedTo"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#symbolHasAddress"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/atAddress"/>
@@ -127,9 +100,6 @@
         <ObjectProperty IRI="/containsModule"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="/contentFor"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="/definedIn"/>
     </Declaration>
     <Declaration>
@@ -142,6 +112,12 @@
         <ObjectProperty IRI="/definesLocal"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="/dependencyTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/dependsOn"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="/dependsOnFunction"/>
     </Declaration>
     <Declaration>
@@ -151,16 +127,13 @@
         <ObjectProperty IRI="/functionalSibling"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="/hasContent"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="/hasDestinationAddress"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/hasDestinationOperand"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="/hasMetadata"/>
+        <ObjectProperty IRI="/hasNode"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/hasPrimaryReference"/>
@@ -173,9 +146,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/hasSourceOperand"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/hasSymbol"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/inferredCalledBy"/>
@@ -214,9 +184,6 @@
         <ObjectProperty IRI="/memoryContainsInstruction"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="/metadataFor"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="/moduleDependencyTo"/>
     </Declaration>
     <Declaration>
@@ -229,6 +196,9 @@
         <ObjectProperty IRI="/networkSend"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="/nodeHasAddress"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="/passesInto"/>
     </Declaration>
     <Declaration>
@@ -239,6 +209,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/references"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/relatedTo"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/relatedToFunction"/>
@@ -361,9 +334,6 @@
         <DataProperty IRI="/isStale"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/symbolHasAddress"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/updatedAt"/>
     </Declaration>
     <Declaration>
@@ -383,55 +353,6 @@
             <ObjectProperty IRI="/definedIn"/>
             <Class IRI="/Namespace"/>
         </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/Content"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/hasDecompiledCode"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/Content"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/hasDisassembly"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/Content"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/hasLLMSummary"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/Content"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/hasRawContent"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/Content"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/hasSignature"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/Content"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/hasSummaryConfidence"/>
-            <Datatype abbreviatedIRI="xsd:float"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/Content"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/hasVectorEmbedding"/>
-            <Datatype abbreviatedIRI="xsd:float"/>
-        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/ExternalFunctionNode"/>
@@ -549,17 +470,185 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/KnowledgeNode"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/hasContent"/>
-            <Class IRI="/Content"/>
-        </ObjectSomeValuesFrom>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/createdAt"/>
+            <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/KnowledgeNode"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/hasMetadata"/>
-            <Class IRI="/Metadata"/>
-        </ObjectSomeValuesFrom>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasActivityProfile"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/KnowledgeNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasAnalysisDepth"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/KnowledgeNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasBinaryID"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/KnowledgeNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasCategory"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/KnowledgeNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasDecompiledCode"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/KnowledgeNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasDisassembly"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/KnowledgeNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasDomain"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/KnowledgeNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasFileIOAPI"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/KnowledgeNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasFilePath"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/KnowledgeNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasID"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/KnowledgeNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasIPAddress"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/KnowledgeNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasLLMSummary"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/KnowledgeNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/KnowledgeNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasNetworkAPI"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/KnowledgeNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasRawContent"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/KnowledgeNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasRegistryKey"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/KnowledgeNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasRiskLevel"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/KnowledgeNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasSecurityFlag"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/KnowledgeNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasSignature"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/KnowledgeNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasSummaryConfidence"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/KnowledgeNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasURL"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/KnowledgeNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasVectorEmbedding"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/KnowledgeNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/isStale"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/KnowledgeNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/updatedAt"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/KnowledgeNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/userEdited"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/Label"/>
@@ -575,62 +664,6 @@
     <SubClassOf>
         <Class IRI="/LocalVariable"/>
         <Class IRI="/Variable"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/Metadata"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/createdAt"/>
-            <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/Metadata"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/hasAnalysisDepth"/>
-            <Datatype abbreviatedIRI="xsd:int"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/Metadata"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/hasBinaryID"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/Metadata"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/hasID"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/Metadata"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/hasName"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/Metadata"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/isStale"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/Metadata"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/updatedAt"/>
-            <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/Metadata"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/userEdited"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/ModuleNode"/>
@@ -698,83 +731,6 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/ReverseEngineeringFeatures"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/hasActivityProfile"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/ReverseEngineeringFeatures"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/hasCategory"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/ReverseEngineeringFeatures"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/hasDomain"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/ReverseEngineeringFeatures"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/hasFileIOAPI"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/ReverseEngineeringFeatures"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/hasFilePath"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/ReverseEngineeringFeatures"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/hasIPAddress"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/ReverseEngineeringFeatures"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/hasNetworkAPI"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/ReverseEngineeringFeatures"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/hasRegistryKey"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/ReverseEngineeringFeatures"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/hasRiskLevel"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/ReverseEngineeringFeatures"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/hasSecurityFlag"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/ReverseEngineeringFeatures"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/hasURL"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="/StructuralNamespaceSymbol"/>
         <Class IRI="/NamespaceSymbol"/>
     </SubClassOf>
@@ -838,11 +794,11 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="/dependsOnFunction"/>
-        <ObjectProperty IRI="#dependsOn"/>
+        <ObjectProperty IRI="/dependsOn"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="/dependsOnModule"/>
-        <ObjectProperty IRI="#dependsOn"/>
+        <ObjectProperty IRI="/dependsOn"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="/hasDestinationAddress"/>
@@ -878,19 +834,19 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="/moduleDependencyTo"/>
-        <ObjectProperty IRI="#dependencyTo"/>
+        <ObjectProperty IRI="/dependencyTo"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="/providesDependencyTo"/>
-        <ObjectProperty IRI="#dependencyTo"/>
+        <ObjectProperty IRI="/dependencyTo"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="/relatedToFunction"/>
-        <ObjectProperty IRI="#relatedTo"/>
+        <ObjectProperty IRI="/relatedTo"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="/relatedToModule"/>
-        <ObjectProperty IRI="#relatedTo"/>
+        <ObjectProperty IRI="/relatedTo"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="/returns"/>
@@ -900,18 +856,6 @@
         <ObjectProperty IRI="/vulnerableVia"/>
         <ObjectProperty IRI="/calledBy"/>
     </SubObjectPropertyOf>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#dependencyTo"/>
-        <ObjectProperty IRI="#dependsOn"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#hasNode"/>
-        <ObjectProperty IRI="#nodeHasAddress"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#symbolHasAddress"/>
-        <ObjectProperty IRI="/hasSymbol"/>
-    </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="/atAddress"/>
         <ObjectProperty IRI="/memoryContainsInstruction"/>
@@ -941,10 +885,6 @@
         <ObjectProperty IRI="/containsInstruction"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="/contentFor"/>
-        <ObjectProperty IRI="/hasContent"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
         <ObjectProperty IRI="/definedIn"/>
         <ObjectProperty IRI="/defines"/>
     </InverseObjectProperties>
@@ -955,6 +895,10 @@
     <InverseObjectProperties>
         <ObjectProperty IRI="/definesLocal"/>
         <ObjectProperty IRI="/localDefinedIn"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/dependencyTo"/>
+        <ObjectProperty IRI="/dependsOn"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="/dependsOnFunction"/>
@@ -973,8 +917,8 @@
         <ObjectProperty IRI="/isDestionationOperandFor"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="/hasMetadata"/>
-        <ObjectProperty IRI="/metadataFor"/>
+        <ObjectProperty IRI="/hasNode"/>
+        <ObjectProperty IRI="/nodeHasAddress"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="/hasPrimaryReference"/>
@@ -1020,16 +964,10 @@
         <ObjectProperty IRI="/atAddress"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="/contentFor"/>
-    </FunctionalObjectProperty>
-    <FunctionalObjectProperty>
         <ObjectProperty IRI="/definedIn"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="/definedInNamespace"/>
-    </FunctionalObjectProperty>
-    <FunctionalObjectProperty>
-        <ObjectProperty IRI="/hasContent"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="/hasDestinationAddress"/>
@@ -1038,25 +976,19 @@
         <ObjectProperty IRI="/hasDestinationOperand"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="/hasMetadata"/>
-    </FunctionalObjectProperty>
-    <FunctionalObjectProperty>
         <ObjectProperty IRI="/hasPrimaryReference"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="/hasSourceAddress"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="/metadataFor"/>
-    </FunctionalObjectProperty>
-    <FunctionalObjectProperty>
         <ObjectProperty IRI="/returns"/>
     </FunctionalObjectProperty>
     <SymmetricObjectProperty>
-        <ObjectProperty IRI="#relatedTo"/>
+        <ObjectProperty IRI="/functionalSibling"/>
     </SymmetricObjectProperty>
     <SymmetricObjectProperty>
-        <ObjectProperty IRI="/functionalSibling"/>
+        <ObjectProperty IRI="/relatedTo"/>
     </SymmetricObjectProperty>
     <SymmetricObjectProperty>
         <ObjectProperty IRI="/relatedToFunction"/>
@@ -1067,30 +999,6 @@
     <SymmetricObjectProperty>
         <ObjectProperty IRI="/similarPurpose"/>
     </SymmetricObjectProperty>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#dependencyTo"/>
-        <Class IRI="/KnowledgeNode"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#dependsOn"/>
-        <Class IRI="/KnowledgeNode"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasNode"/>
-        <Class IRI="/Address"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#nodeHasAddress"/>
-        <Class IRI="/Metadata"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#relatedTo"/>
-        <Class IRI="/KnowledgeNode"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#symbolHasAddress"/>
-        <Class IRI="/Symbol"/>
-    </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/atAddress"/>
         <ObjectUnionOf>
@@ -1139,10 +1047,6 @@
         <Class IRI="/BinaryNode"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="/contentFor"/>
-        <Class IRI="/Content"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="/definedIn"/>
         <ObjectUnionOf>
             <Class IRI="/FunctionNode"/>
@@ -1165,6 +1069,14 @@
         <Class IRI="/FunctionNode"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="/dependencyTo"/>
+        <Class IRI="/KnowledgeNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/dependsOn"/>
+        <Class IRI="/KnowledgeNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="/dependsOnFunction"/>
         <ObjectUnionOf>
             <Class IRI="/FunctionNode"/>
@@ -1180,10 +1092,6 @@
         <Class IRI="/FunctionNode"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="/hasContent"/>
-        <Class IRI="/KnowledgeNode"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="/hasDestinationAddress"/>
         <Class IRI="/Reference"/>
     </ObjectPropertyDomain>
@@ -1192,8 +1100,8 @@
         <Class IRI="/Instruction"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="/hasMetadata"/>
-        <Class IRI="/KnowledgeNode"/>
+        <ObjectProperty IRI="/hasNode"/>
+        <Class IRI="/Address"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/hasPrimaryReference"/>
@@ -1210,10 +1118,6 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/hasSourceOperand"/>
         <Class IRI="/Instruction"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/hasSymbol"/>
-        <Class IRI="/Address"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/inferredCalledBy"/>
@@ -1264,10 +1168,6 @@
         <Class IRI="/Address"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="/metadataFor"/>
-        <Class IRI="/Metadata"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="/moduleDependencyTo"/>
         <Class IRI="/ModuleNode"/>
     </ObjectPropertyDomain>
@@ -1284,6 +1184,10 @@
         <Class IRI="/FunctionNode"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="/nodeHasAddress"/>
+        <Class IRI="/KnowledgeNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="/passesInto"/>
         <Class IRI="/Parameter"/>
     </ObjectPropertyDomain>
@@ -1297,6 +1201,10 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/references"/>
+        <Class IRI="/KnowledgeNode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/relatedTo"/>
         <Class IRI="/KnowledgeNode"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -1331,30 +1239,6 @@
         <ObjectProperty IRI="/vulnerableVia"/>
         <Class IRI="/FunctionNode"/>
     </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#dependencyTo"/>
-        <Class IRI="/KnowledgeNode"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#dependsOn"/>
-        <Class IRI="/KnowledgeNode"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasNode"/>
-        <Class IRI="/Metadata"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#nodeHasAddress"/>
-        <Class IRI="/Address"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#relatedTo"/>
-        <Class IRI="/KnowledgeNode"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#symbolHasAddress"/>
-        <Class IRI="/Address"/>
-    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="/atAddress"/>
         <Class IRI="/Address"/>
@@ -1400,10 +1284,6 @@
         <Class IRI="/ModuleNode"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="/contentFor"/>
-        <Class IRI="/KnowledgeNode"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="/definedIn"/>
         <Class IRI="/StructuralNamespaceSymbol"/>
     </ObjectPropertyRange>
@@ -1423,6 +1303,14 @@
         <Class IRI="/LocalVariable"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="/dependencyTo"/>
+        <Class IRI="/KnowledgeNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/dependsOn"/>
+        <Class IRI="/KnowledgeNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="/dependsOnFunction"/>
         <Class IRI="/FunctionNode"/>
     </ObjectPropertyRange>
@@ -1435,10 +1323,6 @@
         <Class IRI="/FunctionNode"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="/hasContent"/>
-        <Class IRI="/Content"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="/hasDestinationAddress"/>
         <Class IRI="/Address"/>
     </ObjectPropertyRange>
@@ -1447,8 +1331,8 @@
         <Class IRI="/Operand"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="/hasMetadata"/>
-        <Class IRI="/Metadata"/>
+        <ObjectProperty IRI="/hasNode"/>
+        <Class IRI="/KnowledgeNode"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="/hasPrimaryReference"/>
@@ -1465,10 +1349,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="/hasSourceOperand"/>
         <Class IRI="/Operand"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/hasSymbol"/>
-        <Class IRI="/Symbol"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="/inferredCalledBy"/>
@@ -1522,10 +1402,6 @@
         </ObjectUnionOf>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="/metadataFor"/>
-        <Class IRI="/KnowledgeNode"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="/moduleDependencyTo"/>
         <Class IRI="/ModuleNode"/>
     </ObjectPropertyRange>
@@ -1545,6 +1421,10 @@
         <Class IRI="/FunctionNode"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="/nodeHasAddress"/>
+        <Class IRI="/Address"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="/passesInto"/>
         <Class IRI="/FunctionNode"/>
     </ObjectPropertyRange>
@@ -1561,6 +1441,10 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="/references"/>
+        <Class IRI="/KnowledgeNode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/relatedTo"/>
         <Class IRI="/KnowledgeNode"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -1666,9 +1550,6 @@
         <DataProperty IRI="/isStale"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
-        <DataProperty IRI="/symbolHasAddress"/>
-    </FunctionalDataProperty>
-    <FunctionalDataProperty>
         <DataProperty IRI="/updatedAt"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
@@ -1680,23 +1561,23 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/createdAt"/>
-        <Class IRI="/Metadata"/>
+        <Class IRI="/KnowledgeNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasActivityProfile"/>
-        <Class IRI="/Content"/>
+        <Class IRI="/KnowledgeNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasAnalysisDepth"/>
-        <Class IRI="/Metadata"/>
+        <Class IRI="/KnowledgeNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasBinaryID"/>
-        <Class IRI="/Metadata"/>
+        <Class IRI="/KnowledgeNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasCategory"/>
-        <Class IRI="/Content"/>
+        <Class IRI="/KnowledgeNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasDataType"/>
@@ -1704,46 +1585,43 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasDecompiledCode"/>
-        <Class IRI="/Content"/>
+        <Class IRI="/KnowledgeNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasDisassembly"/>
-        <Class IRI="/Content"/>
+        <Class IRI="/KnowledgeNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasDomain"/>
-        <Class IRI="/Content"/>
+        <Class IRI="/KnowledgeNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasFileIOAPI"/>
-        <Class IRI="/Content"/>
+        <Class IRI="/KnowledgeNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasFilePath"/>
-        <Class IRI="/Content"/>
+        <Class IRI="/KnowledgeNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasID"/>
-        <Class IRI="/Metadata"/>
+        <Class IRI="/KnowledgeNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasIPAddress"/>
-        <Class IRI="/Content"/>
+        <Class IRI="/KnowledgeNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasLLMSummary"/>
-        <Class IRI="/Content"/>
+        <Class IRI="/KnowledgeNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasName"/>
-        <ObjectUnionOf>
-            <Class IRI="/KnowledgeNode"/>
-            <Class IRI="/Metadata"/>
-        </ObjectUnionOf>
+        <Class IRI="/KnowledgeNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasNetworkAPI"/>
-        <Class IRI="/Content"/>
+        <Class IRI="/KnowledgeNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasOpcode"/>
@@ -1763,7 +1641,7 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasRawContent"/>
-        <Class IRI="/Content"/>
+        <Class IRI="/KnowledgeNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasReferenceType"/>
@@ -1771,7 +1649,7 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasRegistryKey"/>
-        <Class IRI="/Content"/>
+        <Class IRI="/KnowledgeNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasReturnType"/>
@@ -1779,43 +1657,39 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasRiskLevel"/>
-        <Class IRI="/Content"/>
+        <Class IRI="/KnowledgeNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasSecurityFlag"/>
-        <Class IRI="/Content"/>
+        <Class IRI="/KnowledgeNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasSignature"/>
-        <Class IRI="/Content"/>
+        <Class IRI="/KnowledgeNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasSummaryConfidence"/>
-        <Class IRI="/Content"/>
+        <Class IRI="/KnowledgeNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasURL"/>
-        <Class IRI="/Content"/>
+        <Class IRI="/KnowledgeNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasVectorEmbedding"/>
-        <Class IRI="/Content"/>
+        <Class IRI="/KnowledgeNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/isStale"/>
-        <Class IRI="/Metadata"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="/symbolHasAddress"/>
-        <Class IRI="/Symbol"/>
+        <Class IRI="/KnowledgeNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/updatedAt"/>
-        <Class IRI="/Metadata"/>
+        <Class IRI="/KnowledgeNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/userEdited"/>
-        <Class IRI="/Metadata"/>
+        <Class IRI="/KnowledgeNode"/>
     </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty IRI="/belongsTo"/>
@@ -1946,10 +1820,6 @@
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="/symbolHasAddress"/>
-        <Datatype abbreviatedIRI="xsd:long"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
         <DataProperty IRI="/updatedAt"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
@@ -1957,66 +1827,6 @@
         <DataProperty IRI="/userEdited"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#dependencyTo</IRI>
-        <Literal>inverse of dependsOn</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#dependencyTo</IRI>
-        <Literal>dependencyTo</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#dependsOn</IRI>
-        <Literal>local dependency between components</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#dependsOn</IRI>
-        <Literal>dependsOn</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#hasNode</IRI>
-        <Literal>inverse of nodeHasAddress</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasNode</IRI>
-        <Literal>hasNode</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#nodeHasAddress</IRI>
-        <Literal>indicates the memory address the node is located at</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#nodeHasAddress</IRI>
-        <Literal>nodeHasAddress</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#relatedTo</IRI>
-        <Literal>signifies related functionality without a direct call relationship</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#relatedTo</IRI>
-        <Literal>relatedTo</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#symbolHasAddress</IRI>
-        <Literal>specifies the memory address the symbol is located in</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#symbolHasAddress</IRI>
-        <Literal>symbolHasAddress</Literal>
-    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/Address</IRI>
@@ -2046,16 +1856,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/Class</IRI>
         <Literal>Class</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/Content</IRI>
-        <Literal>object that includes all the content related properties for one knowledge node</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/Content</IRI>
-        <Literal>Content</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2119,16 +1919,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/Metadata</IRI>
-        <Literal>contains the properties of metadata for the given node</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/Metadata</IRI>
-        <Literal>Metadata</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/ModuleNode</IRI>
         <Literal>represents subsystems and logial groupings</Literal>
     </AnnotationAssertion>
@@ -2186,16 +1976,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/Reference</IRI>
         <Literal>Reference</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/ReverseEngineeringFeatures</IRI>
-        <Literal>indicates the reverse engineering feature data properties for a given node (only applies to FunctionNodes)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/ReverseEngineeringFeatures</IRI>
-        <Literal>ReverseEngineeringFeatures</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2349,16 +2129,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/contentFor</IRI>
-        <Literal>inverse of hasContent</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/contentFor</IRI>
-        <Literal>contentFor</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/createdAt</IRI>
         <Literal>indicates when the node was created</Literal>
     </AnnotationAssertion>
@@ -2406,6 +2176,26 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/definesLocal</IRI>
         <Literal>definesLocal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/dependencyTo</IRI>
+        <Literal>inverse of dependsOn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/dependencyTo</IRI>
+        <Literal>dependencyTo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/dependsOn</IRI>
+        <Literal>local dependency between components</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/dependsOn</IRI>
+        <Literal>dependsOn</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2476,16 +2266,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/hasCategory</IRI>
         <Literal>hasCategory</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasContent</IRI>
-        <Literal>specifies content related properties for the given node</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/hasContent</IRI>
-        <Literal>hasContent</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2599,16 +2379,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasMetadata</IRI>
-        <Literal>specifies metadata related properties of the given node</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/hasMetadata</IRI>
-        <Literal>hasMetadata</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/hasName</IRI>
         <Literal>gets the name of a given function/symbol</Literal>
     </AnnotationAssertion>
@@ -2626,6 +2396,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/hasNetworkAPI</IRI>
         <Literal>hasNetworkAPI</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasNode</IRI>
+        <Literal>inverse of nodeHasAddress</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasNode</IRI>
+        <Literal>hasNode</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2789,16 +2569,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/hasSymbol</IRI>
-        <Literal>inverse of symbolHasAddress</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/hasSymbol</IRI>
-        <Literal>hasSymbol</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/hasURL</IRI>
         <Literal>indicates detected URLs in strings in the function</Literal>
     </AnnotationAssertion>
@@ -2949,16 +2719,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/metadataFor</IRI>
-        <Literal>inverse of hasMetadata</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/metadataFor</IRI>
-        <Literal>metadataFor</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/moduleDependencyTo</IRI>
         <Literal>inverse of dependsOnModule</Literal>
     </AnnotationAssertion>
@@ -2996,6 +2756,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/networkSend</IRI>
         <Literal>networkSend</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/nodeHasAddress</IRI>
+        <Literal>indicates the memory address the node is located at</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/nodeHasAddress</IRI>
+        <Literal>nodeHasAddress</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -3039,6 +2809,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/relatedTo</IRI>
+        <Literal>signifies related functionality without a direct call relationship</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/relatedTo</IRI>
+        <Literal>relatedTo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>/relatedToFunction</IRI>
         <Literal>related functionality without a direct call relationship from a module to a function</Literal>
     </AnnotationAssertion>
@@ -3076,16 +2856,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/similarPurpose</IRI>
         <Literal>similarPurpose</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/symbolHasAddress</IRI>
-        <Literal>specifies where a given symbol is located in memory</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/symbolHasAddress</IRI>
-        <Literal>symbolHasAddress</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

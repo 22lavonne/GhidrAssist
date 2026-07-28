@@ -582,7 +582,7 @@
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasActivityProfile
 :hasActivityProfile rdf:type owl:DatatypeProperty ,
                              owl:FunctionalProperty ;
-                    rdfs:domain :KnowledgeNode ;
+                    rdfs:domain :FunctionNode ;
                     rdfs:range xsd:string ;
                     rdfs:comment "indicates the computed activity profile" ;
                     rdfs:label "hasActivityProfile" .
@@ -609,7 +609,7 @@
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasCategory
 :hasCategory rdf:type owl:DatatypeProperty ,
                       owl:FunctionalProperty ;
-             rdfs:domain :KnowledgeNode ;
+             rdfs:domain :FunctionNode ;
              rdfs:range xsd:string ;
              rdfs:comment "indicates the semantic category for the function, aka the general purpose/category of the function" ;
              rdfs:label "hasCategory" .
@@ -644,7 +644,7 @@
 
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasDomain
 :hasDomain rdf:type owl:DatatypeProperty ;
-           rdfs:domain :KnowledgeNode ;
+           rdfs:domain :FunctionNode ;
            rdfs:range xsd:string ;
            rdfs:comment "indicates detected domain names as strings in the function" ;
            rdfs:label "hasDomain" .
@@ -652,7 +652,7 @@
 
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasFileIOAPI
 :hasFileIOAPI rdf:type owl:DatatypeProperty ;
-              rdfs:domain :KnowledgeNode ;
+              rdfs:domain :FunctionNode ;
               rdfs:range xsd:string ;
               rdfs:comment "indicates file IO API calls in the given function" ;
               rdfs:label "hasFileIOAPI" .
@@ -660,7 +660,7 @@
 
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasFilePath
 :hasFilePath rdf:type owl:DatatypeProperty ;
-             rdfs:domain :KnowledgeNode ;
+             rdfs:domain :FunctionNode ;
              rdfs:range xsd:string ;
              rdfs:comment "indicates detected file paths as strings in the function" ;
              rdfs:label "hasFilePath" .
@@ -677,7 +677,7 @@
 
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasIPAddress
 :hasIPAddress rdf:type owl:DatatypeProperty ;
-              rdfs:domain :KnowledgeNode ;
+              rdfs:domain :FunctionNode ;
               rdfs:range xsd:string ;
               rdfs:comment "indicates detected IP addresses from strings in the function" ;
               rdfs:label "hasIPAddress" .
@@ -703,7 +703,7 @@
 
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasNetworkAPI
 :hasNetworkAPI rdf:type owl:DatatypeProperty ;
-               rdfs:domain :KnowledgeNode ;
+               rdfs:domain :FunctionNode ;
                rdfs:range xsd:string ;
                rdfs:comment "indicates network api calls present in the given function" ;
                rdfs:label "hasNetworkAPI" .
@@ -766,7 +766,7 @@
 
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasRegistryKey
 :hasRegistryKey rdf:type owl:DatatypeProperty ;
-                rdfs:domain :KnowledgeNode ;
+                rdfs:domain :FunctionNode ;
                 rdfs:range xsd:string ;
                 rdfs:comment "indicates detected registry keys as strings in the function" ;
                 rdfs:label "hasRegistryKey" .
@@ -784,7 +784,7 @@
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasRiskLevel
 :hasRiskLevel rdf:type owl:DatatypeProperty ,
                        owl:FunctionalProperty ;
-              rdfs:domain :KnowledgeNode ;
+              rdfs:domain :FunctionNode ;
               rdfs:range xsd:string ;
               rdfs:comment "indicates computed risk level (low, medium, or high)" ;
               rdfs:label "hasRiskLevel" .
@@ -792,7 +792,7 @@
 
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasSecurityFlag
 :hasSecurityFlag rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :KnowledgeNode ;
+                 rdfs:domain :FunctionNode ;
                  rdfs:range xsd:string ;
                  rdfs:comment "indicates security annotations given as certain flags for a function" ;
                  rdfs:label "hasSecurityFlag" .
@@ -818,7 +818,7 @@
 
 ###  http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasURL
 :hasURL rdf:type owl:DatatypeProperty ;
-        rdfs:domain :KnowledgeNode ;
+        rdfs:domain :FunctionNode ;
         rdfs:range xsd:string ;
         rdfs:comment "indicates detected URLs in strings in the function" ;
         rdfs:label "hasURL" .
@@ -929,11 +929,51 @@
                                 owl:someValuesFrom :Variable
                               ] ,
                               [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasActivityProfile ;
+                                owl:someValuesFrom xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasCategory ;
+                                owl:someValuesFrom xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasDomain ;
+                                owl:someValuesFrom xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasFileIOAPI ;
+                                owl:someValuesFrom xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasFilePath ;
+                                owl:someValuesFrom xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasIPAddress ;
+                                owl:someValuesFrom xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
                                 owl:onProperty :hasName ;
                                 owl:someValuesFrom xsd:string
                               ] ,
                               [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasNetworkAPI ;
+                                owl:someValuesFrom xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
                                 owl:onProperty :hasReturnType ;
+                                owl:someValuesFrom xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasRiskLevel ;
+                                owl:someValuesFrom xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasSecurityFlag ;
+                                owl:someValuesFrom xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasURL ;
                                 owl:someValuesFrom xsd:string
                               ] ;
               rdfs:comment "a function defined by the ghidra decompilation" ;
@@ -970,10 +1010,6 @@
 :KnowledgeNode rdf:type owl:Class ;
                rdfs:subClassOf [ rdf:type owl:Restriction ;
                                  owl:onProperty :createdAt ;
-                                 owl:someValuesFrom xsd:dateTimeStamp
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasActivityProfile ;
                                  owl:someValuesFrom xsd:string
                                ] ,
                                [ rdf:type owl:Restriction ;
@@ -985,10 +1021,6 @@
                                  owl:someValuesFrom xsd:string
                                ] ,
                                [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasCategory ;
-                                 owl:someValuesFrom xsd:string
-                               ] ,
-                               [ rdf:type owl:Restriction ;
                                  owl:onProperty :hasDecompiledCode ;
                                  owl:someValuesFrom xsd:string
                                ] ,
@@ -997,23 +1029,7 @@
                                  owl:someValuesFrom xsd:string
                                ] ,
                                [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasDomain ;
-                                 owl:someValuesFrom xsd:string
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasFileIOAPI ;
-                                 owl:someValuesFrom xsd:string
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasFilePath ;
-                                 owl:someValuesFrom xsd:string
-                               ] ,
-                               [ rdf:type owl:Restriction ;
                                  owl:onProperty :hasID ;
-                                 owl:someValuesFrom xsd:string
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasIPAddress ;
                                  owl:someValuesFrom xsd:string
                                ] ,
                                [ rdf:type owl:Restriction ;
@@ -1025,23 +1041,7 @@
                                  owl:someValuesFrom xsd:string
                                ] ,
                                [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasNetworkAPI ;
-                                 owl:someValuesFrom xsd:string
-                               ] ,
-                               [ rdf:type owl:Restriction ;
                                  owl:onProperty :hasRawContent ;
-                                 owl:someValuesFrom xsd:string
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasRegistryKey ;
-                                 owl:someValuesFrom xsd:string
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasRiskLevel ;
-                                 owl:someValuesFrom xsd:string
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasSecurityFlag ;
                                  owl:someValuesFrom xsd:string
                                ] ,
                                [ rdf:type owl:Restriction ;
@@ -1051,10 +1051,6 @@
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :hasSummaryConfidence ;
                                  owl:someValuesFrom xsd:float
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasURL ;
-                                 owl:someValuesFrom xsd:string
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :hasVectorEmbedding ;

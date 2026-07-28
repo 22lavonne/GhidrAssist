@@ -422,6 +422,48 @@
     <SubClassOf>
         <Class IRI="/FunctionNode"/>
         <DataSomeValuesFrom>
+            <DataProperty IRI="/hasActivityProfile"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/FunctionNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasCategory"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/FunctionNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasDomain"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/FunctionNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasFileIOAPI"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/FunctionNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasFilePath"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/FunctionNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasIPAddress"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/FunctionNode"/>
+        <DataSomeValuesFrom>
             <DataProperty IRI="/hasName"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
@@ -429,7 +471,35 @@
     <SubClassOf>
         <Class IRI="/FunctionNode"/>
         <DataSomeValuesFrom>
+            <DataProperty IRI="/hasNetworkAPI"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/FunctionNode"/>
+        <DataSomeValuesFrom>
             <DataProperty IRI="/hasReturnType"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/FunctionNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasRiskLevel"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/FunctionNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasSecurityFlag"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/FunctionNode"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="/hasURL"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -472,13 +542,6 @@
         <Class IRI="/KnowledgeNode"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/createdAt"/>
-            <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/KnowledgeNode"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/hasActivityProfile"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -499,13 +562,6 @@
     <SubClassOf>
         <Class IRI="/KnowledgeNode"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/hasCategory"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/KnowledgeNode"/>
-        <DataSomeValuesFrom>
             <DataProperty IRI="/hasDecompiledCode"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
@@ -520,35 +576,7 @@
     <SubClassOf>
         <Class IRI="/KnowledgeNode"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/hasDomain"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/KnowledgeNode"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/hasFileIOAPI"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/KnowledgeNode"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/hasFilePath"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/KnowledgeNode"/>
-        <DataSomeValuesFrom>
             <DataProperty IRI="/hasID"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/KnowledgeNode"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/hasIPAddress"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -569,35 +597,7 @@
     <SubClassOf>
         <Class IRI="/KnowledgeNode"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/hasNetworkAPI"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/KnowledgeNode"/>
-        <DataSomeValuesFrom>
             <DataProperty IRI="/hasRawContent"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/KnowledgeNode"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/hasRegistryKey"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/KnowledgeNode"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/hasRiskLevel"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/KnowledgeNode"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/hasSecurityFlag"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -613,13 +613,6 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="/hasSummaryConfidence"/>
             <Datatype abbreviatedIRI="xsd:float"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/KnowledgeNode"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/hasURL"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1565,7 +1558,7 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasActivityProfile"/>
-        <Class IRI="/KnowledgeNode"/>
+        <Class IRI="/FunctionNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasAnalysisDepth"/>
@@ -1577,7 +1570,7 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasCategory"/>
-        <Class IRI="/KnowledgeNode"/>
+        <Class IRI="/FunctionNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasDataType"/>
@@ -1593,15 +1586,15 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasDomain"/>
-        <Class IRI="/KnowledgeNode"/>
+        <Class IRI="/FunctionNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasFileIOAPI"/>
-        <Class IRI="/KnowledgeNode"/>
+        <Class IRI="/FunctionNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasFilePath"/>
-        <Class IRI="/KnowledgeNode"/>
+        <Class IRI="/FunctionNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasID"/>
@@ -1609,7 +1602,7 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasIPAddress"/>
-        <Class IRI="/KnowledgeNode"/>
+        <Class IRI="/FunctionNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasLLMSummary"/>
@@ -1621,7 +1614,7 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasNetworkAPI"/>
-        <Class IRI="/KnowledgeNode"/>
+        <Class IRI="/FunctionNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasOpcode"/>
@@ -1649,7 +1642,7 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasRegistryKey"/>
-        <Class IRI="/KnowledgeNode"/>
+        <Class IRI="/FunctionNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasReturnType"/>
@@ -1657,11 +1650,11 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasRiskLevel"/>
-        <Class IRI="/KnowledgeNode"/>
+        <Class IRI="/FunctionNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasSecurityFlag"/>
-        <Class IRI="/KnowledgeNode"/>
+        <Class IRI="/FunctionNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasSignature"/>
@@ -1673,7 +1666,7 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasURL"/>
-        <Class IRI="/KnowledgeNode"/>
+        <Class IRI="/FunctionNode"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/hasVectorEmbedding"/>

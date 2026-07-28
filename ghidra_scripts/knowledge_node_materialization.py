@@ -184,20 +184,20 @@ if not dir_path.is_dir():
     exit()
     
 
-script_dir = str(Path(__file__).resolve().parent)
+script_dir = Path(__file__).resolve().parent / dir_name
 
 
-binary_path = script_dir + "/binaries.json"
-binary_list = load_nodes(binary_path)
+binary_path = script_dir / "binaries.json"
+binary_list = load_nodes(str(binary_path))
 
-func_path = script_dir + "/functions.json"
-func_list = load_nodes(func_path)
+func_path = script_dir / "functions.json"
+func_list = load_nodes(str(func_path))
 
-ext_path = script_dir + "/externals.json"
-ext_list = load_nodes(ext_path)
+ext_path = script_dir / "externals.json"
+ext_list = load_nodes(str(ext_path))
 
-module_path = script_dir + "/modules.json"
-module_list = load_nodes(module_path)
+module_path = script_dir / "modules.json"
+module_list = load_nodes(str(module_path))
 
 
 # rdf:type shortcut

@@ -21,7 +21,6 @@ new_dir_name = askString("Input Required", "Please enter name to create new dire
 
 # nested class, imported off the outer class
 GraphEdge = BinaryKnowledgeGraph.GraphEdge
-binary_knowledge_graph = BinaryKnowledgeGraph
 
 program_hash = currentProgram.getExecutableSHA256()
 
@@ -63,16 +62,13 @@ def add_list_property(node_dict, key, value):
         value_list = list(value)
         node_dict[key] = value_list
     return node_dict
-    
 
-# TODO: modify this to include all the properties needed for knowledge nodes
+
 # Iterate through each node, add all the necessary data about it, then put it in its respective list
 for node in all_nodes:
     # create new dictionary for node
     new_node = {"name": node.getName(), "id": node.getId()}
     # get all the data properties for the nodes, adding them only if the getter methods for them return non null or empty
-    # new_node["address"] = node.getAddress()
-    #TODO: change some of these properties to strings if necessary
     if (node.getAddress() is not None):
         # if the node has an address, put it in the same hex format Ghidra uses
         add_property(new_node, "address", "{:08x}".format(node.getAddress()))
@@ -103,34 +99,47 @@ for node in all_nodes:
     
     # dict for all the edges of the current node. The key is the target node id, the value is the type of edge
     # this is to allow for multiple edges of the same type for a node
-    # TODO: might need to change this if there are instances where there are multiple edges to the same target node for a source node
     edge_dict = {}
     
     outgoing = [e for e in all_edges if e.getSourceId() == node.getId()]
     for edge in outgoing:
         target_node = nodes_by_id.get(edge.getTargetId())
         edge_type = edge.getType()  # EdgeType enum
-        # if the target node exists, use that id
+        # if the target node exists, use that name
         if target_node:
             edge_dict.update({str(target_node.getName()): str(edge_type)})
         # if not, get the id from the edge
         else:
-            # edge_dict.update({str(edge.getTargetId()): str(edge_type)})
+            # if there is a name associated with that id, use that
             target_node = graph.getNode(str(edge.getTargetId()))
             node_name = target_node.getName() if target_node is not None else None
+            # use the node name if it exists
             if node_name is not None:
-                print("name for node found!")
+                # print("name for node found!")
                 edge_dict.update({str(node_name): str(edge_type)})
+            # if it doesn't exist, look to see if it is a module/community node
+            elif edge_type == EdgeType.BELONGS_TO_COMMUNITY or edge_type == EdgeType.SIBLING:
+                # print("community type edge found")
+                # look through community objects (separate from knowledge nodes)
+                community = graph.getCommunity(str(edge.getTargetId()))
+                # if that community exists, add its name
+                if community is not None:
+                    edge_dict.update({str(community.getName()): str(edge_type)})
+                # if not just use the id
+                else:
+                    edge_dict.update({str(edge.getTargetId()): str(edge_type)})
+            # if the community doesn't exist, then just default to using the id
             else:
-                print("name for node not found...")
+                # print("name for node not found...")
                 edge_dict.update({str(edge.getTargetId()): str(edge_type)})
-            
-        print("{} (id of {})  --[{}]-->  {}".format(
-            node.getDisplayLabel(),
-            node.getId(),
-            edge_type.getDisplayName(),
-            target_node.getDisplayLabel() if target_node else edge.getTargetId(),
-        ))
+           
+        # print statement for testing 
+        # print("{} (id of {})  --[{}]-->  {}".format(
+        #     node.getDisplayLabel(),
+        #     node.getId(),
+        #     edge_type.getDisplayName(),
+        #     target_node.getDisplayLabel() if target_node else edge.getTargetId(),
+        # ))
         
     new_node.update({"edges": edge_dict})
     # then add the new node to whichever list it belongs in (based on the type of node)
@@ -145,17 +154,17 @@ for node in all_nodes:
     else:
         print("ERROR: found a node not expected:", node.getDisplayLabel(), "type:", node.getType())
 
-
-#TODO: make 4 separate json files to separate the types of knowledge nodes
+# get the directory for where the json files will be stored, based on the name the user gives from the input earlier
 script_dir_str = str(Path(getSourceFile().getAbsolutePath()).parent)
 data_dir = script_dir_str + "/" + new_dir_name
 
-# Define the directory path
+# get the path for that directory
 directory = Path(data_dir)
 
-# Create the directory safely
+# create the directory if it doesn't already exist
 directory.mkdir(parents=True, exist_ok=True)
 
+# then make the json files for each node type
 with open(data_dir + "/binaries.json", "w") as f:
     json.dump(binary_list, f, indent=2)
     

@@ -4,7 +4,6 @@
 # expected to run symbol materialization before this one 
 # since this file parses from the resulting KG from the symbol materialization
 
-
 import json
 from pathlib import Path
 from urllib.parse import quote
@@ -15,11 +14,13 @@ import rdflib
 from rdflib import URIRef, Graph, Namespace, Literal
 from rdflib import OWL, RDF, RDFS, XSD, TIME
 
+# gets the list of dictionaries from a given path to the json files
 def load_nodes(path: str) -> list[dict]:
     with open(path) as f:
         return json.load(f)
     
-
+# method that removes RDF unfriendly characters from strings
+# so they can be added as RDF objects safely.
 def quote_for_turtle(obj_string):
     quoted_string = quote(obj_string)
     return_string = quoted_string.replace('%', '_')
@@ -38,8 +39,7 @@ pfs = {
 }
 
 # Object properties
-#TODO: fix depends on and related to so they better fit the schema
-## Structural Properties
+## Structural Edges
 CONTAINS = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/contains")
 CALLS = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/calls")
 INFERRED_CALLS = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/inferredCalls")
@@ -59,9 +59,8 @@ NETWORK_RECV = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combin
 BELONGS_TO_COMMUNITY = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/belongsToCommunity")
 SIBLING = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/sibling")
 
-## other
+## Other
 AT_ADDRESS = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/atAddress")
-
 
 
 # Data properties 
@@ -70,7 +69,6 @@ CREATED_AT = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined
 UPDATED_AT = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/updatedAt")
 USER_EDITED = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/userEdited")
 HAS_ID = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasID")
-# HAS_ADDRESS = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasAddress")
 HAS_BINARY_ID = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasBinaryID")
 HAS_NAME = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasName")
 HAS_ANALYSIS_DEPTH = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasAnalysisDepth")
@@ -100,15 +98,13 @@ HAS_URL = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-on
 HAS_IP_ADDRESS = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/hasIPAddress")
 
 
-# classes
-# TODO: add classes for content and metadata (maybe)
+# Classes (for knowledge nodes)
 FUNCTION_NODE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/FunctionNode")
 EXTERNAL_FUNCTION_NODE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/ExternalFunctionNode")
 BINARY_NODE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/BinaryNode")
 MODULE_NODE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/ModuleNode")
-# add objects for metadata and content here
 
-
+# dictionary containing all the edges, used for easier traversal for data to turn into triples
 edge_dict = {
     "CONTAINS": CONTAINS,
     "CALLS" : CALLS,
@@ -129,6 +125,7 @@ edge_dict = {
     "SIBLING": SIBLING
     }
 
+# dictionary containing all data properties
 property_dict = {
     "createdAt": CREATED_AT,
     "updatedAt": UPDATED_AT,
@@ -146,7 +143,6 @@ property_dict = {
     "decompiledCode": HAS_DECOMPILED_CODE, 
     "disassembly": HAS_DISASSEMBLY, 
     "signature": HAS_SIGNATURE,
-    #TODO: change the list properties in this dict if needed
     "vectorEmbeddings": HAS_VECTOR_EMBEDDING,
     
     "riskLevel": HAS_RISK_LEVEL,
@@ -162,6 +158,7 @@ property_dict = {
     "IPAddresses": HAS_IP_ADDRESS,
     }
 
+# dictionary with all types of classes (knowledge nodes)
 class_dict = {
     "FUNCTION": FUNCTION_NODE,
     "EXTERNAL": EXTERNAL_FUNCTION_NODE,
@@ -177,17 +174,18 @@ def init_kg(prefixes=pfs):
         kg.bind(prefix, pfs[prefix])
     return kg
 
-
+# ask the user for what directory they want the KG to be made from
+# this directory must contain the json files gotten from the knowledge node extraction script,
+# as well as the symbol-output.ttl gotten from the symbol materialization script.
 dir_name = input("What directory do you want to make a knowledge graph from? (needs to exist in the ghidra-scripts directory): ")
 dir_path = Path(dir_name)
 if not dir_path.is_dir():
     print("Directory does not exist. Exiting...")
     exit()
     
-
 script_dir = Path(__file__).resolve().parent / dir_name
 
-
+# get all the list of dictionaries from the json files
 binary_path = script_dir / "binaries.json"
 binary_list = load_nodes(str(binary_path))
 
@@ -225,7 +223,8 @@ except Exception as e:
     print("Error: an unknown exception occurred:", e, "Exiting...")
     exit()
 
-# TODO: change both materialization files to have nodes named by id instead of name if necessary
+# function that will create all necessary RDF triples for a given node.
+# takes in a node dictionary and a string representing the type of node
 def materialize_knowledge_node(node, node_type):
     
     # add the node object to the KG
@@ -242,16 +241,16 @@ def materialize_knowledge_node(node, node_type):
             addr_obj = pfs["mkg"][quote_for_turtle(str(value))]
             graph.add( (node_obj, AT_ADDRESS, addr_obj))
             
+        # else if it's a property, add the data property relation
         elif (key in property_dict):
             # if the current value is a list, then iterate through the list and add all elements of that list to the given node
             if (isinstance(value, list)):
                 for item in value:
-                    # item_obj = pfs["mkg"][quote_for_turtle(str(item))]
                     item_obj = Literal(str(item))
                     graph.add( (node_obj, property_dict[key], item_obj))
+                    
             # if it isn't a list then just add the one property to the node here
             else:
-                # value_obj = pfs["mkg"][quote_for_turtle(str(value))]
                 value_obj = Literal(str(value))
                 graph.add( (node_obj, property_dict[key], value_obj))
         else:
@@ -271,19 +270,17 @@ def materialize_knowledge_node(node, node_type):
 # Then add the triples for all 4 kinds of knowledge nodes
 for function in func_list:
     materialize_knowledge_node(function, "FUNCTION")
-        
-        
+          
 for external in ext_list:
     materialize_knowledge_node(external, "EXTERNAL")
     
-
 for module in module_list:
     materialize_knowledge_node(module, "MODULE")
 
 for binary in binary_list:
     materialize_knowledge_node(binary, "BINARY")
     
-
+# after all triples are created, serialize the KG.
 output_file = dir_name + "/combined-output.ttl"
 temp = graph.serialize(format="turtle", encoding="utf-8", destination=output_file)
 print("Finished materializing. Exiting...")

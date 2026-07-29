@@ -38,6 +38,7 @@ nodes_by_id = {n.getId(): n for n in all_nodes}
 
 print("Total nodes: {}".format(len(all_nodes)))
 
+
 # All edges in one batched query, keyed off every node ID as a source
 all_edges = graph.getEdgesForNodes(node_ids)
 print("Total edges: {}".format(len(all_edges)))
@@ -153,6 +154,8 @@ for node in all_nodes:
         module_list.append(new_node)
     else:
         print("ERROR: found a node not expected:", node.getDisplayLabel(), "type:", node.getType())
+
+print("Total functions: {}".format(len(func_list)))
 
 # get the directory for where the json files will be stored, based on the name the user gives from the input earlier
 script_dir_str = str(Path(getSourceFile().getAbsolutePath()).parent)

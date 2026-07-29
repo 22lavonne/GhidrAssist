@@ -1,0 +1,124 @@
+PREFIX : <http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+# Lists all the functions that have security flags, how many distinct flags they have, and their type. 
+SELECT ?function
+# get all distinct security flags
+       (GROUP_CONCAT(DISTINCT ?securityFlag; separator=", ") AS ?securityFlags)
+    #    get the count of the number of security flags
+       (COUNT(DISTINCT ?securityFlag) AS ?flagCount)
+WHERE {
+    ?function a :FunctionNode ;
+              :hasSecurityFlag ?securityFlag .
+}
+GROUP BY ?function
+ORDER BY DESC(?flagCount) ?function
+
+# gets how many functions have a risk level, and displays how many functions have a specific risk level
+SELECT ?riskLevel (COUNT(?function) AS ?count)
+WHERE { ?function a :FunctionNode ; :hasRiskLevel ?riskLevel . }
+GROUP BY ?riskLevel
+ORDER BY DESC(?count)
+
+# displays how many instances of each type of security flag there are
+SELECT ?securityFlag (COUNT(?function) AS ?count)
+WHERE { ?function a :FunctionNode ; :hasSecurityFlag ?securityFlag . }
+GROUP BY ?securityFlag
+ORDER BY DESC(?count)
+
+# shows all instances of taint flow
+SELECT ?source ?sink
+WHERE {
+    ?source :taintFlowsTo ?sink .
+}
+
+SELECT 
+
+# get instances of vulnerableVia relations for functions
+SELECT ?vulnerableFunction ?caller
+WHERE {
+    ?vulnerableFunction :vulnerableVia ?caller .
+}
+
+# gets instances of network APIs in functions, lists the risk level for that function, 
+# and gets the security flags for that function
+SELECT ?function ?networkAPI ?riskLevel (GROUP_CONCAT(DISTINCT ?flag; separator=", ") AS ?flags)
+WHERE {
+    ?function a :FunctionNode ;
+              :hasNetworkAPI ?networkAPI .
+    OPTIONAL { ?function :hasRiskLevel ?riskLevel }
+    OPTIONAL { ?function :hasSecurityFlag ?flag }
+}
+GROUP BY ?function ?networkAPI ?riskLevel
+
+# shows functions with the most calls
+SELECT ?function (COUNT(DISTINCT ?caller) AS ?callerCount)
+WHERE {
+    ?caller :calls ?function .
+}
+GROUP BY ?function
+ORDER BY DESC(?callerCount)
+LIMIT 15
+
+# shows functions that are part of a taint flow and have a security flag
+SELECT DISTINCT ?function ?flag ?role
+WHERE {
+    ?function :hasSecurityFlag ?flag .
+    {
+        ?function :taintFlowsTo ?other .
+        BIND("taint source" AS ?role)
+    } UNION {
+        ?other :taintFlowsTo ?function .
+        BIND("taint sink" AS ?role)
+    }
+}
+
+# final queries used in report:
+
+# a union that gets the amount of taint flow relations, vulnerable via operations, 
+# and the number of high risk functions in the executable.
+SELECT ?metric ?count
+WHERE {
+  {
+    SELECT ("Taint Flows" AS ?metric) (COUNT(*) AS ?count)
+    WHERE { ?source :taintFlowsTo ?sink . }
+  }
+  UNION
+  {
+    SELECT ("Vulnerable Via" AS ?metric) (COUNT(*) AS ?count)
+    WHERE { ?vulnerableFunction :vulnerableVia ?caller . }
+  }
+  UNION
+  {
+    SELECT (CONCAT(STR(?riskLevel), " Risk Function") AS ?metric) (COUNT(?function) AS ?count)
+    WHERE { 
+      ?function a :FunctionNode ; 
+                :hasRiskLevel ?riskLevel . 
+      FILTER (LCASE(STR(?riskLevel)) NOT IN ("low", "medium"))
+    }
+    GROUP BY ?riskLevel
+  }
+}
+
+# lists functions, and displays how many security flags they have, what those flags are,
+# the number of network APIs are present in the function, and the risk level of the function.
+SELECT ?function 
+       (COUNT(DISTINCT ?securityFlag) AS ?flagCount)
+       (GROUP_CONCAT(DISTINCT ?securityFlag; separator=", ") AS ?securityFlags)
+       (COUNT(DISTINCT ?networkAPI) AS ?networkAPICount)
+       ?riskLevel
+WHERE {
+    ?function a :FunctionNode .
+    
+    # Capture security flags
+    ?function :hasSecurityFlag ?securityFlag .
+    
+    # Capture optional network APIs
+    OPTIONAL { ?function :hasNetworkAPI ?networkAPI . }
+    
+    # Capture optional risk/security level
+    OPTIONAL { ?function :hasRiskLevel ?riskLevel . }
+}
+GROUP BY ?function ?riskLevel
+ORDER BY DESC(?flagCount) ?function
+LIMIT 10

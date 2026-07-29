@@ -54,6 +54,7 @@ VULNERABLE_VIA = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/comb
 TAINT_FLOWS_TO = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/taintFlowsTo")
 CALLS_VULNERABLE = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/callsVulnerable")
 NETWORK_SEND = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/networkSend")
+NETWORK_RECV = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/networkRecv")
 ## Community Edges 
 BELONGS_TO_COMMUNITY = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/belongsToCommunity")
 SIBLING = URIRef("http://www.semanticweb.org/jaspe/ontologies/2026/0/combined-ontology/sibling")
@@ -123,7 +124,7 @@ edge_dict = {
     "TAINT_FLOWS_TO": TAINT_FLOWS_TO,
     "CALLS_VULNERABLE": CALLS_VULNERABLE,
     "NETWORK_SEND": NETWORK_SEND,
-    
+    "NETWORK_RECV": NETWORK_RECV,
     "BELONGS_TO_COMMUNITY": BELONGS_TO_COMMUNITY,
     "SIBLING": SIBLING
     }

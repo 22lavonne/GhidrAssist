@@ -21,6 +21,7 @@ new_dir_name = askString("Input Required", "Please enter name to create new dire
 
 # nested class, imported off the outer class
 GraphEdge = BinaryKnowledgeGraph.GraphEdge
+binary_knowledge_graph = BinaryKnowledgeGraph
 
 program_hash = currentProgram.getExecutableSHA256()
 
@@ -111,17 +112,25 @@ for node in all_nodes:
         edge_type = edge.getType()  # EdgeType enum
         # if the target node exists, use that id
         if target_node:
-            edge_dict.update({str(target_node.getId()): str(edge_type)})
+            edge_dict.update({str(target_node.getName()): str(edge_type)})
         # if not, get the id from the edge
         else:
-            edge_dict.update({str(edge.getTargetId()): str(edge_type)})
+            # edge_dict.update({str(edge.getTargetId()): str(edge_type)})
+            target_node = graph.getNode(str(edge.getTargetId()))
+            node_name = target_node.getName() if target_node is not None else None
+            if node_name is not None:
+                print("name for node found!")
+                edge_dict.update({str(node_name): str(edge_type)})
+            else:
+                print("name for node not found...")
+                edge_dict.update({str(edge.getTargetId()): str(edge_type)})
             
-        # print("{} (id of {})  --[{}]-->  {}".format(
-        #     node.getDisplayLabel(),
-        #     node.getId(),
-        #     edge_type.getDisplayName(),
-        #     target_node.getDisplayLabel() if target_node else edge.getTargetId(),
-        # ))
+        print("{} (id of {})  --[{}]-->  {}".format(
+            node.getDisplayLabel(),
+            node.getId(),
+            edge_type.getDisplayName(),
+            target_node.getDisplayLabel() if target_node else edge.getTargetId(),
+        ))
         
     new_node.update({"edges": edge_dict})
     # then add the new node to whichever list it belongs in (based on the type of node)

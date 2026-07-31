@@ -1,0 +1,3115 @@
+INSTRUCTION min_address=00400e80 opcode=SUB in_function=_init numoperands=2
+SOURCEOPERAND operand=RSP type=REGISTER
+DESTINATIONOPERAND operand=0x8 type=SCALAR
+INSTRUCTION min_address=00400e84 opcode=MOV in_function=_init numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=qword ptr [0x00602ff8] type=ADDRESS
+INSTRUCTION min_address=00400e8b opcode=TEST in_function=_init numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=RAX type=REGISTER
+INSTRUCTION min_address=00400e8e opcode=JZ in_function=_init numoperands=1
+SOURCEOPERAND operand=0x00400e95 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400e95 type=ADDRESS
+INSTRUCTION min_address=00400e90 opcode=CALL in_function=_init numoperands=1
+SOURCEOPERAND operand=0x00401170 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401170 type=ADDRESS
+INSTRUCTION min_address=00400e95 opcode=ADD in_function=_init numoperands=2
+SOURCEOPERAND operand=RSP type=REGISTER
+DESTINATIONOPERAND operand=0x8 type=SCALAR
+INSTRUCTION min_address=00400e99 opcode=RET in_function=_init numoperands=0
+INSTRUCTION min_address=00400ea0 opcode=PUSH in_function=FUN_00400ea0 numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603008] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603008] type=ADDRESS
+INSTRUCTION min_address=00400ea6 opcode=JMP in_function=FUN_00400ea0 numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603010] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603010] type=ADDRESS
+INSTRUCTION min_address=00400eb0 opcode=JMP in_function=free numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603018] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603018] type=ADDRESS
+INSTRUCTION min_address=00400ec0 opcode=JMP in_function=pthread_create numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603020] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603020] type=ADDRESS
+INSTRUCTION min_address=00400ed0 opcode=JMP in_function=localtime numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603028] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603028] type=ADDRESS
+INSTRUCTION min_address=00400ee0 opcode=JMP in_function=abort numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603030] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603030] type=ADDRESS
+INSTRUCTION min_address=00400ef0 opcode=JMP in_function=__errno_location numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603038] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603038] type=ADDRESS
+INSTRUCTION min_address=00400f00 opcode=JMP in_function=strcpy numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603040] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603040] type=ADDRESS
+INSTRUCTION min_address=00400f10 opcode=JMP in_function=puts numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603048] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603048] type=ADDRESS
+INSTRUCTION min_address=00400f20 opcode=JMP in_function=setsockopt numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603050] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603050] type=ADDRESS
+INSTRUCTION min_address=00400f30 opcode=JMP in_function=fcntl numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603058] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603058] type=ADDRESS
+INSTRUCTION min_address=00400f40 opcode=JMP in_function=strlen numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603060] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603060] type=ADDRESS
+INSTRUCTION min_address=00400f50 opcode=JMP in_function=asctime numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603068] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603068] type=ADDRESS
+INSTRUCTION min_address=00400f60 opcode=JMP in_function=send numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603070] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603070] type=ADDRESS
+INSTRUCTION min_address=00400f70 opcode=JMP in_function=strchr numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603078] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603078] type=ADDRESS
+INSTRUCTION min_address=00400f80 opcode=JMP in_function=printf numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603080] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603080] type=ADDRESS
+INSTRUCTION min_address=00400f90 opcode=JMP in_function=gai_strerror numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603088] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603088] type=ADDRESS
+INSTRUCTION min_address=00400fa0 opcode=JMP in_function=memset numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603090] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603090] type=ADDRESS
+INSTRUCTION min_address=00400fb0 opcode=JMP in_function=close numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603098] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603098] type=ADDRESS
+INSTRUCTION min_address=00400fc0 opcode=JMP in_function=isspace numoperands=1
+SOURCEOPERAND operand=qword ptr [0x006030a0] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x006030a0] type=ADDRESS
+INSTRUCTION min_address=00400fd0 opcode=JMP in_function=epoll_ctl numoperands=1
+SOURCEOPERAND operand=qword ptr [0x006030a8] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x006030a8] type=ADDRESS
+INSTRUCTION min_address=00400fe0 opcode=JMP in_function=read numoperands=1
+SOURCEOPERAND operand=qword ptr [0x006030b0] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x006030b0] type=ADDRESS
+INSTRUCTION min_address=00400ff0 opcode=JMP in_function=__libc_start_main numoperands=1
+SOURCEOPERAND operand=qword ptr [0x006030b8] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x006030b8] type=ADDRESS
+INSTRUCTION min_address=00401000 opcode=JMP in_function=calloc numoperands=1
+SOURCEOPERAND operand=qword ptr [0x006030c0] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x006030c0] type=ADDRESS
+INSTRUCTION min_address=00401010 opcode=JMP in_function=strcmp numoperands=1
+SOURCEOPERAND operand=qword ptr [0x006030c8] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x006030c8] type=ADDRESS
+INSTRUCTION min_address=00401020 opcode=JMP in_function=signal numoperands=1
+SOURCEOPERAND operand=qword ptr [0x006030d0] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x006030d0] type=ADDRESS
+INSTRUCTION min_address=00401030 opcode=JMP in_function=fprintf numoperands=1
+SOURCEOPERAND operand=qword ptr [0x006030d8] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x006030d8] type=ADDRESS
+INSTRUCTION min_address=00401040 opcode=JMP in_function=time numoperands=1
+SOURCEOPERAND operand=qword ptr [0x006030e0] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x006030e0] type=ADDRESS
+INSTRUCTION min_address=00401050 opcode=JMP in_function=malloc numoperands=1
+SOURCEOPERAND operand=qword ptr [0x006030e8] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x006030e8] type=ADDRESS
+INSTRUCTION min_address=00401060 opcode=JMP in_function=fflush numoperands=1
+SOURCEOPERAND operand=qword ptr [0x006030f0] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x006030f0] type=ADDRESS
+INSTRUCTION min_address=00401070 opcode=JMP in_function=listen numoperands=1
+SOURCEOPERAND operand=qword ptr [0x006030f8] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x006030f8] type=ADDRESS
+INSTRUCTION min_address=00401080 opcode=JMP in_function=epoll_wait numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603100] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603100] type=ADDRESS
+INSTRUCTION min_address=00401090 opcode=JMP in_function=bind numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603108] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603108] type=ADDRESS
+INSTRUCTION min_address=004010a0 opcode=JMP in_function=fopen numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603110] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603110] type=ADDRESS
+INSTRUCTION min_address=004010b0 opcode=JMP in_function=perror numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603118] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603118] type=ADDRESS
+INSTRUCTION min_address=004010c0 opcode=JMP in_function=accept numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603120] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603120] type=ADDRESS
+INSTRUCTION min_address=004010d0 opcode=JMP in_function=atoi numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603128] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603128] type=ADDRESS
+INSTRUCTION min_address=004010e0 opcode=JMP in_function=sprintf numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603130] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603130] type=ADDRESS
+INSTRUCTION min_address=004010f0 opcode=JMP in_function=exit numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603138] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603138] type=ADDRESS
+INSTRUCTION min_address=00401100 opcode=JMP in_function=fwrite numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603140] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603140] type=ADDRESS
+INSTRUCTION min_address=00401110 opcode=JMP in_function=getaddrinfo numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603148] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603148] type=ADDRESS
+INSTRUCTION min_address=00401120 opcode=JMP in_function=sleep numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603150] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603150] type=ADDRESS
+INSTRUCTION min_address=00401130 opcode=JMP in_function=epoll_create1 numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603158] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603158] type=ADDRESS
+INSTRUCTION min_address=00401140 opcode=JMP in_function=strstr numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603160] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603160] type=ADDRESS
+INSTRUCTION min_address=00401150 opcode=JMP in_function=freeaddrinfo numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603168] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603168] type=ADDRESS
+INSTRUCTION min_address=00401160 opcode=JMP in_function=socket numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00603170] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00603170] type=ADDRESS
+INSTRUCTION min_address=00401170 opcode=JMP in_function=__gmon_start__ numoperands=1
+SOURCEOPERAND operand=qword ptr [0x00602ff8] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [0x00602ff8] type=ADDRESS
+INSTRUCTION min_address=00401180 opcode=XOR in_function=_start numoperands=2
+SOURCEOPERAND operand=EBP type=REGISTER
+DESTINATIONOPERAND operand=EBP type=REGISTER
+INSTRUCTION min_address=00401182 opcode=MOV in_function=_start numoperands=2
+SOURCEOPERAND operand=R9 type=REGISTER
+DESTINATIONOPERAND operand=RDX type=REGISTER
+INSTRUCTION min_address=00401185 opcode=POP in_function=_start numoperands=1
+SOURCEOPERAND operand=RSI type=REGISTER
+DESTINATIONOPERAND operand=RSI type=REGISTER
+INSTRUCTION min_address=00401186 opcode=MOV in_function=_start numoperands=2
+SOURCEOPERAND operand=RDX type=REGISTER
+DESTINATIONOPERAND operand=RSP type=REGISTER
+INSTRUCTION min_address=00401189 opcode=AND in_function=_start numoperands=2
+SOURCEOPERAND operand=RSP type=REGISTER
+DESTINATIONOPERAND operand=-0x10 type=SCALAR
+INSTRUCTION min_address=0040118d opcode=PUSH in_function=_start numoperands=1
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=RAX type=REGISTER
+INSTRUCTION min_address=0040118e opcode=PUSH in_function=_start numoperands=1
+SOURCEOPERAND operand=RSP type=REGISTER
+DESTINATIONOPERAND operand=RSP type=REGISTER
+INSTRUCTION min_address=0040118f opcode=MOV in_function=_start numoperands=2
+SOURCEOPERAND operand=R8 type=REGISTER
+DESTINATIONOPERAND operand=0x4021a0 type=ADDRESS
+INSTRUCTION min_address=00401196 opcode=MOV in_function=_start numoperands=2
+SOURCEOPERAND operand=RCX type=REGISTER
+DESTINATIONOPERAND operand=0x402130 type=ADDRESS
+INSTRUCTION min_address=0040119d opcode=MOV in_function=_start numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=0x401e40 type=ADDRESS
+INSTRUCTION min_address=004011a4 opcode=CALL in_function=_start numoperands=1
+SOURCEOPERAND operand=0x00400ff0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400ff0 type=ADDRESS
+INSTRUCTION min_address=004011a9 opcode=HLT in_function=_start numoperands=0
+INSTRUCTION min_address=004011b0 opcode=MOV in_function=deregister_tm_clones numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=0x60318f type=SCALAR
+INSTRUCTION min_address=004011b5 opcode=PUSH in_function=deregister_tm_clones numoperands=1
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=004011b6 opcode=SUB in_function=deregister_tm_clones numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=0x603188 type=ADDRESS
+INSTRUCTION min_address=004011bc opcode=CMP in_function=deregister_tm_clones numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=0xe type=SCALAR
+INSTRUCTION min_address=004011c0 opcode=MOV in_function=deregister_tm_clones numoperands=2
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RSP type=REGISTER
+INSTRUCTION min_address=004011c3 opcode=JBE in_function=deregister_tm_clones numoperands=1
+SOURCEOPERAND operand=0x004011e0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004011e0 type=ADDRESS
+INSTRUCTION min_address=004011c5 opcode=MOV in_function=deregister_tm_clones numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=0x0 type=SCALAR
+INSTRUCTION min_address=004011ca opcode=TEST in_function=deregister_tm_clones numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=RAX type=REGISTER
+INSTRUCTION min_address=004011cd opcode=JZ in_function=deregister_tm_clones numoperands=1
+SOURCEOPERAND operand=0x004011e0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004011e0 type=ADDRESS
+INSTRUCTION min_address=004011cf opcode=POP in_function=deregister_tm_clones numoperands=1
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=004011d0 opcode=MOV in_function=deregister_tm_clones numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=0x603188 type=ADDRESS
+INSTRUCTION min_address=004011d5 opcode=JMP in_function=deregister_tm_clones numoperands=1
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=RAX type=REGISTER
+INSTRUCTION min_address=004011e0 opcode=POP in_function=deregister_tm_clones numoperands=1
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=004011e1 opcode=RET in_function=deregister_tm_clones numoperands=0
+INSTRUCTION min_address=004011f0 opcode=MOV in_function=register_tm_clones numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x603188 type=ADDRESS
+INSTRUCTION min_address=004011f5 opcode=PUSH in_function=register_tm_clones numoperands=1
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=004011f6 opcode=SUB in_function=register_tm_clones numoperands=2
+SOURCEOPERAND operand=RSI type=REGISTER
+DESTINATIONOPERAND operand=0x603188 type=ADDRESS
+INSTRUCTION min_address=004011fd opcode=SAR in_function=register_tm_clones numoperands=2
+SOURCEOPERAND operand=RSI type=REGISTER
+DESTINATIONOPERAND operand=0x3 type=SCALAR
+INSTRUCTION min_address=00401201 opcode=MOV in_function=register_tm_clones numoperands=2
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RSP type=REGISTER
+INSTRUCTION min_address=00401204 opcode=MOV in_function=register_tm_clones numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=RSI type=REGISTER
+INSTRUCTION min_address=00401207 opcode=SHR in_function=register_tm_clones numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=0x3f type=SCALAR
+INSTRUCTION min_address=0040120b opcode=ADD in_function=register_tm_clones numoperands=2
+SOURCEOPERAND operand=RSI type=REGISTER
+DESTINATIONOPERAND operand=RAX type=REGISTER
+INSTRUCTION min_address=0040120e opcode=SAR in_function=register_tm_clones numoperands=2
+SOURCEOPERAND operand=RSI type=REGISTER
+DESTINATIONOPERAND operand=0x1 type=SCALAR
+INSTRUCTION min_address=00401211 opcode=JZ in_function=register_tm_clones numoperands=1
+SOURCEOPERAND operand=0x00401228 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401228 type=ADDRESS
+INSTRUCTION min_address=00401213 opcode=MOV in_function=register_tm_clones numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=0x0 type=SCALAR
+INSTRUCTION min_address=00401218 opcode=TEST in_function=register_tm_clones numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=RAX type=REGISTER
+INSTRUCTION min_address=0040121b opcode=JZ in_function=register_tm_clones numoperands=1
+SOURCEOPERAND operand=0x00401228 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401228 type=ADDRESS
+INSTRUCTION min_address=0040121d opcode=POP in_function=register_tm_clones numoperands=1
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=0040121e opcode=MOV in_function=register_tm_clones numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=0x603188 type=ADDRESS
+INSTRUCTION min_address=00401223 opcode=JMP in_function=register_tm_clones numoperands=1
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=RAX type=REGISTER
+INSTRUCTION min_address=00401228 opcode=POP in_function=register_tm_clones numoperands=1
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=00401229 opcode=RET in_function=register_tm_clones numoperands=0
+INSTRUCTION min_address=00401230 opcode=CMP in_function=__do_global_dtors_aux numoperands=2
+SOURCEOPERAND operand=byte ptr [0x006031a8] type=ADDRESS
+DESTINATIONOPERAND operand=0x0 type=SCALAR
+INSTRUCTION min_address=00401237 opcode=JNZ in_function=__do_global_dtors_aux numoperands=1
+SOURCEOPERAND operand=0x0040124a type=ADDRESS
+DESTINATIONOPERAND operand=0x0040124a type=ADDRESS
+INSTRUCTION min_address=00401239 opcode=PUSH in_function=__do_global_dtors_aux numoperands=1
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=0040123a opcode=MOV in_function=__do_global_dtors_aux numoperands=2
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RSP type=REGISTER
+INSTRUCTION min_address=0040123d opcode=CALL in_function=__do_global_dtors_aux numoperands=1
+SOURCEOPERAND operand=0x004011b0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004011b0 type=ADDRESS
+INSTRUCTION min_address=00401242 opcode=POP in_function=__do_global_dtors_aux numoperands=1
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=00401243 opcode=MOV in_function=__do_global_dtors_aux numoperands=2
+SOURCEOPERAND operand=byte ptr [0x006031a8] type=ADDRESS
+DESTINATIONOPERAND operand=0x1 type=SCALAR
+INSTRUCTION min_address=0040124a opcode=RET in_function=__do_global_dtors_aux numoperands=0
+INSTRUCTION min_address=00401250 opcode=MOV in_function=frame_dummy numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=0x602e10 type=ADDRESS
+INSTRUCTION min_address=00401255 opcode=CMP in_function=frame_dummy numoperands=2
+SOURCEOPERAND operand=qword ptr [RDI] type=ADDRESS
+DESTINATIONOPERAND operand=0x0 type=SCALAR
+INSTRUCTION min_address=00401259 opcode=JNZ in_function=frame_dummy numoperands=1
+SOURCEOPERAND operand=0x00401260 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401260 type=ADDRESS
+INSTRUCTION min_address=0040125b opcode=JMP in_function=frame_dummy numoperands=1
+SOURCEOPERAND operand=0x004011f0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004011f0 type=ADDRESS
+INSTRUCTION min_address=00401260 opcode=MOV in_function=frame_dummy numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=0x0 type=SCALAR
+INSTRUCTION min_address=00401265 opcode=TEST in_function=frame_dummy numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=RAX type=REGISTER
+INSTRUCTION min_address=00401268 opcode=JZ in_function=frame_dummy numoperands=1
+SOURCEOPERAND operand=0x0040125b type=ADDRESS
+DESTINATIONOPERAND operand=0x0040125b type=ADDRESS
+INSTRUCTION min_address=0040126a opcode=PUSH in_function=frame_dummy numoperands=1
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=0040126b opcode=MOV in_function=frame_dummy numoperands=2
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RSP type=REGISTER
+INSTRUCTION min_address=0040126e opcode=CALL in_function=frame_dummy numoperands=1
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=RAX type=REGISTER
+INSTRUCTION min_address=00401270 opcode=POP in_function=frame_dummy numoperands=1
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=00401271 opcode=JMP in_function=frame_dummy numoperands=1
+SOURCEOPERAND operand=0x004011f0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004011f0 type=ADDRESS
+INSTRUCTION min_address=00401280 opcode=PUSH in_function=fdgets numoperands=1
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=00401281 opcode=PUSH in_function=fdgets numoperands=1
+SOURCEOPERAND operand=R15 type=REGISTER
+DESTINATIONOPERAND operand=R15 type=REGISTER
+INSTRUCTION min_address=00401283 opcode=PUSH in_function=fdgets numoperands=1
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=00401285 opcode=PUSH in_function=fdgets numoperands=1
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=00401286 opcode=PUSH in_function=fdgets numoperands=1
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=RAX type=REGISTER
+INSTRUCTION min_address=00401287 opcode=MOV in_function=fdgets numoperands=2
+SOURCEOPERAND operand=R14D type=REGISTER
+DESTINATIONOPERAND operand=EDX type=REGISTER
+INSTRUCTION min_address=0040128a opcode=MOV in_function=fdgets numoperands=2
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=RDI type=REGISTER
+INSTRUCTION min_address=0040128d opcode=MOV in_function=fdgets numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=0x1 type=SCALAR
+INSTRUCTION min_address=00401292 opcode=TEST in_function=fdgets numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=ESI type=REGISTER
+INSTRUCTION min_address=00401294 opcode=JLE in_function=fdgets numoperands=1
+SOURCEOPERAND operand=0x004012c8 type=ADDRESS
+DESTINATIONOPERAND operand=0x004012c8 type=ADDRESS
+INSTRUCTION min_address=00401296 opcode=MOVSXD in_function=fdgets numoperands=2
+SOURCEOPERAND operand=R15 type=REGISTER
+DESTINATIONOPERAND operand=ESI type=REGISTER
+INSTRUCTION min_address=00401299 opcode=MOV in_function=fdgets numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=0x1 type=SCALAR
+INSTRUCTION min_address=0040129e opcode=XOR in_function=fdgets numoperands=2
+SOURCEOPERAND operand=EBP type=REGISTER
+DESTINATIONOPERAND operand=EBP type=REGISTER
+INSTRUCTION min_address=004012a0 opcode=MOVZX in_function=fdgets numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=byte ptr [RBX + RBP*0x1 + -0x1] type=DYNAMIC
+INSTRUCTION min_address=004012a5 opcode=CMP in_function=fdgets numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=0xa type=SCALAR
+INSTRUCTION min_address=004012a8 opcode=JZ in_function=fdgets numoperands=1
+SOURCEOPERAND operand=0x004012c8 type=ADDRESS
+DESTINATIONOPERAND operand=0x004012c8 type=ADDRESS
+INSTRUCTION min_address=004012aa opcode=LEA in_function=fdgets numoperands=2
+SOURCEOPERAND operand=RSI type=REGISTER
+DESTINATIONOPERAND operand=[RBX + RBP*0x1] type=DYNAMIC
+INSTRUCTION min_address=004012ae opcode=MOV in_function=fdgets numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=0x1 type=SCALAR
+INSTRUCTION min_address=004012b3 opcode=MOV in_function=fdgets numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=R14D type=REGISTER
+INSTRUCTION min_address=004012b6 opcode=CALL in_function=fdgets numoperands=1
+SOURCEOPERAND operand=0x00400fe0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400fe0 type=ADDRESS
+INSTRUCTION min_address=004012bb opcode=INC in_function=fdgets numoperands=1
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=004012be opcode=CMP in_function=fdgets numoperands=2
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=R15 type=REGISTER
+INSTRUCTION min_address=004012c1 opcode=JGE in_function=fdgets numoperands=1
+SOURCEOPERAND operand=0x004012c8 type=ADDRESS
+DESTINATIONOPERAND operand=0x004012c8 type=ADDRESS
+INSTRUCTION min_address=004012c3 opcode=CMP in_function=fdgets numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=0x1 type=SCALAR
+INSTRUCTION min_address=004012c6 opcode=JZ in_function=fdgets numoperands=1
+SOURCEOPERAND operand=0x004012a0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004012a0 type=ADDRESS
+INSTRUCTION min_address=004012c8 opcode=ADD in_function=fdgets numoperands=2
+SOURCEOPERAND operand=RSP type=REGISTER
+DESTINATIONOPERAND operand=0x8 type=SCALAR
+INSTRUCTION min_address=004012cc opcode=POP in_function=fdgets numoperands=1
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=004012cd opcode=POP in_function=fdgets numoperands=1
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=004012cf opcode=POP in_function=fdgets numoperands=1
+SOURCEOPERAND operand=R15 type=REGISTER
+DESTINATIONOPERAND operand=R15 type=REGISTER
+INSTRUCTION min_address=004012d1 opcode=POP in_function=fdgets numoperands=1
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=004012d2 opcode=RET in_function=fdgets numoperands=0
+INSTRUCTION min_address=004012e0 opcode=PUSH in_function=trim numoperands=1
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=004012e1 opcode=PUSH in_function=trim numoperands=1
+SOURCEOPERAND operand=R15 type=REGISTER
+DESTINATIONOPERAND operand=R15 type=REGISTER
+INSTRUCTION min_address=004012e3 opcode=PUSH in_function=trim numoperands=1
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=004012e5 opcode=PUSH in_function=trim numoperands=1
+SOURCEOPERAND operand=R13 type=REGISTER
+DESTINATIONOPERAND operand=R13 type=REGISTER
+INSTRUCTION min_address=004012e7 opcode=PUSH in_function=trim numoperands=1
+SOURCEOPERAND operand=R12 type=REGISTER
+DESTINATIONOPERAND operand=R12 type=REGISTER
+INSTRUCTION min_address=004012e9 opcode=PUSH in_function=trim numoperands=1
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=004012ea opcode=PUSH in_function=trim numoperands=1
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=RAX type=REGISTER
+INSTRUCTION min_address=004012eb opcode=MOV in_function=trim numoperands=2
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=RDI type=REGISTER
+INSTRUCTION min_address=004012ee opcode=MOV in_function=trim numoperands=2
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=-0x100000000 type=SCALAR
+INSTRUCTION min_address=004012f8 opcode=MOV in_function=trim numoperands=2
+SOURCEOPERAND operand=R13D type=REGISTER
+DESTINATIONOPERAND operand=0xffffffff type=SCALAR
+INSTRUCTION min_address=004012fe opcode=CALL in_function=trim numoperands=1
+SOURCEOPERAND operand=0x00400f40 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f40 type=ADDRESS
+INSTRUCTION min_address=00401303 opcode=MOV in_function=trim numoperands=2
+SOURCEOPERAND operand=R15 type=REGISTER
+DESTINATIONOPERAND operand=RAX type=REGISTER
+INSTRUCTION min_address=00401306 opcode=LEA in_function=trim numoperands=2
+SOURCEOPERAND operand=R12 type=REGISTER
+DESTINATIONOPERAND operand=[R15 + R13*0x1] type=DYNAMIC
+INSTRUCTION min_address=0040130a opcode=XOR in_function=trim numoperands=2
+SOURCEOPERAND operand=EBX type=REGISTER
+DESTINATIONOPERAND operand=EBX type=REGISTER
+INSTRUCTION min_address=0040130c opcode=NOP in_function=trim numoperands=1
+SOURCEOPERAND operand=dword ptr [RAX] type=DYNAMIC
+DESTINATIONOPERAND operand=dword ptr [RAX] type=DYNAMIC
+INSTRUCTION min_address=00401310 opcode=MOVSX in_function=trim numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=byte ptr [R14 + RBX*0x1] type=DYNAMIC
+INSTRUCTION min_address=00401315 opcode=XOR in_function=trim numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00401317 opcode=CALL in_function=trim numoperands=1
+SOURCEOPERAND operand=0x00400fc0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400fc0 type=ADDRESS
+INSTRUCTION min_address=0040131c opcode=INC in_function=trim numoperands=1
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=0040131f opcode=LEA in_function=trim numoperands=2
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=[R13 + RBP*0x1 + 0x1] type=DYNAMIC
+INSTRUCTION min_address=00401324 opcode=TEST in_function=trim numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00401326 opcode=JNZ in_function=trim numoperands=1
+SOURCEOPERAND operand=0x00401310 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401310 type=ADDRESS
+INSTRUCTION min_address=00401328 opcode=LEA in_function=trim numoperands=2
+SOURCEOPERAND operand=R13 type=REGISTER
+DESTINATIONOPERAND operand=[RBX + -0x1] type=DYNAMIC
+INSTRUCTION min_address=0040132c opcode=CMP in_function=trim numoperands=2
+SOURCEOPERAND operand=R12D type=REGISTER
+DESTINATIONOPERAND operand=R13D type=REGISTER
+INSTRUCTION min_address=0040132f opcode=JL in_function=trim numoperands=1
+SOURCEOPERAND operand=0x00401371 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401371 type=ADDRESS
+INSTRUCTION min_address=00401331 opcode=SHL in_function=trim numoperands=2
+SOURCEOPERAND operand=R15 type=REGISTER
+DESTINATIONOPERAND operand=0x20 type=SCALAR
+INSTRUCTION min_address=00401335 opcode=MOV in_function=trim numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=-0x100000000 type=SCALAR
+INSTRUCTION min_address=0040133f opcode=ADD in_function=trim numoperands=2
+SOURCEOPERAND operand=R15 type=REGISTER
+DESTINATIONOPERAND operand=RAX type=REGISTER
+INSTRUCTION min_address=00401342 opcode=SAR in_function=trim numoperands=2
+SOURCEOPERAND operand=R15 type=REGISTER
+DESTINATIONOPERAND operand=0x20 type=SCALAR
+INSTRUCTION min_address=00401346 opcode=SAR in_function=trim numoperands=2
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=0x20 type=SCALAR
+INSTRUCTION min_address=0040134a opcode=NOP in_function=trim numoperands=1
+SOURCEOPERAND operand=word ptr [RAX + RAX*0x1] type=DYNAMIC
+DESTINATIONOPERAND operand=word ptr [RAX + RAX*0x1] type=DYNAMIC
+INSTRUCTION min_address=00401350 opcode=MOVSX in_function=trim numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=byte ptr [R14 + R15*0x1] type=DYNAMIC
+INSTRUCTION min_address=00401355 opcode=XOR in_function=trim numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00401357 opcode=CALL in_function=trim numoperands=1
+SOURCEOPERAND operand=0x00400fc0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400fc0 type=ADDRESS
+INSTRUCTION min_address=0040135c opcode=TEST in_function=trim numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=0040135e opcode=JZ in_function=trim numoperands=1
+SOURCEOPERAND operand=0x0040136e type=ADDRESS
+DESTINATIONOPERAND operand=0x0040136e type=ADDRESS
+INSTRUCTION min_address=00401360 opcode=DEC in_function=trim numoperands=1
+SOURCEOPERAND operand=R12D type=REGISTER
+DESTINATIONOPERAND operand=R12D type=REGISTER
+INSTRUCTION min_address=00401363 opcode=CMP in_function=trim numoperands=2
+SOURCEOPERAND operand=R15 type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=00401366 opcode=LEA in_function=trim numoperands=2
+SOURCEOPERAND operand=R15 type=REGISTER
+DESTINATIONOPERAND operand=[R15 + -0x1] type=DYNAMIC
+INSTRUCTION min_address=0040136a opcode=JG in_function=trim numoperands=1
+SOURCEOPERAND operand=0x00401350 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401350 type=ADDRESS
+INSTRUCTION min_address=0040136c opcode=JMP in_function=trim numoperands=1
+SOURCEOPERAND operand=0x00401371 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401371 type=ADDRESS
+INSTRUCTION min_address=0040136e opcode=MOV in_function=trim numoperands=2
+SOURCEOPERAND operand=R12D type=REGISTER
+DESTINATIONOPERAND operand=R15D type=REGISTER
+INSTRUCTION min_address=00401371 opcode=CMP in_function=trim numoperands=2
+SOURCEOPERAND operand=R13D type=REGISTER
+DESTINATIONOPERAND operand=R12D type=REGISTER
+INSTRUCTION min_address=00401374 opcode=JG in_function=trim numoperands=1
+SOURCEOPERAND operand=0x004013ac type=ADDRESS
+DESTINATIONOPERAND operand=0x004013ac type=ADDRESS
+INSTRUCTION min_address=00401376 opcode=MOVSXD in_function=trim numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=R12D type=REGISTER
+INSTRUCTION min_address=00401379 opcode=MOVSXD in_function=trim numoperands=2
+SOURCEOPERAND operand=RDX type=REGISTER
+DESTINATIONOPERAND operand=R13D type=REGISTER
+INSTRUCTION min_address=0040137c opcode=LEA in_function=trim numoperands=2
+SOURCEOPERAND operand=RSI type=REGISTER
+DESTINATIONOPERAND operand=[R14 + RDX*0x1] type=DYNAMIC
+INSTRUCTION min_address=00401380 opcode=XOR in_function=trim numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00401382 opcode=NOP in_function=trim numoperands=1
+SOURCEOPERAND operand=word ptr CS:[RAX + RAX*0x1] type=DYNAMIC
+DESTINATIONOPERAND operand=word ptr CS:[RAX + RAX*0x1] type=DYNAMIC
+INSTRUCTION min_address=00401390 opcode=MOV in_function=trim numoperands=2
+SOURCEOPERAND operand=CL type=REGISTER
+DESTINATIONOPERAND operand=byte ptr [RSI + RAX*0x1] type=DYNAMIC
+INSTRUCTION min_address=00401393 opcode=MOV in_function=trim numoperands=2
+SOURCEOPERAND operand=byte ptr [R14 + RAX*0x1] type=DYNAMIC
+DESTINATIONOPERAND operand=CL type=REGISTER
+INSTRUCTION min_address=00401397 opcode=LEA in_function=trim numoperands=2
+SOURCEOPERAND operand=RCX type=REGISTER
+DESTINATIONOPERAND operand=[RDX + RAX*0x1 + 0x1] type=DYNAMIC
+INSTRUCTION min_address=0040139c opcode=INC in_function=trim numoperands=1
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=RAX type=REGISTER
+INSTRUCTION min_address=0040139f opcode=DEC in_function=trim numoperands=1
+SOURCEOPERAND operand=RCX type=REGISTER
+DESTINATIONOPERAND operand=RCX type=REGISTER
+INSTRUCTION min_address=004013a2 opcode=CMP in_function=trim numoperands=2
+SOURCEOPERAND operand=RCX type=REGISTER
+DESTINATIONOPERAND operand=RDI type=REGISTER
+INSTRUCTION min_address=004013a5 opcode=JL in_function=trim numoperands=1
+SOURCEOPERAND operand=0x00401390 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401390 type=ADDRESS
+INSTRUCTION min_address=004013a7 opcode=LEA in_function=trim numoperands=2
+SOURCEOPERAND operand=R13D type=REGISTER
+DESTINATIONOPERAND operand=[RBX + RAX*0x1 + -0x1] type=DYNAMIC
+INSTRUCTION min_address=004013ac opcode=SUB in_function=trim numoperands=2
+SOURCEOPERAND operand=R13D type=REGISTER
+DESTINATIONOPERAND operand=EBX type=REGISTER
+INSTRUCTION min_address=004013af opcode=INC in_function=trim numoperands=1
+SOURCEOPERAND operand=R13D type=REGISTER
+DESTINATIONOPERAND operand=R13D type=REGISTER
+INSTRUCTION min_address=004013b2 opcode=MOVSXD in_function=trim numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=R13D type=REGISTER
+INSTRUCTION min_address=004013b5 opcode=MOV in_function=trim numoperands=2
+SOURCEOPERAND operand=byte ptr [R14 + RAX*0x1] type=DYNAMIC
+DESTINATIONOPERAND operand=0x0 type=SCALAR
+INSTRUCTION min_address=004013ba opcode=ADD in_function=trim numoperands=2
+SOURCEOPERAND operand=RSP type=REGISTER
+DESTINATIONOPERAND operand=0x8 type=SCALAR
+INSTRUCTION min_address=004013be opcode=POP in_function=trim numoperands=1
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=004013bf opcode=POP in_function=trim numoperands=1
+SOURCEOPERAND operand=R12 type=REGISTER
+DESTINATIONOPERAND operand=R12 type=REGISTER
+INSTRUCTION min_address=004013c1 opcode=POP in_function=trim numoperands=1
+SOURCEOPERAND operand=R13 type=REGISTER
+DESTINATIONOPERAND operand=R13 type=REGISTER
+INSTRUCTION min_address=004013c3 opcode=POP in_function=trim numoperands=1
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=004013c5 opcode=POP in_function=trim numoperands=1
+SOURCEOPERAND operand=R15 type=REGISTER
+DESTINATIONOPERAND operand=R15 type=REGISTER
+INSTRUCTION min_address=004013c7 opcode=POP in_function=trim numoperands=1
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=004013c8 opcode=RET in_function=trim numoperands=0
+INSTRUCTION min_address=004013d0 opcode=PUSH in_function=broadcast numoperands=1
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=004013d1 opcode=PUSH in_function=broadcast numoperands=1
+SOURCEOPERAND operand=R15 type=REGISTER
+DESTINATIONOPERAND operand=R15 type=REGISTER
+INSTRUCTION min_address=004013d3 opcode=PUSH in_function=broadcast numoperands=1
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=004013d5 opcode=PUSH in_function=broadcast numoperands=1
+SOURCEOPERAND operand=R13 type=REGISTER
+DESTINATIONOPERAND operand=R13 type=REGISTER
+INSTRUCTION min_address=004013d7 opcode=PUSH in_function=broadcast numoperands=1
+SOURCEOPERAND operand=R12 type=REGISTER
+DESTINATIONOPERAND operand=R12 type=REGISTER
+INSTRUCTION min_address=004013d9 opcode=PUSH in_function=broadcast numoperands=1
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=004013da opcode=SUB in_function=broadcast numoperands=2
+SOURCEOPERAND operand=RSP type=REGISTER
+DESTINATIONOPERAND operand=0x18 type=SCALAR
+INSTRUCTION min_address=004013de opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=R13D type=REGISTER
+DESTINATIONOPERAND operand=ESI type=REGISTER
+INSTRUCTION min_address=004013e1 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=RDI type=REGISTER
+INSTRUCTION min_address=004013e4 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x4021b4 type=ADDRESS
+INSTRUCTION min_address=004013e9 opcode=CALL in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x00401010 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401010 type=ADDRESS
+INSTRUCTION min_address=004013ee opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=R12D type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=004013f1 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=004013f4 opcode=CALL in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x00400f40 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f40 type=ADDRESS
+INSTRUCTION min_address=004013f9 opcode=LEA in_function=broadcast numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=[RAX + 0xa] type=DYNAMIC
+INSTRUCTION min_address=004013fd opcode=CALL in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x00401050 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401050 type=ADDRESS
+INSTRUCTION min_address=00401402 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=RAX type=REGISTER
+INSTRUCTION min_address=00401405 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=qword ptr [RSP + 0x8] type=ADDRESS
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=0040140a opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=0040140d opcode=CALL in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x00400f40 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f40 type=ADDRESS
+INSTRUCTION min_address=00401412 opcode=LEA in_function=broadcast numoperands=2
+SOURCEOPERAND operand=RDX type=REGISTER
+DESTINATIONOPERAND operand=[RAX + 0xa] type=DYNAMIC
+INSTRUCTION min_address=00401416 opcode=XOR in_function=broadcast numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=ESI type=REGISTER
+INSTRUCTION min_address=00401418 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=0040141b opcode=CALL in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x00400fa0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400fa0 type=ADDRESS
+INSTRUCTION min_address=00401420 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=00401423 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=RSI type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=00401426 opcode=CALL in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x00400f00 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f00 type=ADDRESS
+INSTRUCTION min_address=0040142b opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=0040142e opcode=CALL in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x004012e0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004012e0 type=ADDRESS
+INSTRUCTION min_address=00401433 opcode=LEA in_function=broadcast numoperands=2
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=[RSP + 0x10] type=DYNAMIC
+INSTRUCTION min_address=00401438 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=0040143b opcode=CALL in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x00401040 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401040 type=ADDRESS
+INSTRUCTION min_address=00401440 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=00401443 opcode=CALL in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x00400ed0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400ed0 type=ADDRESS
+INSTRUCTION min_address=00401448 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=RAX type=REGISTER
+INSTRUCTION min_address=0040144b opcode=CALL in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x00400f50 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f50 type=ADDRESS
+INSTRUCTION min_address=00401450 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=R15 type=REGISTER
+DESTINATIONOPERAND operand=RAX type=REGISTER
+INSTRUCTION min_address=00401453 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=R15 type=REGISTER
+INSTRUCTION min_address=00401456 opcode=CALL in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x004012e0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004012e0 type=ADDRESS
+INSTRUCTION min_address=0040145b opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=R13D type=REGISTER
+DESTINATIONOPERAND operand=R13D type=REGISTER
+INSTRUCTION min_address=0040145e opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=EBX type=REGISTER
+DESTINATIONOPERAND operand=0x9d3adb type=ADDRESS
+INSTRUCTION min_address=00401463 opcode=XOR in_function=broadcast numoperands=2
+SOURCEOPERAND operand=EBP type=REGISTER
+DESTINATIONOPERAND operand=EBP type=REGISTER
+INSTRUCTION min_address=00401465 opcode=NOP in_function=broadcast numoperands=1
+SOURCEOPERAND operand=dword ptr CS:[RAX + RAX*0x1] type=DYNAMIC
+DESTINATIONOPERAND operand=dword ptr CS:[RAX + RAX*0x1] type=DYNAMIC
+INSTRUCTION min_address=00401470 opcode=CMP in_function=broadcast numoperands=2
+SOURCEOPERAND operand=R13 type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=00401473 opcode=JZ in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x00401576 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401576 type=ADDRESS
+INSTRUCTION min_address=00401479 opcode=CMP in_function=broadcast numoperands=2
+SOURCEOPERAND operand=byte ptr [RBX] type=ADDRESS
+DESTINATIONOPERAND operand=0x0 type=SCALAR
+INSTRUCTION min_address=0040147c opcode=JZ in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x004014b0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004014b0 type=ADDRESS
+INSTRUCTION min_address=0040147e opcode=TEST in_function=broadcast numoperands=2
+SOURCEOPERAND operand=R12D type=REGISTER
+DESTINATIONOPERAND operand=R12D type=REGISTER
+INSTRUCTION min_address=00401481 opcode=JNZ in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x004014c7 type=ADDRESS
+DESTINATIONOPERAND operand=0x004014c7 type=ADDRESS
+INSTRUCTION min_address=00401483 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=0x4021bf type=ADDRESS
+INSTRUCTION min_address=00401488 opcode=XOR in_function=broadcast numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=0040148a opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=EBP type=REGISTER
+INSTRUCTION min_address=0040148c opcode=CALL in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x00400f80 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f80 type=ADDRESS
+INSTRUCTION min_address=00401491 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=00401494 opcode=CALL in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x00400f40 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f40 type=ADDRESS
+INSTRUCTION min_address=00401499 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=0x4000 type=SCALAR
+INSTRUCTION min_address=0040149e opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=EBP type=REGISTER
+INSTRUCTION min_address=004014a0 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=RSI type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=004014a3 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=RDX type=REGISTER
+DESTINATIONOPERAND operand=RAX type=REGISTER
+INSTRUCTION min_address=004014a6 opcode=CALL in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x00400f60 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f60 type=ADDRESS
+INSTRUCTION min_address=004014ab opcode=JMP in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x00401560 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401560 type=ADDRESS
+INSTRUCTION min_address=004014b0 opcode=TEST in_function=broadcast numoperands=2
+SOURCEOPERAND operand=R12D type=REGISTER
+DESTINATIONOPERAND operand=R12D type=REGISTER
+INSTRUCTION min_address=004014b3 opcode=JZ in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x00401576 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401576 type=ADDRESS
+INSTRUCTION min_address=004014b9 opcode=CMP in_function=broadcast numoperands=2
+SOURCEOPERAND operand=dword ptr [0x6031d0 + RBP*0x4] type=ADDRESS
+DESTINATIONOPERAND operand=0x0 type=SCALAR
+INSTRUCTION min_address=004014c1 opcode=JZ in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x00401576 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401576 type=ADDRESS
+INSTRUCTION min_address=004014c7 opcode=CMP in_function=broadcast numoperands=2
+SOURCEOPERAND operand=dword ptr [0x6031d0 + RBP*0x4] type=ADDRESS
+DESTINATIONOPERAND operand=0x0 type=SCALAR
+INSTRUCTION min_address=004014cf opcode=JZ in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x00401517 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401517 type=ADDRESS
+INSTRUCTION min_address=004014d1 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x4021b9 type=ADDRESS
+INSTRUCTION min_address=004014d6 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=0x5 type=SCALAR
+INSTRUCTION min_address=004014db opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=0x4000 type=SCALAR
+INSTRUCTION min_address=004014e0 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=EBP type=REGISTER
+INSTRUCTION min_address=004014e2 opcode=CALL in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x00400f60 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f60 type=ADDRESS
+INSTRUCTION min_address=004014e7 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=R15 type=REGISTER
+INSTRUCTION min_address=004014ea opcode=CALL in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x00400f40 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f40 type=ADDRESS
+INSTRUCTION min_address=004014ef opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=0x4000 type=SCALAR
+INSTRUCTION min_address=004014f4 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=EBP type=REGISTER
+INSTRUCTION min_address=004014f6 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=RSI type=REGISTER
+DESTINATIONOPERAND operand=R15 type=REGISTER
+INSTRUCTION min_address=004014f9 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=RDX type=REGISTER
+DESTINATIONOPERAND operand=RAX type=REGISTER
+INSTRUCTION min_address=004014fc opcode=CALL in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x00400f60 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f60 type=ADDRESS
+INSTRUCTION min_address=00401501 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x40227a type=ADDRESS
+INSTRUCTION min_address=00401506 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=0x2 type=SCALAR
+INSTRUCTION min_address=0040150b opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=0x4000 type=SCALAR
+INSTRUCTION min_address=00401510 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=EBP type=REGISTER
+INSTRUCTION min_address=00401512 opcode=CALL in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x00400f60 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f60 type=ADDRESS
+INSTRUCTION min_address=00401517 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=0x4021bf type=ADDRESS
+INSTRUCTION min_address=0040151c opcode=XOR in_function=broadcast numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=0040151e opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=EBP type=REGISTER
+INSTRUCTION min_address=00401520 opcode=CALL in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x00400f80 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f80 type=ADDRESS
+INSTRUCTION min_address=00401525 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=00401528 opcode=CALL in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x00400f40 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f40 type=ADDRESS
+INSTRUCTION min_address=0040152d opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=0x4000 type=SCALAR
+INSTRUCTION min_address=00401532 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=EBP type=REGISTER
+INSTRUCTION min_address=00401534 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=RSI type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=00401537 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=RDX type=REGISTER
+DESTINATIONOPERAND operand=RAX type=REGISTER
+INSTRUCTION min_address=0040153a opcode=CALL in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x00400f60 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f60 type=ADDRESS
+INSTRUCTION min_address=0040153f opcode=CMP in_function=broadcast numoperands=2
+SOURCEOPERAND operand=dword ptr [0x6031d0 + RBP*0x4] type=ADDRESS
+DESTINATIONOPERAND operand=0x0 type=SCALAR
+INSTRUCTION min_address=00401547 opcode=JZ in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x00401560 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401560 type=ADDRESS
+INSTRUCTION min_address=00401549 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x4021cf type=ADDRESS
+INSTRUCTION min_address=0040154e opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=0xd type=SCALAR
+INSTRUCTION min_address=00401553 opcode=JMP in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x0040156a type=ADDRESS
+DESTINATIONOPERAND operand=0x0040156a type=ADDRESS
+INSTRUCTION min_address=00401560 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x4022e6 type=ADDRESS
+INSTRUCTION min_address=00401565 opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=0x1 type=SCALAR
+INSTRUCTION min_address=0040156a opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=0x4000 type=SCALAR
+INSTRUCTION min_address=0040156f opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=EBP type=REGISTER
+INSTRUCTION min_address=00401571 opcode=CALL in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x00400f60 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f60 type=ADDRESS
+INSTRUCTION min_address=00401576 opcode=INC in_function=broadcast numoperands=1
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=00401579 opcode=ADD in_function=broadcast numoperands=2
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=0xc type=SCALAR
+INSTRUCTION min_address=0040157d opcode=CMP in_function=broadcast numoperands=2
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=0xf4240 type=SCALAR
+INSTRUCTION min_address=00401584 opcode=JNZ in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x00401470 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401470 type=ADDRESS
+INSTRUCTION min_address=0040158a opcode=MOV in_function=broadcast numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=qword ptr [RSP + 0x8] type=ADDRESS
+INSTRUCTION min_address=0040158f opcode=CALL in_function=broadcast numoperands=1
+SOURCEOPERAND operand=0x00400eb0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400eb0 type=ADDRESS
+INSTRUCTION min_address=00401594 opcode=ADD in_function=broadcast numoperands=2
+SOURCEOPERAND operand=RSP type=REGISTER
+DESTINATIONOPERAND operand=0x18 type=SCALAR
+INSTRUCTION min_address=00401598 opcode=POP in_function=broadcast numoperands=1
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=00401599 opcode=POP in_function=broadcast numoperands=1
+SOURCEOPERAND operand=R12 type=REGISTER
+DESTINATIONOPERAND operand=R12 type=REGISTER
+INSTRUCTION min_address=0040159b opcode=POP in_function=broadcast numoperands=1
+SOURCEOPERAND operand=R13 type=REGISTER
+DESTINATIONOPERAND operand=R13 type=REGISTER
+INSTRUCTION min_address=0040159d opcode=POP in_function=broadcast numoperands=1
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=0040159f opcode=POP in_function=broadcast numoperands=1
+SOURCEOPERAND operand=R15 type=REGISTER
+DESTINATIONOPERAND operand=R15 type=REGISTER
+INSTRUCTION min_address=004015a1 opcode=POP in_function=broadcast numoperands=1
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=004015a2 opcode=RET in_function=broadcast numoperands=0
+INSTRUCTION min_address=004015b0 opcode=PUSH in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=004015b1 opcode=PUSH in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=R15 type=REGISTER
+DESTINATIONOPERAND operand=R15 type=REGISTER
+INSTRUCTION min_address=004015b3 opcode=PUSH in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=004015b5 opcode=PUSH in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=R13 type=REGISTER
+DESTINATIONOPERAND operand=R13 type=REGISTER
+INSTRUCTION min_address=004015b7 opcode=PUSH in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=R12 type=REGISTER
+DESTINATIONOPERAND operand=R12 type=REGISTER
+INSTRUCTION min_address=004015b9 opcode=PUSH in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=004015ba opcode=SUB in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RSP type=REGISTER
+DESTINATIONOPERAND operand=0x858 type=SCALAR
+INSTRUCTION min_address=004015c1 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=0xf4240 type=SCALAR
+INSTRUCTION min_address=004015c6 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0xc type=SCALAR
+INSTRUCTION min_address=004015cb opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401000 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401000 type=ADDRESS
+INSTRUCTION min_address=004015d0 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=R15 type=REGISTER
+DESTINATIONOPERAND operand=RAX type=REGISTER
+INSTRUCTION min_address=004015d3 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=qword ptr [RSP + 0x18] type=ADDRESS
+DESTINATIONOPERAND operand=R15 type=REGISTER
+INSTRUCTION min_address=004015d8 opcode=LEA in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=[RSP + 0x40] type=DYNAMIC
+INSTRUCTION min_address=004015dd opcode=NOP in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=dword ptr [RAX] type=DYNAMIC
+DESTINATIONOPERAND operand=dword ptr [RAX] type=DYNAMIC
+INSTRUCTION min_address=004015e0 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=dword ptr [0x006031b0] type=ADDRESS
+INSTRUCTION min_address=004015e6 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=0xf4240 type=SCALAR
+INSTRUCTION min_address=004015eb opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=0xffffffff type=SCALAR
+INSTRUCTION min_address=004015f0 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RSI type=REGISTER
+DESTINATIONOPERAND operand=R15 type=REGISTER
+INSTRUCTION min_address=004015f3 opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401080 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401080 type=ADDRESS
+INSTRUCTION min_address=004015f8 opcode=TEST in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=004015fa opcode=JLE in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x004015e0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004015e0 type=ADDRESS
+INSTRUCTION min_address=004015fc opcode=MOVSXD in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=004015ff opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=qword ptr [RSP + 0x28] type=ADDRESS
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=00401604 opcode=XOR in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EBP type=REGISTER
+DESTINATIONOPERAND operand=EBP type=REGISTER
+INSTRUCTION min_address=00401606 opcode=JMP in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401630 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401630 type=ADDRESS
+INSTRUCTION min_address=00401608 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=0x4021fc type=ADDRESS
+INSTRUCTION min_address=0040160d opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x004010b0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004010b0 type=ADDRESS
+INSTRUCTION min_address=00401612 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=EBP type=REGISTER
+INSTRUCTION min_address=00401614 opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00400fb0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400fb0 type=ADDRESS
+INSTRUCTION min_address=00401619 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=qword ptr [RSP + 0x28] type=ADDRESS
+INSTRUCTION min_address=0040161e opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=qword ptr [RSP + 0x30] type=ADDRESS
+INSTRUCTION min_address=00401623 opcode=JMP in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401a21 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401a21 type=ADDRESS
+INSTRUCTION min_address=00401630 opcode=LEA in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=[RBP + RBP*0x2] type=DYNAMIC
+INSTRUCTION min_address=00401635 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=dword ptr [R15 + RAX*0x4] type=DYNAMIC
+INSTRUCTION min_address=00401639 opcode=AND in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=0x19 type=SCALAR
+INSTRUCTION min_address=0040163c opcode=CMP in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=0x1 type=SCALAR
+INSTRUCTION min_address=0040163f opcode=JNZ in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x004017e0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004017e0 type=ADDRESS
+INSTRUCTION min_address=00401645 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=qword ptr [RSP + 0x30] type=ADDRESS
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=0040164a opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=dword ptr [0x006031b4] type=ADDRESS
+INSTRUCTION min_address=00401650 opcode=MOVSXD in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=R13 type=REGISTER
+DESTINATIONOPERAND operand=dword ptr [R15 + RAX*0x4 + 0x4] type=DYNAMIC
+INSTRUCTION min_address=00401655 opcode=CMP in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=R13D type=REGISTER
+INSTRUCTION min_address=00401658 opcode=JNZ in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401800 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401800 type=ADDRESS
+INSTRUCTION min_address=0040165e opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=dword ptr [RSP + 0x844] type=ADDRESS
+DESTINATIONOPERAND operand=0x10 type=SCALAR
+INSTRUCTION min_address=00401669 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=dword ptr [0x006031b4] type=ADDRESS
+INSTRUCTION min_address=0040166f opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RSI type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=00401672 opcode=LEA in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=R12 type=REGISTER
+DESTINATIONOPERAND operand=[RSP + 0x844] type=DYNAMIC
+INSTRUCTION min_address=0040167a opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RDX type=REGISTER
+DESTINATIONOPERAND operand=R12 type=REGISTER
+INSTRUCTION min_address=0040167d opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x004010c0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004010c0 type=ADDRESS
+INSTRUCTION min_address=00401682 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EBP type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00401684 opcode=CMP in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EBP type=REGISTER
+DESTINATIONOPERAND operand=-0x1 type=SCALAR
+INSTRUCTION min_address=00401687 opcode=LEA in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=R13 type=REGISTER
+DESTINATIONOPERAND operand=[RSP + 0x848] type=DYNAMIC
+INSTRUCTION min_address=0040168f opcode=JZ in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x004017aa type=ADDRESS
+DESTINATIONOPERAND operand=0x004017aa type=ADDRESS
+INSTRUCTION min_address=00401695 opcode=NOP in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=dword ptr CS:[RAX + RAX*0x1] type=DYNAMIC
+DESTINATIONOPERAND operand=dword ptr CS:[RAX + RAX*0x1] type=DYNAMIC
+INSTRUCTION min_address=004016a0 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=dword ptr [RSP + 0x44] type=ADDRESS
+INSTRUCTION min_address=004016a4 opcode=MOVSXD in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RCX type=REGISTER
+DESTINATIONOPERAND operand=EBP type=REGISTER
+INSTRUCTION min_address=004016a7 opcode=LEA in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=[RCX + RCX*0x2] type=DYNAMIC
+INSTRUCTION min_address=004016ab opcode=LEA in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=[0x9d3ad0 + R14*0x4] type=ADDRESS
+INSTRUCTION min_address=004016b3 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=dword ptr [0x9d3ad0 + R14*0x4] type=ADDRESS
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=004016bb opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=ECX type=REGISTER
+INSTRUCTION min_address=004016bd opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=0x9d3ad0 type=ADDRESS
+INSTRUCTION min_address=004016c2 opcode=XOR in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=ESI type=REGISTER
+INSTRUCTION min_address=004016c4 opcode=NOP in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=word ptr CS:[RAX + RAX*0x1] type=DYNAMIC
+DESTINATIONOPERAND operand=word ptr CS:[RAX + RAX*0x1] type=DYNAMIC
+INSTRUCTION min_address=004016d0 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=AL type=REGISTER
+DESTINATIONOPERAND operand=byte ptr [RDX + 0xb] type=ADDRESS
+INSTRUCTION min_address=004016d3 opcode=CMP in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RCX type=REGISTER
+DESTINATIONOPERAND operand=RSI type=REGISTER
+INSTRUCTION min_address=004016d6 opcode=JZ in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x004016e2 type=ADDRESS
+DESTINATIONOPERAND operand=0x004016e2 type=ADDRESS
+INSTRUCTION min_address=004016d8 opcode=TEST in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=AL type=REGISTER
+DESTINATIONOPERAND operand=AL type=REGISTER
+INSTRUCTION min_address=004016da opcode=JZ in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x004016e2 type=ADDRESS
+DESTINATIONOPERAND operand=0x004016e2 type=ADDRESS
+INSTRUCTION min_address=004016dc opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=dword ptr [RDX] type=ADDRESS
+INSTRUCTION min_address=004016de opcode=CMP in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=dword ptr [RDI] type=ADDRESS
+INSTRUCTION min_address=004016e0 opcode=JZ in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401740 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401740 type=ADDRESS
+INSTRUCTION min_address=004016e2 opcode=INC in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=RSI type=REGISTER
+DESTINATIONOPERAND operand=RSI type=REGISTER
+INSTRUCTION min_address=004016e5 opcode=ADD in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RDX type=REGISTER
+DESTINATIONOPERAND operand=0xc type=SCALAR
+INSTRUCTION min_address=004016e9 opcode=CMP in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RSI type=REGISTER
+DESTINATIONOPERAND operand=0xf4240 type=SCALAR
+INSTRUCTION min_address=004016f0 opcode=JL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x004016d0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004016d0 type=ADDRESS
+INSTRUCTION min_address=004016f2 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=EBP type=REGISTER
+INSTRUCTION min_address=004016f4 opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401a40 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401a40 type=ADDRESS
+INSTRUCTION min_address=004016f9 opcode=CMP in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=-0x1 type=SCALAR
+INSTRUCTION min_address=004016fc opcode=JZ in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401612 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401612 type=ADDRESS
+INSTRUCTION min_address=00401702 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=dword ptr [RSP + 0x84c] type=ADDRESS
+DESTINATIONOPERAND operand=EBP type=REGISTER
+INSTRUCTION min_address=00401709 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=dword ptr [RSP + 0x848] type=ADDRESS
+DESTINATIONOPERAND operand=0x80000001 type=SCALAR
+INSTRUCTION min_address=00401714 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=dword ptr [0x006031b0] type=ADDRESS
+INSTRUCTION min_address=0040171a opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x1 type=SCALAR
+INSTRUCTION min_address=0040171f opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=EBP type=REGISTER
+INSTRUCTION min_address=00401721 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RCX type=REGISTER
+DESTINATIONOPERAND operand=R13 type=REGISTER
+INSTRUCTION min_address=00401724 opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00400fd0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400fd0 type=ADDRESS
+INSTRUCTION min_address=00401729 opcode=CMP in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=-0x1 type=SCALAR
+INSTRUCTION min_address=0040172c opcode=JZ in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401608 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401608 type=ADDRESS
+INSTRUCTION min_address=00401732 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=byte ptr [0x9d3adb + R14*0x4] type=ADDRESS
+DESTINATIONOPERAND operand=0x1 type=SCALAR
+INSTRUCTION min_address=0040173b opcode=JMP in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401783 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401783 type=ADDRESS
+INSTRUCTION min_address=00401740 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=0x40240a type=ADDRESS
+INSTRUCTION min_address=00401745 opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00400f10 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f10 type=ADDRESS
+INSTRUCTION min_address=0040174a opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x4021e9 type=ADDRESS
+INSTRUCTION min_address=0040174f opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=0xd type=SCALAR
+INSTRUCTION min_address=00401754 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=0x4000 type=SCALAR
+INSTRUCTION min_address=00401759 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=EBP type=REGISTER
+INSTRUCTION min_address=0040175b opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00400f60 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f60 type=ADDRESS
+INSTRUCTION min_address=00401760 opcode=CMP in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=-0x1 type=SCALAR
+INSTRUCTION min_address=00401764 opcode=JZ in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x0040177c type=ADDRESS
+DESTINATIONOPERAND operand=0x0040177c type=ADDRESS
+INSTRUCTION min_address=00401766 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x4021f7 type=ADDRESS
+INSTRUCTION min_address=0040176b opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=0x4 type=SCALAR
+INSTRUCTION min_address=00401770 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=0x4000 type=SCALAR
+INSTRUCTION min_address=00401775 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=EBP type=REGISTER
+INSTRUCTION min_address=00401777 opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00400f60 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f60 type=ADDRESS
+INSTRUCTION min_address=0040177c opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=EBP type=REGISTER
+INSTRUCTION min_address=0040177e opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00400fb0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400fb0 type=ADDRESS
+INSTRUCTION min_address=00401783 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=dword ptr [RSP + 0x844] type=ADDRESS
+DESTINATIONOPERAND operand=0x10 type=SCALAR
+INSTRUCTION min_address=0040178e opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=dword ptr [0x006031b4] type=ADDRESS
+INSTRUCTION min_address=00401794 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RSI type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=00401797 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RDX type=REGISTER
+DESTINATIONOPERAND operand=R12 type=REGISTER
+INSTRUCTION min_address=0040179a opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x004010c0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004010c0 type=ADDRESS
+INSTRUCTION min_address=0040179f opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EBP type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=004017a1 opcode=CMP in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EBP type=REGISTER
+DESTINATIONOPERAND operand=-0x1 type=SCALAR
+INSTRUCTION min_address=004017a4 opcode=JNZ in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x004016a0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004016a0 type=ADDRESS
+INSTRUCTION min_address=004017aa opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00400ef0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400ef0 type=ADDRESS
+INSTRUCTION min_address=004017af opcode=CMP in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=dword ptr [RAX] type=DYNAMIC
+DESTINATIONOPERAND operand=0xb type=SCALAR
+INSTRUCTION min_address=004017b2 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=qword ptr [RSP + 0x28] type=ADDRESS
+INSTRUCTION min_address=004017b7 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=qword ptr [RSP + 0x30] type=ADDRESS
+INSTRUCTION min_address=004017bc opcode=JZ in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401a21 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401a21 type=ADDRESS
+INSTRUCTION min_address=004017c2 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=0x402393 type=ADDRESS
+INSTRUCTION min_address=004017c7 opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x004010b0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004010b0 type=ADDRESS
+INSTRUCTION min_address=004017cc opcode=JMP in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401a21 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401a21 type=ADDRESS
+INSTRUCTION min_address=004017e0 opcode=MOVSXD in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=dword ptr [R15 + RAX*0x4 + 0x4] type=DYNAMIC
+INSTRUCTION min_address=004017e5 opcode=LEA in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=[RDI + RDI*0x2] type=DYNAMIC
+INSTRUCTION min_address=004017e9 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=byte ptr [0x9d3adb + RAX*0x4] type=ADDRESS
+DESTINATIONOPERAND operand=0x0 type=SCALAR
+INSTRUCTION min_address=004017f1 opcode=JMP in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401a1c type=ADDRESS
+DESTINATIONOPERAND operand=0x00401a1c type=ADDRESS
+INSTRUCTION min_address=00401800 opcode=LEA in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=[R13 + R13*0x2] type=DYNAMIC
+INSTRUCTION min_address=00401805 opcode=LEA in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RCX type=REGISTER
+DESTINATIONOPERAND operand=[0x9d3adb + RAX*0x4] type=ADDRESS
+INSTRUCTION min_address=0040180d opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=qword ptr [RSP + 0x20] type=ADDRESS
+DESTINATIONOPERAND operand=RCX type=REGISTER
+INSTRUCTION min_address=00401812 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=byte ptr [0x9d3adb + RAX*0x4] type=ADDRESS
+DESTINATIONOPERAND operand=0x1 type=SCALAR
+INSTRUCTION min_address=0040181a opcode=LEA in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=[0x9d3ad4 + RAX*0x4] type=ADDRESS
+INSTRUCTION min_address=00401822 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=dword ptr [RSP + 0x3c] type=ADDRESS
+DESTINATIONOPERAND operand=0x0 type=SCALAR
+INSTRUCTION min_address=0040182a opcode=JMP in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401835 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401835 type=ADDRESS
+INSTRUCTION min_address=00401830 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=dword ptr [RSP + 0x3c] type=ADDRESS
+DESTINATIONOPERAND operand=R14D type=REGISTER
+INSTRUCTION min_address=00401835 opcode=XOR in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=ESI type=REGISTER
+INSTRUCTION min_address=00401837 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=0x800 type=SCALAR
+INSTRUCTION min_address=0040183c opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=0040183f opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00400fa0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400fa0 type=ADDRESS
+INSTRUCTION min_address=00401844 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x800 type=SCALAR
+INSTRUCTION min_address=00401849 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=0040184c opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=R13D type=REGISTER
+INSTRUCTION min_address=0040184f opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401280 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401280 type=ADDRESS
+INSTRUCTION min_address=00401854 opcode=MOVSXD in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=R15 type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00401857 opcode=TEST in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=R15D type=REGISTER
+DESTINATIONOPERAND operand=R15D type=REGISTER
+INSTRUCTION min_address=0040185a opcode=JLE in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x004019c0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004019c0 type=ADDRESS
+INSTRUCTION min_address=00401860 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0xa type=SCALAR
+INSTRUCTION min_address=00401865 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=00401868 opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00400f70 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f70 type=ADDRESS
+INSTRUCTION min_address=0040186d opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=R14D type=REGISTER
+DESTINATIONOPERAND operand=0x1 type=SCALAR
+INSTRUCTION min_address=00401873 opcode=TEST in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=RAX type=REGISTER
+INSTRUCTION min_address=00401876 opcode=JZ in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x004019c5 type=ADDRESS
+DESTINATIONOPERAND operand=0x004019c5 type=ADDRESS
+INSTRUCTION min_address=0040187c opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=0040187f opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x004012e0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004012e0 type=ADDRESS
+INSTRUCTION min_address=00401884 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x4021b4 type=ADDRESS
+INSTRUCTION min_address=00401889 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=0040188c opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401010 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401010 type=ADDRESS
+INSTRUCTION min_address=00401891 opcode=TEST in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00401893 opcode=JZ in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x004018f0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004018f0 type=ADDRESS
+INSTRUCTION min_address=00401895 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x40220c type=ADDRESS
+INSTRUCTION min_address=0040189a opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=0040189d opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401140 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401140 type=ADDRESS
+INSTRUCTION min_address=004018a2 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=R12 type=REGISTER
+DESTINATIONOPERAND operand=RAX type=REGISTER
+INSTRUCTION min_address=004018a5 opcode=CMP in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=R12 type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=004018a8 opcode=JZ in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401920 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401920 type=ADDRESS
+INSTRUCTION min_address=004018aa opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x402228 type=ADDRESS
+INSTRUCTION min_address=004018af opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=004018b2 opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401140 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401140 type=ADDRESS
+INSTRUCTION min_address=004018b7 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RCX type=REGISTER
+DESTINATIONOPERAND operand=RAX type=REGISTER
+INSTRUCTION min_address=004018ba opcode=CMP in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RCX type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=004018bd opcode=JZ in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401954 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401954 type=ADDRESS
+INSTRUCTION min_address=004018c3 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x402230 type=ADDRESS
+INSTRUCTION min_address=004018c8 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=004018cb opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401010 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401010 type=ADDRESS
+INSTRUCTION min_address=004018d0 opcode=TEST in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=004018d2 opcode=JZ in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401980 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401980 type=ADDRESS
+INSTRUCTION min_address=004018d8 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=0x402235 type=ADDRESS
+INSTRUCTION min_address=004018dd opcode=XOR in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=004018df opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RSI type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=004018e2 opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00400f80 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f80 type=ADDRESS
+INSTRUCTION min_address=004018e7 opcode=JMP in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401980 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401980 type=ADDRESS
+INSTRUCTION min_address=004018f0 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x402206 type=ADDRESS
+INSTRUCTION min_address=004018f5 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=0x5 type=SCALAR
+INSTRUCTION min_address=004018fa opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=0x4000 type=SCALAR
+INSTRUCTION min_address=004018ff opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=R13D type=REGISTER
+INSTRUCTION min_address=00401902 opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00400f60 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f60 type=ADDRESS
+INSTRUCTION min_address=00401907 opcode=CMP in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=-0x1 type=SCALAR
+INSTRUCTION min_address=0040190b opcode=JNZ in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401980 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401980 type=ADDRESS
+INSTRUCTION min_address=0040190d opcode=JMP in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x004019c5 type=ADDRESS
+DESTINATIONOPERAND operand=0x004019c5 type=ADDRESS
+INSTRUCTION min_address=00401920 opcode=ADD in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=R12 type=REGISTER
+DESTINATIONOPERAND operand=0x6 type=SCALAR
+INSTRUCTION min_address=00401924 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=R12 type=REGISTER
+INSTRUCTION min_address=00401927 opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00400f40 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f40 type=ADDRESS
+INSTRUCTION min_address=0040192c opcode=CMP in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=0x7 type=SCALAR
+INSTRUCTION min_address=00401930 opcode=JNC in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x004019d6 type=ADDRESS
+DESTINATIONOPERAND operand=0x004019d6 type=ADDRESS
+INSTRUCTION min_address=00401936 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=byte ptr [RBP + 0x6] type=DYNAMIC
+DESTINATIONOPERAND operand=0x0 type=ADDRESS
+INSTRUCTION min_address=0040193a opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=word ptr [RBP + 0x4] type=DYNAMIC
+DESTINATIONOPERAND operand=0x0 type=ADDRESS
+INSTRUCTION min_address=00401940 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=dword ptr [RBP] type=DYNAMIC
+DESTINATIONOPERAND operand=0x0 type=ADDRESS
+INSTRUCTION min_address=00401947 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=0040194a opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RSI type=REGISTER
+DESTINATIONOPERAND operand=R12 type=REGISTER
+INSTRUCTION min_address=0040194d opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00400f00 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f00 type=ADDRESS
+INSTRUCTION min_address=00401952 opcode=JMP in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401980 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401980 type=ADDRESS
+INSTRUCTION min_address=00401954 opcode=ADD in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RCX type=REGISTER
+DESTINATIONOPERAND operand=0x7 type=SCALAR
+INSTRUCTION min_address=00401958 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=qword ptr [0x006031b8] type=ADDRESS
+INSTRUCTION min_address=0040195f opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x4023eb type=ADDRESS
+INSTRUCTION min_address=00401964 opcode=XOR in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00401966 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RDX type=REGISTER
+DESTINATIONOPERAND operand=RCX type=REGISTER
+INSTRUCTION min_address=00401969 opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401030 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401030 type=ADDRESS
+INSTRUCTION min_address=0040196e opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=qword ptr [0x006031b8] type=ADDRESS
+INSTRUCTION min_address=00401975 opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401060 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401060 type=ADDRESS
+INSTRUCTION min_address=0040197a opcode=NOP in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=word ptr [RAX + RAX*0x1] type=DYNAMIC
+DESTINATIONOPERAND operand=word ptr [RAX + RAX*0x1] type=DYNAMIC
+INSTRUCTION min_address=00401980 opcode=XOR in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=ESI type=REGISTER
+INSTRUCTION min_address=00401982 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=0x800 type=SCALAR
+INSTRUCTION min_address=00401987 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=0040198a opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00400fa0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400fa0 type=ADDRESS
+INSTRUCTION min_address=0040198f opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x800 type=SCALAR
+INSTRUCTION min_address=00401994 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=00401997 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=R13D type=REGISTER
+INSTRUCTION min_address=0040199a opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401280 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401280 type=ADDRESS
+INSTRUCTION min_address=0040199f opcode=MOVSXD in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=R15 type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=004019a2 opcode=TEST in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=R15D type=REGISTER
+DESTINATIONOPERAND operand=R15D type=REGISTER
+INSTRUCTION min_address=004019a5 opcode=JG in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401860 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401860 type=ADDRESS
+INSTRUCTION min_address=004019ab opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=R14D type=REGISTER
+DESTINATIONOPERAND operand=dword ptr [RSP + 0x3c] type=ADDRESS
+INSTRUCTION min_address=004019b0 opcode=JMP in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x004019c5 type=ADDRESS
+DESTINATIONOPERAND operand=0x004019c5 type=ADDRESS
+INSTRUCTION min_address=004019c0 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=R14D type=REGISTER
+DESTINATIONOPERAND operand=dword ptr [RSP + 0x3c] type=ADDRESS
+INSTRUCTION min_address=004019c5 opcode=TEST in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=R15 type=REGISTER
+DESTINATIONOPERAND operand=R15 type=REGISTER
+INSTRUCTION min_address=004019c8 opcode=JZ in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401a02 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401a02 type=ADDRESS
+INSTRUCTION min_address=004019ca opcode=CMP in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=R15 type=REGISTER
+DESTINATIONOPERAND operand=-0x1 type=SCALAR
+INSTRUCTION min_address=004019ce opcode=JNZ in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401830 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401830 type=ADDRESS
+INSTRUCTION min_address=004019d4 opcode=JMP in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x004019e2 type=ADDRESS
+DESTINATIONOPERAND operand=0x004019e2 type=ADDRESS
+INSTRUCTION min_address=004019d6 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=0x402420 type=ADDRESS
+INSTRUCTION min_address=004019db opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00400f10 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f10 type=ADDRESS
+INSTRUCTION min_address=004019e0 opcode=JMP in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x004019c5 type=ADDRESS
+DESTINATIONOPERAND operand=0x004019c5 type=ADDRESS
+INSTRUCTION min_address=004019e2 opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00400ef0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400ef0 type=ADDRESS
+INSTRUCTION min_address=004019e7 opcode=CMP in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=dword ptr [RAX] type=DYNAMIC
+DESTINATIONOPERAND operand=0xb type=SCALAR
+INSTRUCTION min_address=004019ea opcode=JNZ in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401a02 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401a02 type=ADDRESS
+INSTRUCTION min_address=004019ec opcode=TEST in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=R14D type=REGISTER
+DESTINATIONOPERAND operand=R14D type=REGISTER
+INSTRUCTION min_address=004019ef opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=R15 type=REGISTER
+DESTINATIONOPERAND operand=qword ptr [RSP + 0x18] type=ADDRESS
+INSTRUCTION min_address=004019f4 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=qword ptr [RSP + 0x28] type=ADDRESS
+INSTRUCTION min_address=004019f9 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=qword ptr [RSP + 0x30] type=ADDRESS
+INSTRUCTION min_address=004019fe opcode=JNZ in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401a11 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401a11 type=ADDRESS
+INSTRUCTION min_address=00401a00 opcode=JMP in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401a21 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401a21 type=ADDRESS
+INSTRUCTION min_address=00401a02 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=R15 type=REGISTER
+DESTINATIONOPERAND operand=qword ptr [RSP + 0x18] type=ADDRESS
+INSTRUCTION min_address=00401a07 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=qword ptr [RSP + 0x28] type=ADDRESS
+INSTRUCTION min_address=00401a0c opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=qword ptr [RSP + 0x30] type=ADDRESS
+INSTRUCTION min_address=00401a11 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=qword ptr [RSP + 0x20] type=ADDRESS
+INSTRUCTION min_address=00401a16 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=byte ptr [RAX] type=DYNAMIC
+DESTINATIONOPERAND operand=0x0 type=ADDRESS
+INSTRUCTION min_address=00401a19 opcode=MOV in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=R13D type=REGISTER
+INSTRUCTION min_address=00401a1c opcode=CALL in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00400fb0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400fb0 type=ADDRESS
+INSTRUCTION min_address=00401a21 opcode=INC in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=00401a24 opcode=CMP in_function=epollEventLoop numoperands=2
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=00401a27 opcode=JGE in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x004015e0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004015e0 type=ADDRESS
+INSTRUCTION min_address=00401a2d opcode=JMP in_function=epollEventLoop numoperands=1
+SOURCEOPERAND operand=0x00401630 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401630 type=ADDRESS
+INSTRUCTION min_address=00401a40 opcode=PUSH in_function=make_socket_non_blocking numoperands=1
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=00401a41 opcode=PUSH in_function=make_socket_non_blocking numoperands=1
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=00401a42 opcode=PUSH in_function=make_socket_non_blocking numoperands=1
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=RAX type=REGISTER
+INSTRUCTION min_address=00401a43 opcode=MOV in_function=make_socket_non_blocking numoperands=2
+SOURCEOPERAND operand=EBP type=REGISTER
+DESTINATIONOPERAND operand=EDI type=REGISTER
+INSTRUCTION min_address=00401a45 opcode=XOR in_function=make_socket_non_blocking numoperands=2
+SOURCEOPERAND operand=EBX type=REGISTER
+DESTINATIONOPERAND operand=EBX type=REGISTER
+INSTRUCTION min_address=00401a47 opcode=MOV in_function=make_socket_non_blocking numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x3 type=SCALAR
+INSTRUCTION min_address=00401a4c opcode=XOR in_function=make_socket_non_blocking numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=EDX type=REGISTER
+INSTRUCTION min_address=00401a4e opcode=XOR in_function=make_socket_non_blocking numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00401a50 opcode=CALL in_function=make_socket_non_blocking numoperands=1
+SOURCEOPERAND operand=0x00400f30 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f30 type=ADDRESS
+INSTRUCTION min_address=00401a55 opcode=MOV in_function=make_socket_non_blocking numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00401a57 opcode=CMP in_function=make_socket_non_blocking numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=-0x1 type=SCALAR
+INSTRUCTION min_address=00401a5a opcode=JZ in_function=make_socket_non_blocking numoperands=1
+SOURCEOPERAND operand=0x00401a80 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401a80 type=ADDRESS
+INSTRUCTION min_address=00401a5c opcode=OR in_function=make_socket_non_blocking numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=0x800 type=SCALAR
+INSTRUCTION min_address=00401a62 opcode=MOV in_function=make_socket_non_blocking numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x4 type=SCALAR
+INSTRUCTION min_address=00401a67 opcode=XOR in_function=make_socket_non_blocking numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00401a69 opcode=MOV in_function=make_socket_non_blocking numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=EBP type=REGISTER
+INSTRUCTION min_address=00401a6b opcode=MOV in_function=make_socket_non_blocking numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=ECX type=REGISTER
+INSTRUCTION min_address=00401a6d opcode=CALL in_function=make_socket_non_blocking numoperands=1
+SOURCEOPERAND operand=0x00400f30 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f30 type=ADDRESS
+INSTRUCTION min_address=00401a72 opcode=CMP in_function=make_socket_non_blocking numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=-0x1 type=SCALAR
+INSTRUCTION min_address=00401a75 opcode=JZ in_function=make_socket_non_blocking numoperands=1
+SOURCEOPERAND operand=0x00401a80 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401a80 type=ADDRESS
+INSTRUCTION min_address=00401a77 opcode=MOV in_function=make_socket_non_blocking numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=EBX type=REGISTER
+INSTRUCTION min_address=00401a79 opcode=ADD in_function=make_socket_non_blocking numoperands=2
+SOURCEOPERAND operand=RSP type=REGISTER
+DESTINATIONOPERAND operand=0x8 type=SCALAR
+INSTRUCTION min_address=00401a7d opcode=POP in_function=make_socket_non_blocking numoperands=1
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=00401a7e opcode=POP in_function=make_socket_non_blocking numoperands=1
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=00401a7f opcode=RET in_function=make_socket_non_blocking numoperands=0
+INSTRUCTION min_address=00401a80 opcode=MOV in_function=make_socket_non_blocking numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=0x4023d8 type=ADDRESS
+INSTRUCTION min_address=00401a85 opcode=CALL in_function=make_socket_non_blocking numoperands=1
+SOURCEOPERAND operand=0x004010b0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004010b0 type=ADDRESS
+INSTRUCTION min_address=00401a8a opcode=MOV in_function=make_socket_non_blocking numoperands=2
+SOURCEOPERAND operand=EBX type=REGISTER
+DESTINATIONOPERAND operand=0xffffffff type=SCALAR
+INSTRUCTION min_address=00401a8f opcode=JMP in_function=make_socket_non_blocking numoperands=1
+SOURCEOPERAND operand=0x00401a77 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401a77 type=ADDRESS
+INSTRUCTION min_address=00401aa0 opcode=XOR in_function=clientsConnected numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00401aa2 opcode=MOV in_function=clientsConnected numoperands=2
+SOURCEOPERAND operand=RCX type=REGISTER
+DESTINATIONOPERAND operand=-0xb71b00 type=SCALAR
+INSTRUCTION min_address=00401aa9 opcode=NOP in_function=clientsConnected numoperands=1
+SOURCEOPERAND operand=dword ptr [RAX] type=DYNAMIC
+DESTINATIONOPERAND operand=dword ptr [RAX] type=DYNAMIC
+INSTRUCTION min_address=00401ab0 opcode=CMP in_function=clientsConnected numoperands=2
+SOURCEOPERAND operand=byte ptr [RCX + 0x15455db] type=ADDRESS
+DESTINATIONOPERAND operand=0x1 type=SCALAR
+INSTRUCTION min_address=00401ab7 opcode=SBB in_function=clientsConnected numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=-0x1 type=SCALAR
+INSTRUCTION min_address=00401aba opcode=ADD in_function=clientsConnected numoperands=2
+SOURCEOPERAND operand=RCX type=REGISTER
+DESTINATIONOPERAND operand=0xc type=SCALAR
+INSTRUCTION min_address=00401abe opcode=JNZ in_function=clientsConnected numoperands=1
+SOURCEOPERAND operand=0x00401ab0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401ab0 type=ADDRESS
+INSTRUCTION min_address=00401ac0 opcode=RET in_function=clientsConnected numoperands=0
+INSTRUCTION min_address=00401ad0 opcode=PUSH in_function=titleWriter numoperands=1
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=00401ad2 opcode=PUSH in_function=titleWriter numoperands=1
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=00401ad3 opcode=SUB in_function=titleWriter numoperands=2
+SOURCEOPERAND operand=RSP type=REGISTER
+DESTINATIONOPERAND operand=0x808 type=SCALAR
+INSTRUCTION min_address=00401ada opcode=MOV in_function=titleWriter numoperands=2
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=RDI type=REGISTER
+INSTRUCTION min_address=00401add opcode=LEA in_function=titleWriter numoperands=2
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=[RSP] type=REGISTER
+INSTRUCTION min_address=00401ae1 opcode=JMP in_function=titleWriter numoperands=1
+SOURCEOPERAND operand=0x00401afa type=ADDRESS
+DESTINATIONOPERAND operand=0x00401afa type=ADDRESS
+INSTRUCTION min_address=00401af0 opcode=MOV in_function=titleWriter numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=0x2 type=SCALAR
+INSTRUCTION min_address=00401af5 opcode=CALL in_function=titleWriter numoperands=1
+SOURCEOPERAND operand=0x00401120 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401120 type=ADDRESS
+INSTRUCTION min_address=00401afa opcode=XOR in_function=titleWriter numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=ESI type=REGISTER
+INSTRUCTION min_address=00401afc opcode=MOV in_function=titleWriter numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=0x800 type=SCALAR
+INSTRUCTION min_address=00401b01 opcode=MOV in_function=titleWriter numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=00401b04 opcode=CALL in_function=titleWriter numoperands=1
+SOURCEOPERAND operand=0x00400fa0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400fa0 type=ADDRESS
+INSTRUCTION min_address=00401b09 opcode=CALL in_function=titleWriter numoperands=1
+SOURCEOPERAND operand=0x00401aa0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401aa0 type=ADDRESS
+INSTRUCTION min_address=00401b0e opcode=MOV in_function=titleWriter numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00401b10 opcode=MOV in_function=titleWriter numoperands=2
+SOURCEOPERAND operand=R8D type=REGISTER
+DESTINATIONOPERAND operand=dword ptr [0x006031c0] type=ADDRESS
+INSTRUCTION min_address=00401b17 opcode=MOV in_function=titleWriter numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x402240 type=ADDRESS
+INSTRUCTION min_address=00401b1c opcode=MOV in_function=titleWriter numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=0x1b type=SCALAR
+INSTRUCTION min_address=00401b21 opcode=MOV in_function=titleWriter numoperands=2
+SOURCEOPERAND operand=R9D type=REGISTER
+DESTINATIONOPERAND operand=0x7 type=SCALAR
+INSTRUCTION min_address=00401b27 opcode=XOR in_function=titleWriter numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00401b29 opcode=MOV in_function=titleWriter numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=00401b2c opcode=CALL in_function=titleWriter numoperands=1
+SOURCEOPERAND operand=0x004010e0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004010e0 type=ADDRESS
+INSTRUCTION min_address=00401b31 opcode=MOV in_function=titleWriter numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=00401b34 opcode=CALL in_function=titleWriter numoperands=1
+SOURCEOPERAND operand=0x00400f40 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f40 type=ADDRESS
+INSTRUCTION min_address=00401b39 opcode=MOV in_function=titleWriter numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=0x4000 type=SCALAR
+INSTRUCTION min_address=00401b3e opcode=MOV in_function=titleWriter numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=R14D type=REGISTER
+INSTRUCTION min_address=00401b41 opcode=MOV in_function=titleWriter numoperands=2
+SOURCEOPERAND operand=RSI type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=00401b44 opcode=MOV in_function=titleWriter numoperands=2
+SOURCEOPERAND operand=RDX type=REGISTER
+DESTINATIONOPERAND operand=RAX type=REGISTER
+INSTRUCTION min_address=00401b47 opcode=CALL in_function=titleWriter numoperands=1
+SOURCEOPERAND operand=0x00400f60 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f60 type=ADDRESS
+INSTRUCTION min_address=00401b4c opcode=CMP in_function=titleWriter numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=-0x1 type=SCALAR
+INSTRUCTION min_address=00401b50 opcode=JNZ in_function=titleWriter numoperands=1
+SOURCEOPERAND operand=0x00401af0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401af0 type=ADDRESS
+INSTRUCTION min_address=00401b52 opcode=XOR in_function=titleWriter numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00401b54 opcode=ADD in_function=titleWriter numoperands=2
+SOURCEOPERAND operand=RSP type=REGISTER
+DESTINATIONOPERAND operand=0x808 type=SCALAR
+INSTRUCTION min_address=00401b5b opcode=POP in_function=titleWriter numoperands=1
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=00401b5c opcode=POP in_function=titleWriter numoperands=1
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=00401b5e opcode=RET in_function=titleWriter numoperands=0
+INSTRUCTION min_address=00401b60 opcode=PUSH in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=00401b62 opcode=PUSH in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=00401b63 opcode=SUB in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=RSP type=REGISTER
+DESTINATIONOPERAND operand=0x808 type=SCALAR
+INSTRUCTION min_address=00401b6a opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=RDI type=REGISTER
+INSTRUCTION min_address=00401b6d opcode=INC in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=dword ptr [0x006031c0] type=ADDRESS
+DESTINATIONOPERAND operand=dword ptr [0x006031c0] type=ADDRESS
+INSTRUCTION min_address=00401b73 opcode=LEA in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=[RSP] type=REGISTER
+INSTRUCTION min_address=00401b77 opcode=XOR in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=ESI type=REGISTER
+INSTRUCTION min_address=00401b79 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=0x800 type=SCALAR
+INSTRUCTION min_address=00401b7e opcode=CALL in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x00400fa0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400fa0 type=ADDRESS
+INSTRUCTION min_address=00401b83 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x402272 type=ADDRESS
+INSTRUCTION min_address=00401b88 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=0xa type=SCALAR
+INSTRUCTION min_address=00401b8d opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=0x4000 type=SCALAR
+INSTRUCTION min_address=00401b92 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=EBX type=REGISTER
+INSTRUCTION min_address=00401b94 opcode=CALL in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x00400f60 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f60 type=ADDRESS
+INSTRUCTION min_address=00401b99 opcode=CMP in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=-0x1 type=SCALAR
+INSTRUCTION min_address=00401b9d opcode=JZ in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x00401d2e type=ADDRESS
+DESTINATIONOPERAND operand=0x00401d2e type=ADDRESS
+INSTRUCTION min_address=00401ba3 opcode=LEA in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=[RSP] type=REGISTER
+INSTRUCTION min_address=00401ba7 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x800 type=SCALAR
+INSTRUCTION min_address=00401bac opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=EBX type=REGISTER
+INSTRUCTION min_address=00401bae opcode=CALL in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x00401280 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401280 type=ADDRESS
+INSTRUCTION min_address=00401bb3 opcode=TEST in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00401bb5 opcode=JLE in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x00401d2e type=ADDRESS
+DESTINATIONOPERAND operand=0x00401d2e type=ADDRESS
+INSTRUCTION min_address=00401bbb opcode=LEA in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=[RSP] type=REGISTER
+INSTRUCTION min_address=00401bbf opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=00401bc2 opcode=CALL in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x004012e0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004012e0 type=ADDRESS
+INSTRUCTION min_address=00401bc7 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x40227d type=ADDRESS
+INSTRUCTION min_address=00401bcc opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=00401bcf opcode=CALL in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x00401010 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401010 type=ADDRESS
+INSTRUCTION min_address=00401bd4 opcode=TEST in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00401bd6 opcode=JNZ in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x00401d2e type=ADDRESS
+DESTINATIONOPERAND operand=0x00401d2e type=ADDRESS
+INSTRUCTION min_address=00401bdc opcode=LEA in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=[RSP] type=REGISTER
+INSTRUCTION min_address=00401be0 opcode=XOR in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=ESI type=REGISTER
+INSTRUCTION min_address=00401be2 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=0x800 type=SCALAR
+INSTRUCTION min_address=00401be7 opcode=CALL in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x00400fa0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400fa0 type=ADDRESS
+INSTRUCTION min_address=00401bec opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x402286 type=ADDRESS
+INSTRUCTION min_address=00401bf1 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=0x4 type=SCALAR
+INSTRUCTION min_address=00401bf6 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=0x4000 type=SCALAR
+INSTRUCTION min_address=00401bfb opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=EBX type=REGISTER
+INSTRUCTION min_address=00401bfd opcode=CALL in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x00400f60 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f60 type=ADDRESS
+INSTRUCTION min_address=00401c02 opcode=CMP in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=-0x1 type=SCALAR
+INSTRUCTION min_address=00401c06 opcode=JZ in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x00401d2e type=ADDRESS
+DESTINATIONOPERAND operand=0x00401d2e type=ADDRESS
+INSTRUCTION min_address=00401c0c opcode=LEA in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=[RSP + 0x800] type=DYNAMIC
+INSTRUCTION min_address=00401c14 opcode=XOR in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=ESI type=REGISTER
+INSTRUCTION min_address=00401c16 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=0x401ad0 type=ADDRESS
+INSTRUCTION min_address=00401c1b opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=RCX type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=00401c1e opcode=CALL in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x00400ec0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400ec0 type=ADDRESS
+INSTRUCTION min_address=00401c23 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x40228b type=ADDRESS
+INSTRUCTION min_address=00401c28 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=0x30 type=SCALAR
+INSTRUCTION min_address=00401c2d opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=0x4000 type=SCALAR
+INSTRUCTION min_address=00401c32 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=EBX type=REGISTER
+INSTRUCTION min_address=00401c34 opcode=CALL in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x00400f60 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f60 type=ADDRESS
+INSTRUCTION min_address=00401c39 opcode=CMP in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=-0x1 type=SCALAR
+INSTRUCTION min_address=00401c3d opcode=JZ in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x00401d2e type=ADDRESS
+DESTINATIONOPERAND operand=0x00401d2e type=ADDRESS
+INSTRUCTION min_address=00401c43 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x4022bc type=ADDRESS
+INSTRUCTION min_address=00401c48 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=0x2b type=SCALAR
+INSTRUCTION min_address=00401c4d opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=0x4000 type=SCALAR
+INSTRUCTION min_address=00401c52 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=EBX type=REGISTER
+INSTRUCTION min_address=00401c54 opcode=CALL in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x00400f60 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f60 type=ADDRESS
+INSTRUCTION min_address=00401c59 opcode=CMP in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=-0x1 type=SCALAR
+INSTRUCTION min_address=00401c5d opcode=JZ in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x00401d2e type=ADDRESS
+DESTINATIONOPERAND operand=0x00401d2e type=ADDRESS
+INSTRUCTION min_address=00401c63 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x4022e8 type=ADDRESS
+INSTRUCTION min_address=00401c68 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=0x35 type=SCALAR
+INSTRUCTION min_address=00401c6d opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=0x4000 type=SCALAR
+INSTRUCTION min_address=00401c72 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=EBX type=REGISTER
+INSTRUCTION min_address=00401c74 opcode=CALL in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x00400f60 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f60 type=ADDRESS
+INSTRUCTION min_address=00401c79 opcode=CMP in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=-0x1 type=SCALAR
+INSTRUCTION min_address=00401c7d opcode=JZ in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x00401d2e type=ADDRESS
+DESTINATIONOPERAND operand=0x00401d2e type=ADDRESS
+INSTRUCTION min_address=00401c83 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x40231e type=ADDRESS
+INSTRUCTION min_address=00401c88 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=0x33 type=SCALAR
+INSTRUCTION min_address=00401c8d opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=0x4000 type=SCALAR
+INSTRUCTION min_address=00401c92 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=EBX type=REGISTER
+INSTRUCTION min_address=00401c94 opcode=CALL in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x00400f60 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f60 type=ADDRESS
+INSTRUCTION min_address=00401c99 opcode=CMP in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=-0x1 type=SCALAR
+INSTRUCTION min_address=00401c9d opcode=JZ in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x00401d2e type=ADDRESS
+DESTINATIONOPERAND operand=0x00401d2e type=ADDRESS
+INSTRUCTION min_address=00401ca3 opcode=MOVSXD in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=EBX type=REGISTER
+INSTRUCTION min_address=00401ca6 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=dword ptr [0x6031d0 + RAX*0x4] type=ADDRESS
+DESTINATIONOPERAND operand=0x1 type=SCALAR
+INSTRUCTION min_address=00401cb1 opcode=LEA in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=[RSP] type=REGISTER
+INSTRUCTION min_address=00401cb5 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x800 type=SCALAR
+INSTRUCTION min_address=00401cba opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=EBX type=REGISTER
+INSTRUCTION min_address=00401cbc opcode=CALL in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x00401280 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401280 type=ADDRESS
+INSTRUCTION min_address=00401cc1 opcode=TEST in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00401cc3 opcode=JLE in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x00401d2e type=ADDRESS
+DESTINATIONOPERAND operand=0x00401d2e type=ADDRESS
+INSTRUCTION min_address=00401cc5 opcode=LEA in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=[RSP] type=REGISTER
+INSTRUCTION min_address=00401cc9 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=00401ccc opcode=CALL in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x004012e0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004012e0 type=ADDRESS
+INSTRUCTION min_address=00401cd1 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x4021d1 type=ADDRESS
+INSTRUCTION min_address=00401cd6 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=0xb type=SCALAR
+INSTRUCTION min_address=00401cdb opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=0x4000 type=SCALAR
+INSTRUCTION min_address=00401ce0 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=EBX type=REGISTER
+INSTRUCTION min_address=00401ce2 opcode=CALL in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x00400f60 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f60 type=ADDRESS
+INSTRUCTION min_address=00401ce7 opcode=CMP in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=-0x1 type=SCALAR
+INSTRUCTION min_address=00401ceb opcode=JZ in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x00401d2e type=ADDRESS
+DESTINATIONOPERAND operand=0x00401d2e type=ADDRESS
+INSTRUCTION min_address=00401ced opcode=CMP in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=byte ptr [RSP] type=ADDRESS
+DESTINATIONOPERAND operand=0x0 type=SCALAR
+INSTRUCTION min_address=00401cf1 opcode=JZ in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x00401d1b type=ADDRESS
+DESTINATIONOPERAND operand=0x00401d1b type=ADDRESS
+INSTRUCTION min_address=00401cf3 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=0x402352 type=ADDRESS
+INSTRUCTION min_address=00401cf8 opcode=XOR in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00401cfa opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=RSI type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=00401cfd opcode=CALL in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x00400f80 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f80 type=ADDRESS
+INSTRUCTION min_address=00401d02 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=00401d05 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=EBX type=REGISTER
+INSTRUCTION min_address=00401d07 opcode=CALL in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x004013d0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004013d0 type=ADDRESS
+INSTRUCTION min_address=00401d0c opcode=XOR in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=ESI type=REGISTER
+INSTRUCTION min_address=00401d0e opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=0x800 type=SCALAR
+INSTRUCTION min_address=00401d13 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=00401d16 opcode=CALL in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x00400fa0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400fa0 type=ADDRESS
+INSTRUCTION min_address=00401d1b opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x800 type=SCALAR
+INSTRUCTION min_address=00401d20 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=00401d23 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=EBX type=REGISTER
+INSTRUCTION min_address=00401d25 opcode=CALL in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x00401280 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401280 type=ADDRESS
+INSTRUCTION min_address=00401d2a opcode=TEST in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00401d2c opcode=JG in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x00401cc9 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401cc9 type=ADDRESS
+INSTRUCTION min_address=00401d2e opcode=MOVSXD in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=EBX type=REGISTER
+INSTRUCTION min_address=00401d31 opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=dword ptr [0x6031d0 + RAX*0x4] type=ADDRESS
+DESTINATIONOPERAND operand=0x0 type=SCALAR
+INSTRUCTION min_address=00401d3c opcode=MOV in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=EBX type=REGISTER
+INSTRUCTION min_address=00401d3e opcode=CALL in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=0x00400fb0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400fb0 type=ADDRESS
+INSTRUCTION min_address=00401d43 opcode=DEC in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=dword ptr [0x006031c0] type=ADDRESS
+DESTINATIONOPERAND operand=dword ptr [0x006031c0] type=ADDRESS
+INSTRUCTION min_address=00401d49 opcode=ADD in_function=telnetWorker numoperands=2
+SOURCEOPERAND operand=RSP type=REGISTER
+DESTINATIONOPERAND operand=0x808 type=SCALAR
+INSTRUCTION min_address=00401d50 opcode=POP in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=00401d51 opcode=POP in_function=telnetWorker numoperands=1
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=00401d53 opcode=RET in_function=telnetWorker numoperands=0
+INSTRUCTION min_address=00401d60 opcode=PUSH in_function=telnetListener numoperands=1
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=00401d61 opcode=PUSH in_function=telnetListener numoperands=1
+SOURCEOPERAND operand=R15 type=REGISTER
+DESTINATIONOPERAND operand=R15 type=REGISTER
+INSTRUCTION min_address=00401d63 opcode=PUSH in_function=telnetListener numoperands=1
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=00401d65 opcode=PUSH in_function=telnetListener numoperands=1
+SOURCEOPERAND operand=R12 type=REGISTER
+DESTINATIONOPERAND operand=R12 type=REGISTER
+INSTRUCTION min_address=00401d67 opcode=PUSH in_function=telnetListener numoperands=1
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=00401d68 opcode=SUB in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=RSP type=REGISTER
+DESTINATIONOPERAND operand=0x40 type=SCALAR
+INSTRUCTION min_address=00401d6c opcode=MOV in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=0x2 type=SCALAR
+INSTRUCTION min_address=00401d71 opcode=MOV in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x1 type=SCALAR
+INSTRUCTION min_address=00401d76 opcode=XOR in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=EDX type=REGISTER
+INSTRUCTION min_address=00401d78 opcode=CALL in_function=telnetListener numoperands=1
+SOURCEOPERAND operand=0x00401160 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401160 type=ADDRESS
+INSTRUCTION min_address=00401d7d opcode=MOV in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=R12D type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00401d80 opcode=TEST in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=R12D type=REGISTER
+DESTINATIONOPERAND operand=R12D type=REGISTER
+INSTRUCTION min_address=00401d83 opcode=JS in_function=telnetListener numoperands=1
+SOURCEOPERAND operand=0x00401e22 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401e22 type=ADDRESS
+INSTRUCTION min_address=00401d89 opcode=XORPS in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=XMM0 type=REGISTER
+DESTINATIONOPERAND operand=XMM0 type=REGISTER
+INSTRUCTION min_address=00401d8c opcode=MOVAPS in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=xmmword ptr [RSP + 0x20] type=ADDRESS
+DESTINATIONOPERAND operand=XMM0 type=REGISTER
+INSTRUCTION min_address=00401d91 opcode=MOV in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=word ptr [RSP + 0x20] type=ADDRESS
+DESTINATIONOPERAND operand=0x2 type=SCALAR
+INSTRUCTION min_address=00401d98 opcode=MOV in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=dword ptr [RSP + 0x24] type=ADDRESS
+DESTINATIONOPERAND operand=0x0 type=SCALAR
+INSTRUCTION min_address=00401da0 opcode=MOV in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=word ptr [RSP + 0x22] type=ADDRESS
+DESTINATIONOPERAND operand=0xb822 type=SCALAR
+INSTRUCTION min_address=00401da7 opcode=LEA in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=RSI type=REGISTER
+DESTINATIONOPERAND operand=[RSP + 0x20] type=DYNAMIC
+INSTRUCTION min_address=00401dac opcode=MOV in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=0x10 type=SCALAR
+INSTRUCTION min_address=00401db1 opcode=MOV in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=R12D type=REGISTER
+INSTRUCTION min_address=00401db4 opcode=CALL in_function=telnetListener numoperands=1
+SOURCEOPERAND operand=0x00401090 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401090 type=ADDRESS
+INSTRUCTION min_address=00401db9 opcode=TEST in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00401dbb opcode=JS in_function=telnetListener numoperands=1
+SOURCEOPERAND operand=0x00401e31 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401e31 type=ADDRESS
+INSTRUCTION min_address=00401dbd opcode=MOV in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x5 type=SCALAR
+INSTRUCTION min_address=00401dc2 opcode=MOV in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=R12D type=REGISTER
+INSTRUCTION min_address=00401dc5 opcode=CALL in_function=telnetListener numoperands=1
+SOURCEOPERAND operand=0x00401070 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401070 type=ADDRESS
+INSTRUCTION min_address=00401dca opcode=MOV in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=dword ptr [RSP + 0x3c] type=ADDRESS
+DESTINATIONOPERAND operand=0x10 type=SCALAR
+INSTRUCTION min_address=00401dd2 opcode=LEA in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=[RSP + 0x10] type=DYNAMIC
+INSTRUCTION min_address=00401dd7 opcode=LEA in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=R15 type=REGISTER
+DESTINATIONOPERAND operand=[RSP + 0x3c] type=DYNAMIC
+INSTRUCTION min_address=00401ddc opcode=LEA in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=[RSP + 0x8] type=DYNAMIC
+INSTRUCTION min_address=00401de1 opcode=JMP in_function=telnetListener numoperands=1
+SOURCEOPERAND operand=0x00401e02 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401e02 type=ADDRESS
+INSTRUCTION min_address=00401df0 opcode=MOVSXD in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=RCX type=REGISTER
+DESTINATIONOPERAND operand=EBP type=REGISTER
+INSTRUCTION min_address=00401df3 opcode=XOR in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=ESI type=REGISTER
+INSTRUCTION min_address=00401df5 opcode=MOV in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=0x401b60 type=ADDRESS
+INSTRUCTION min_address=00401dfa opcode=MOV in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=00401dfd opcode=CALL in_function=telnetListener numoperands=1
+SOURCEOPERAND operand=0x00400ec0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400ec0 type=ADDRESS
+INSTRUCTION min_address=00401e02 opcode=MOV in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=R12D type=REGISTER
+INSTRUCTION min_address=00401e05 opcode=MOV in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=RSI type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=00401e08 opcode=MOV in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=RDX type=REGISTER
+DESTINATIONOPERAND operand=R15 type=REGISTER
+INSTRUCTION min_address=00401e0b opcode=CALL in_function=telnetListener numoperands=1
+SOURCEOPERAND operand=0x004010c0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004010c0 type=ADDRESS
+INSTRUCTION min_address=00401e10 opcode=MOV in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=EBP type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00401e12 opcode=TEST in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=EBP type=REGISTER
+DESTINATIONOPERAND operand=EBP type=REGISTER
+INSTRUCTION min_address=00401e14 opcode=JNS in_function=telnetListener numoperands=1
+SOURCEOPERAND operand=0x00401df0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401df0 type=ADDRESS
+INSTRUCTION min_address=00401e16 opcode=MOV in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=0x40238a type=ADDRESS
+INSTRUCTION min_address=00401e1b opcode=CALL in_function=telnetListener numoperands=1
+SOURCEOPERAND operand=0x004010b0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004010b0 type=ADDRESS
+INSTRUCTION min_address=00401e20 opcode=JMP in_function=telnetListener numoperands=1
+SOURCEOPERAND operand=0x00401df0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401df0 type=ADDRESS
+INSTRUCTION min_address=00401e22 opcode=MOV in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=0x402364 type=ADDRESS
+INSTRUCTION min_address=00401e27 opcode=CALL in_function=telnetListener numoperands=1
+SOURCEOPERAND operand=0x004010b0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004010b0 type=ADDRESS
+INSTRUCTION min_address=00401e2c opcode=JMP in_function=telnetListener numoperands=1
+SOURCEOPERAND operand=0x00401d89 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401d89 type=ADDRESS
+INSTRUCTION min_address=00401e31 opcode=MOV in_function=telnetListener numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=0x402379 type=ADDRESS
+INSTRUCTION min_address=00401e36 opcode=CALL in_function=telnetListener numoperands=1
+SOURCEOPERAND operand=0x004010b0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004010b0 type=ADDRESS
+INSTRUCTION min_address=00401e3b opcode=JMP in_function=telnetListener numoperands=1
+SOURCEOPERAND operand=0x00401dbd type=ADDRESS
+DESTINATIONOPERAND operand=0x00401dbd type=ADDRESS
+INSTRUCTION min_address=00401e40 opcode=PUSH in_function=main numoperands=1
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=00401e41 opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RSP type=REGISTER
+INSTRUCTION min_address=00401e44 opcode=PUSH in_function=main numoperands=1
+SOURCEOPERAND operand=R15 type=REGISTER
+DESTINATIONOPERAND operand=R15 type=REGISTER
+INSTRUCTION min_address=00401e46 opcode=PUSH in_function=main numoperands=1
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=00401e48 opcode=PUSH in_function=main numoperands=1
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=00401e49 opcode=SUB in_function=main numoperands=2
+SOURCEOPERAND operand=RSP type=REGISTER
+DESTINATIONOPERAND operand=0x18 type=SCALAR
+INSTRUCTION min_address=00401e4d opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=RSI type=REGISTER
+INSTRUCTION min_address=00401e50 opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=EBX type=REGISTER
+DESTINATIONOPERAND operand=EDI type=REGISTER
+INSTRUCTION min_address=00401e52 opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=0xd type=SCALAR
+INSTRUCTION min_address=00401e57 opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x1 type=SCALAR
+INSTRUCTION min_address=00401e5c opcode=CALL in_function=main numoperands=1
+SOURCEOPERAND operand=0x00401020 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401020 type=ADDRESS
+INSTRUCTION min_address=00401e61 opcode=CMP in_function=main numoperands=2
+SOURCEOPERAND operand=EBX type=REGISTER
+DESTINATIONOPERAND operand=0x3 type=SCALAR
+INSTRUCTION min_address=00401e64 opcode=JNZ in_function=main numoperands=1
+SOURCEOPERAND operand=0x00401fb0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401fb0 type=ADDRESS
+INSTRUCTION min_address=00401e6a opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=0x4023b6 type=ADDRESS
+INSTRUCTION min_address=00401e6f opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x4023c1 type=ADDRESS
+INSTRUCTION min_address=00401e74 opcode=CALL in_function=main numoperands=1
+SOURCEOPERAND operand=0x004010a0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004010a0 type=ADDRESS
+INSTRUCTION min_address=00401e79 opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=qword ptr [0x006031b8] type=ADDRESS
+DESTINATIONOPERAND operand=RAX type=REGISTER
+INSTRUCTION min_address=00401e80 opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=qword ptr [R14 + 0x10] type=DYNAMIC
+INSTRUCTION min_address=00401e84 opcode=CALL in_function=main numoperands=1
+SOURCEOPERAND operand=0x004010d0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004010d0 type=ADDRESS
+INSTRUCTION min_address=00401e89 opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=R15D type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00401e8c opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=qword ptr [R14 + 0x8] type=DYNAMIC
+INSTRUCTION min_address=00401e90 opcode=CALL in_function=main numoperands=1
+SOURCEOPERAND operand=0x00402000 type=ADDRESS
+DESTINATIONOPERAND operand=0x00402000 type=ADDRESS
+INSTRUCTION min_address=00401e95 opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=dword ptr [0x006031b4] type=ADDRESS
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00401e9b opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=dword ptr [0x006031b4] type=ADDRESS
+INSTRUCTION min_address=00401ea1 opcode=CMP in_function=main numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=-0x1 type=SCALAR
+INSTRUCTION min_address=00401ea4 opcode=JZ in_function=main numoperands=1
+SOURCEOPERAND operand=0x00401fab type=ADDRESS
+DESTINATIONOPERAND operand=0x00401fab type=ADDRESS
+INSTRUCTION min_address=00401eaa opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=dword ptr [0x006031b4] type=ADDRESS
+INSTRUCTION min_address=00401eb0 opcode=CALL in_function=main numoperands=1
+SOURCEOPERAND operand=0x00401a40 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401a40 type=ADDRESS
+INSTRUCTION min_address=00401eb5 opcode=CMP in_function=main numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=-0x1 type=SCALAR
+INSTRUCTION min_address=00401eb8 opcode=JZ in_function=main numoperands=1
+SOURCEOPERAND operand=0x00401fab type=ADDRESS
+DESTINATIONOPERAND operand=0x00401fab type=ADDRESS
+INSTRUCTION min_address=00401ebe opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=dword ptr [0x006031b4] type=ADDRESS
+INSTRUCTION min_address=00401ec4 opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x80 type=SCALAR
+INSTRUCTION min_address=00401ec9 opcode=CALL in_function=main numoperands=1
+SOURCEOPERAND operand=0x00401070 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401070 type=ADDRESS
+INSTRUCTION min_address=00401ece opcode=CMP in_function=main numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=-0x1 type=SCALAR
+INSTRUCTION min_address=00401ed1 opcode=JZ in_function=main numoperands=1
+SOURCEOPERAND operand=0x00401fd0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401fd0 type=ADDRESS
+INSTRUCTION min_address=00401ed7 opcode=XOR in_function=main numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=EDI type=REGISTER
+INSTRUCTION min_address=00401ed9 opcode=CALL in_function=main numoperands=1
+SOURCEOPERAND operand=0x00401130 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401130 type=ADDRESS
+INSTRUCTION min_address=00401ede opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=dword ptr [0x006031b0] type=ADDRESS
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00401ee4 opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=dword ptr [0x006031b0] type=ADDRESS
+INSTRUCTION min_address=00401eea opcode=CMP in_function=main numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=-0x1 type=SCALAR
+INSTRUCTION min_address=00401eed opcode=JZ in_function=main numoperands=1
+SOURCEOPERAND operand=0x00401fdf type=ADDRESS
+DESTINATIONOPERAND operand=0x00401fdf type=ADDRESS
+INSTRUCTION min_address=00401ef3 opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=dword ptr [0x006031b4] type=ADDRESS
+INSTRUCTION min_address=00401ef9 opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=dword ptr [RBP + -0x24] type=ADDRESS
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00401efc opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=dword ptr [RBP + -0x28] type=ADDRESS
+DESTINATIONOPERAND operand=0x80000001 type=SCALAR
+INSTRUCTION min_address=00401f03 opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=dword ptr [0x006031b0] type=ADDRESS
+INSTRUCTION min_address=00401f09 opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=dword ptr [0x006031b4] type=ADDRESS
+INSTRUCTION min_address=00401f0f opcode=LEA in_function=main numoperands=2
+SOURCEOPERAND operand=RCX type=REGISTER
+DESTINATIONOPERAND operand=[RBP + -0x28] type=DYNAMIC
+INSTRUCTION min_address=00401f13 opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x1 type=SCALAR
+INSTRUCTION min_address=00401f18 opcode=CALL in_function=main numoperands=1
+SOURCEOPERAND operand=0x00400fd0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400fd0 type=ADDRESS
+INSTRUCTION min_address=00401f1d opcode=CMP in_function=main numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=-0x1 type=SCALAR
+INSTRUCTION min_address=00401f20 opcode=JZ in_function=main numoperands=1
+SOURCEOPERAND operand=0x00401fee type=ADDRESS
+DESTINATIONOPERAND operand=0x00401fee type=ADDRESS
+INSTRUCTION min_address=00401f26 opcode=LEA in_function=main numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=[R15 + 0x2] type=DYNAMIC
+INSTRUCTION min_address=00401f2a opcode=LEA in_function=main numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=[0xf + RAX*0x8] type=DYNAMIC
+INSTRUCTION min_address=00401f32 opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=RCX type=REGISTER
+DESTINATIONOPERAND operand=0xffffffff0 type=SCALAR
+INSTRUCTION min_address=00401f3c opcode=AND in_function=main numoperands=2
+SOURCEOPERAND operand=RCX type=REGISTER
+DESTINATIONOPERAND operand=RAX type=REGISTER
+INSTRUCTION min_address=00401f3f opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=RSP type=REGISTER
+INSTRUCTION min_address=00401f42 opcode=SUB in_function=main numoperands=2
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=RCX type=REGISTER
+INSTRUCTION min_address=00401f45 opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=RSP type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=00401f48 opcode=TEST in_function=main numoperands=2
+SOURCEOPERAND operand=R15D type=REGISTER
+DESTINATIONOPERAND operand=R15D type=REGISTER
+INSTRUCTION min_address=00401f4b opcode=JZ in_function=main numoperands=1
+SOURCEOPERAND operand=0x00401f7a type=ADDRESS
+DESTINATIONOPERAND operand=0x00401f7a type=ADDRESS
+INSTRUCTION min_address=00401f4d opcode=MOVSXD in_function=main numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=R15D type=REGISTER
+INSTRUCTION min_address=00401f50 opcode=LEA in_function=main numoperands=2
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=[R14 + RAX*0x8] type=DYNAMIC
+INSTRUCTION min_address=00401f54 opcode=NOP in_function=main numoperands=1
+SOURCEOPERAND operand=word ptr CS:[RAX + RAX*0x1] type=DYNAMIC
+DESTINATIONOPERAND operand=word ptr CS:[RAX + RAX*0x1] type=DYNAMIC
+INSTRUCTION min_address=00401f60 opcode=XOR in_function=main numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=ESI type=REGISTER
+INSTRUCTION min_address=00401f62 opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=0x4015b0 type=ADDRESS
+INSTRUCTION min_address=00401f67 opcode=XOR in_function=main numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=ECX type=REGISTER
+INSTRUCTION min_address=00401f69 opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=00401f6c opcode=CALL in_function=main numoperands=1
+SOURCEOPERAND operand=0x00400ec0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400ec0 type=ADDRESS
+INSTRUCTION min_address=00401f71 opcode=ADD in_function=main numoperands=2
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=-0x8 type=SCALAR
+INSTRUCTION min_address=00401f75 opcode=DEC in_function=main numoperands=1
+SOURCEOPERAND operand=R15D type=REGISTER
+DESTINATIONOPERAND operand=R15D type=REGISTER
+INSTRUCTION min_address=00401f78 opcode=JNZ in_function=main numoperands=1
+SOURCEOPERAND operand=0x00401f60 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401f60 type=ADDRESS
+INSTRUCTION min_address=00401f7a opcode=XOR in_function=main numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=ESI type=REGISTER
+INSTRUCTION min_address=00401f7c opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=0x401d60 type=ADDRESS
+INSTRUCTION min_address=00401f81 opcode=XOR in_function=main numoperands=2
+SOURCEOPERAND operand=ECX type=REGISTER
+DESTINATIONOPERAND operand=ECX type=REGISTER
+INSTRUCTION min_address=00401f83 opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=00401f86 opcode=CALL in_function=main numoperands=1
+SOURCEOPERAND operand=0x00400ec0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400ec0 type=ADDRESS
+INSTRUCTION min_address=00401f8b opcode=NOP in_function=main numoperands=1
+SOURCEOPERAND operand=dword ptr [RAX + RAX*0x1] type=DYNAMIC
+DESTINATIONOPERAND operand=dword ptr [RAX + RAX*0x1] type=DYNAMIC
+INSTRUCTION min_address=00401f90 opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=0x4021b4 type=ADDRESS
+INSTRUCTION min_address=00401f95 opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0xffffffff type=SCALAR
+INSTRUCTION min_address=00401f9a opcode=CALL in_function=main numoperands=1
+SOURCEOPERAND operand=0x004013d0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004013d0 type=ADDRESS
+INSTRUCTION min_address=00401f9f opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=0x3c type=SCALAR
+INSTRUCTION min_address=00401fa4 opcode=CALL in_function=main numoperands=1
+SOURCEOPERAND operand=0x00401120 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401120 type=ADDRESS
+INSTRUCTION min_address=00401fa9 opcode=JMP in_function=main numoperands=1
+SOURCEOPERAND operand=0x00401f90 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401f90 type=ADDRESS
+INSTRUCTION min_address=00401fab opcode=CALL in_function=main numoperands=1
+SOURCEOPERAND operand=0x00400ee0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400ee0 type=ADDRESS
+INSTRUCTION min_address=00401fb0 opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=qword ptr [0x006031a0] type=ADDRESS
+INSTRUCTION min_address=00401fb7 opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=RDX type=REGISTER
+DESTINATIONOPERAND operand=qword ptr [R14] type=DYNAMIC
+INSTRUCTION min_address=00401fba opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x40239a type=ADDRESS
+INSTRUCTION min_address=00401fbf opcode=XOR in_function=main numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00401fc1 opcode=CALL in_function=main numoperands=1
+SOURCEOPERAND operand=0x00401030 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401030 type=ADDRESS
+INSTRUCTION min_address=00401fc6 opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=0x1 type=SCALAR
+INSTRUCTION min_address=00401fcb opcode=CALL in_function=main numoperands=1
+SOURCEOPERAND operand=0x004010f0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004010f0 type=ADDRESS
+INSTRUCTION min_address=00401fd0 opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=0x4023c4 type=ADDRESS
+INSTRUCTION min_address=00401fd5 opcode=CALL in_function=main numoperands=1
+SOURCEOPERAND operand=0x004010b0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004010b0 type=ADDRESS
+INSTRUCTION min_address=00401fda opcode=CALL in_function=main numoperands=1
+SOURCEOPERAND operand=0x00400ee0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400ee0 type=ADDRESS
+INSTRUCTION min_address=00401fdf opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=0x4023cb type=ADDRESS
+INSTRUCTION min_address=00401fe4 opcode=CALL in_function=main numoperands=1
+SOURCEOPERAND operand=0x004010b0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004010b0 type=ADDRESS
+INSTRUCTION min_address=00401fe9 opcode=CALL in_function=main numoperands=1
+SOURCEOPERAND operand=0x00400ee0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400ee0 type=ADDRESS
+INSTRUCTION min_address=00401fee opcode=MOV in_function=main numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=0x4021fc type=ADDRESS
+INSTRUCTION min_address=00401ff3 opcode=CALL in_function=main numoperands=1
+SOURCEOPERAND operand=0x004010b0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004010b0 type=ADDRESS
+INSTRUCTION min_address=00401ff8 opcode=CALL in_function=main numoperands=1
+SOURCEOPERAND operand=0x00400ee0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400ee0 type=ADDRESS
+INSTRUCTION min_address=00402000 opcode=PUSH in_function=create_and_bind numoperands=1
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=00402001 opcode=PUSH in_function=create_and_bind numoperands=1
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=00402003 opcode=PUSH in_function=create_and_bind numoperands=1
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=00402004 opcode=SUB in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=RSP type=REGISTER
+DESTINATIONOPERAND operand=0x40 type=SCALAR
+INSTRUCTION min_address=00402008 opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=RAX type=REGISTER
+DESTINATIONOPERAND operand=RDI type=REGISTER
+INSTRUCTION min_address=0040200b opcode=XORPS in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=XMM0 type=REGISTER
+DESTINATIONOPERAND operand=XMM0 type=REGISTER
+INSTRUCTION min_address=0040200e opcode=MOVAPS in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=xmmword ptr [RSP + 0x30] type=ADDRESS
+DESTINATIONOPERAND operand=XMM0 type=REGISTER
+INSTRUCTION min_address=00402013 opcode=MOVAPS in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=xmmword ptr [RSP + 0x20] type=ADDRESS
+DESTINATIONOPERAND operand=XMM0 type=REGISTER
+INSTRUCTION min_address=00402018 opcode=MOVAPS in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=xmmword ptr [RSP + 0x10] type=ADDRESS
+DESTINATIONOPERAND operand=XMM0 type=REGISTER
+INSTRUCTION min_address=0040201d opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=dword ptr [RSP + 0x18] type=ADDRESS
+DESTINATIONOPERAND operand=0x1 type=SCALAR
+INSTRUCTION min_address=00402025 opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=dword ptr [RSP + 0x10] type=ADDRESS
+DESTINATIONOPERAND operand=0x1 type=SCALAR
+INSTRUCTION min_address=0040202d opcode=LEA in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=RDX type=REGISTER
+DESTINATIONOPERAND operand=[RSP + 0x10] type=DYNAMIC
+INSTRUCTION min_address=00402032 opcode=LEA in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=RCX type=REGISTER
+DESTINATIONOPERAND operand=[RSP + 0x8] type=DYNAMIC
+INSTRUCTION min_address=00402037 opcode=XOR in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=EDI type=REGISTER
+INSTRUCTION min_address=00402039 opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=RSI type=REGISTER
+DESTINATIONOPERAND operand=RAX type=REGISTER
+INSTRUCTION min_address=0040203c opcode=CALL in_function=create_and_bind numoperands=1
+SOURCEOPERAND operand=0x00401110 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401110 type=ADDRESS
+INSTRUCTION min_address=00402041 opcode=TEST in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00402043 opcode=JNZ in_function=create_and_bind numoperands=1
+SOURCEOPERAND operand=0x004020fc type=ADDRESS
+DESTINATIONOPERAND operand=0x004020fc type=ADDRESS
+INSTRUCTION min_address=00402049 opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=qword ptr [RSP + 0x8] type=ADDRESS
+INSTRUCTION min_address=0040204e opcode=TEST in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=00402051 opcode=JZ in_function=create_and_bind numoperands=1
+SOURCEOPERAND operand=0x004020ce type=ADDRESS
+DESTINATIONOPERAND operand=0x004020ce type=ADDRESS
+INSTRUCTION min_address=00402053 opcode=LEA in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=[RSP + 0x4] type=DYNAMIC
+INSTRUCTION min_address=00402058 opcode=JMP in_function=create_and_bind numoperands=1
+SOURCEOPERAND operand=0x00402070 type=ADDRESS
+DESTINATIONOPERAND operand=0x00402070 type=ADDRESS
+INSTRUCTION min_address=0040205a opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=0x4023ef type=ADDRESS
+INSTRUCTION min_address=0040205f opcode=CALL in_function=create_and_bind numoperands=1
+SOURCEOPERAND operand=0x004010b0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004010b0 type=ADDRESS
+INSTRUCTION min_address=00402064 opcode=JMP in_function=create_and_bind numoperands=1
+SOURCEOPERAND operand=0x004020ac type=ADDRESS
+DESTINATIONOPERAND operand=0x004020ac type=ADDRESS
+INSTRUCTION min_address=00402070 opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=dword ptr [RBX + 0x4] type=DYNAMIC
+INSTRUCTION min_address=00402073 opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=dword ptr [RBX + 0x8] type=DYNAMIC
+INSTRUCTION min_address=00402076 opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=dword ptr [RBX + 0xc] type=DYNAMIC
+INSTRUCTION min_address=00402079 opcode=CALL in_function=create_and_bind numoperands=1
+SOURCEOPERAND operand=0x00401160 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401160 type=ADDRESS
+INSTRUCTION min_address=0040207e opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=EBP type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00402080 opcode=CMP in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=EBP type=REGISTER
+DESTINATIONOPERAND operand=-0x1 type=SCALAR
+INSTRUCTION min_address=00402083 opcode=JZ in_function=create_and_bind numoperands=1
+SOURCEOPERAND operand=0x004020c5 type=ADDRESS
+DESTINATIONOPERAND operand=0x004020c5 type=ADDRESS
+INSTRUCTION min_address=00402085 opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=dword ptr [RSP + 0x4] type=ADDRESS
+DESTINATIONOPERAND operand=0x1 type=SCALAR
+INSTRUCTION min_address=0040208d opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x1 type=SCALAR
+INSTRUCTION min_address=00402092 opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=0x2 type=SCALAR
+INSTRUCTION min_address=00402097 opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=R8D type=REGISTER
+DESTINATIONOPERAND operand=0x4 type=SCALAR
+INSTRUCTION min_address=0040209d opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=EBP type=REGISTER
+INSTRUCTION min_address=0040209f opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=RCX type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=004020a2 opcode=CALL in_function=create_and_bind numoperands=1
+SOURCEOPERAND operand=0x00400f20 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f20 type=ADDRESS
+INSTRUCTION min_address=004020a7 opcode=CMP in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=-0x1 type=SCALAR
+INSTRUCTION min_address=004020aa opcode=JZ in_function=create_and_bind numoperands=1
+SOURCEOPERAND operand=0x0040205a type=ADDRESS
+DESTINATIONOPERAND operand=0x0040205a type=ADDRESS
+INSTRUCTION min_address=004020ac opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=RSI type=REGISTER
+DESTINATIONOPERAND operand=qword ptr [RBX + 0x18] type=DYNAMIC
+INSTRUCTION min_address=004020b0 opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=dword ptr [RBX + 0x10] type=DYNAMIC
+INSTRUCTION min_address=004020b3 opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=EBP type=REGISTER
+INSTRUCTION min_address=004020b5 opcode=CALL in_function=create_and_bind numoperands=1
+SOURCEOPERAND operand=0x00401090 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401090 type=ADDRESS
+INSTRUCTION min_address=004020ba opcode=TEST in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=004020bc opcode=JZ in_function=create_and_bind numoperands=1
+SOURCEOPERAND operand=0x004020f0 type=ADDRESS
+DESTINATIONOPERAND operand=0x004020f0 type=ADDRESS
+INSTRUCTION min_address=004020be opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=EBP type=REGISTER
+INSTRUCTION min_address=004020c0 opcode=CALL in_function=create_and_bind numoperands=1
+SOURCEOPERAND operand=0x00400fb0 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400fb0 type=ADDRESS
+INSTRUCTION min_address=004020c5 opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=qword ptr [RBX + 0x28] type=DYNAMIC
+INSTRUCTION min_address=004020c9 opcode=TEST in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=004020cc opcode=JNZ in_function=create_and_bind numoperands=1
+SOURCEOPERAND operand=0x00402070 type=ADDRESS
+DESTINATIONOPERAND operand=0x00402070 type=ADDRESS
+INSTRUCTION min_address=004020ce opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=RCX type=REGISTER
+DESTINATIONOPERAND operand=qword ptr [0x006031a0] type=ADDRESS
+INSTRUCTION min_address=004020d5 opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=0x4023fa type=ADDRESS
+INSTRUCTION min_address=004020da opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0xf type=SCALAR
+INSTRUCTION min_address=004020df opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=EDX type=REGISTER
+DESTINATIONOPERAND operand=0x1 type=SCALAR
+INSTRUCTION min_address=004020e4 opcode=CALL in_function=create_and_bind numoperands=1
+SOURCEOPERAND operand=0x00401100 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401100 type=ADDRESS
+INSTRUCTION min_address=004020e9 opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=EBP type=REGISTER
+DESTINATIONOPERAND operand=0xffffffff type=SCALAR
+INSTRUCTION min_address=004020ee opcode=JMP in_function=create_and_bind numoperands=1
+SOURCEOPERAND operand=0x00402124 type=ADDRESS
+DESTINATIONOPERAND operand=0x00402124 type=ADDRESS
+INSTRUCTION min_address=004020f0 opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=qword ptr [RSP + 0x8] type=ADDRESS
+INSTRUCTION min_address=004020f5 opcode=CALL in_function=create_and_bind numoperands=1
+SOURCEOPERAND operand=0x00401150 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401150 type=ADDRESS
+INSTRUCTION min_address=004020fa opcode=JMP in_function=create_and_bind numoperands=1
+SOURCEOPERAND operand=0x00402124 type=ADDRESS
+DESTINATIONOPERAND operand=0x00402124 type=ADDRESS
+INSTRUCTION min_address=004020fc opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=qword ptr [0x006031a0] type=ADDRESS
+INSTRUCTION min_address=00402103 opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00402105 opcode=CALL in_function=create_and_bind numoperands=1
+SOURCEOPERAND operand=0x00400f90 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400f90 type=ADDRESS
+INSTRUCTION min_address=0040210a opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=RCX type=REGISTER
+DESTINATIONOPERAND operand=RAX type=REGISTER
+INSTRUCTION min_address=0040210d opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=ESI type=REGISTER
+DESTINATIONOPERAND operand=0x4023de type=ADDRESS
+INSTRUCTION min_address=00402112 opcode=XOR in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=EAX type=REGISTER
+INSTRUCTION min_address=00402114 opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=RDI type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=00402117 opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=RDX type=REGISTER
+DESTINATIONOPERAND operand=RCX type=REGISTER
+INSTRUCTION min_address=0040211a opcode=CALL in_function=create_and_bind numoperands=1
+SOURCEOPERAND operand=0x00401030 type=ADDRESS
+DESTINATIONOPERAND operand=0x00401030 type=ADDRESS
+INSTRUCTION min_address=0040211f opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=EBP type=REGISTER
+DESTINATIONOPERAND operand=0xffffffff type=SCALAR
+INSTRUCTION min_address=00402124 opcode=MOV in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=EAX type=REGISTER
+DESTINATIONOPERAND operand=EBP type=REGISTER
+INSTRUCTION min_address=00402126 opcode=ADD in_function=create_and_bind numoperands=2
+SOURCEOPERAND operand=RSP type=REGISTER
+DESTINATIONOPERAND operand=0x40 type=SCALAR
+INSTRUCTION min_address=0040212a opcode=POP in_function=create_and_bind numoperands=1
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=0040212b opcode=POP in_function=create_and_bind numoperands=1
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=0040212d opcode=POP in_function=create_and_bind numoperands=1
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=0040212e opcode=RET in_function=create_and_bind numoperands=0
+INSTRUCTION min_address=00402130 opcode=PUSH in_function=__libc_csu_init numoperands=1
+SOURCEOPERAND operand=R15 type=REGISTER
+DESTINATIONOPERAND operand=R15 type=REGISTER
+INSTRUCTION min_address=00402132 opcode=PUSH in_function=__libc_csu_init numoperands=1
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=00402134 opcode=MOV in_function=__libc_csu_init numoperands=2
+SOURCEOPERAND operand=R15D type=REGISTER
+DESTINATIONOPERAND operand=EDI type=REGISTER
+INSTRUCTION min_address=00402137 opcode=PUSH in_function=__libc_csu_init numoperands=1
+SOURCEOPERAND operand=R13 type=REGISTER
+DESTINATIONOPERAND operand=R13 type=REGISTER
+INSTRUCTION min_address=00402139 opcode=PUSH in_function=__libc_csu_init numoperands=1
+SOURCEOPERAND operand=R12 type=REGISTER
+DESTINATIONOPERAND operand=R12 type=REGISTER
+INSTRUCTION min_address=0040213b opcode=LEA in_function=__libc_csu_init numoperands=2
+SOURCEOPERAND operand=R12 type=REGISTER
+DESTINATIONOPERAND operand=[0x602e00] type=ADDRESS
+INSTRUCTION min_address=00402142 opcode=PUSH in_function=__libc_csu_init numoperands=1
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=00402143 opcode=LEA in_function=__libc_csu_init numoperands=2
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=[0x602e08] type=ADDRESS
+INSTRUCTION min_address=0040214a opcode=PUSH in_function=__libc_csu_init numoperands=1
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=0040214b opcode=MOV in_function=__libc_csu_init numoperands=2
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=RSI type=REGISTER
+INSTRUCTION min_address=0040214e opcode=MOV in_function=__libc_csu_init numoperands=2
+SOURCEOPERAND operand=R13 type=REGISTER
+DESTINATIONOPERAND operand=RDX type=REGISTER
+INSTRUCTION min_address=00402151 opcode=SUB in_function=__libc_csu_init numoperands=2
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=R12 type=REGISTER
+INSTRUCTION min_address=00402154 opcode=SUB in_function=__libc_csu_init numoperands=2
+SOURCEOPERAND operand=RSP type=REGISTER
+DESTINATIONOPERAND operand=0x8 type=SCALAR
+INSTRUCTION min_address=00402158 opcode=SAR in_function=__libc_csu_init numoperands=2
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=0x3 type=SCALAR
+INSTRUCTION min_address=0040215c opcode=CALL in_function=__libc_csu_init numoperands=1
+SOURCEOPERAND operand=0x00400e80 type=ADDRESS
+DESTINATIONOPERAND operand=0x00400e80 type=ADDRESS
+INSTRUCTION min_address=00402161 opcode=TEST in_function=__libc_csu_init numoperands=2
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=00402164 opcode=JZ in_function=__libc_csu_init numoperands=1
+SOURCEOPERAND operand=0x00402186 type=ADDRESS
+DESTINATIONOPERAND operand=0x00402186 type=ADDRESS
+INSTRUCTION min_address=00402166 opcode=XOR in_function=__libc_csu_init numoperands=2
+SOURCEOPERAND operand=EBX type=REGISTER
+DESTINATIONOPERAND operand=EBX type=REGISTER
+INSTRUCTION min_address=00402168 opcode=NOP in_function=__libc_csu_init numoperands=1
+SOURCEOPERAND operand=dword ptr [RAX + RAX*0x1] type=DYNAMIC
+DESTINATIONOPERAND operand=dword ptr [RAX + RAX*0x1] type=DYNAMIC
+INSTRUCTION min_address=00402170 opcode=MOV in_function=__libc_csu_init numoperands=2
+SOURCEOPERAND operand=RDX type=REGISTER
+DESTINATIONOPERAND operand=R13 type=REGISTER
+INSTRUCTION min_address=00402173 opcode=MOV in_function=__libc_csu_init numoperands=2
+SOURCEOPERAND operand=RSI type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=00402176 opcode=MOV in_function=__libc_csu_init numoperands=2
+SOURCEOPERAND operand=EDI type=REGISTER
+DESTINATIONOPERAND operand=R15D type=REGISTER
+INSTRUCTION min_address=00402179 opcode=CALL in_function=__libc_csu_init numoperands=1
+SOURCEOPERAND operand=qword ptr [R12 + RBX*0x8] type=ADDRESS
+DESTINATIONOPERAND operand=qword ptr [R12 + RBX*0x8] type=ADDRESS
+INSTRUCTION min_address=0040217d opcode=ADD in_function=__libc_csu_init numoperands=2
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=0x1 type=SCALAR
+INSTRUCTION min_address=00402181 opcode=CMP in_function=__libc_csu_init numoperands=2
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=00402184 opcode=JNZ in_function=__libc_csu_init numoperands=1
+SOURCEOPERAND operand=0x00402170 type=ADDRESS
+DESTINATIONOPERAND operand=0x00402170 type=ADDRESS
+INSTRUCTION min_address=00402186 opcode=ADD in_function=__libc_csu_init numoperands=2
+SOURCEOPERAND operand=RSP type=REGISTER
+DESTINATIONOPERAND operand=0x8 type=SCALAR
+INSTRUCTION min_address=0040218a opcode=POP in_function=__libc_csu_init numoperands=1
+SOURCEOPERAND operand=RBX type=REGISTER
+DESTINATIONOPERAND operand=RBX type=REGISTER
+INSTRUCTION min_address=0040218b opcode=POP in_function=__libc_csu_init numoperands=1
+SOURCEOPERAND operand=RBP type=REGISTER
+DESTINATIONOPERAND operand=RBP type=REGISTER
+INSTRUCTION min_address=0040218c opcode=POP in_function=__libc_csu_init numoperands=1
+SOURCEOPERAND operand=R12 type=REGISTER
+DESTINATIONOPERAND operand=R12 type=REGISTER
+INSTRUCTION min_address=0040218e opcode=POP in_function=__libc_csu_init numoperands=1
+SOURCEOPERAND operand=R13 type=REGISTER
+DESTINATIONOPERAND operand=R13 type=REGISTER
+INSTRUCTION min_address=00402190 opcode=POP in_function=__libc_csu_init numoperands=1
+SOURCEOPERAND operand=R14 type=REGISTER
+DESTINATIONOPERAND operand=R14 type=REGISTER
+INSTRUCTION min_address=00402192 opcode=POP in_function=__libc_csu_init numoperands=1
+SOURCEOPERAND operand=R15 type=REGISTER
+DESTINATIONOPERAND operand=R15 type=REGISTER
+INSTRUCTION min_address=00402194 opcode=RET in_function=__libc_csu_init numoperands=0
+INSTRUCTION min_address=004021a0 opcode=RET in_function=__libc_csu_fini numoperands=0
+INSTRUCTION min_address=004021a4 opcode=SUB in_function=_fini numoperands=2
+SOURCEOPERAND operand=RSP type=REGISTER
+DESTINATIONOPERAND operand=0x8 type=SCALAR
+INSTRUCTION min_address=004021a8 opcode=ADD in_function=_fini numoperands=2
+SOURCEOPERAND operand=RSP type=REGISTER
+DESTINATIONOPERAND operand=0x8 type=SCALAR
+INSTRUCTION min_address=004021ac opcode=RET in_function=_fini numoperands=0

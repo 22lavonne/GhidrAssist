@@ -1,0 +1,1670 @@
+FUNCTION func=sigprocmask address=EXTERNAL:00000001 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610000 destination=EXTERNAL:00000001 operandindex=-2 type=THUNK
+FUNCTION func=free address=EXTERNAL:00000002 returntype=void returnvalue=[void <RETURN>@<VOID>] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610008 destination=EXTERNAL:00000002 operandindex=-2 type=THUNK
+FUNCTION func=recv address=EXTERNAL:00000003 returntype=typedef ssize_t __ssize_t returnvalue=[ssize_t <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610010 destination=EXTERNAL:00000003 operandindex=-2 type=THUNK
+FUNCTION func=__errno_location address=EXTERNAL:00000004 returntype=int * returnvalue=[int * <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610018 destination=EXTERNAL:00000004 operandindex=-2 type=THUNK
+FUNCTION func=_exit address=EXTERNAL:00000005 returntype=void returnvalue=[void <RETURN>@<VOID>] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610020 destination=EXTERNAL:00000005 operandindex=-2 type=THUNK
+FUNCTION func=strcpy address=EXTERNAL:00000006 returntype=char * returnvalue=[char * <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610028 destination=EXTERNAL:00000006 operandindex=-2 type=THUNK
+FUNCTION func=toupper address=EXTERNAL:00000007 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610030 destination=EXTERNAL:00000007 operandindex=-2 type=THUNK
+FUNCTION func=setsockopt address=EXTERNAL:00000008 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610038 destination=EXTERNAL:00000008 operandindex=-2 type=THUNK
+FUNCTION func=fcntl address=EXTERNAL:00000009 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610040 destination=EXTERNAL:00000009 operandindex=-2 type=THUNK
+FUNCTION func=write address=EXTERNAL:0000000a returntype=typedef ssize_t __ssize_t returnvalue=[ssize_t <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610048 destination=EXTERNAL:0000000a operandindex=-2 type=THUNK
+FUNCTION func=getpid address=EXTERNAL:0000000b returntype=typedef __pid_t int returnvalue=[__pid_t <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610050 destination=EXTERNAL:0000000b operandindex=-2 type=THUNK
+FUNCTION func=inet_ntoa address=EXTERNAL:0000000c returntype=char * returnvalue=[char * <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610058 destination=EXTERNAL:0000000c operandindex=-2 type=THUNK
+FUNCTION func=strlen address=EXTERNAL:0000000d returntype=typedef size_t ulong returnvalue=[size_t <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610060 destination=EXTERNAL:0000000d operandindex=-2 type=THUNK
+FUNCTION func=chdir address=EXTERNAL:0000000e returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610068 destination=EXTERNAL:0000000e operandindex=-2 type=THUNK
+FUNCTION func=htons address=EXTERNAL:0000000f returntype=typedef uint16_t ushort returnvalue=[uint16_t <RETURN>@AX:2] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610070 destination=EXTERNAL:0000000f operandindex=-2 type=THUNK
+FUNCTION func=dup2 address=EXTERNAL:00000010 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610078 destination=EXTERNAL:00000010 operandindex=-2 type=THUNK
+FUNCTION func=send address=EXTERNAL:00000011 returntype=typedef ssize_t __ssize_t returnvalue=[ssize_t <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610080 destination=EXTERNAL:00000011 operandindex=-2 type=THUNK
+FUNCTION func=strchr address=EXTERNAL:00000012 returntype=char * returnvalue=[char * <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610088 destination=EXTERNAL:00000012 operandindex=-2 type=THUNK
+FUNCTION func=printf address=EXTERNAL:00000013 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610090 destination=EXTERNAL:00000013 operandindex=-2 type=THUNK
+FUNCTION func=htonl address=EXTERNAL:00000014 returntype=typedef uint32_t uint returnvalue=[uint32_t <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610098 destination=EXTERNAL:00000014 operandindex=-2 type=THUNK
+FUNCTION func=memset address=EXTERNAL:00000015 returntype=void * returnvalue=[void * <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=006100a0 destination=EXTERNAL:00000015 operandindex=-2 type=THUNK
+FUNCTION func=ioctl address=EXTERNAL:00000016 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=006100a8 destination=EXTERNAL:00000016 operandindex=-2 type=THUNK
+FUNCTION func=sendto address=EXTERNAL:00000017 returntype=typedef ssize_t __ssize_t returnvalue=[ssize_t <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=006100b0 destination=EXTERNAL:00000017 operandindex=-2 type=THUNK
+FUNCTION func=close address=EXTERNAL:00000018 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=006100b8 destination=EXTERNAL:00000018 operandindex=-2 type=THUNK
+FUNCTION func=pipe address=EXTERNAL:00000019 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=006100c0 destination=EXTERNAL:00000019 operandindex=-2 type=THUNK
+FUNCTION func=setsid address=EXTERNAL:0000001a returntype=typedef __pid_t int returnvalue=[__pid_t <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=006100c8 destination=EXTERNAL:0000001a operandindex=-2 type=THUNK
+FUNCTION func=isspace address=EXTERNAL:0000001b returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=006100d0 destination=EXTERNAL:0000001b operandindex=-2 type=THUNK
+FUNCTION func=read address=EXTERNAL:0000001c returntype=typedef ssize_t __ssize_t returnvalue=[ssize_t <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=006100d8 destination=EXTERNAL:0000001c operandindex=-2 type=THUNK
+FUNCTION func=__libc_start_main address=EXTERNAL:0000001d returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=006100e0 destination=EXTERNAL:0000001d operandindex=-2 type=THUNK
+FUNCTION func=srand address=EXTERNAL:0000001e returntype=void returnvalue=[void <RETURN>@<VOID>] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=006100e8 destination=EXTERNAL:0000001e operandindex=-2 type=THUNK
+FUNCTION func=getsockopt address=EXTERNAL:0000001f returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=006100f0 destination=EXTERNAL:0000001f operandindex=-2 type=THUNK
+FUNCTION func=inet_addr address=EXTERNAL:00000020 returntype=typedef in_addr_t uint32_t returnvalue=[in_addr_t <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=006100f8 destination=EXTERNAL:00000020 operandindex=-2 type=THUNK
+FUNCTION func=strcmp address=EXTERNAL:00000021 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610100 destination=EXTERNAL:00000021 operandindex=-2 type=THUNK
+FUNCTION func=signal address=EXTERNAL:00000022 returntype=typedef __sighandler_t __sighandler_t * returnvalue=[__sighandler_t <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610108 destination=EXTERNAL:00000022 operandindex=-2 type=THUNK
+FUNCTION func=sigemptyset address=EXTERNAL:00000023 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610110 destination=EXTERNAL:00000023 operandindex=-2 type=THUNK
+FUNCTION func=kill address=EXTERNAL:00000024 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610120 destination=EXTERNAL:00000024 operandindex=-2 type=THUNK
+FUNCTION func=time address=EXTERNAL:00000025 returntype=typedef time_t __time_t returnvalue=[time_t <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610128 destination=EXTERNAL:00000025 operandindex=-2 type=THUNK
+FUNCTION func=select address=EXTERNAL:00000026 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610130 destination=EXTERNAL:00000026 operandindex=-2 type=THUNK
+FUNCTION func=malloc address=EXTERNAL:00000027 returntype=void * returnvalue=[void * <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610138 destination=EXTERNAL:00000027 operandindex=-2 type=THUNK
+FUNCTION func=waitpid address=EXTERNAL:00000028 returntype=typedef __pid_t int returnvalue=[__pid_t <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610140 destination=EXTERNAL:00000028 operandindex=-2 type=THUNK
+FUNCTION func=open address=EXTERNAL:00000029 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610148 destination=EXTERNAL:00000029 operandindex=-2 type=THUNK
+FUNCTION func=strtok address=EXTERNAL:0000002a returntype=char * returnvalue=[char * <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610150 destination=EXTERNAL:0000002a operandindex=-2 type=THUNK
+FUNCTION func=vfork address=EXTERNAL:0000002b returntype=typedef __pid_t int returnvalue=[__pid_t <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610158 destination=EXTERNAL:0000002b operandindex=-2 type=THUNK
+FUNCTION func=getsockname address=EXTERNAL:0000002c returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610160 destination=EXTERNAL:0000002c operandindex=-2 type=THUNK
+FUNCTION func=atoi address=EXTERNAL:0000002d returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610168 destination=EXTERNAL:0000002d operandindex=-2 type=THUNK
+FUNCTION func=exit address=EXTERNAL:0000002e returntype=void returnvalue=[void <RETURN>@<VOID>] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610170 destination=EXTERNAL:0000002e operandindex=-2 type=THUNK
+FUNCTION func=connect address=EXTERNAL:0000002f returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610178 destination=EXTERNAL:0000002f operandindex=-2 type=THUNK
+FUNCTION func=ntohl address=EXTERNAL:00000030 returntype=typedef uint32_t uint returnvalue=[uint32_t <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610180 destination=EXTERNAL:00000030 operandindex=-2 type=THUNK
+FUNCTION func=execl address=EXTERNAL:00000031 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610188 destination=EXTERNAL:00000031 operandindex=-2 type=THUNK
+FUNCTION func=sleep address=EXTERNAL:00000032 returntype=uint returnvalue=[uint <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610190 destination=EXTERNAL:00000032 operandindex=-2 type=THUNK
+FUNCTION func=sigaddset address=EXTERNAL:00000033 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610198 destination=EXTERNAL:00000033 operandindex=-2 type=THUNK
+FUNCTION func=fork address=EXTERNAL:00000034 returntype=typedef __pid_t int returnvalue=[__pid_t <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=006101a0 destination=EXTERNAL:00000034 operandindex=-2 type=THUNK
+FUNCTION func=strstr address=EXTERNAL:00000035 returntype=char * returnvalue=[char * <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=006101a8 destination=EXTERNAL:00000035 operandindex=-2 type=THUNK
+FUNCTION func=getdtablesize address=EXTERNAL:00000036 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=006101b0 destination=EXTERNAL:00000036 operandindex=-2 type=THUNK
+FUNCTION func=rand address=EXTERNAL:00000037 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=006101b8 destination=EXTERNAL:00000037 operandindex=-2 type=THUNK
+FUNCTION func=socket address=EXTERNAL:00000038 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=006101c0 destination=EXTERNAL:00000038 operandindex=-2 type=THUNK
+FUNCTION func=__gmon_start__ address=EXTERNAL:00000039 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00610118 destination=EXTERNAL:00000039 operandindex=-2 type=THUNK
+FUNCTION func=_init address=00400fd0 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=__gmon_start__
+REFERENCE source=_elfSectionHeaders::000002d0 destination=00400fd0 operandindex=0 type=DATA
+REFERENCE source=0060ae40 destination=00400fd0 operandindex=0 type=DATA
+REFERENCE source=Entry Point destination=00400fd0 operandindex=-1 type=EXTERNAL
+REFERENCE source=0040902c destination=00400fd0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=0040902c destination=00400fd0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=FUN_00400ff0 address=00400ff0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+REFERENCE source=_elfSectionHeaders::00000310 destination=00400ff0 operandindex=0 type=DATA
+REFERENCE source=00409c1c destination=00400ff0 operandindex=0 type=INDIRECTION
+REFERENCE source=00409de0 destination=00400ff0 operandindex=0 type=DATA
+REFERENCE source=0040100b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040101b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040102b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040103b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040104b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040105b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040106b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040107b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040108b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040109b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004010ab destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004010bb destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004010cb destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004010db destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004010eb destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004010fb destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040110b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040111b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040112b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040113b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040114b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040115b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040116b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040117b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040118b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040119b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004011ab destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004011bb destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004011cb destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004011db destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004011eb destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004011fb destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040120b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040121b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040122b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040123b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040124b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040125b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040126b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040127b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040128b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040129b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004012ab destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004012bb destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004012cb destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004012db destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004012eb destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004012fb destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040130b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040131b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040132b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040133b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040134b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040135b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040136b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040137b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=0040137b destination=00400ff0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=sigprocmask address=00401000 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=sigprocmask
+REFERENCE source=004024e4 destination=00401000 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00402558 destination=00401000 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00402558 destination=00401000 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=free address=00401010 returntype=void returnvalue=[void <RETURN>@<VOID>] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=free
+REFERENCE source=004021d3 destination=00401010 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00403381 destination=00401010 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00403f4e destination=00401010 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408697 destination=00401010 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408c59 destination=00401010 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408c59 destination=00401010 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=recv address=00401020 returntype=typedef ssize_t __ssize_t returnvalue=[ssize_t <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=recv
+REFERENCE source=00402f2e destination=00401020 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040386b destination=00401020 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004038ca destination=00401020 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=004038ca destination=00401020 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=__errno_location address=00401030 returntype=int * returnvalue=[int * <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=__errno_location
+REFERENCE source=00402529 destination=00401030 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004030fa destination=00401030 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004045ba destination=00401030 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406a96 destination=00401030 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406cef destination=00401030 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406f86 destination=00401030 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00406f86 destination=00401030 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=_exit address=00401040 returntype=void returnvalue=[void <RETURN>@<VOID>] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=_exit
+REFERENCE source=004023cd destination=00401040 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004074b4 destination=00401040 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004075da destination=00401040 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040765f destination=00401040 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407785 destination=00401040 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040780a destination=00401040 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407a0c destination=00401040 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407a9c destination=00401040 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407ceb destination=00401040 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407d8e destination=00401040 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00407d8e destination=00401040 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=strcpy address=00401050 returntype=char * returnvalue=[char * <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=strcpy
+REFERENCE source=00402b21 destination=00401050 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407fb2 destination=00401050 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408260 destination=00401050 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408bcb destination=00401050 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408bcb destination=00401050 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=toupper address=00401060 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=toupper
+REFERENCE source=00402848 destination=00401060 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00402859 destination=00401060 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00402922 destination=00401060 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040898b destination=00401060 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=0040898b destination=00401060 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=setsockopt address=00401070 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=setsockopt
+REFERENCE source=00405f0a destination=00401070 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040635a destination=00401070 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=0040635a destination=00401070 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=fcntl address=00401080 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=fcntl
+REFERENCE source=0040300d destination=00401080 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00403042 destination=00401080 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00403268 destination=00401080 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040329d destination=00401080 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00404564 destination=00401080 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040457d destination=00401080 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040487c destination=00401080 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00404895 destination=00401080 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406a49 destination=00401080 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406a62 destination=00401080 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406f39 destination=00401080 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406f52 destination=00401080 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00406f52 destination=00401080 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=write address=00401090 returntype=typedef ssize_t __ssize_t returnvalue=[ssize_t <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=write
+REFERENCE source=00408fee destination=00401090 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408fee destination=00401090 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=getpid address=004010a0 returntype=typedef __pid_t int returnvalue=[__pid_t <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=getpid
+REFERENCE source=00407e0f destination=004010a0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040832d destination=004010a0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408352 destination=004010a0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408352 destination=004010a0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=inet_ntoa address=004010b0 returntype=char * returnvalue=[char * <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=inet_ntoa
+REFERENCE source=0040576b destination=004010b0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405b61 destination=004010b0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407383 destination=004010b0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00407383 destination=004010b0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=strlen address=004010c0 returntype=typedef size_t ulong returnvalue=[size_t <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=strlen
+REFERENCE source=004015f7 destination=004010c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00402162 destination=004010c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004021ab destination=004010c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00402a64 destination=004010c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00402a94 destination=004010c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00402ace destination=004010c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040354e destination=004010c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00403572 destination=004010c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00404b3c destination=004010c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00404c52 destination=004010c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00404f81 destination=004010c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405097 destination=004010c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405438 destination=004010c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040585d destination=004010c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405c32 destination=004010c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040882e destination=004010c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408857 destination=004010c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408887 destination=004010c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004088c1 destination=004010c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408b4f destination=004010c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408b97 destination=004010c0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408b97 destination=004010c0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=chdir address=004010d0 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=chdir
+REFERENCE source=0040846e destination=004010d0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=0040846e destination=004010d0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=htons address=004010e0 returntype=typedef uint16_t ushort returnvalue=[uint16_t <RETURN>@AX:2] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=htons
+REFERENCE source=0040305e destination=004010e0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00403ee5 destination=004010e0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004040b4 destination=004010e0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040447c destination=004010e0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405d3a destination=004010e0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406069 destination=004010e0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004060ab destination=004010e0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406183 destination=004010e0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406296 destination=004010e0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004066e9 destination=004010e0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004068a0 destination=004010e0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406d90 destination=004010e0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004080f4 destination=004010e0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=004080f4 destination=004010e0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=dup2 address=004010f0 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=dup2
+REFERENCE source=00402347 destination=004010f0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00402379 destination=004010f0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00402379 destination=004010f0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=send address=00401100 returntype=typedef ssize_t __ssize_t returnvalue=[ssize_t <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=send
+REFERENCE source=004021c5 destination=00401100 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040341f destination=00401100 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004034df destination=00401100 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004034ff destination=00401100 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00404c6d destination=00401100 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00404cf7 destination=00401100 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004050b2 destination=00401100 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040513c destination=00401100 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405508 destination=00401100 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004055ad destination=00401100 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040592d destination=00401100 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004059d2 destination=00401100 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406ce0 destination=00401100 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00406ce0 destination=00401100 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=strchr address=00401110 returntype=char * returnvalue=[char * <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=strchr
+REFERENCE source=00402af3 destination=00401110 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00402b0e destination=00401110 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407fd5 destination=00401110 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407ff0 destination=00401110 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408013 destination=00401110 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408013 destination=00401110 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=printf address=00401120 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=printf
+REFERENCE source=004084ab destination=00401120 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408c8d destination=00401120 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408c8d destination=00401120 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=htonl address=00401130 returntype=typedef uint32_t uint returnvalue=[uint32_t <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=htonl
+REFERENCE source=00406020 destination=00401130 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004061bc destination=00401130 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040641f destination=00401130 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040678f destination=00401130 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=0040678f destination=00401130 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=memset address=00401140 returntype=void * returnvalue=[void * <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=memset
+REFERENCE source=00402119 destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004022d0 destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00402b57 destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00402c21 destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00402cd1 destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004030ca destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00403a05 destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00403d64 destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00404105 destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00404176 destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00404324 destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040437d destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004044bb destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004048f0 destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00404b06 destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00404ee2 destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004052f6 destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040538e destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405418 destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004057f2 destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405bfc destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405d79 destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405dff destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004062f6 destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406925 destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040695d destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406e15 destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406e4d destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407f1b destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004080d5 destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408212 destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408a0c destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408abf destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408bb0 destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408bb0 destination=00401140 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=ioctl address=00401150 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=ioctl
+REFERENCE source=0040827f destination=00401150 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=0040827f destination=00401150 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=sendto address=00401160 returntype=typedef ssize_t __ssize_t returnvalue=[ssize_t <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=sendto
+REFERENCE source=00405e42 destination=00401160 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406143 destination=00401160 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406779 destination=00401160 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00406779 destination=00401160 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=close address=00401170 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=close
+REFERENCE source=00402306 destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00402311 destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00402352 destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040235d destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00402384 destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040238f destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004023eb destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00402401 destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00402472 destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00402b30 destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00402b64 destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00402c2e destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00404038 destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406ab2 destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406c39 destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406c89 destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406d0b destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406fa2 destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407129 destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407179 destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004072b5 destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004075cd destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407652 destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407778 destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004077fd destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004079ff destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407a8f destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407cde destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407d81 destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407f35 destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040821f destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004082d9 destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=004082d9 destination=00401170 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=pipe address=00401180 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=pipe
+REFERENCE source=00402241 destination=00401180 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00402241 destination=00401180 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=setsid address=00401190 returntype=typedef __pid_t int returnvalue=[__pid_t <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=setsid
+REFERENCE source=00408459 destination=00401190 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408459 destination=00401190 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=isspace address=004011a0 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=isspace
+REFERENCE source=00401613 destination=004011a0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00401655 destination=004011a0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00401655 destination=004011a0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=read address=004011b0 returntype=typedef ssize_t __ssize_t returnvalue=[ssize_t <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=read
+REFERENCE source=00402654 destination=004011b0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00402654 destination=004011b0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=__libc_start_main address=004011c0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=__libc_start_main
+REFERENCE source=004013b4 destination=004011c0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=004013b4 destination=004011c0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=srand address=004011d0 returntype=void returnvalue=[void <RETURN>@<VOID>] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=srand
+REFERENCE source=00405f76 destination=004011d0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040833c destination=004011d0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=0040833c destination=004011d0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=getsockopt address=004011e0 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=getsockopt
+REFERENCE source=0040320f destination=004011e0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004047d8 destination=004011e0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406c13 destination=004011e0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407103 destination=004011e0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00407103 destination=004011e0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=inet_addr address=004011f0 returntype=typedef in_addr_t uint32_t returnvalue=[in_addr_t <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=inet_addr
+REFERENCE source=004028c4 destination=004011f0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00403a42 destination=004011f0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00403d98 destination=004011f0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004080e7 destination=004011f0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=004080e7 destination=004011f0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=strcmp address=00401200 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=strcmp
+REFERENCE source=004064a4 destination=00401200 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406552 destination=00401200 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406586 destination=00401200 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004065ba destination=00401200 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004065ee destination=00401200 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406622 destination=00401200 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407320 destination=00401200 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040735f destination=00401200 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004073bb destination=00401200 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407405 destination=00401200 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407457 destination=00401200 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004074cc destination=00401200 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407677 destination=00401200 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407822 destination=00401200 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407ab4 destination=00401200 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407da6 destination=00401200 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407ed6 destination=00401200 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004089c0 destination=00401200 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=004089c0 destination=00401200 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=signal address=00401210 returntype=typedef __sighandler_t __sighandler_t * returnvalue=[__sighandler_t <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=signal
+REFERENCE source=00408485 destination=00401210 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408485 destination=00401210 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=sigemptyset address=00401220 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=sigemptyset
+REFERENCE source=00402484 destination=00401220 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00402484 destination=00401220 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=kill address=00401230 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=kill
+REFERENCE source=00407432 destination=00401230 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407e39 destination=00401230 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00407e39 destination=00401230 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=time address=00401240 returntype=typedef time_t __time_t returnvalue=[time_t <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=time
+REFERENCE source=00404658 destination=00401240 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00404993 destination=00401240 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00404a18 destination=00401240 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00404b7e destination=00401240 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00404d93 destination=00401240 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00404fc3 destination=00401240 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004051d8 destination=00401240 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040547a destination=00401240 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405649 destination=00401240 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040589f destination=00401240 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405a6e destination=00401240 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405c74 destination=00401240 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405e16 destination=00401240 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405e76 destination=00401240 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405f5c destination=00401240 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040610c destination=00401240 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004061f9 destination=00401240 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406742 destination=00401240 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040681a destination=00401240 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040696b destination=00401240 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040698b destination=00401240 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406e5b destination=00401240 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406e7b destination=00401240 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408322 destination=00401240 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408347 destination=00401240 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408347 destination=00401240 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=select address=00401250 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=select
+REFERENCE source=00402da7 destination=00401250 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00402ebc destination=00401250 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004031d9 destination=00401250 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00403833 destination=00401250 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00404783 destination=00401250 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406bc8 destination=00401250 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004070b8 destination=00401250 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040728f destination=00401250 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=0040728f destination=00401250 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=malloc address=00401260 returntype=void * returnvalue=[void * <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=malloc
+REFERENCE source=004020f9 destination=00401260 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00402295 destination=00401260 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040330c destination=00401260 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00403ef9 destination=00401260 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040413a destination=00401260 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405dd7 destination=00401260 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406931 destination=00401260 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406e21 destination=00401260 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408627 destination=00401260 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408b5b destination=00401260 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408b5b destination=00401260 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=waitpid address=00401270 returntype=typedef __pid_t int returnvalue=[__pid_t <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=waitpid
+REFERENCE source=00402507 destination=00401270 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004083d9 destination=00401270 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408572 destination=00401270 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408572 destination=00401270 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=open address=00401280 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=open
+REFERENCE source=00402970 destination=00401280 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00402bb0 destination=00401280 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408175 destination=00401280 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408175 destination=00401280 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=strtok address=00401290 returntype=char * returnvalue=[char * <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=strtok
+REFERENCE source=00406533 destination=00401290 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040668f destination=00401290 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407595 destination=00401290 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004075ed destination=00401290 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407740 destination=00401290 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407798 destination=00401290 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004079bc destination=00401290 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407a1f destination=00401290 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407c80 destination=00401290 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407cfe destination=00401290 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408b0d destination=00401290 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408bf4 destination=00401290 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408bf4 destination=00401290 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=vfork address=004012a0 returntype=typedef __pid_t int returnvalue=[__pid_t <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=vfork
+REFERENCE source=004022d5 destination=004012a0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=004022d5 destination=004012a0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=getsockname address=004012b0 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=getsockname
+REFERENCE source=0040813f destination=004012b0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=0040813f destination=004012b0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=atoi address=004012c0 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=atoi
+REFERENCE source=004074ec destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407502 destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407529 destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407539 destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407697 destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004076ad destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004076d4 destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004076e4 destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407842 destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407858 destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040786e destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407884 destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040789a destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004078b2 destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004078d2 destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004078f9 destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407909 destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407919 destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407929 destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407943 destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407ad4 destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407aea destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407b00 destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407b16 destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407b36 destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407b56 destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407b7d destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407b8d destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407b9d destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407bc9 destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407c07 destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407ffc destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00407ffc destination=004012c0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=exit address=004012d0 returntype=void returnvalue=[void <RETURN>@<VOID>] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=exit
+REFERENCE source=00407ee6 destination=004012d0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004083e6 destination=004012d0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408408 destination=004012d0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408750 destination=004012d0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408aed destination=004012d0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408aed destination=004012d0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=connect address=004012e0 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=connect
+REFERENCE source=004030e2 destination=004012e0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004045ac destination=004012e0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406a88 destination=004012e0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406f78 destination=004012e0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040810c destination=004012e0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=0040810c destination=004012e0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=ntohl address=004012f0 returntype=typedef uint32_t uint returnvalue=[uint32_t <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=ntohl
+REFERENCE source=00403dc2 destination=004012f0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00403dc2 destination=004012f0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=execl address=00401300 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=execl
+REFERENCE source=004023c0 destination=00401300 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=004023c0 destination=00401300 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=sleep address=00401310 returntype=uint returnvalue=[uint <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=sleep
+REFERENCE source=004084bb destination=00401310 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408aca destination=00401310 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408aca destination=00401310 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=sigaddset address=00401320 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=sigaddset
+REFERENCE source=0040249b destination=00401320 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004024b2 destination=00401320 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004024c9 destination=00401320 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=004024c9 destination=00401320 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=fork address=00401330 returntype=typedef __pid_t int returnvalue=[__pid_t <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=fork
+REFERENCE source=004032c8 destination=00401330 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407478 destination=00401330 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004083bf destination=00401330 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004083f5 destination=00401330 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=004083f5 destination=00401330 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=strstr address=00401340 returntype=char * returnvalue=[char * <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=strstr
+REFERENCE source=004029b3 destination=00401340 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00402bf3 destination=00401340 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00403933 destination=00401340 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00404e83 destination=00401340 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00404f0c destination=00401340 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004052c8 destination=00401340 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405738 destination=00401340 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040754f destination=00401340 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004076fa destination=00401340 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040797a destination=00401340 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407c3e destination=00401340 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004081ac destination=00401340 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004086f0 destination=00401340 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408739 destination=00401340 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408739 destination=00401340 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=getdtablesize address=00401350 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=getdtablesize
+REFERENCE source=0040226a destination=00401350 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040405c destination=00401350 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406875 destination=00401350 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406d65 destination=00401350 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00406d65 destination=00401350 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=rand address=00401360 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=rand
+REFERENCE source=00403a4f destination=00401360 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00403a67 destination=00401360 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00403a7f destination=00401360 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00403cf5 destination=00401360 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00403d0d destination=00401360 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00403d25 destination=00401360 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405f7b destination=00401360 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00405f7b destination=00401360 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=socket address=00401370 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=socket
+REFERENCE source=004044ed destination=00401370 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405d9c destination=00401370 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405eb7 destination=00401370 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406307 destination=00401370 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406a14 destination=00401370 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406f04 destination=00401370 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408027 destination=00401370 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408096 destination=00401370 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408096 destination=00401370 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=__gmon_start__ address=00401380 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=<EXTERNAL> parenttype=DLL
+FUNCTIONCALLED func=__gmon_start__
+REFERENCE source=_elfSectionHeaders::00000350 destination=00401380 operandindex=0 type=DATA
+REFERENCE source=00400fe0 destination=00401380 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00400fe0 destination=00401380 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=_start address=00401390 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=__libc_start_main
+REFERENCE source=_elfSectionHeaders::00000390 destination=00401390 operandindex=0 type=DATA
+REFERENCE source=Entry Point destination=00401390 operandindex=-1 type=EXTERNAL
+REFERENCE source=00400018 destination=00401390 operandindex=0 type=DATA
+REFERENCE source=00409c24 destination=00401390 operandindex=0 type=INDIRECTION
+REFERENCE source=00409db0 destination=00401390 operandindex=0 type=DATA
+PRIMARYREFERENCE source=00409db0 destination=00401390 operandindex=0 type=DATA
+FUNCTION func=deregister_tm_clones address=004013c0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+REFERENCE source=0040144d destination=004013c0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=0040144d destination=004013c0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=register_tm_clones address=00401400 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+REFERENCE source=0040146b destination=00401400 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00401481 destination=00401400 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00401481 destination=00401400 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=__do_global_dtors_aux address=00401440 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=deregister_tm_clones
+REFERENCE source=0060ae18 destination=00401440 operandindex=0 type=DATA
+REFERENCE source=Entry Point destination=00401440 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409049 destination=00401440 operandindex=0 type=COMPUTED_CALL
+PRIMARYREFERENCE source=0060ae18 destination=00401440 operandindex=0 type=DATA
+FUNCTION func=frame_dummy address=00401460 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=register_tm_clones
+REFERENCE source=0060ae10 destination=00401460 operandindex=0 type=DATA
+REFERENCE source=Entry Point destination=00401460 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409049 destination=00401460 operandindex=0 type=COMPUTED_CALL
+PRIMARYREFERENCE source=0060ae10 destination=00401460 operandindex=0 type=DATA
+FUNCTION func=init_rand address=00401490 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+REFERENCE source=Entry Point destination=00401490 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409c2c destination=00401490 operandindex=0 type=INDIRECTION
+REFERENCE source=00409e08 destination=00401490 operandindex=0 type=DATA
+REFERENCE source=00405f82 destination=00401490 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408361 destination=00401490 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408361 destination=00401490 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=rand_cmwc address=00401520 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+REFERENCE source=Entry Point destination=00401520 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409c34 destination=00401520 operandindex=0 type=INDIRECTION
+REFERENCE source=00409e28 destination=00401520 operandindex=0 type=DATA
+REFERENCE source=00402c79 destination=00401520 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00403dd3 destination=00401520 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00403fb0 destination=00401520 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405d20 destination=00401520 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405e64 destination=00401520 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405f67 destination=00401520 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406077 destination=00401520 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406092 destination=00401520 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040614f destination=00401520 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040616a destination=00401520 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004061a2 destination=00401520 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040627c destination=00401520 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406458 destination=00401520 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406469 destination=00401520 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004066a2 destination=00401520 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004066d0 destination=00401520 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040679b destination=00401520 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004067ad destination=00401520 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004067b9 destination=00401520 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=004067b9 destination=00401520 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=trim address=004015e0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=isspace
+FUNCTIONCALLED func=strlen
+REFERENCE source=Entry Point destination=004015e0 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409c3c destination=004015e0 operandindex=0 type=INDIRECTION
+REFERENCE source=00409e48 destination=004015e0 operandindex=0 type=DATA
+REFERENCE source=004086da destination=004015e0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408a77 destination=004015e0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408a77 destination=004015e0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=zprintf address=004016e0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=print
+REFERENCE source=Entry Point destination=004016e0 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409c44 destination=004016e0 operandindex=0 type=INDIRECTION
+REFERENCE source=00409e68 destination=004016e0 operandindex=0 type=DATA
+REFERENCE source=00402189 destination=004016e0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00402fb6 destination=004016e0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004083b4 destination=004016e0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408428 destination=004016e0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408449 destination=004016e0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408449 destination=004016e0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=print address=00401850 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=prints
+FUNCTIONCALLED func=printchar
+FUNCTIONCALLED func=printi
+REFERENCE source=00409c4c destination=00401850 operandindex=0 type=INDIRECTION
+REFERENCE source=00409e88 destination=00401850 operandindex=0 type=DATA
+REFERENCE source=00401833 destination=00401850 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00401fb1 destination=00401850 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00402153 destination=00401850 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00402153 destination=00401850 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=szprintf address=00401e60 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=print
+REFERENCE source=Entry Point destination=00401e60 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409c54 destination=00401e60 operandindex=0 type=INDIRECTION
+REFERENCE source=00409ea8 destination=00401e60 operandindex=0 type=DATA
+REFERENCE source=00403a36 destination=00401e60 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00403d8c destination=00401e60 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408a28 destination=00401e60 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408a28 destination=00401e60 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=sockprintf address=00401fc0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=send
+FUNCTIONCALLED func=print
+FUNCTIONCALLED func=memset
+FUNCTIONCALLED func=zprintf
+FUNCTIONCALLED func=free
+FUNCTIONCALLED func=malloc
+FUNCTIONCALLED func=strlen
+REFERENCE source=Entry Point destination=00401fc0 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409c5c destination=00401fc0 operandindex=0 type=INDIRECTION
+REFERENCE source=00409ec8 destination=00401fc0 operandindex=0 type=DATA
+REFERENCE source=00402de0 destination=00401fc0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004057c8 destination=00401fc0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405b9c destination=00401fc0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405dc1 destination=00401fc0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405edc destination=00401fc0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405f2b destination=00401fc0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040632c destination=00401fc0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040637b destination=00401fc0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406662 destination=00401fc0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407341 destination=00401fc0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040739d destination=00401fc0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004073e6 destination=00401fc0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040757c destination=00401fc0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407631 destination=00401fc0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407727 destination=00401fc0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004077dc destination=00401fc0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004079a3 destination=00401fc0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407a63 destination=00401fc0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407c67 destination=00401fc0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407d41 destination=00401fc0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407e95 destination=00401fc0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407eb8 destination=00401fc0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004084f2 destination=00401fc0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408718 destination=00401fc0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408a96 destination=00401fc0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408a96 destination=00401fc0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=fdpopen address=004021f0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=vfork
+FUNCTIONCALLED func=execl
+FUNCTIONCALLED func=memset
+FUNCTIONCALLED func=pipe
+FUNCTIONCALLED func=getdtablesize
+FUNCTIONCALLED func=close
+FUNCTIONCALLED func=malloc
+FUNCTIONCALLED func=dup2
+FUNCTIONCALLED func=_exit
+REFERENCE source=Entry Point destination=004021f0 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409c64 destination=004021f0 operandindex=0 type=INDIRECTION
+REFERENCE source=00409ee8 destination=004021f0 operandindex=0 type=DATA
+REFERENCE source=00408a44 destination=004021f0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408a44 destination=004021f0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=fdpclose address=00402430 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=sigprocmask
+FUNCTIONCALLED func=sigaddset
+FUNCTIONCALLED func=close
+FUNCTIONCALLED func=__errno_location
+FUNCTIONCALLED func=waitpid
+FUNCTIONCALLED func=sigemptyset
+REFERENCE source=Entry Point destination=00402430 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409c6c destination=00402430 operandindex=0 type=INDIRECTION
+REFERENCE source=00409f08 destination=00402430 operandindex=0 type=DATA
+REFERENCE source=00408ae0 destination=00402430 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408ae0 destination=00402430 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=fdgets address=004025d0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=read
+REFERENCE source=Entry Point destination=004025d0 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409c74 destination=004025d0 operandindex=0 type=INDIRECTION
+REFERENCE source=00409f28 destination=004025d0 operandindex=0 type=DATA
+REFERENCE source=00402987 destination=004025d0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00402bc7 destination=004025d0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040818c destination=004025d0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408a61 destination=004025d0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408a61 destination=004025d0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=parseHex address=004026a0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+REFERENCE source=Entry Point destination=004026a0 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409c7c destination=004026a0 operandindex=0 type=INDIRECTION
+REFERENCE source=00409f48 destination=004026a0 operandindex=0 type=DATA
+PRIMARYREFERENCE source=00409f48 destination=004026a0 operandindex=0 type=DATA
+FUNCTION func=wildString address=00402720 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=wildString
+FUNCTIONCALLED func=toupper
+REFERENCE source=Entry Point destination=00402720 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409c84 destination=00402720 operandindex=0 type=INDIRECTION
+REFERENCE source=00409f68 destination=00402720 operandindex=0 type=DATA
+REFERENCE source=0040278d destination=00402720 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004027c6 destination=00402720 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040281c destination=00402720 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00402887 destination=00402720 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00402887 destination=00402720 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=getHost address=004028b0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=inet_addr
+REFERENCE source=Entry Point destination=004028b0 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409c8c destination=004028b0 operandindex=0 type=INDIRECTION
+REFERENCE source=00409f88 destination=004028b0 operandindex=0 type=DATA
+REFERENCE source=00403076 destination=004028b0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405d52 destination=004028b0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004062ae destination=004028b0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004068b8 destination=004028b0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406da8 destination=004028b0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00406da8 destination=004028b0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=uppercase address=00402900 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=toupper
+REFERENCE source=Entry Point destination=00402900 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409c94 destination=00402900 operandindex=0 type=INDIRECTION
+REFERENCE source=00409fa8 destination=00402900 operandindex=0 type=DATA
+REFERENCE source=0040299d destination=00402900 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00402bdd destination=00402900 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00402bdd destination=00402900 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=getBogos address=00402950 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=strchr
+FUNCTIONCALLED func=memset
+FUNCTIONCALLED func=strcpy
+FUNCTIONCALLED func=close
+FUNCTIONCALLED func=strstr
+FUNCTIONCALLED func=fdgets
+FUNCTIONCALLED func=uppercase
+FUNCTIONCALLED func=open
+FUNCTIONCALLED func=strlen
+REFERENCE source=Entry Point destination=00402950 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409c9c destination=00402950 operandindex=0 type=INDIRECTION
+REFERENCE source=00409fc8 destination=00402950 operandindex=0 type=DATA
+PRIMARYREFERENCE source=00409fc8 destination=00402950 operandindex=0 type=DATA
+FUNCTION func=getCores address=00402b90 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=memset
+FUNCTIONCALLED func=close
+FUNCTIONCALLED func=strstr
+FUNCTIONCALLED func=fdgets
+FUNCTIONCALLED func=uppercase
+FUNCTIONCALLED func=open
+REFERENCE source=Entry Point destination=00402b90 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409ca4 destination=00402b90 operandindex=0 type=INDIRECTION
+REFERENCE source=00409fe8 destination=00402b90 operandindex=0 type=DATA
+PRIMARYREFERENCE source=00409fe8 destination=00402b90 operandindex=0 type=DATA
+FUNCTION func=makeRandomStr address=00402c50 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=rand_cmwc
+REFERENCE source=Entry Point destination=00402c50 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409cac destination=00402c50 operandindex=0 type=INDIRECTION
+REFERENCE source=0040a008 destination=00402c50 operandindex=0 type=DATA
+REFERENCE source=00405e0b destination=00402c50 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004060e2 destination=00402c50 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406cba destination=00402c50 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00406cba destination=00402c50 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=recvLine address=00402cb0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=memset
+FUNCTIONCALLED func=sockprintf
+FUNCTIONCALLED func=zprintf
+FUNCTIONCALLED func=select
+FUNCTIONCALLED func=recv
+REFERENCE source=Entry Point destination=00402cb0 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409cb4 destination=00402cb0 operandindex=0 type=INDIRECTION
+REFERENCE source=0040a028 destination=00402cb0 operandindex=0 type=DATA
+REFERENCE source=00408524 destination=00402cb0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408524 destination=00402cb0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=connectTimeout address=00402fe0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=htons
+FUNCTIONCALLED func=memset
+FUNCTIONCALLED func=getsockopt
+FUNCTIONCALLED func=fcntl
+FUNCTIONCALLED func=getHost
+FUNCTIONCALLED func=__errno_location
+FUNCTIONCALLED func=select
+FUNCTIONCALLED func=connect
+REFERENCE source=Entry Point destination=00402fe0 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409cbc destination=00402fe0 operandindex=0 type=INDIRECTION
+REFERENCE source=0040a048 destination=00402fe0 operandindex=0 type=DATA
+REFERENCE source=0040804c destination=00402fe0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=0040804c destination=00402fe0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=listFork address=004032c0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=free
+FUNCTIONCALLED func=fork
+FUNCTIONCALLED func=malloc
+REFERENCE source=Entry Point destination=004032c0 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409cc4 destination=004032c0 operandindex=0 type=INDIRECTION
+REFERENCE source=0040a068 destination=004032c0 operandindex=0 type=DATA
+REFERENCE source=004075a9 destination=004032c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407600 destination=004032c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407754 destination=004032c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004077ab destination=004032c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004079d0 destination=004032c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407a32 destination=004032c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407c9a destination=004032c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407d14 destination=004032c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004089ce destination=004032c0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=004089ce destination=004032c0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=negotiate address=004033b0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=send
+REFERENCE source=Entry Point destination=004033b0 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409ccc destination=004033b0 operandindex=0 type=INDIRECTION
+REFERENCE source=0040a088 destination=004033b0 operandindex=0 type=DATA
+REFERENCE source=0040390c destination=004033b0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=0040390c destination=004033b0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=matchPrompt address=00403530 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=strlen
+REFERENCE source=Entry Point destination=00403530 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409cd4 destination=00403530 operandindex=0 type=INDIRECTION
+REFERENCE source=0040a0a8 destination=00403530 operandindex=0 type=DATA
+REFERENCE source=00403950 destination=00403530 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405361 destination=00403530 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00405361 destination=00403530 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=readUntil address=004036c0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=matchPrompt
+FUNCTIONCALLED func=negotiate
+FUNCTIONCALLED func=strstr
+FUNCTIONCALLED func=select
+FUNCTIONCALLED func=recv
+REFERENCE source=Entry Point destination=004036c0 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409cdc destination=004036c0 operandindex=0 type=INDIRECTION
+REFERENCE source=0040a0c8 destination=004036c0 operandindex=0 type=DATA
+REFERENCE source=00404aa4 destination=004036c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00404e20 destination=004036c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405265 destination=004036c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004056d5 destination=004036c0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405afa destination=004036c0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00405afa destination=004036c0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=getRandomPublicIP address=004039a0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=rand
+FUNCTIONCALLED func=memset
+FUNCTIONCALLED func=inet_addr
+FUNCTIONCALLED func=szprintf
+REFERENCE source=Entry Point destination=004039a0 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409ce4 destination=004039a0 operandindex=0 type=INDIRECTION
+REFERENCE source=0040a0e8 destination=004039a0 operandindex=0 type=DATA
+REFERENCE source=0040439f destination=004039a0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=0040439f destination=004039a0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=getRandomIP address=00403db0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=rand_cmwc
+FUNCTIONCALLED func=ntohl
+REFERENCE source=Entry Point destination=00403db0 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409cec destination=00403db0 operandindex=0 type=INDIRECTION
+REFERENCE source=0040a108 destination=00403db0 operandindex=0 type=DATA
+REFERENCE source=00406019 destination=00403db0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004061b5 destination=00403db0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406418 destination=00403db0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406788 destination=00403db0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00406788 destination=00403db0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=csum address=00403df0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+REFERENCE source=Entry Point destination=00403df0 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409cf4 destination=00403df0 operandindex=0 type=INDIRECTION
+REFERENCE source=0040a128 destination=00403df0 operandindex=0 type=DATA
+REFERENCE source=00403f41 destination=00403df0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004060f9 destination=00403df0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004061da destination=00403df0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040672f destination=00403df0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004067fb destination=00403df0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=004067fb destination=00403df0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=tcpcsum address=00403ea0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=htons
+FUNCTIONCALLED func=free
+FUNCTIONCALLED func=malloc
+FUNCTIONCALLED func=csum
+REFERENCE source=Entry Point destination=00403ea0 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409cfc destination=00403ea0 operandindex=0 type=INDIRECTION
+REFERENCE source=0040a148 destination=00403ea0 operandindex=0 type=DATA
+REFERENCE source=00406710 destination=00403ea0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004067dc destination=00403ea0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=004067dc destination=00403ea0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=makeIPPacket address=00403f60 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=rand_cmwc
+REFERENCE source=Entry Point destination=00403f60 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409d04 destination=00403f60 operandindex=0 type=INDIRECTION
+REFERENCE source=0040a168 destination=00403f60 operandindex=0 type=DATA
+REFERENCE source=00406054 destination=00403f60 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00406453 destination=00403f60 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00406453 destination=00403f60 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=sclose address=00404010 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=close
+REFERENCE source=Entry Point destination=00404010 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409d0c destination=00404010 operandindex=0 type=INDIRECTION
+REFERENCE source=0040a188 destination=00404010 operandindex=0 type=DATA
+REFERENCE source=004045dc destination=00404010 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00404804 destination=00404010 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00404933 destination=00404010 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004049ba destination=00404010 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00404ba5 destination=00404010 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00404c90 destination=00404010 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00404d1a destination=00404010 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00404f2f destination=00404010 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00404fea destination=00404010 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004050d5 destination=00404010 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040515f destination=00404010 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040530f destination=00404010 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004053a7 destination=00404010 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004054a1 destination=00404010 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040552b destination=00404010 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004055d0 destination=00404010 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=0040580b destination=00404010 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004058c6 destination=00404010 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405950 destination=00404010 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004059f5 destination=00404010 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405bbb destination=00404010 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00405c9b destination=00404010 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00405c9b destination=00404010 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=StartTheLelz address=00404050 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=time
+FUNCTIONCALLED func=matchPrompt
+FUNCTIONCALLED func=memset
+FUNCTIONCALLED func=getRandomPublicIP
+FUNCTIONCALLED func=sockprintf
+FUNCTIONCALLED func=readUntil
+FUNCTIONCALLED func=inet_ntoa
+FUNCTIONCALLED func=socket
+FUNCTIONCALLED func=strstr
+FUNCTIONCALLED func=connect
+FUNCTIONCALLED func=strlen
+FUNCTIONCALLED func=htons
+FUNCTIONCALLED func=send
+FUNCTIONCALLED func=getsockopt
+FUNCTIONCALLED func=getdtablesize
+FUNCTIONCALLED func=fcntl
+FUNCTIONCALLED func=__errno_location
+FUNCTIONCALLED func=malloc
+FUNCTIONCALLED func=select
+FUNCTIONCALLED func=sclose
+REFERENCE source=Entry Point destination=00404050 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409d14 destination=00404050 operandindex=0 type=INDIRECTION
+REFERENCE source=0040a1a8 destination=00404050 operandindex=0 type=DATA
+REFERENCE source=004074ad destination=00404050 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=004074ad destination=00404050 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=sendUDP address=00405cf0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=getRandomIP
+FUNCTIONCALLED func=time
+FUNCTIONCALLED func=makeIPPacket
+FUNCTIONCALLED func=memset
+FUNCTIONCALLED func=sockprintf
+FUNCTIONCALLED func=init_rand
+FUNCTIONCALLED func=getHost
+FUNCTIONCALLED func=htonl
+FUNCTIONCALLED func=socket
+FUNCTIONCALLED func=srand
+FUNCTIONCALLED func=makeRandomStr
+FUNCTIONCALLED func=htons
+FUNCTIONCALLED func=rand
+FUNCTIONCALLED func=sendto
+FUNCTIONCALLED func=rand_cmwc
+FUNCTIONCALLED func=malloc
+FUNCTIONCALLED func=setsockopt
+FUNCTIONCALLED func=csum
+REFERENCE source=Entry Point destination=00405cf0 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409d1c destination=00405cf0 operandindex=0 type=INDIRECTION
+REFERENCE source=0040a1c8 destination=00405cf0 operandindex=0 type=DATA
+REFERENCE source=004079f3 destination=00405cf0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407a83 destination=00405cf0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00407a83 destination=00405cf0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=sendTCP address=00406240 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=getRandomIP
+FUNCTIONCALLED func=makeIPPacket
+FUNCTIONCALLED func=time
+FUNCTIONCALLED func=memset
+FUNCTIONCALLED func=sockprintf
+FUNCTIONCALLED func=strcmp
+FUNCTIONCALLED func=getHost
+FUNCTIONCALLED func=htonl
+FUNCTIONCALLED func=socket
+FUNCTIONCALLED func=htons
+FUNCTIONCALLED func=sendto
+FUNCTIONCALLED func=rand_cmwc
+FUNCTIONCALLED func=strtok
+FUNCTIONCALLED func=tcpcsum
+FUNCTIONCALLED func=setsockopt
+FUNCTIONCALLED func=csum
+REFERENCE source=Entry Point destination=00406240 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409d24 destination=00406240 operandindex=0 type=INDIRECTION
+REFERENCE source=0040a1e8 destination=00406240 operandindex=0 type=DATA
+REFERENCE source=00407cd2 destination=00406240 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407d75 destination=00406240 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00407d75 destination=00406240 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=sendJUNK address=00406860 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=time
+FUNCTIONCALLED func=memset
+FUNCTIONCALLED func=getHost
+FUNCTIONCALLED func=socket
+FUNCTIONCALLED func=connect
+FUNCTIONCALLED func=makeRandomStr
+FUNCTIONCALLED func=htons
+FUNCTIONCALLED func=send
+FUNCTIONCALLED func=getsockopt
+FUNCTIONCALLED func=getdtablesize
+FUNCTIONCALLED func=fcntl
+FUNCTIONCALLED func=__errno_location
+FUNCTIONCALLED func=close
+FUNCTIONCALLED func=malloc
+FUNCTIONCALLED func=select
+REFERENCE source=Entry Point destination=00406860 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409d2c destination=00406860 operandindex=0 type=INDIRECTION
+REFERENCE source=0040a208 destination=00406860 operandindex=0 type=DATA
+REFERENCE source=0040776c destination=00406860 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=004077f1 destination=00406860 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=004077f1 destination=00406860 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=sendHOLD address=00406d50 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=time
+FUNCTIONCALLED func=memset
+FUNCTIONCALLED func=getHost
+FUNCTIONCALLED func=socket
+FUNCTIONCALLED func=connect
+FUNCTIONCALLED func=htons
+FUNCTIONCALLED func=getsockopt
+FUNCTIONCALLED func=getdtablesize
+FUNCTIONCALLED func=fcntl
+FUNCTIONCALLED func=__errno_location
+FUNCTIONCALLED func=close
+FUNCTIONCALLED func=malloc
+FUNCTIONCALLED func=select
+REFERENCE source=Entry Point destination=00406d50 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409d34 destination=00406d50 operandindex=0 type=INDIRECTION
+REFERENCE source=0040a228 destination=00406d50 operandindex=0 type=DATA
+REFERENCE source=004075c1 destination=00406d50 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00407646 destination=00406d50 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00407646 destination=00406d50 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=processCmd address=00407300 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=kill
+FUNCTIONCALLED func=sendHOLD
+FUNCTIONCALLED func=StartTheLelz
+FUNCTIONCALLED func=sockprintf
+FUNCTIONCALLED func=strcmp
+FUNCTIONCALLED func=sendUDP
+FUNCTIONCALLED func=inet_ntoa
+FUNCTIONCALLED func=sendTCP
+FUNCTIONCALLED func=exit
+FUNCTIONCALLED func=strstr
+FUNCTIONCALLED func=fork
+FUNCTIONCALLED func=listFork
+FUNCTIONCALLED func=_exit
+FUNCTIONCALLED func=close
+FUNCTIONCALLED func=strtok
+FUNCTIONCALLED func=getpid
+FUNCTIONCALLED func=atoi
+FUNCTIONCALLED func=sendJUNK
+REFERENCE source=Entry Point destination=00407300 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409d3c destination=00407300 operandindex=0 type=INDIRECTION
+REFERENCE source=0040a248 destination=00407300 operandindex=0 type=DATA
+REFERENCE source=00408c12 destination=00407300 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408c12 destination=00407300 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=initConnection address=00407f00 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=strchr
+FUNCTIONCALLED func=memset
+FUNCTIONCALLED func=strcpy
+FUNCTIONCALLED func=close
+FUNCTIONCALLED func=socket
+FUNCTIONCALLED func=atoi
+FUNCTIONCALLED func=connectTimeout
+REFERENCE source=Entry Point destination=00407f00 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409d44 destination=00407f00 operandindex=0 type=INDIRECTION
+REFERENCE source=0040a268 destination=00407f00 operandindex=0 type=DATA
+REFERENCE source=00408491 destination=00407f00 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408491 destination=00407f00 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=getOurIP address=00408080 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=htons
+FUNCTIONCALLED func=memset
+FUNCTIONCALLED func=inet_addr
+FUNCTIONCALLED func=strcpy
+FUNCTIONCALLED func=close
+FUNCTIONCALLED func=ioctl
+FUNCTIONCALLED func=socket
+FUNCTIONCALLED func=strstr
+FUNCTIONCALLED func=fdgets
+FUNCTIONCALLED func=connect
+FUNCTIONCALLED func=getsockname
+FUNCTIONCALLED func=open
+REFERENCE source=Entry Point destination=00408080 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409d4c destination=00408080 operandindex=0 type=INDIRECTION
+REFERENCE source=0040a288 destination=00408080 operandindex=0 type=DATA
+REFERENCE source=00408366 destination=00408080 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408366 destination=00408080 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=getBuild address=004082f0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+REFERENCE source=Entry Point destination=004082f0 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409d54 destination=004082f0 operandindex=0 type=INDIRECTION
+REFERENCE source=0040a2a8 destination=004082f0 operandindex=0 type=DATA
+REFERENCE source=004084d8 destination=004082f0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=004084d8 destination=004082f0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=main address=00408300 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=fdpclose
+FUNCTIONCALLED func=time
+FUNCTIONCALLED func=zprintf
+FUNCTIONCALLED func=toupper
+FUNCTIONCALLED func=init_rand
+FUNCTIONCALLED func=exit
+FUNCTIONCALLED func=strstr
+FUNCTIONCALLED func=srand
+FUNCTIONCALLED func=fork
+FUNCTIONCALLED func=chdir
+FUNCTIONCALLED func=sleep
+FUNCTIONCALLED func=recvLine
+FUNCTIONCALLED func=fdpopen
+FUNCTIONCALLED func=strtok
+FUNCTIONCALLED func=printf
+FUNCTIONCALLED func=sockprintf
+FUNCTIONCALLED func=memset
+FUNCTIONCALLED func=initConnection
+FUNCTIONCALLED func=strcmp
+FUNCTIONCALLED func=strcpy
+FUNCTIONCALLED func=getOurIP
+FUNCTIONCALLED func=waitpid
+FUNCTIONCALLED func=szprintf
+FUNCTIONCALLED func=listFork
+FUNCTIONCALLED func=signal
+FUNCTIONCALLED func=strlen
+FUNCTIONCALLED func=getBuild
+FUNCTIONCALLED func=trim
+FUNCTIONCALLED func=getpid
+FUNCTIONCALLED func=free
+FUNCTIONCALLED func=fdgets
+FUNCTIONCALLED func=malloc
+FUNCTIONCALLED func=setsid
+FUNCTIONCALLED func=processCmd
+REFERENCE source=Entry Point destination=00408300 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409d5c destination=00408300 operandindex=0 type=INDIRECTION
+REFERENCE source=0040a2c8 destination=00408300 operandindex=0 type=DATA
+REFERENCE source=004013ad destination=00408300 operandindex=1 type=PARAM
+PRIMARYREFERENCE source=004013ad destination=00408300 operandindex=1 type=PARAM
+FUNCTION func=prints address=00408ca0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=printchar
+REFERENCE source=00409d64 destination=00408ca0 operandindex=0 type=INDIRECTION
+REFERENCE source=0040a2e8 destination=00408ca0 operandindex=0 type=DATA
+REFERENCE source=00401a30 destination=00408ca0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00401de7 destination=00408ca0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408e57 destination=00408ca0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408f7e destination=00408ca0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408f7e destination=00408ca0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=printi address=00408e00 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=prints
+FUNCTIONCALLED func=printchar
+REFERENCE source=00409d6c destination=00408e00 operandindex=0 type=INDIRECTION
+REFERENCE source=0040a308 destination=00408e00 operandindex=0 type=DATA
+REFERENCE source=00401ae2 destination=00408e00 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00401baf destination=00408e00 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00401c7c destination=00408e00 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00401d49 destination=00408e00 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00401d49 destination=00408e00 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=printchar address=00408fa0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=write
+REFERENCE source=00409d74 destination=00408fa0 operandindex=0 type=INDIRECTION
+REFERENCE source=0040a328 destination=00408fa0 operandindex=0 type=DATA
+REFERENCE source=00401e0c destination=00408fa0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408d67 destination=00408fa0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408da5 destination=00408fa0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408dda destination=00408fa0 operandindex=0 type=UNCONDITIONAL_CALL
+REFERENCE source=00408f36 destination=00408fa0 operandindex=0 type=UNCONDITIONAL_CALL
+PRIMARYREFERENCE source=00408f36 destination=00408fa0 operandindex=0 type=UNCONDITIONAL_CALL
+FUNCTION func=__libc_csu_init address=00409000 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=_init
+FUNCTIONCALLED func=__do_global_dtors_aux
+FUNCTIONCALLED func=frame_dummy
+REFERENCE source=Entry Point destination=00409000 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409d7c destination=00409000 operandindex=0 type=INDIRECTION
+REFERENCE source=0040a348 destination=00409000 operandindex=0 type=DATA
+REFERENCE source=004013a6 destination=00409000 operandindex=1 type=PARAM
+PRIMARYREFERENCE source=004013a6 destination=00409000 operandindex=1 type=PARAM
+FUNCTION func=__libc_csu_fini address=00409070 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+REFERENCE source=Entry Point destination=00409070 operandindex=-1 type=EXTERNAL
+REFERENCE source=00409d84 destination=00409070 operandindex=0 type=INDIRECTION
+REFERENCE source=0040a390 destination=00409070 operandindex=0 type=DATA
+REFERENCE source=0040139f destination=00409070 operandindex=1 type=PARAM
+PRIMARYREFERENCE source=0040139f destination=00409070 operandindex=1 type=PARAM
+FUNCTION func=_fini address=00409074 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+REFERENCE source=_elfSectionHeaders::000003d0 destination=00409074 operandindex=0 type=DATA
+REFERENCE source=0060ae50 destination=00409074 operandindex=0 type=DATA
+REFERENCE source=Entry Point destination=00409074 operandindex=-1 type=EXTERNAL
+PRIMARYREFERENCE source=0060ae50 destination=00409074 operandindex=0 type=DATA
+FUNCTION func=sigprocmask address=00610000 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401000 destination=00610000 operandindex=-2 type=THUNK
+REFERENCE source=0060b018 destination=00610000 operandindex=0 type=DATA
+REFERENCE source=00401000 destination=00610000 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401000 destination=00610000 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=free address=00610008 returntype=void returnvalue=[void <RETURN>@<VOID>] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401010 destination=00610008 operandindex=-2 type=THUNK
+REFERENCE source=0060b020 destination=00610008 operandindex=0 type=DATA
+REFERENCE source=00401010 destination=00610008 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401010 destination=00610008 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=recv address=00610010 returntype=typedef ssize_t __ssize_t returnvalue=[ssize_t <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401020 destination=00610010 operandindex=-2 type=THUNK
+REFERENCE source=0060b028 destination=00610010 operandindex=0 type=DATA
+REFERENCE source=00401020 destination=00610010 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401020 destination=00610010 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=__errno_location address=00610018 returntype=int * returnvalue=[int * <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401030 destination=00610018 operandindex=-2 type=THUNK
+REFERENCE source=0060b030 destination=00610018 operandindex=0 type=DATA
+REFERENCE source=00401030 destination=00610018 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401030 destination=00610018 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=_exit address=00610020 returntype=void returnvalue=[void <RETURN>@<VOID>] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401040 destination=00610020 operandindex=-2 type=THUNK
+REFERENCE source=0060b038 destination=00610020 operandindex=0 type=DATA
+REFERENCE source=00401040 destination=00610020 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401040 destination=00610020 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=strcpy address=00610028 returntype=char * returnvalue=[char * <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401050 destination=00610028 operandindex=-2 type=THUNK
+REFERENCE source=0060b040 destination=00610028 operandindex=0 type=DATA
+REFERENCE source=00401050 destination=00610028 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401050 destination=00610028 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=toupper address=00610030 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401060 destination=00610030 operandindex=-2 type=THUNK
+REFERENCE source=0060b048 destination=00610030 operandindex=0 type=DATA
+REFERENCE source=00401060 destination=00610030 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401060 destination=00610030 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=setsockopt address=00610038 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401070 destination=00610038 operandindex=-2 type=THUNK
+REFERENCE source=0060b050 destination=00610038 operandindex=0 type=DATA
+REFERENCE source=00401070 destination=00610038 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401070 destination=00610038 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=fcntl address=00610040 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401080 destination=00610040 operandindex=-2 type=THUNK
+REFERENCE source=0060b058 destination=00610040 operandindex=0 type=DATA
+REFERENCE source=00401080 destination=00610040 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401080 destination=00610040 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=write address=00610048 returntype=typedef ssize_t __ssize_t returnvalue=[ssize_t <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401090 destination=00610048 operandindex=-2 type=THUNK
+REFERENCE source=0060b060 destination=00610048 operandindex=0 type=DATA
+REFERENCE source=00401090 destination=00610048 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401090 destination=00610048 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=getpid address=00610050 returntype=typedef __pid_t int returnvalue=[__pid_t <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=004010a0 destination=00610050 operandindex=-2 type=THUNK
+REFERENCE source=0060b068 destination=00610050 operandindex=0 type=DATA
+REFERENCE source=004010a0 destination=00610050 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=004010a0 destination=00610050 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=inet_ntoa address=00610058 returntype=char * returnvalue=[char * <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=004010b0 destination=00610058 operandindex=-2 type=THUNK
+REFERENCE source=0060b070 destination=00610058 operandindex=0 type=DATA
+REFERENCE source=004010b0 destination=00610058 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=004010b0 destination=00610058 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=strlen address=00610060 returntype=typedef size_t ulong returnvalue=[size_t <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=004010c0 destination=00610060 operandindex=-2 type=THUNK
+REFERENCE source=0060b078 destination=00610060 operandindex=0 type=DATA
+REFERENCE source=004010c0 destination=00610060 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=004010c0 destination=00610060 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=chdir address=00610068 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=004010d0 destination=00610068 operandindex=-2 type=THUNK
+REFERENCE source=0060b080 destination=00610068 operandindex=0 type=DATA
+REFERENCE source=004010d0 destination=00610068 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=004010d0 destination=00610068 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=htons address=00610070 returntype=typedef uint16_t ushort returnvalue=[uint16_t <RETURN>@AX:2] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=004010e0 destination=00610070 operandindex=-2 type=THUNK
+REFERENCE source=0060b088 destination=00610070 operandindex=0 type=DATA
+REFERENCE source=004010e0 destination=00610070 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=004010e0 destination=00610070 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=dup2 address=00610078 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=004010f0 destination=00610078 operandindex=-2 type=THUNK
+REFERENCE source=0060b090 destination=00610078 operandindex=0 type=DATA
+REFERENCE source=004010f0 destination=00610078 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=004010f0 destination=00610078 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=send address=00610080 returntype=typedef ssize_t __ssize_t returnvalue=[ssize_t <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401100 destination=00610080 operandindex=-2 type=THUNK
+REFERENCE source=0060b098 destination=00610080 operandindex=0 type=DATA
+REFERENCE source=00401100 destination=00610080 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401100 destination=00610080 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=strchr address=00610088 returntype=char * returnvalue=[char * <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401110 destination=00610088 operandindex=-2 type=THUNK
+REFERENCE source=0060b0a0 destination=00610088 operandindex=0 type=DATA
+REFERENCE source=00401110 destination=00610088 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401110 destination=00610088 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=printf address=00610090 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401120 destination=00610090 operandindex=-2 type=THUNK
+REFERENCE source=0060b0a8 destination=00610090 operandindex=0 type=DATA
+REFERENCE source=00401120 destination=00610090 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401120 destination=00610090 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=htonl address=00610098 returntype=typedef uint32_t uint returnvalue=[uint32_t <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401130 destination=00610098 operandindex=-2 type=THUNK
+REFERENCE source=0060b0b0 destination=00610098 operandindex=0 type=DATA
+REFERENCE source=00401130 destination=00610098 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401130 destination=00610098 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=memset address=006100a0 returntype=void * returnvalue=[void * <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401140 destination=006100a0 operandindex=-2 type=THUNK
+REFERENCE source=0060b0b8 destination=006100a0 operandindex=0 type=DATA
+REFERENCE source=00401140 destination=006100a0 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401140 destination=006100a0 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=ioctl address=006100a8 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401150 destination=006100a8 operandindex=-2 type=THUNK
+REFERENCE source=0060b0c0 destination=006100a8 operandindex=0 type=DATA
+REFERENCE source=00401150 destination=006100a8 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401150 destination=006100a8 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=sendto address=006100b0 returntype=typedef ssize_t __ssize_t returnvalue=[ssize_t <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401160 destination=006100b0 operandindex=-2 type=THUNK
+REFERENCE source=0060b0c8 destination=006100b0 operandindex=0 type=DATA
+REFERENCE source=00401160 destination=006100b0 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401160 destination=006100b0 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=close address=006100b8 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401170 destination=006100b8 operandindex=-2 type=THUNK
+REFERENCE source=0060b0d0 destination=006100b8 operandindex=0 type=DATA
+REFERENCE source=00401170 destination=006100b8 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401170 destination=006100b8 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=pipe address=006100c0 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401180 destination=006100c0 operandindex=-2 type=THUNK
+REFERENCE source=0060b0d8 destination=006100c0 operandindex=0 type=DATA
+REFERENCE source=00401180 destination=006100c0 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401180 destination=006100c0 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=setsid address=006100c8 returntype=typedef __pid_t int returnvalue=[__pid_t <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401190 destination=006100c8 operandindex=-2 type=THUNK
+REFERENCE source=0060b0e0 destination=006100c8 operandindex=0 type=DATA
+REFERENCE source=00401190 destination=006100c8 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401190 destination=006100c8 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=isspace address=006100d0 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=004011a0 destination=006100d0 operandindex=-2 type=THUNK
+REFERENCE source=0060b0e8 destination=006100d0 operandindex=0 type=DATA
+REFERENCE source=004011a0 destination=006100d0 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=004011a0 destination=006100d0 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=read address=006100d8 returntype=typedef ssize_t __ssize_t returnvalue=[ssize_t <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=004011b0 destination=006100d8 operandindex=-2 type=THUNK
+REFERENCE source=0060b0f0 destination=006100d8 operandindex=0 type=DATA
+REFERENCE source=004011b0 destination=006100d8 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=004011b0 destination=006100d8 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=__libc_start_main address=006100e0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=004011c0 destination=006100e0 operandindex=-2 type=THUNK
+REFERENCE source=0060b0f8 destination=006100e0 operandindex=0 type=DATA
+REFERENCE source=004011c0 destination=006100e0 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=004011c0 destination=006100e0 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=srand address=006100e8 returntype=void returnvalue=[void <RETURN>@<VOID>] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=004011d0 destination=006100e8 operandindex=-2 type=THUNK
+REFERENCE source=0060b100 destination=006100e8 operandindex=0 type=DATA
+REFERENCE source=004011d0 destination=006100e8 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=004011d0 destination=006100e8 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=getsockopt address=006100f0 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=004011e0 destination=006100f0 operandindex=-2 type=THUNK
+REFERENCE source=0060b108 destination=006100f0 operandindex=0 type=DATA
+REFERENCE source=004011e0 destination=006100f0 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=004011e0 destination=006100f0 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=inet_addr address=006100f8 returntype=typedef in_addr_t uint32_t returnvalue=[in_addr_t <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=004011f0 destination=006100f8 operandindex=-2 type=THUNK
+REFERENCE source=0060b110 destination=006100f8 operandindex=0 type=DATA
+REFERENCE source=004011f0 destination=006100f8 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=004011f0 destination=006100f8 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=strcmp address=00610100 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401200 destination=00610100 operandindex=-2 type=THUNK
+REFERENCE source=0060b118 destination=00610100 operandindex=0 type=DATA
+REFERENCE source=00401200 destination=00610100 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401200 destination=00610100 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=signal address=00610108 returntype=typedef __sighandler_t __sighandler_t * returnvalue=[__sighandler_t <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401210 destination=00610108 operandindex=-2 type=THUNK
+REFERENCE source=0060b120 destination=00610108 operandindex=0 type=DATA
+REFERENCE source=00401210 destination=00610108 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401210 destination=00610108 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=sigemptyset address=00610110 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401220 destination=00610110 operandindex=-2 type=THUNK
+REFERENCE source=0060b128 destination=00610110 operandindex=0 type=DATA
+REFERENCE source=00401220 destination=00610110 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401220 destination=00610110 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=__gmon_start__ address=00610118 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401380 destination=00610118 operandindex=-2 type=THUNK
+REFERENCE source=0060aff8 destination=00610118 operandindex=0 type=DATA
+REFERENCE source=00400fd4 destination=00610118 operandindex=0 type=DATA
+REFERENCE source=00401380 destination=00610118 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401380 destination=00610118 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=kill address=00610120 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401230 destination=00610120 operandindex=-2 type=THUNK
+REFERENCE source=0060b130 destination=00610120 operandindex=0 type=DATA
+REFERENCE source=00401230 destination=00610120 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401230 destination=00610120 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=time address=00610128 returntype=typedef time_t __time_t returnvalue=[time_t <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401240 destination=00610128 operandindex=-2 type=THUNK
+REFERENCE source=0060b138 destination=00610128 operandindex=0 type=DATA
+REFERENCE source=00401240 destination=00610128 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401240 destination=00610128 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=select address=00610130 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401250 destination=00610130 operandindex=-2 type=THUNK
+REFERENCE source=0060b140 destination=00610130 operandindex=0 type=DATA
+REFERENCE source=00401250 destination=00610130 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401250 destination=00610130 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=malloc address=00610138 returntype=void * returnvalue=[void * <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401260 destination=00610138 operandindex=-2 type=THUNK
+REFERENCE source=0060b148 destination=00610138 operandindex=0 type=DATA
+REFERENCE source=00401260 destination=00610138 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401260 destination=00610138 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=waitpid address=00610140 returntype=typedef __pid_t int returnvalue=[__pid_t <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401270 destination=00610140 operandindex=-2 type=THUNK
+REFERENCE source=0060b150 destination=00610140 operandindex=0 type=DATA
+REFERENCE source=00401270 destination=00610140 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401270 destination=00610140 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=open address=00610148 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401280 destination=00610148 operandindex=-2 type=THUNK
+REFERENCE source=0060b158 destination=00610148 operandindex=0 type=DATA
+REFERENCE source=00401280 destination=00610148 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401280 destination=00610148 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=strtok address=00610150 returntype=char * returnvalue=[char * <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401290 destination=00610150 operandindex=-2 type=THUNK
+REFERENCE source=0060b160 destination=00610150 operandindex=0 type=DATA
+REFERENCE source=00401290 destination=00610150 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401290 destination=00610150 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=vfork address=00610158 returntype=typedef __pid_t int returnvalue=[__pid_t <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=004012a0 destination=00610158 operandindex=-2 type=THUNK
+REFERENCE source=0060b168 destination=00610158 operandindex=0 type=DATA
+REFERENCE source=004012a0 destination=00610158 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=004012a0 destination=00610158 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=getsockname address=00610160 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=004012b0 destination=00610160 operandindex=-2 type=THUNK
+REFERENCE source=0060b170 destination=00610160 operandindex=0 type=DATA
+REFERENCE source=004012b0 destination=00610160 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=004012b0 destination=00610160 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=atoi address=00610168 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=004012c0 destination=00610168 operandindex=-2 type=THUNK
+REFERENCE source=0060b178 destination=00610168 operandindex=0 type=DATA
+REFERENCE source=004012c0 destination=00610168 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=004012c0 destination=00610168 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=exit address=00610170 returntype=void returnvalue=[void <RETURN>@<VOID>] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=004012d0 destination=00610170 operandindex=-2 type=THUNK
+REFERENCE source=0060b180 destination=00610170 operandindex=0 type=DATA
+REFERENCE source=004012d0 destination=00610170 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=004012d0 destination=00610170 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=connect address=00610178 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=004012e0 destination=00610178 operandindex=-2 type=THUNK
+REFERENCE source=0060b188 destination=00610178 operandindex=0 type=DATA
+REFERENCE source=004012e0 destination=00610178 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=004012e0 destination=00610178 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=ntohl address=00610180 returntype=typedef uint32_t uint returnvalue=[uint32_t <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=004012f0 destination=00610180 operandindex=-2 type=THUNK
+REFERENCE source=0060b190 destination=00610180 operandindex=0 type=DATA
+REFERENCE source=004012f0 destination=00610180 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=004012f0 destination=00610180 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=execl address=00610188 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401300 destination=00610188 operandindex=-2 type=THUNK
+REFERENCE source=0060b198 destination=00610188 operandindex=0 type=DATA
+REFERENCE source=00401300 destination=00610188 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401300 destination=00610188 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=sleep address=00610190 returntype=uint returnvalue=[uint <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401310 destination=00610190 operandindex=-2 type=THUNK
+REFERENCE source=0060b1a0 destination=00610190 operandindex=0 type=DATA
+REFERENCE source=00401310 destination=00610190 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401310 destination=00610190 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=sigaddset address=00610198 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401320 destination=00610198 operandindex=-2 type=THUNK
+REFERENCE source=0060b1a8 destination=00610198 operandindex=0 type=DATA
+REFERENCE source=00401320 destination=00610198 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401320 destination=00610198 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=fork address=006101a0 returntype=typedef __pid_t int returnvalue=[__pid_t <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401330 destination=006101a0 operandindex=-2 type=THUNK
+REFERENCE source=0060b1b0 destination=006101a0 operandindex=0 type=DATA
+REFERENCE source=00401330 destination=006101a0 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401330 destination=006101a0 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=strstr address=006101a8 returntype=char * returnvalue=[char * <RETURN>@RAX:8] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401340 destination=006101a8 operandindex=-2 type=THUNK
+REFERENCE source=0060b1b8 destination=006101a8 operandindex=0 type=DATA
+REFERENCE source=00401340 destination=006101a8 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401340 destination=006101a8 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=getdtablesize address=006101b0 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401350 destination=006101b0 operandindex=-2 type=THUNK
+REFERENCE source=0060b1c0 destination=006101b0 operandindex=0 type=DATA
+REFERENCE source=00401350 destination=006101b0 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401350 destination=006101b0 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=rand address=006101b8 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401360 destination=006101b8 operandindex=-2 type=THUNK
+REFERENCE source=0060b1c8 destination=006101b8 operandindex=0 type=DATA
+REFERENCE source=00401360 destination=006101b8 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401360 destination=006101b8 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+FUNCTION func=socket address=006101c0 returntype=int returnvalue=[int <RETURN>@EAX:4] parent=<EXTERNAL> parenttype=DLL
+REFERENCE source=00401370 destination=006101c0 operandindex=-2 type=THUNK
+REFERENCE source=0060b1d0 destination=006101c0 operandindex=0 type=DATA
+REFERENCE source=00401370 destination=006101c0 operandindex=-1 type=COMPUTED_CALL_TERMINATOR
+PRIMARYREFERENCE source=00401370 destination=006101c0 operandindex=-1 type=COMPUTED_CALL_TERMINATOR

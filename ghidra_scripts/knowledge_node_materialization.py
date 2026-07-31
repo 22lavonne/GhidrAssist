@@ -237,7 +237,7 @@ def materialize_knowledge_node(node, node_type):
         if key == "edges":
             continue
         # if the current key is address, then add it as an address object/node
-        elif key == "address":
+        elif key == "ipAddresses":
             addr_obj = pfs["mkg"][quote_for_turtle(str(value))]
             graph.add( (node_obj, AT_ADDRESS, addr_obj))
             

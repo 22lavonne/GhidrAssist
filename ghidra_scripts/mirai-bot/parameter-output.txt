@@ -1,0 +1,334 @@
+PARAMETER var=__how datatype=int parent=sigprocmask parenttype=FUNCTION
+PARAMETER var=__set datatype=sigset_t * parent=sigprocmask parenttype=FUNCTION
+PARAMETER var=__oset datatype=sigset_t * parent=sigprocmask parenttype=FUNCTION
+PARAMETER var=__sig datatype=int parent=raise parenttype=FUNCTION
+PARAMETER var=__ptr datatype=void * parent=free parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=recv parenttype=FUNCTION
+PARAMETER var=__buf datatype=void * parent=recv parenttype=FUNCTION
+PARAMETER var=__n datatype=typedef size_t ulong parent=recv parenttype=FUNCTION
+PARAMETER var=__flags datatype=int parent=recv parenttype=FUNCTION
+PARAMETER var=__name datatype=char * parent=unlink parenttype=FUNCTION
+PARAMETER var=__dest datatype=char * parent=strcpy parenttype=FUNCTION
+PARAMETER var=__src datatype=char * parent=strcpy parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=setsockopt parenttype=FUNCTION
+PARAMETER var=__level datatype=int parent=setsockopt parenttype=FUNCTION
+PARAMETER var=__optname datatype=int parent=setsockopt parenttype=FUNCTION
+PARAMETER var=__optval datatype=void * parent=setsockopt parenttype=FUNCTION
+PARAMETER var=__optlen datatype=typedef socklen_t __socklen_t parent=setsockopt parenttype=FUNCTION
+PARAMETER var=__path datatype=char * parent=readlink parenttype=FUNCTION
+PARAMETER var=__buf datatype=char * parent=readlink parenttype=FUNCTION
+PARAMETER var=__len datatype=typedef size_t ulong parent=readlink parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=fcntl parenttype=FUNCTION
+PARAMETER var=__cmd datatype=int parent=fcntl parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=write parenttype=FUNCTION
+PARAMETER var=__buf datatype=void * parent=write parenttype=FUNCTION
+PARAMETER var=__n datatype=typedef size_t ulong parent=write parenttype=FUNCTION
+PARAMETER var=__name datatype=char * parent=opendir parenttype=FUNCTION
+PARAMETER var=__path datatype=char * parent=chdir parenttype=FUNCTION
+PARAMETER var=__hostshort datatype=typedef uint16_t ushort parent=htons parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=send parenttype=FUNCTION
+PARAMETER var=__buf datatype=void * parent=send parenttype=FUNCTION
+PARAMETER var=__n datatype=typedef size_t ulong parent=send parenttype=FUNCTION
+PARAMETER var=__flags datatype=int parent=send parenttype=FUNCTION
+PARAMETER var=__hostlong datatype=typedef uint32_t uint parent=htonl parenttype=FUNCTION
+PARAMETER var=__s datatype=void * parent=memset parenttype=FUNCTION
+PARAMETER var=__c datatype=int parent=memset parenttype=FUNCTION
+PARAMETER var=__n datatype=typedef size_t ulong parent=memset parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=ioctl parenttype=FUNCTION
+PARAMETER var=__request datatype=ulong parent=ioctl parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=sendto parenttype=FUNCTION
+PARAMETER var=__buf datatype=void * parent=sendto parenttype=FUNCTION
+PARAMETER var=__n datatype=typedef size_t ulong parent=sendto parenttype=FUNCTION
+PARAMETER var=__flags datatype=int parent=sendto parenttype=FUNCTION
+PARAMETER var=__addr datatype=sockaddr * parent=sendto parenttype=FUNCTION
+PARAMETER var=__addr_len datatype=typedef socklen_t __socklen_t parent=sendto parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=close parenttype=FUNCTION
+PARAMETER var=__dirp datatype=DIR * parent=closedir parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=read parenttype=FUNCTION
+PARAMETER var=__buf datatype=void * parent=read parenttype=FUNCTION
+PARAMETER var=__nbytes datatype=typedef size_t ulong parent=read parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=getsockopt parenttype=FUNCTION
+PARAMETER var=__level datatype=int parent=getsockopt parenttype=FUNCTION
+PARAMETER var=__optname datatype=int parent=getsockopt parenttype=FUNCTION
+PARAMETER var=__optval datatype=void * parent=getsockopt parenttype=FUNCTION
+PARAMETER var=__optlen datatype=socklen_t * parent=getsockopt parenttype=FUNCTION
+PARAMETER var=__nmemb datatype=typedef size_t ulong parent=calloc parenttype=FUNCTION
+PARAMETER var=__size datatype=typedef size_t ulong parent=calloc parenttype=FUNCTION
+PARAMETER var=__cp datatype=char * parent=inet_addr parenttype=FUNCTION
+PARAMETER var=__sig datatype=int parent=signal parenttype=FUNCTION
+PARAMETER var=__handler datatype=typedef __sighandler_t __sighandler_t * parent=signal parenttype=FUNCTION
+PARAMETER var=__set datatype=sigset_t * parent=sigemptyset parenttype=FUNCTION
+PARAMETER var=__dest datatype=void * parent=memcpy parenttype=FUNCTION
+PARAMETER var=__src datatype=void * parent=memcpy parenttype=FUNCTION
+PARAMETER var=__n datatype=typedef size_t ulong parent=memcpy parenttype=FUNCTION
+PARAMETER var=__option datatype=int parent=prctl parenttype=FUNCTION
+PARAMETER var=__pid datatype=typedef __pid_t int parent=kill parenttype=FUNCTION
+PARAMETER var=__sig datatype=int parent=kill parenttype=FUNCTION
+PARAMETER var=__timer datatype=time_t * parent=time parenttype=FUNCTION
+PARAMETER var=__nfds datatype=int parent=select parenttype=FUNCTION
+PARAMETER var=__readfds datatype=fd_set * parent=select parenttype=FUNCTION
+PARAMETER var=__writefds datatype=fd_set * parent=select parenttype=FUNCTION
+PARAMETER var=__exceptfds datatype=fd_set * parent=select parenttype=FUNCTION
+PARAMETER var=__timeout datatype=timeval * parent=select parenttype=FUNCTION
+PARAMETER var=__dirp datatype=DIR * parent=readdir parenttype=FUNCTION
+PARAMETER var=__size datatype=typedef size_t ulong parent=malloc parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=listen parenttype=FUNCTION
+PARAMETER var=__n datatype=int parent=listen parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=recvfrom parenttype=FUNCTION
+PARAMETER var=__buf datatype=void * parent=recvfrom parenttype=FUNCTION
+PARAMETER var=__n datatype=typedef size_t ulong parent=recvfrom parenttype=FUNCTION
+PARAMETER var=__flags datatype=int parent=recvfrom parenttype=FUNCTION
+PARAMETER var=__addr datatype=sockaddr * parent=recvfrom parenttype=FUNCTION
+PARAMETER var=__addr_len datatype=socklen_t * parent=recvfrom parenttype=FUNCTION
+PARAMETER var=__ptr datatype=void * parent=realloc parenttype=FUNCTION
+PARAMETER var=__size datatype=typedef size_t ulong parent=realloc parenttype=FUNCTION
+PARAMETER var=__netshort datatype=typedef uint16_t ushort parent=ntohs parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=bind parenttype=FUNCTION
+PARAMETER var=__addr datatype=sockaddr * parent=bind parenttype=FUNCTION
+PARAMETER var=__len datatype=typedef socklen_t __socklen_t parent=bind parenttype=FUNCTION
+PARAMETER var=__dest datatype=void * parent=memmove parenttype=FUNCTION
+PARAMETER var=__src datatype=void * parent=memmove parenttype=FUNCTION
+PARAMETER var=__n datatype=typedef size_t ulong parent=memmove parenttype=FUNCTION
+PARAMETER var=__file datatype=char * parent=open parenttype=FUNCTION
+PARAMETER var=__oflag datatype=int parent=open parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=accept parenttype=FUNCTION
+PARAMETER var=__addr datatype=sockaddr * parent=accept parenttype=FUNCTION
+PARAMETER var=__addr_len datatype=socklen_t * parent=accept parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=getsockname parenttype=FUNCTION
+PARAMETER var=__addr datatype=sockaddr * parent=getsockname parenttype=FUNCTION
+PARAMETER var=__len datatype=socklen_t * parent=getsockname parenttype=FUNCTION
+PARAMETER var=__nptr datatype=char * parent=atoi parenttype=FUNCTION
+PARAMETER var=__status datatype=int parent=exit parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=connect parenttype=FUNCTION
+PARAMETER var=__addr datatype=sockaddr * parent=connect parenttype=FUNCTION
+PARAMETER var=__len datatype=typedef socklen_t __socklen_t parent=connect parenttype=FUNCTION
+PARAMETER var=__netlong datatype=typedef uint32_t uint parent=ntohl parenttype=FUNCTION
+PARAMETER var=__seconds datatype=uint parent=sleep parenttype=FUNCTION
+PARAMETER var=__set datatype=sigset_t * parent=sigaddset parenttype=FUNCTION
+PARAMETER var=__signo datatype=int parent=sigaddset parenttype=FUNCTION
+PARAMETER var=__domain datatype=int parent=socket parenttype=FUNCTION
+PARAMETER var=__type datatype=int parent=socket parenttype=FUNCTION
+PARAMETER var=__protocol datatype=int parent=socket parenttype=FUNCTION
+PARAMETER var=ctx datatype=EVP_PKEY_CTX * parent=_init parenttype=FUNCTION
+PARAMETER var=__how datatype=int parent=sigprocmask parenttype=FUNCTION
+PARAMETER var=__set datatype=sigset_t * parent=sigprocmask parenttype=FUNCTION
+PARAMETER var=__oset datatype=sigset_t * parent=sigprocmask parenttype=FUNCTION
+PARAMETER var=__sig datatype=int parent=raise parenttype=FUNCTION
+PARAMETER var=__ptr datatype=void * parent=free parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=recv parenttype=FUNCTION
+PARAMETER var=__buf datatype=void * parent=recv parenttype=FUNCTION
+PARAMETER var=__n datatype=typedef size_t ulong parent=recv parenttype=FUNCTION
+PARAMETER var=__flags datatype=int parent=recv parenttype=FUNCTION
+PARAMETER var=__name datatype=char * parent=unlink parenttype=FUNCTION
+PARAMETER var=__dest datatype=char * parent=strcpy parenttype=FUNCTION
+PARAMETER var=__src datatype=char * parent=strcpy parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=setsockopt parenttype=FUNCTION
+PARAMETER var=__level datatype=int parent=setsockopt parenttype=FUNCTION
+PARAMETER var=__optname datatype=int parent=setsockopt parenttype=FUNCTION
+PARAMETER var=__optval datatype=void * parent=setsockopt parenttype=FUNCTION
+PARAMETER var=__optlen datatype=typedef socklen_t __socklen_t parent=setsockopt parenttype=FUNCTION
+PARAMETER var=__path datatype=char * parent=readlink parenttype=FUNCTION
+PARAMETER var=__buf datatype=char * parent=readlink parenttype=FUNCTION
+PARAMETER var=__len datatype=typedef size_t ulong parent=readlink parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=fcntl parenttype=FUNCTION
+PARAMETER var=__cmd datatype=int parent=fcntl parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=write parenttype=FUNCTION
+PARAMETER var=__buf datatype=void * parent=write parenttype=FUNCTION
+PARAMETER var=__n datatype=typedef size_t ulong parent=write parenttype=FUNCTION
+PARAMETER var=__name datatype=char * parent=opendir parenttype=FUNCTION
+PARAMETER var=__path datatype=char * parent=chdir parenttype=FUNCTION
+PARAMETER var=__hostshort datatype=typedef uint16_t ushort parent=htons parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=send parenttype=FUNCTION
+PARAMETER var=__buf datatype=void * parent=send parenttype=FUNCTION
+PARAMETER var=__n datatype=typedef size_t ulong parent=send parenttype=FUNCTION
+PARAMETER var=__flags datatype=int parent=send parenttype=FUNCTION
+PARAMETER var=__hostlong datatype=typedef uint32_t uint parent=htonl parenttype=FUNCTION
+PARAMETER var=__s datatype=void * parent=memset parenttype=FUNCTION
+PARAMETER var=__c datatype=int parent=memset parenttype=FUNCTION
+PARAMETER var=__n datatype=typedef size_t ulong parent=memset parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=ioctl parenttype=FUNCTION
+PARAMETER var=__request datatype=ulong parent=ioctl parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=sendto parenttype=FUNCTION
+PARAMETER var=__buf datatype=void * parent=sendto parenttype=FUNCTION
+PARAMETER var=__n datatype=typedef size_t ulong parent=sendto parenttype=FUNCTION
+PARAMETER var=__flags datatype=int parent=sendto parenttype=FUNCTION
+PARAMETER var=__addr datatype=sockaddr * parent=sendto parenttype=FUNCTION
+PARAMETER var=__addr_len datatype=typedef socklen_t __socklen_t parent=sendto parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=close parenttype=FUNCTION
+PARAMETER var=__dirp datatype=DIR * parent=closedir parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=read parenttype=FUNCTION
+PARAMETER var=__buf datatype=void * parent=read parenttype=FUNCTION
+PARAMETER var=__nbytes datatype=typedef size_t ulong parent=read parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=getsockopt parenttype=FUNCTION
+PARAMETER var=__level datatype=int parent=getsockopt parenttype=FUNCTION
+PARAMETER var=__optname datatype=int parent=getsockopt parenttype=FUNCTION
+PARAMETER var=__optval datatype=void * parent=getsockopt parenttype=FUNCTION
+PARAMETER var=__optlen datatype=socklen_t * parent=getsockopt parenttype=FUNCTION
+PARAMETER var=__nmemb datatype=typedef size_t ulong parent=calloc parenttype=FUNCTION
+PARAMETER var=__size datatype=typedef size_t ulong parent=calloc parenttype=FUNCTION
+PARAMETER var=__cp datatype=char * parent=inet_addr parenttype=FUNCTION
+PARAMETER var=__sig datatype=int parent=signal parenttype=FUNCTION
+PARAMETER var=__handler datatype=typedef __sighandler_t __sighandler_t * parent=signal parenttype=FUNCTION
+PARAMETER var=__set datatype=sigset_t * parent=sigemptyset parenttype=FUNCTION
+PARAMETER var=__dest datatype=void * parent=memcpy parenttype=FUNCTION
+PARAMETER var=__src datatype=void * parent=memcpy parenttype=FUNCTION
+PARAMETER var=__n datatype=typedef size_t ulong parent=memcpy parenttype=FUNCTION
+PARAMETER var=__option datatype=int parent=prctl parenttype=FUNCTION
+PARAMETER var=__pid datatype=typedef __pid_t int parent=kill parenttype=FUNCTION
+PARAMETER var=__sig datatype=int parent=kill parenttype=FUNCTION
+PARAMETER var=__timer datatype=time_t * parent=time parenttype=FUNCTION
+PARAMETER var=__nfds datatype=int parent=select parenttype=FUNCTION
+PARAMETER var=__readfds datatype=fd_set * parent=select parenttype=FUNCTION
+PARAMETER var=__writefds datatype=fd_set * parent=select parenttype=FUNCTION
+PARAMETER var=__exceptfds datatype=fd_set * parent=select parenttype=FUNCTION
+PARAMETER var=__timeout datatype=timeval * parent=select parenttype=FUNCTION
+PARAMETER var=__dirp datatype=DIR * parent=readdir parenttype=FUNCTION
+PARAMETER var=__size datatype=typedef size_t ulong parent=malloc parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=listen parenttype=FUNCTION
+PARAMETER var=__n datatype=int parent=listen parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=recvfrom parenttype=FUNCTION
+PARAMETER var=__buf datatype=void * parent=recvfrom parenttype=FUNCTION
+PARAMETER var=__n datatype=typedef size_t ulong parent=recvfrom parenttype=FUNCTION
+PARAMETER var=__flags datatype=int parent=recvfrom parenttype=FUNCTION
+PARAMETER var=__addr datatype=sockaddr * parent=recvfrom parenttype=FUNCTION
+PARAMETER var=__addr_len datatype=socklen_t * parent=recvfrom parenttype=FUNCTION
+PARAMETER var=__ptr datatype=void * parent=realloc parenttype=FUNCTION
+PARAMETER var=__size datatype=typedef size_t ulong parent=realloc parenttype=FUNCTION
+PARAMETER var=__netshort datatype=typedef uint16_t ushort parent=ntohs parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=bind parenttype=FUNCTION
+PARAMETER var=__addr datatype=sockaddr * parent=bind parenttype=FUNCTION
+PARAMETER var=__len datatype=typedef socklen_t __socklen_t parent=bind parenttype=FUNCTION
+PARAMETER var=__dest datatype=void * parent=memmove parenttype=FUNCTION
+PARAMETER var=__src datatype=void * parent=memmove parenttype=FUNCTION
+PARAMETER var=__n datatype=typedef size_t ulong parent=memmove parenttype=FUNCTION
+PARAMETER var=__file datatype=char * parent=open parenttype=FUNCTION
+PARAMETER var=__oflag datatype=int parent=open parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=accept parenttype=FUNCTION
+PARAMETER var=__addr datatype=sockaddr * parent=accept parenttype=FUNCTION
+PARAMETER var=__addr_len datatype=socklen_t * parent=accept parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=getsockname parenttype=FUNCTION
+PARAMETER var=__addr datatype=sockaddr * parent=getsockname parenttype=FUNCTION
+PARAMETER var=__len datatype=socklen_t * parent=getsockname parenttype=FUNCTION
+PARAMETER var=__nptr datatype=char * parent=atoi parenttype=FUNCTION
+PARAMETER var=__status datatype=int parent=exit parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=connect parenttype=FUNCTION
+PARAMETER var=__addr datatype=sockaddr * parent=connect parenttype=FUNCTION
+PARAMETER var=__len datatype=typedef socklen_t __socklen_t parent=connect parenttype=FUNCTION
+PARAMETER var=__netlong datatype=typedef uint32_t uint parent=ntohl parenttype=FUNCTION
+PARAMETER var=__seconds datatype=uint parent=sleep parenttype=FUNCTION
+PARAMETER var=__set datatype=sigset_t * parent=sigaddset parenttype=FUNCTION
+PARAMETER var=__signo datatype=int parent=sigaddset parenttype=FUNCTION
+PARAMETER var=__domain datatype=int parent=socket parenttype=FUNCTION
+PARAMETER var=__type datatype=int parent=socket parenttype=FUNCTION
+PARAMETER var=__protocol datatype=int parent=socket parenttype=FUNCTION
+PARAMETER var=__how datatype=int parent=sigprocmask parenttype=FUNCTION
+PARAMETER var=__set datatype=sigset_t * parent=sigprocmask parenttype=FUNCTION
+PARAMETER var=__oset datatype=sigset_t * parent=sigprocmask parenttype=FUNCTION
+PARAMETER var=__sig datatype=int parent=raise parenttype=FUNCTION
+PARAMETER var=__ptr datatype=void * parent=free parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=recv parenttype=FUNCTION
+PARAMETER var=__buf datatype=void * parent=recv parenttype=FUNCTION
+PARAMETER var=__n datatype=typedef size_t ulong parent=recv parenttype=FUNCTION
+PARAMETER var=__flags datatype=int parent=recv parenttype=FUNCTION
+PARAMETER var=__name datatype=char * parent=unlink parenttype=FUNCTION
+PARAMETER var=__dest datatype=char * parent=strcpy parenttype=FUNCTION
+PARAMETER var=__src datatype=char * parent=strcpy parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=setsockopt parenttype=FUNCTION
+PARAMETER var=__level datatype=int parent=setsockopt parenttype=FUNCTION
+PARAMETER var=__optname datatype=int parent=setsockopt parenttype=FUNCTION
+PARAMETER var=__optval datatype=void * parent=setsockopt parenttype=FUNCTION
+PARAMETER var=__optlen datatype=typedef socklen_t __socklen_t parent=setsockopt parenttype=FUNCTION
+PARAMETER var=__path datatype=char * parent=readlink parenttype=FUNCTION
+PARAMETER var=__buf datatype=char * parent=readlink parenttype=FUNCTION
+PARAMETER var=__len datatype=typedef size_t ulong parent=readlink parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=fcntl parenttype=FUNCTION
+PARAMETER var=__cmd datatype=int parent=fcntl parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=write parenttype=FUNCTION
+PARAMETER var=__buf datatype=void * parent=write parenttype=FUNCTION
+PARAMETER var=__n datatype=typedef size_t ulong parent=write parenttype=FUNCTION
+PARAMETER var=__name datatype=char * parent=opendir parenttype=FUNCTION
+PARAMETER var=__path datatype=char * parent=chdir parenttype=FUNCTION
+PARAMETER var=__hostshort datatype=typedef uint16_t ushort parent=htons parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=send parenttype=FUNCTION
+PARAMETER var=__buf datatype=void * parent=send parenttype=FUNCTION
+PARAMETER var=__n datatype=typedef size_t ulong parent=send parenttype=FUNCTION
+PARAMETER var=__flags datatype=int parent=send parenttype=FUNCTION
+PARAMETER var=__hostlong datatype=typedef uint32_t uint parent=htonl parenttype=FUNCTION
+PARAMETER var=__s datatype=void * parent=memset parenttype=FUNCTION
+PARAMETER var=__c datatype=int parent=memset parenttype=FUNCTION
+PARAMETER var=__n datatype=typedef size_t ulong parent=memset parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=ioctl parenttype=FUNCTION
+PARAMETER var=__request datatype=ulong parent=ioctl parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=sendto parenttype=FUNCTION
+PARAMETER var=__buf datatype=void * parent=sendto parenttype=FUNCTION
+PARAMETER var=__n datatype=typedef size_t ulong parent=sendto parenttype=FUNCTION
+PARAMETER var=__flags datatype=int parent=sendto parenttype=FUNCTION
+PARAMETER var=__addr datatype=sockaddr * parent=sendto parenttype=FUNCTION
+PARAMETER var=__addr_len datatype=typedef socklen_t __socklen_t parent=sendto parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=close parenttype=FUNCTION
+PARAMETER var=__dirp datatype=DIR * parent=closedir parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=read parenttype=FUNCTION
+PARAMETER var=__buf datatype=void * parent=read parenttype=FUNCTION
+PARAMETER var=__nbytes datatype=typedef size_t ulong parent=read parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=getsockopt parenttype=FUNCTION
+PARAMETER var=__level datatype=int parent=getsockopt parenttype=FUNCTION
+PARAMETER var=__optname datatype=int parent=getsockopt parenttype=FUNCTION
+PARAMETER var=__optval datatype=void * parent=getsockopt parenttype=FUNCTION
+PARAMETER var=__optlen datatype=socklen_t * parent=getsockopt parenttype=FUNCTION
+PARAMETER var=__nmemb datatype=typedef size_t ulong parent=calloc parenttype=FUNCTION
+PARAMETER var=__size datatype=typedef size_t ulong parent=calloc parenttype=FUNCTION
+PARAMETER var=__cp datatype=char * parent=inet_addr parenttype=FUNCTION
+PARAMETER var=__sig datatype=int parent=signal parenttype=FUNCTION
+PARAMETER var=__handler datatype=typedef __sighandler_t __sighandler_t * parent=signal parenttype=FUNCTION
+PARAMETER var=__set datatype=sigset_t * parent=sigemptyset parenttype=FUNCTION
+PARAMETER var=__dest datatype=void * parent=memcpy parenttype=FUNCTION
+PARAMETER var=__src datatype=void * parent=memcpy parenttype=FUNCTION
+PARAMETER var=__n datatype=typedef size_t ulong parent=memcpy parenttype=FUNCTION
+PARAMETER var=__option datatype=int parent=prctl parenttype=FUNCTION
+PARAMETER var=__pid datatype=typedef __pid_t int parent=kill parenttype=FUNCTION
+PARAMETER var=__sig datatype=int parent=kill parenttype=FUNCTION
+PARAMETER var=__timer datatype=time_t * parent=time parenttype=FUNCTION
+PARAMETER var=__nfds datatype=int parent=select parenttype=FUNCTION
+PARAMETER var=__readfds datatype=fd_set * parent=select parenttype=FUNCTION
+PARAMETER var=__writefds datatype=fd_set * parent=select parenttype=FUNCTION
+PARAMETER var=__exceptfds datatype=fd_set * parent=select parenttype=FUNCTION
+PARAMETER var=__timeout datatype=timeval * parent=select parenttype=FUNCTION
+PARAMETER var=__dirp datatype=DIR * parent=readdir parenttype=FUNCTION
+PARAMETER var=__size datatype=typedef size_t ulong parent=malloc parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=listen parenttype=FUNCTION
+PARAMETER var=__n datatype=int parent=listen parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=recvfrom parenttype=FUNCTION
+PARAMETER var=__buf datatype=void * parent=recvfrom parenttype=FUNCTION
+PARAMETER var=__n datatype=typedef size_t ulong parent=recvfrom parenttype=FUNCTION
+PARAMETER var=__flags datatype=int parent=recvfrom parenttype=FUNCTION
+PARAMETER var=__addr datatype=sockaddr * parent=recvfrom parenttype=FUNCTION
+PARAMETER var=__addr_len datatype=socklen_t * parent=recvfrom parenttype=FUNCTION
+PARAMETER var=__ptr datatype=void * parent=realloc parenttype=FUNCTION
+PARAMETER var=__size datatype=typedef size_t ulong parent=realloc parenttype=FUNCTION
+PARAMETER var=__netshort datatype=typedef uint16_t ushort parent=ntohs parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=bind parenttype=FUNCTION
+PARAMETER var=__addr datatype=sockaddr * parent=bind parenttype=FUNCTION
+PARAMETER var=__len datatype=typedef socklen_t __socklen_t parent=bind parenttype=FUNCTION
+PARAMETER var=__dest datatype=void * parent=memmove parenttype=FUNCTION
+PARAMETER var=__src datatype=void * parent=memmove parenttype=FUNCTION
+PARAMETER var=__n datatype=typedef size_t ulong parent=memmove parenttype=FUNCTION
+PARAMETER var=__file datatype=char * parent=open parenttype=FUNCTION
+PARAMETER var=__oflag datatype=int parent=open parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=accept parenttype=FUNCTION
+PARAMETER var=__addr datatype=sockaddr * parent=accept parenttype=FUNCTION
+PARAMETER var=__addr_len datatype=socklen_t * parent=accept parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=getsockname parenttype=FUNCTION
+PARAMETER var=__addr datatype=sockaddr * parent=getsockname parenttype=FUNCTION
+PARAMETER var=__len datatype=socklen_t * parent=getsockname parenttype=FUNCTION
+PARAMETER var=__nptr datatype=char * parent=atoi parenttype=FUNCTION
+PARAMETER var=__status datatype=int parent=exit parenttype=FUNCTION
+PARAMETER var=__fd datatype=int parent=connect parenttype=FUNCTION
+PARAMETER var=__addr datatype=sockaddr * parent=connect parenttype=FUNCTION
+PARAMETER var=__len datatype=typedef socklen_t __socklen_t parent=connect parenttype=FUNCTION
+PARAMETER var=__netlong datatype=typedef uint32_t uint parent=ntohl parenttype=FUNCTION
+PARAMETER var=__seconds datatype=uint parent=sleep parenttype=FUNCTION
+PARAMETER var=__set datatype=sigset_t * parent=sigaddset parenttype=FUNCTION
+PARAMETER var=__signo datatype=int parent=sigaddset parenttype=FUNCTION
+PARAMETER var=__domain datatype=int parent=socket parenttype=FUNCTION
+PARAMETER var=__type datatype=int parent=socket parenttype=FUNCTION
+PARAMETER var=__protocol datatype=int parent=socket parenttype=FUNCTION

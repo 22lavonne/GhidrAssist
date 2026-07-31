@@ -1249,7 +1249,8 @@ mkg:x86__64__lsb__unix-system-v__clang-3_8_0__O0__no-obf__unstripped__BASHLITE-l
         mkg:uppercase,
         mkg:wildString,
         mkg:zprintf ;
-    :createdAt "2026-07-29T20:03:47.972Z" ;
+    :createdAt "2026-07-29T20:03:47.972Z",
+        "2026-07-31T13:44:23.982Z" ;
     :hasAnalysisDepth "0" ;
     :hasBinaryID "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e" ;
     :hasDecompiledCode """Binary: x86__64__lsb__unix-system-v__clang-3.8.0__O0__no-obf__unstripped__BASHLITE-lizkebab__client
@@ -1305,7 +1306,8 @@ Entry Points:
   - frame_dummy @ 00401460
   - __do_global_dtors_aux @ 00401440
 """ ;
-    :hasID "b6a9d93c-1279-42d7-9a7a-f87b2f943e04" ;
+    :hasID "a331972d-7343-4f27-99b5-b08c30b99865",
+        "b6a9d93c-1279-42d7-9a7a-f87b2f943e04" ;
     :hasName "x86__64__lsb__unix-system-v__clang-3.8.0__O0__no-obf__unstripped__BASHLITE-lizkebab__client" ;
     :hasRawContent """Binary: x86__64__lsb__unix-system-v__clang-3.8.0__O0__no-obf__unstripped__BASHLITE-lizkebab__client
 Format: Executable and Linking Format (ELF)
@@ -1362,7 +1364,8 @@ Entry Points:
 """ ;
     :hasSummaryConfidence "0.0" ;
     :isStale "True" ;
-    :updatedAt "2026-07-29T20:03:47.972Z" ;
+    :updatedAt "2026-07-29T20:03:47.972Z",
+        "2026-07-31T13:44:23.982Z" ;
     :userEdited "False" .
 
 :containsFunction a owl:ObjectProperty ;
@@ -14989,9 +14992,12 @@ mkg:EXTERNAL_3A00000039 a :Address .
 mkg:FUN_00400ff0 a :FunctionNode ;
     :atAddress mkg:00400ff0,
         "00400ff0" ;
-    :belongsToCommunity mkg:ab1d2298-4c65-4977-992b-aebb58393636,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:ab1d2298-4c65-4977-992b-aebb58393636,
         mkg:f90fb811-2628-4ab9-90b0-46ab130247a0,
-        mkg:main_group_20_2843_29 ;
+        mkg:main_group_20_2832_29 ;
     :containsInstruction mkg:ins_00400ff0,
         mkg:ins_00400ff6 ;
     :createdAt "2026-07-29T20:03:46.084Z" ;
@@ -15182,9 +15188,12 @@ mkg:_5Buint_20_3CRETURN_3E_40EAX_3A4_5D a :Parameter .
 mkg:__libc_csu_fini a :FunctionNode ;
     :atAddress mkg:00409070,
         "00409070" ;
-    :belongsToCommunity mkg:ab1d2298-4c65-4977-992b-aebb58393636,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:ab1d2298-4c65-4977-992b-aebb58393636,
         mkg:f90fb811-2628-4ab9-90b0-46ab130247a0,
-        mkg:main_group_20_2843_29 ;
+        mkg:main_group_20_2832_29 ;
     :containsInstruction mkg:ins_00409070 ;
     :createdAt "2026-07-29T20:03:47.739Z" ;
     :definedIn mkg:Global ;
@@ -15226,9 +15235,12 @@ void __libc_csu_fini(void)
 mkg:__libc_csu_init a :FunctionNode ;
     :atAddress mkg:00409000,
         "00409000" ;
-    :belongsToCommunity mkg:2e48df76-c393-4f45-8e63-2128365cfd6d,
+    :belongsToCommunity mkg:177e5605-e1c6-4c79-99f3-7f520e75b99f,
+        mkg:17961754-e99b-437e-a6ea-6e6b2640be0f,
+        mkg:2e48df76-c393-4f45-8e63-2128365cfd6d,
         mkg:5d6c46b0-5c4a-47c8-a80a-7a4a22af3f94,
-        mkg:_init_group_20_286_29 ;
+        mkg:_init_group_20_286_29,
+        mkg:f83e1b65-4ccc-4fc3-a63a-96bea9b1688c ;
     :calls mkg:__do_global_dtors_aux,
         mkg:_init,
         mkg:frame_dummy ;
@@ -15361,9 +15373,12 @@ mkg:_comment_3A_3A00000033 a :Address .
 mkg:_fini a :FunctionNode ;
     :atAddress mkg:00409074,
         "00409074" ;
-    :belongsToCommunity mkg:ab1d2298-4c65-4977-992b-aebb58393636,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:ab1d2298-4c65-4977-992b-aebb58393636,
         mkg:f90fb811-2628-4ab9-90b0-46ab130247a0,
-        mkg:main_group_20_2843_29 ;
+        mkg:main_group_20_2832_29 ;
     :containsInstruction mkg:ins_00409074,
         mkg:ins_00409078,
         mkg:ins_0040907c ;
@@ -15408,9 +15423,12 @@ void _fini(void)
 mkg:_start a :FunctionNode ;
     :atAddress mkg:00401390,
         "00401390" ;
-    :belongsToCommunity mkg:ab1d2298-4c65-4977-992b-aebb58393636,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:ab1d2298-4c65-4977-992b-aebb58393636,
         mkg:f90fb811-2628-4ab9-90b0-46ab130247a0,
-        mkg:main_group_20_2843_29 ;
+        mkg:main_group_20_2832_29 ;
     :calls mkg:__libc_start_main ;
     :containsInstruction mkg:ins_00401390,
         mkg:ins_00401392,
@@ -58717,9 +58735,12 @@ mkg:local_ea a :LocalVariable ;
 mkg:parseHex a :FunctionNode ;
     :atAddress mkg:004026a0,
         "004026a0" ;
-    :belongsToCommunity mkg:ab1d2298-4c65-4977-992b-aebb58393636,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:ab1d2298-4c65-4977-992b-aebb58393636,
         mkg:f90fb811-2628-4ab9-90b0-46ab130247a0,
-        mkg:main_group_20_2843_29 ;
+        mkg:main_group_20_2832_29 ;
     :containsInstruction mkg:ins_004026a0,
         mkg:ins_004026a1,
         mkg:ins_004026a4,
@@ -68192,9 +68213,12 @@ mkg:_5Bvoid_20_2A_20_3CRETURN_3E_40RAX_3A8_5D a :Parameter .
 mkg:__do_global_dtors_aux a :FunctionNode ;
     :atAddress mkg:00401440,
         "00401440" ;
-    :belongsToCommunity mkg:2e48df76-c393-4f45-8e63-2128365cfd6d,
+    :belongsToCommunity mkg:177e5605-e1c6-4c79-99f3-7f520e75b99f,
+        mkg:17961754-e99b-437e-a6ea-6e6b2640be0f,
+        mkg:2e48df76-c393-4f45-8e63-2128365cfd6d,
         mkg:6b471009-7224-4ec2-bb3e-b4c2b4eab448,
-        mkg:_init_group_20_286_29 ;
+        mkg:_init_group_20_286_29,
+        mkg:f83e1b65-4ccc-4fc3-a63a-96bea9b1688c ;
     :calls mkg:deregister_tm_clones ;
     :containsInstruction mkg:ins_00401440,
         mkg:ins_00401447,
@@ -68280,7 +68304,7 @@ mkg:__gmon_start__ a :ExternalFunctionNode,
         mkg:ref__elfSectionHeaders%3A%3A00000350_to_00401380 ;
     :hasReturnType "undefined" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bundefined_20_3CRETURN_3E_40_3CUNASSIGNED_3E_5D ;
     :updatedAt "2026-07-29T20:03:45.768Z" ;
     :userEdited "False" .
@@ -68308,7 +68332,7 @@ mkg:__libc_start_main a :ExternalFunctionNode,
         mkg:ref_006100e0_to_EXTERNAL%3A0000001d ;
     :hasReturnType "undefined" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bundefined_20_3CRETURN_3E_40_3CUNASSIGNED_3E_5D ;
     :updatedAt "2026-07-29T20:03:45.783Z" ;
     :userEdited "False" .
@@ -68354,9 +68378,12 @@ mkg:byte_20ptr_20_5BRSI_5D a :Operand ;
 mkg:deregister_tm_clones a :FunctionNode ;
     :atAddress mkg:004013c0,
         "004013c0" ;
-    :belongsToCommunity mkg:2e48df76-c393-4f45-8e63-2128365cfd6d,
+    :belongsToCommunity mkg:177e5605-e1c6-4c79-99f3-7f520e75b99f,
+        mkg:17961754-e99b-437e-a6ea-6e6b2640be0f,
+        mkg:2e48df76-c393-4f45-8e63-2128365cfd6d,
         mkg:6b471009-7224-4ec2-bb3e-b4c2b4eab448,
-        mkg:_init_group_20_286_29 ;
+        mkg:_init_group_20_286_29,
+        mkg:f83e1b65-4ccc-4fc3-a63a-96bea9b1688c ;
     :containsInstruction mkg:ins_004013c0,
         mkg:ins_004013c5,
         mkg:ins_004013c6,
@@ -68586,9 +68613,12 @@ mkg:dword_20ptr_20_5BRSI_20_2B_200x10_5D a :Operand ;
 mkg:frame_dummy a :FunctionNode ;
     :atAddress mkg:00401460,
         "00401460" ;
-    :belongsToCommunity mkg:2e48df76-c393-4f45-8e63-2128365cfd6d,
+    :belongsToCommunity mkg:177e5605-e1c6-4c79-99f3-7f520e75b99f,
+        mkg:17961754-e99b-437e-a6ea-6e6b2640be0f,
+        mkg:2e48df76-c393-4f45-8e63-2128365cfd6d,
         mkg:5d6c46b0-5c4a-47c8-a80a-7a4a22af3f94,
-        mkg:_init_group_20_286_29 ;
+        mkg:_init_group_20_286_29,
+        mkg:f83e1b65-4ccc-4fc3-a63a-96bea9b1688c ;
     :calls mkg:register_tm_clones ;
     :containsInstruction mkg:ins_00401460,
         mkg:ins_00401465,
@@ -68658,9 +68688,12 @@ void frame_dummy(void)
 mkg:getBuild a :FunctionNode ;
     :atAddress mkg:004082f0,
         "004082f0" ;
-    :belongsToCommunity mkg:ab1d2298-4c65-4977-992b-aebb58393636,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:ab1d2298-4c65-4977-992b-aebb58393636,
         mkg:f90fb811-2628-4ab9-90b0-46ab130247a0,
-        mkg:main_group_20_2843_29 ;
+        mkg:main_group_20_2832_29 ;
     :containsInstruction mkg:ins_004082f0,
         mkg:ins_004082f1,
         mkg:ins_004082f4,
@@ -68812,7 +68845,10 @@ mkg:local_9c a :LocalVariable ;
 mkg:printi a :FunctionNode ;
     :atAddress mkg:00408e00,
         "00408e00" ;
-    :belongsToCommunity mkg:ab1d2298-4c65-4977-992b-aebb58393636,
+    :belongsToCommunity mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:551b76ee-8e89-44f3-b79e-71ec0c9ed094,
+        mkg:8e0b2e0c-eabe-45b2-bf7d-dedad1310563,
+        mkg:ab1d2298-4c65-4977-992b-aebb58393636,
         mkg:f90fb811-2628-4ab9-90b0-46ab130247a0,
         mkg:prints_group_20_283_29 ;
     :calls mkg:printchar,
@@ -69599,9 +69635,12 @@ mkg:qword_20ptr_20_5BRSI_5D a :Operand ;
 mkg:readUntil a :FunctionNode ;
     :atAddress mkg:004036c0,
         "004036c0" ;
-    :belongsToCommunity mkg:1b75dce9-70e3-41c0-867a-1882d9545c8f,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:1b75dce9-70e3-41c0-867a-1882d9545c8f,
         mkg:376b8464-c243-4558-925e-c9cb006ba671,
-        mkg:main_group_20_2843_29 ;
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:8e65d4b0-ee60-4226-85d9-b60ae57ee75f,
+        mkg:readUntil_group_20_283_29 ;
     :calls mkg:matchPrompt,
         mkg:negotiate,
         mkg:recv,
@@ -71761,9 +71800,12 @@ mkg:ref__elfSectionHeaders%3A%3A000006d0_to_.comment%3A%3A00000000 a :Reference 
 mkg:register_tm_clones a :FunctionNode ;
     :atAddress mkg:00401400,
         "00401400" ;
-    :belongsToCommunity mkg:2e48df76-c393-4f45-8e63-2128365cfd6d,
+    :belongsToCommunity mkg:177e5605-e1c6-4c79-99f3-7f520e75b99f,
+        mkg:17961754-e99b-437e-a6ea-6e6b2640be0f,
+        mkg:2e48df76-c393-4f45-8e63-2128365cfd6d,
         mkg:5d6c46b0-5c4a-47c8-a80a-7a4a22af3f94,
-        mkg:_init_group_20_286_29 ;
+        mkg:_init_group_20_286_29,
+        mkg:f83e1b65-4ccc-4fc3-a63a-96bea9b1688c ;
     :containsInstruction mkg:ins_00401400,
         mkg:ins_00401405,
         mkg:ins_00401406,
@@ -71863,7 +71905,7 @@ mkg:setsid a :ExternalFunctionNode,
         mkg:ref_006100c8_to_EXTERNAL%3A0000001a ;
     :hasReturnType "typedef __pid_t int" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5B__pid_t_20_3CRETURN_3E_40EAX_3A4_5D ;
     :updatedAt "2026-07-29T20:03:47.575Z" ;
     :userEdited "False" .
@@ -71871,9 +71913,12 @@ mkg:setsid a :ExternalFunctionNode,
 mkg:tcpcsum a :FunctionNode ;
     :atAddress mkg:00403ea0,
         "00403ea0" ;
-    :belongsToCommunity mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
-        mkg:e85f0b60-bb41-4192-8589-ec781e0ac829,
-        mkg:main_group_20_2843_29 ;
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:0fc0d48c-feeb-4189-b035-c10c19f39a1d,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
+        mkg:csum_group_20_288_29,
+        mkg:e85f0b60-bb41-4192-8589-ec781e0ac829 ;
     :calls mkg:csum,
         mkg:free,
         mkg:htons,
@@ -72071,9 +72116,12 @@ undefined2 tcpcsum(long param_1,ulong *param_2)
 mkg:trim a :FunctionNode ;
     :atAddress mkg:004015e0,
         "004015e0" ;
-    :belongsToCommunity mkg:ab1d2298-4c65-4977-992b-aebb58393636,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:ab1d2298-4c65-4977-992b-aebb58393636,
         mkg:f90fb811-2628-4ab9-90b0-46ab130247a0,
-        mkg:main_group_20_2843_29 ;
+        mkg:main_group_20_2832_29 ;
     :calls mkg:isspace,
         mkg:strlen ;
     :containsInstruction mkg:ins_004015e0,
@@ -72329,7 +72377,7 @@ mkg:vfork a :ExternalFunctionNode,
         mkg:ref_00610158_to_EXTERNAL%3A0000002b ;
     :hasReturnType "typedef __pid_t int" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5B__pid_t_20_3CRETURN_3E_40EAX_3A4_5D ;
     :updatedAt "2026-07-29T20:03:46.206Z" ;
     :userEdited "False" .
@@ -72337,9 +72385,12 @@ mkg:vfork a :ExternalFunctionNode,
 mkg:wildString a :FunctionNode ;
     :atAddress mkg:00402720,
         "00402720" ;
-    :belongsToCommunity mkg:ab1d2298-4c65-4977-992b-aebb58393636,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:ab1d2298-4c65-4977-992b-aebb58393636,
         mkg:f90fb811-2628-4ab9-90b0-46ab130247a0,
-        mkg:main_group_20_2843_29 ;
+        mkg:main_group_20_2832_29 ;
     :calls mkg:toupper,
         mkg:wildString ;
     :containsInstruction mkg:ins_00402720,
@@ -72910,9 +72961,12 @@ mkg:_5BRBP_20_2B_200x10_5D a :Operand ;
 mkg:_init a :FunctionNode ;
     :atAddress mkg:00400fd0,
         "00400fd0" ;
-    :belongsToCommunity mkg:2e48df76-c393-4f45-8e63-2128365cfd6d,
+    :belongsToCommunity mkg:177e5605-e1c6-4c79-99f3-7f520e75b99f,
+        mkg:17961754-e99b-437e-a6ea-6e6b2640be0f,
+        mkg:2e48df76-c393-4f45-8e63-2128365cfd6d,
         mkg:5d6c46b0-5c4a-47c8-a80a-7a4a22af3f94,
-        mkg:_init_group_20_286_29 ;
+        mkg:_init_group_20_286_29,
+        mkg:f83e1b65-4ccc-4fc3-a63a-96bea9b1688c ;
     :calls mkg:__gmon_start__ ;
     :containsInstruction mkg:ins_00400fd0,
         mkg:ins_00400fd4,
@@ -73057,7 +73111,7 @@ mkg:chdir a :ExternalFunctionNode,
         mkg:ref_00610068_to_EXTERNAL%3A0000000e ;
     :hasReturnType "int" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bint_20_3CRETURN_3E_40EAX_3A4_5D ;
     :updatedAt "2026-07-29T20:03:47.575Z" ;
     :userEdited "False" .
@@ -73135,9 +73189,12 @@ mkg:dword_20ptr_20_5BRBP_20_2B_200x10_5D a :Operand ;
 mkg:fdpclose a :FunctionNode ;
     :atAddress mkg:00402430,
         "00402430" ;
-    :belongsToCommunity mkg:ab1d2298-4c65-4977-992b-aebb58393636,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:ab1d2298-4c65-4977-992b-aebb58393636,
         mkg:f90fb811-2628-4ab9-90b0-46ab130247a0,
-        mkg:main_group_20_2843_29 ;
+        mkg:main_group_20_2832_29 ;
     :calls mkg:__errno_location,
         mkg:close,
         mkg:sigaddset,
@@ -73449,9 +73506,12 @@ int fdpclose(int param_1)
 mkg:fdpopen a :FunctionNode ;
     :atAddress mkg:004021f0,
         "004021f0" ;
-    :belongsToCommunity mkg:ab1d2298-4c65-4977-992b-aebb58393636,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:ab1d2298-4c65-4977-992b-aebb58393636,
         mkg:f90fb811-2628-4ab9-90b0-46ab130247a0,
-        mkg:main_group_20_2843_29 ;
+        mkg:main_group_20_2832_29 ;
     :calls mkg:_exit,
         mkg:close,
         mkg:dup2,
@@ -73946,9 +74006,12 @@ int fdpopen(undefined8 param_1,char *param_2)
 mkg:getBogos a :FunctionNode ;
     :atAddress mkg:00402950,
         "00402950" ;
-    :belongsToCommunity mkg:ab1d2298-4c65-4977-992b-aebb58393636,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:ab1d2298-4c65-4977-992b-aebb58393636,
         mkg:f90fb811-2628-4ab9-90b0-46ab130247a0,
-        mkg:main_group_20_2843_29 ;
+        mkg:main_group_20_2832_29 ;
     :calls mkg:close,
         mkg:fdgets,
         mkg:memset,
@@ -74350,9 +74413,12 @@ undefined4 getBogos(char *param_1)
 mkg:getCores a :FunctionNode ;
     :atAddress mkg:00402b90,
         "00402b90" ;
-    :belongsToCommunity mkg:ab1d2298-4c65-4977-992b-aebb58393636,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:ab1d2298-4c65-4977-992b-aebb58393636,
         mkg:f90fb811-2628-4ab9-90b0-46ab130247a0,
-        mkg:main_group_20_2843_29 ;
+        mkg:main_group_20_2832_29 ;
     :calls mkg:close,
         mkg:fdgets,
         mkg:memset,
@@ -74530,9 +74596,12 @@ int getCores(void)
 mkg:getRandomIP a :FunctionNode ;
     :atAddress mkg:00403db0,
         "00403db0" ;
-    :belongsToCommunity mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
-        mkg:e85f0b60-bb41-4192-8589-ec781e0ac829,
-        mkg:main_group_20_2843_29 ;
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:0fc0d48c-feeb-4189-b035-c10c19f39a1d,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
+        mkg:csum_group_20_288_29,
+        mkg:e85f0b60-bb41-4192-8589-ec781e0ac829 ;
     :calls mkg:ntohl,
         mkg:rand_cmwc ;
     :containsInstruction mkg:ins_00403db0,
@@ -74656,7 +74725,7 @@ mkg:getpid a :ExternalFunctionNode,
         mkg:ref_00610050_to_EXTERNAL%3A0000000b ;
     :hasReturnType "typedef __pid_t int" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5B__pid_t_20_3CRETURN_3E_40EAX_3A4_5D ;
     :updatedAt "2026-07-29T20:03:47.394Z" ;
     :userEdited "False" .
@@ -74664,9 +74733,12 @@ mkg:getpid a :ExternalFunctionNode,
 mkg:initConnection a :FunctionNode ;
     :atAddress mkg:00407f00,
         "00407f00" ;
-    :belongsToCommunity mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
         mkg:e85f0b60-bb41-4192-8589-ec781e0ac829,
-        mkg:main_group_20_2843_29 ;
+        mkg:main_group_20_2832_29 ;
     :calls mkg:atoi,
         mkg:close,
         mkg:connectTimeout,
@@ -74934,9 +75006,12 @@ bool initConnection(void)
 mkg:init_rand a :FunctionNode ;
     :atAddress mkg:00401490,
         "00401490" ;
-    :belongsToCommunity mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:0fc0d48c-feeb-4189-b035-c10c19f39a1d,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
         mkg:e85f0b60-bb41-4192-8589-ec781e0ac829,
-        mkg:main_group_20_2843_29 ;
+        mkg:main_group_20_2832_29 ;
     :containsInstruction mkg:ins_00401490,
         mkg:ins_00401491,
         mkg:ins_00401494,
@@ -75084,7 +75159,7 @@ mkg:isspace a :ExternalFunctionNode,
         mkg:ref_006100d0_to_EXTERNAL%3A0000001b ;
     :hasReturnType "int" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bint_20_3CRETURN_3E_40EAX_3A4_5D ;
     :updatedAt "2026-07-29T20:03:45.910Z" ;
     :userEdited "False" .
@@ -75092,9 +75167,12 @@ mkg:isspace a :ExternalFunctionNode,
 mkg:listFork a :FunctionNode ;
     :atAddress mkg:004032c0,
         "004032c0" ;
-    :belongsToCommunity mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
         mkg:e85f0b60-bb41-4192-8589-ec781e0ac829,
-        mkg:main_group_20_2843_29 ;
+        mkg:main_group_20_2832_29 ;
     :calls mkg:fork,
         mkg:free,
         mkg:malloc ;
@@ -75350,9 +75428,12 @@ mkg:local_90 a :LocalVariable ;
 mkg:main a :FunctionNode ;
     :atAddress mkg:00408300,
         "00408300" ;
-    :belongsToCommunity mkg:ab1d2298-4c65-4977-992b-aebb58393636,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:ab1d2298-4c65-4977-992b-aebb58393636,
         mkg:f90fb811-2628-4ab9-90b0-46ab130247a0,
-        mkg:main_group_20_2843_29 ;
+        mkg:main_group_20_2832_29 ;
     :calls mkg:chdir,
         mkg:exit,
         mkg:fdgets,
@@ -76823,9 +76904,12 @@ void main(undefined4 param_1,undefined8 param_2)
 mkg:makeIPPacket a :FunctionNode ;
     :atAddress mkg:00403f60,
         "00403f60" ;
-    :belongsToCommunity mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
-        mkg:e85f0b60-bb41-4192-8589-ec781e0ac829,
-        mkg:main_group_20_2843_29 ;
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:0fc0d48c-feeb-4189-b035-c10c19f39a1d,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
+        mkg:csum_group_20_288_29,
+        mkg:e85f0b60-bb41-4192-8589-ec781e0ac829 ;
     :calls mkg:rand_cmwc ;
     :containsInstruction mkg:ins_00403f60,
         mkg:ins_00403f61,
@@ -77000,9 +77084,12 @@ void makeIPPacket(byte *param_1,undefined4 param_2,undefined4 param_3,byte param
 mkg:makeRandomStr a :FunctionNode ;
     :atAddress mkg:00402c50,
         "00402c50" ;
-    :belongsToCommunity mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
-        mkg:e85f0b60-bb41-4192-8589-ec781e0ac829,
-        mkg:main_group_20_2843_29 ;
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:0fc0d48c-feeb-4189-b035-c10c19f39a1d,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
+        mkg:csum_group_20_288_29,
+        mkg:e85f0b60-bb41-4192-8589-ec781e0ac829 ;
     :calls mkg:rand_cmwc ;
     :containsInstruction mkg:ins_00402c50,
         mkg:ins_00402c51,
@@ -77114,9 +77201,12 @@ void makeRandomStr(long param_1,int param_2)
 mkg:matchPrompt a :FunctionNode ;
     :atAddress mkg:00403530,
         "00403530" ;
-    :belongsToCommunity mkg:1b75dce9-70e3-41c0-867a-1882d9545c8f,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:1b75dce9-70e3-41c0-867a-1882d9545c8f,
         mkg:376b8464-c243-4558-925e-c9cb006ba671,
-        mkg:main_group_20_2843_29 ;
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:8e65d4b0-ee60-4226-85d9-b60ae57ee75f,
+        mkg:readUntil_group_20_283_29 ;
     :calls mkg:strlen ;
     :containsInstruction mkg:ins_00403530,
         mkg:ins_00403531,
@@ -77459,7 +77549,7 @@ mkg:ntohl a :ExternalFunctionNode,
         mkg:ref_00610180_to_EXTERNAL%3A00000030 ;
     :hasReturnType "typedef uint32_t uint" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Buint32_t_20_3CRETURN_3E_40EAX_3A4_5D ;
     :updatedAt "2026-07-29T20:03:46.553Z" ;
     :userEdited "False" .
@@ -77487,7 +77577,7 @@ mkg:pipe a :ExternalFunctionNode,
         mkg:ref_006100c0_to_EXTERNAL%3A00000019 ;
     :hasReturnType "int" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bint_20_3CRETURN_3E_40EAX_3A4_5D ;
     :updatedAt "2026-07-29T20:03:46.205Z" ;
     :userEdited "False" .
@@ -77516,7 +77606,7 @@ mkg:printf a :ExternalFunctionNode,
         mkg:ref_00610090_to_EXTERNAL%3A00000013 ;
     :hasReturnType "int" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bint_20_3CRETURN_3E_40EAX_3A4_5D ;
     :updatedAt "2026-07-29T20:03:47.610Z" ;
     :userEdited "False" .
@@ -77524,7 +77614,10 @@ mkg:printf a :ExternalFunctionNode,
 mkg:prints a :FunctionNode ;
     :atAddress mkg:00408ca0,
         "00408ca0" ;
-    :belongsToCommunity mkg:ab1d2298-4c65-4977-992b-aebb58393636,
+    :belongsToCommunity mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:551b76ee-8e89-44f3-b79e-71ec0c9ed094,
+        mkg:8e0b2e0c-eabe-45b2-bf7d-dedad1310563,
+        mkg:ab1d2298-4c65-4977-992b-aebb58393636,
         mkg:f90fb811-2628-4ab9-90b0-46ab130247a0,
         mkg:prints_group_20_283_29 ;
     :calls mkg:printchar ;
@@ -77900,7 +77993,7 @@ mkg:rand a :ExternalFunctionNode,
         mkg:ref_006101b8_to_EXTERNAL%3A00000037 ;
     :hasReturnType "int" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bint_20_3CRETURN_3E_40EAX_3A4_5D ;
     :updatedAt "2026-07-29T20:03:46.508Z" ;
     :userEdited "False" .
@@ -77908,9 +78001,12 @@ mkg:rand a :ExternalFunctionNode,
 mkg:recvLine a :FunctionNode ;
     :atAddress mkg:00402cb0,
         "00402cb0" ;
-    :belongsToCommunity mkg:ab1d2298-4c65-4977-992b-aebb58393636,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:ab1d2298-4c65-4977-992b-aebb58393636,
         mkg:f90fb811-2628-4ab9-90b0-46ab130247a0,
-        mkg:main_group_20_2843_29 ;
+        mkg:main_group_20_2832_29 ;
     :calls mkg:memset,
         mkg:recv,
         mkg:select,
@@ -78485,121 +78581,6 @@ int recvLine(int param_1,char *param_2,int param_3)
     :updatedAt "2026-07-29T20:03:46.350Z" ;
     :userEdited "False" .
 
-mkg:sclose a :FunctionNode ;
-    :atAddress mkg:00404010,
-        "00404010" ;
-    :belongsToCommunity mkg:376b8464-c243-4558-925e-c9cb006ba671,
-        mkg:ab1d2298-4c65-4977-992b-aebb58393636,
-        mkg:main_group_20_2843_29 ;
-    :calls mkg:close ;
-    :containsInstruction mkg:ins_00404010,
-        mkg:ins_00404011,
-        mkg:ins_00404014,
-        mkg:ins_00404018,
-        mkg:ins_0040401d,
-        mkg:ins_00404020,
-        mkg:ins_00404023,
-        mkg:ins_00404029,
-        mkg:ins_00404030,
-        mkg:ins_00404035,
-        mkg:ins_00404038,
-        mkg:ins_0040403d,
-        mkg:ins_00404044,
-        mkg:ins_00404047,
-        mkg:ins_0040404a,
-        mkg:ins_0040404e,
-        mkg:ins_0040404f ;
-    :createdAt "2026-07-29T20:03:46.537Z" ;
-    :definedIn mkg:Global ;
-    :defines mkg:local_10,
-        mkg:local_14,
-        mkg:local_c ;
-    :hasActivityProfile "MIXED_IO" ;
-    :hasAnalysisDepth "0" ;
-    :hasBinaryID "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e" ;
-    :hasDecompiledCode """
-bool sclose(int param_1)
-
-{
-  if (2 < param_1) {
-    close(param_1);
-  }
-  return 2 >= param_1;
-}
-
-""" ;
-    :hasDisassembly """.text:0000000000404010  PUSH RBP
-.text:0000000000404011  MOV RBP,RSP
-.text:0000000000404014  SUB RSP,0x10
-.text:0000000000404018  MOV EAX,0x3
-.text:000000000040401d  MOV dword ptr [RBP + -0x8],EDI
-.text:0000000000404020  CMP EAX,dword ptr [RBP + -0x8]
-.text:0000000000404023  JLE 0x00404035
-.text:0000000000404029  MOV dword ptr [RBP + -0x4],0x1
-.text:0000000000404030  JMP 0x00404047
-.text:0000000000404035  MOV EDI,dword ptr [RBP + -0x8]
-.text:0000000000404038  CALL 0x00401170
-.text:000000000040403d  MOV dword ptr [RBP + -0x4],0x0
-.text:0000000000404044  MOV dword ptr [RBP + -0xc],EAX
-.text:0000000000404047  MOV EAX,dword ptr [RBP + -0x4]
-.text:000000000040404a  ADD RSP,0x10
-.text:000000000040404e  POP RBP
-.text:000000000040404f  RET
-""" ;
-    :hasFileIOAPI "close" ;
-    :hasID "6988585f-86b3-41ab-8113-753f4046f652" ;
-    :hasName "sclose" ;
-    :hasNetworkAPI "close" ;
-    :hasPrimaryReference mkg:ref_00405c9b_to_00404010 ;
-    :hasRawContent """
-bool sclose(int param_1)
-
-{
-  if (2 < param_1) {
-    close(param_1);
-  }
-  return 2 >= param_1;
-}
-
-""" ;
-    :hasReference mkg:ref_004045dc_to_00404010,
-        mkg:ref_00404804_to_00404010,
-        mkg:ref_00404933_to_00404010,
-        mkg:ref_004049ba_to_00404010,
-        mkg:ref_00404ba5_to_00404010,
-        mkg:ref_00404c90_to_00404010,
-        mkg:ref_00404d1a_to_00404010,
-        mkg:ref_00404f2f_to_00404010,
-        mkg:ref_00404fea_to_00404010,
-        mkg:ref_004050d5_to_00404010,
-        mkg:ref_0040515f_to_00404010,
-        mkg:ref_0040530f_to_00404010,
-        mkg:ref_004053a7_to_00404010,
-        mkg:ref_004054a1_to_00404010,
-        mkg:ref_0040552b_to_00404010,
-        mkg:ref_004055d0_to_00404010,
-        mkg:ref_0040580b_to_00404010,
-        mkg:ref_004058c6_to_00404010,
-        mkg:ref_00405950_to_00404010,
-        mkg:ref_004059f5_to_00404010,
-        mkg:ref_00405bbb_to_00404010,
-        mkg:ref_00405c9b_to_00404010,
-        mkg:ref_00409d0c_to_00404010,
-        mkg:ref_0040a188_to_00404010,
-        mkg:ref_Entry%20Point_to_00404010 ;
-    :hasReturnType "undefined" ;
-    :hasRiskLevel "MEDIUM" ;
-    :hasSecurityFlag "FILE_IO_CAPABLE",
-        "MEDIUM_RISK",
-        "NETWORK_CAPABLE",
-        "POTENTIAL_DATA_EXFILTRATION" ;
-    :hasSignature "55 48 89 E5 48 ? ? ? B8 ? ? ? ? 89 ? ? 3B ? ? 0F ? ? ? ? ? C7 45 FC ? ? ? ? E9 ? ? ? ? 8B ? ? E8 ? ? ? ? C7 45 FC ? ? ? ? 89 ? ? 8B ? ? 48 ? ? ? 5D C3" ;
-    :hasSummaryConfidence "0.0" ;
-    :isStale "True" ;
-    :returns mkg:_5Bundefined_20_3CRETURN_3E_40_3CUNASSIGNED_3E_5D ;
-    :updatedAt "2026-07-29T20:03:46.537Z" ;
-    :userEdited "False" .
-
 mkg:sigemptyset a :ExternalFunctionNode,
         :FunctionNode ;
     :atAddress mkg:00401220,
@@ -78623,7 +78604,7 @@ mkg:sigemptyset a :ExternalFunctionNode,
         mkg:ref_00610110_to_EXTERNAL%3A00000023 ;
     :hasReturnType "int" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bint_20_3CRETURN_3E_40EAX_3A4_5D ;
     :updatedAt "2026-07-29T20:03:46.215Z" ;
     :userEdited "False" .
@@ -78652,7 +78633,7 @@ mkg:sleep a :ExternalFunctionNode,
         mkg:ref_00610190_to_EXTERNAL%3A00000032 ;
     :hasReturnType "uint" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Buint_20_3CRETURN_3E_40EAX_3A4_5D ;
     :updatedAt "2026-07-29T20:03:47.611Z" ;
     :userEdited "False" .
@@ -78660,9 +78641,12 @@ mkg:sleep a :ExternalFunctionNode,
 mkg:szprintf a :FunctionNode ;
     :atAddress mkg:00401e60,
         "00401e60" ;
-    :belongsToCommunity mkg:ab1d2298-4c65-4977-992b-aebb58393636,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:ab1d2298-4c65-4977-992b-aebb58393636,
         mkg:f90fb811-2628-4ab9-90b0-46ab130247a0,
-        mkg:main_group_20_2843_29 ;
+        mkg:main_group_20_2832_29 ;
     :calls mkg:print ;
     :containsInstruction mkg:ins_00401e60,
         mkg:ins_00401e61,
@@ -78948,9 +78932,12 @@ void szprintf(undefined4 param_1,undefined4 param_2,undefined4 param_3,undefined
 mkg:uppercase a :FunctionNode ;
     :atAddress mkg:00402900,
         "00402900" ;
-    :belongsToCommunity mkg:ab1d2298-4c65-4977-992b-aebb58393636,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:ab1d2298-4c65-4977-992b-aebb58393636,
         mkg:f90fb811-2628-4ab9-90b0-46ab130247a0,
-        mkg:main_group_20_2843_29 ;
+        mkg:main_group_20_2832_29 ;
     :calls mkg:toupper ;
     :containsInstruction mkg:ins_00402900,
         mkg:ins_00402901,
@@ -79703,7 +79690,7 @@ mkg:_exit a :ExternalFunctionNode,
         mkg:ref_00610020_to_EXTERNAL%3A00000005 ;
     :hasReturnType "void" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bvoid_20_3CRETURN_3E_40_3CVOID_3E_5D ;
     :updatedAt "2026-07-29T20:03:46.207Z" ;
     :userEdited "False" .
@@ -79762,7 +79749,7 @@ mkg:atoi a :ExternalFunctionNode,
         mkg:ref_00610168_to_EXTERNAL%3A0000002d ;
     :hasReturnType "int" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bint_20_3CRETURN_3E_40EAX_3A4_5D ;
     :updatedAt "2026-07-29T20:03:47.393Z" ;
     :userEdited "False" .
@@ -79805,9 +79792,12 @@ mkg:byte_20ptr_20_5BRDX_20_2B_20RCX_2A0x1_5D a :Operand ;
 mkg:connectTimeout a :FunctionNode ;
     :atAddress mkg:00402fe0,
         "00402fe0" ;
-    :belongsToCommunity mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
         mkg:e85f0b60-bb41-4192-8589-ec781e0ac829,
-        mkg:main_group_20_2843_29 ;
+        mkg:main_group_20_2832_29 ;
     :calls mkg:__errno_location,
         mkg:connect,
         mkg:fcntl,
@@ -80321,9 +80311,12 @@ undefined4 connectTimeout(int param_1,undefined8 param_2,undefined4 param_3,int 
 mkg:csum a :FunctionNode ;
     :atAddress mkg:00403df0,
         "00403df0" ;
-    :belongsToCommunity mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
-        mkg:e85f0b60-bb41-4192-8589-ec781e0ac829,
-        mkg:main_group_20_2843_29 ;
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:0fc0d48c-feeb-4189-b035-c10c19f39a1d,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
+        mkg:csum_group_20_288_29,
+        mkg:e85f0b60-bb41-4192-8589-ec781e0ac829 ;
     :containsInstruction mkg:ins_00403df0,
         mkg:ins_00403df1,
         mkg:ins_00403df4,
@@ -80509,7 +80502,7 @@ mkg:dup2 a :ExternalFunctionNode,
         mkg:ref_00610078_to_EXTERNAL%3A00000010 ;
     :hasReturnType "int" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bint_20_3CRETURN_3E_40EAX_3A4_5D ;
     :updatedAt "2026-07-29T20:03:46.207Z" ;
     :userEdited "False" .
@@ -80586,7 +80579,7 @@ mkg:execl a :ExternalFunctionNode,
         mkg:ref_00610188_to_EXTERNAL%3A00000031 ;
     :hasReturnType "int" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bint_20_3CRETURN_3E_40EAX_3A4_5D ;
     :updatedAt "2026-07-29T20:03:46.207Z" ;
     :userEdited "False" .
@@ -80618,7 +80611,7 @@ mkg:exit a :ExternalFunctionNode,
         mkg:ref_00610170_to_EXTERNAL%3A0000002e ;
     :hasReturnType "void" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bvoid_20_3CRETURN_3E_40_3CVOID_3E_5D ;
     :updatedAt "2026-07-29T20:03:47.394Z" ;
     :userEdited "False" .
@@ -80649,7 +80642,7 @@ mkg:fork a :ExternalFunctionNode,
         mkg:ref_006101a0_to_EXTERNAL%3A00000034 ;
     :hasReturnType "typedef __pid_t int" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5B__pid_t_20_3CRETURN_3E_40EAX_3A4_5D ;
     :updatedAt "2026-07-29T20:03:46.391Z" ;
     :userEdited "False" .
@@ -80658,9 +80651,12 @@ mkg:getOurIP a :FunctionNode ;
     :atAddress mkg:00408080,
         mkg:_5B_278_8_8_8_27_5D,
         "00408080" ;
-    :belongsToCommunity mkg:ab1d2298-4c65-4977-992b-aebb58393636,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:ab1d2298-4c65-4977-992b-aebb58393636,
         mkg:f90fb811-2628-4ab9-90b0-46ab130247a0,
-        mkg:main_group_20_2843_29 ;
+        mkg:main_group_20_2832_29 ;
     :calls mkg:close,
         mkg:connect,
         mkg:fdgets,
@@ -81118,9 +81114,12 @@ LAB_0040821c:
 mkg:getRandomPublicIP a :FunctionNode ;
     :atAddress mkg:004039a0,
         "004039a0" ;
-    :belongsToCommunity mkg:ab1d2298-4c65-4977-992b-aebb58393636,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:ab1d2298-4c65-4977-992b-aebb58393636,
         mkg:f90fb811-2628-4ab9-90b0-46ab130247a0,
-        mkg:main_group_20_2843_29 ;
+        mkg:main_group_20_2832_29 ;
     :calls mkg:inet_addr,
         mkg:memset,
         mkg:rand,
@@ -81743,7 +81742,7 @@ mkg:htonl a :ExternalFunctionNode,
         mkg:ref_00610098_to_EXTERNAL%3A00000014 ;
     :hasReturnType "typedef uint32_t uint" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Buint32_t_20_3CRETURN_3E_40EAX_3A4_5D ;
     :updatedAt "2026-07-29T20:03:46.689Z" ;
     :userEdited "False" .
@@ -81755,12 +81754,14 @@ mkg:inet_ntoa a :ExternalFunctionNode,
         mkg:EXTERNAL_3A0000000c ;
     :calls mkg:inet_ntoa ;
     :containsInstruction mkg:ins_004010b0 ;
-    :createdAt "2026-07-29T20:03:47.392Z" ;
+    :createdAt "2026-07-29T20:03:47.392Z",
+        "2026-07-31T13:44:23.821Z" ;
     :definedIn mkg:_3CEXTERNAL_3E ;
     :hasAnalysisDepth "0" ;
     :hasBinaryID "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e" ;
     :hasDecompiledCode "// External function: inet_ntoa" ;
-    :hasID "01aea82a-5e2f-43c3-84bf-3ff3efb2590b" ;
+    :hasID "01aea82a-5e2f-43c3-84bf-3ff3efb2590b",
+        "327fcf27-d7af-4578-bded-2a990e31ae94" ;
     :hasName "inet_ntoa" ;
     :hasPrimaryReference mkg:ref_004010b0_to_00610058,
         mkg:ref_00407383_to_004010b0 ;
@@ -81773,9 +81774,11 @@ mkg:inet_ntoa a :ExternalFunctionNode,
         mkg:ref_00610058_to_EXTERNAL%3A0000000c ;
     :hasReturnType "char *" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "False",
+        "True" ;
     :returns mkg:_5Bchar_20_2A_20_3CRETURN_3E_40RAX_3A8_5D ;
-    :updatedAt "2026-07-29T20:03:47.392Z" ;
+    :updatedAt "2026-07-29T20:03:47.392Z",
+        "2026-07-31T13:44:23.821Z" ;
     :userEdited "False" .
 
 mkg:ioctl a :ExternalFunctionNode,
@@ -81801,7 +81804,7 @@ mkg:ioctl a :ExternalFunctionNode,
         mkg:ref_006100a8_to_EXTERNAL%3A00000016 ;
     :hasReturnType "int" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bint_20_3CRETURN_3E_40EAX_3A4_5D ;
     :updatedAt "2026-07-29T20:03:47.448Z" ;
     :userEdited "False" .
@@ -81830,7 +81833,7 @@ mkg:kill a :ExternalFunctionNode,
         mkg:ref_00610120_to_EXTERNAL%3A00000024 ;
     :hasReturnType "int" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bint_20_3CRETURN_3E_40EAX_3A4_5D ;
     :updatedAt "2026-07-29T20:03:47.392Z" ;
     :userEdited "False" .
@@ -81877,9 +81880,12 @@ mkg:local_fc a :LocalVariable ;
 mkg:negotiate a :FunctionNode ;
     :atAddress mkg:004033b0,
         "004033b0" ;
-    :belongsToCommunity mkg:1b75dce9-70e3-41c0-867a-1882d9545c8f,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:1b75dce9-70e3-41c0-867a-1882d9545c8f,
         mkg:376b8464-c243-4558-925e-c9cb006ba671,
-        mkg:main_group_20_2843_29 ;
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:8e65d4b0-ee60-4226-85d9-b60ae57ee75f,
+        mkg:readUntil_group_20_283_29 ;
     :calls mkg:send ;
     :containsInstruction mkg:ins_004033b0,
         mkg:ins_004033b1,
@@ -82179,9 +82185,12 @@ undefined4 negotiate(int param_1,long param_2,undefined4 param_3)
 mkg:print a :FunctionNode ;
     :atAddress mkg:00401850,
         "00401850" ;
-    :belongsToCommunity mkg:ab1d2298-4c65-4977-992b-aebb58393636,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:ab1d2298-4c65-4977-992b-aebb58393636,
         mkg:f90fb811-2628-4ab9-90b0-46ab130247a0,
-        mkg:main_group_20_2843_29 ;
+        mkg:main_group_20_2832_29 ;
     :calls mkg:printchar,
         mkg:printi,
         mkg:prints ;
@@ -83286,9 +83295,12 @@ LAB_00401e01:
 mkg:processCmd a :FunctionNode ;
     :atAddress mkg:00407300,
         "00407300" ;
-    :belongsToCommunity mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
         mkg:e85f0b60-bb41-4192-8589-ec781e0ac829,
-        mkg:main_group_20_2843_29 ;
+        mkg:main_group_20_2832_29 ;
     :calls mkg:StartTheLelz,
         mkg:_exit,
         mkg:atoi,
@@ -85335,12 +85347,133 @@ mkg:qword_20ptr_20_5BRBP_20_2B_20-0x48_5D a :Operand ;
         "REGISTER" ;
     :hasOperandValue "qword ptr [RBP + -0x48]" .
 
+mkg:sclose a :FunctionNode ;
+    :atAddress mkg:00404010,
+        "00404010" ;
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:376b8464-c243-4558-925e-c9cb006ba671,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:ab1d2298-4c65-4977-992b-aebb58393636,
+        mkg:main_group_20_2832_29 ;
+    :calls mkg:close ;
+    :containsInstruction mkg:ins_00404010,
+        mkg:ins_00404011,
+        mkg:ins_00404014,
+        mkg:ins_00404018,
+        mkg:ins_0040401d,
+        mkg:ins_00404020,
+        mkg:ins_00404023,
+        mkg:ins_00404029,
+        mkg:ins_00404030,
+        mkg:ins_00404035,
+        mkg:ins_00404038,
+        mkg:ins_0040403d,
+        mkg:ins_00404044,
+        mkg:ins_00404047,
+        mkg:ins_0040404a,
+        mkg:ins_0040404e,
+        mkg:ins_0040404f ;
+    :createdAt "2026-07-29T20:03:46.537Z" ;
+    :definedIn mkg:Global ;
+    :defines mkg:local_10,
+        mkg:local_14,
+        mkg:local_c ;
+    :hasActivityProfile "MIXED_IO" ;
+    :hasAnalysisDepth "0" ;
+    :hasBinaryID "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e" ;
+    :hasDecompiledCode """
+bool sclose(int param_1)
+
+{
+  if (2 < param_1) {
+    close(param_1);
+  }
+  return 2 >= param_1;
+}
+
+""" ;
+    :hasDisassembly """.text:0000000000404010  PUSH RBP
+.text:0000000000404011  MOV RBP,RSP
+.text:0000000000404014  SUB RSP,0x10
+.text:0000000000404018  MOV EAX,0x3
+.text:000000000040401d  MOV dword ptr [RBP + -0x8],EDI
+.text:0000000000404020  CMP EAX,dword ptr [RBP + -0x8]
+.text:0000000000404023  JLE 0x00404035
+.text:0000000000404029  MOV dword ptr [RBP + -0x4],0x1
+.text:0000000000404030  JMP 0x00404047
+.text:0000000000404035  MOV EDI,dword ptr [RBP + -0x8]
+.text:0000000000404038  CALL 0x00401170
+.text:000000000040403d  MOV dword ptr [RBP + -0x4],0x0
+.text:0000000000404044  MOV dword ptr [RBP + -0xc],EAX
+.text:0000000000404047  MOV EAX,dword ptr [RBP + -0x4]
+.text:000000000040404a  ADD RSP,0x10
+.text:000000000040404e  POP RBP
+.text:000000000040404f  RET
+""" ;
+    :hasFileIOAPI "close" ;
+    :hasID "6988585f-86b3-41ab-8113-753f4046f652" ;
+    :hasName "sclose" ;
+    :hasNetworkAPI "close" ;
+    :hasPrimaryReference mkg:ref_00405c9b_to_00404010 ;
+    :hasRawContent """
+bool sclose(int param_1)
+
+{
+  if (2 < param_1) {
+    close(param_1);
+  }
+  return 2 >= param_1;
+}
+
+""" ;
+    :hasReference mkg:ref_004045dc_to_00404010,
+        mkg:ref_00404804_to_00404010,
+        mkg:ref_00404933_to_00404010,
+        mkg:ref_004049ba_to_00404010,
+        mkg:ref_00404ba5_to_00404010,
+        mkg:ref_00404c90_to_00404010,
+        mkg:ref_00404d1a_to_00404010,
+        mkg:ref_00404f2f_to_00404010,
+        mkg:ref_00404fea_to_00404010,
+        mkg:ref_004050d5_to_00404010,
+        mkg:ref_0040515f_to_00404010,
+        mkg:ref_0040530f_to_00404010,
+        mkg:ref_004053a7_to_00404010,
+        mkg:ref_004054a1_to_00404010,
+        mkg:ref_0040552b_to_00404010,
+        mkg:ref_004055d0_to_00404010,
+        mkg:ref_0040580b_to_00404010,
+        mkg:ref_004058c6_to_00404010,
+        mkg:ref_00405950_to_00404010,
+        mkg:ref_004059f5_to_00404010,
+        mkg:ref_00405bbb_to_00404010,
+        mkg:ref_00405c9b_to_00404010,
+        mkg:ref_00409d0c_to_00404010,
+        mkg:ref_0040a188_to_00404010,
+        mkg:ref_Entry%20Point_to_00404010 ;
+    :hasReturnType "undefined" ;
+    :hasRiskLevel "MEDIUM" ;
+    :hasSecurityFlag "FILE_IO_CAPABLE",
+        "MEDIUM_RISK",
+        "NETWORK_CAPABLE",
+        "POTENTIAL_DATA_EXFILTRATION" ;
+    :hasSignature "55 48 89 E5 48 ? ? ? B8 ? ? ? ? 89 ? ? 3B ? ? 0F ? ? ? ? ? C7 45 FC ? ? ? ? E9 ? ? ? ? 8B ? ? E8 ? ? ? ? C7 45 FC ? ? ? ? 89 ? ? 8B ? ? 48 ? ? ? 5D C3" ;
+    :hasSummaryConfidence "0.0" ;
+    :isStale "True" ;
+    :returns mkg:_5Bundefined_20_3CRETURN_3E_40_3CUNASSIGNED_3E_5D ;
+    :updatedAt "2026-07-29T20:03:46.537Z" ;
+    :userEdited "False" .
+
 mkg:sendHOLD a :FunctionNode ;
     :atAddress mkg:00406d50,
         "00406d50" ;
-    :belongsToCommunity mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
         mkg:e85f0b60-bb41-4192-8589-ec781e0ac829,
-        mkg:main_group_20_2843_29 ;
+        mkg:main_group_20_2832_29 ;
     :calls mkg:__errno_location,
         mkg:close,
         mkg:connect,
@@ -86493,9 +86626,12 @@ LAB_004072d5:
 mkg:sendJUNK a :FunctionNode ;
     :atAddress mkg:00406860,
         "00406860" ;
-    :belongsToCommunity mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
         mkg:e85f0b60-bb41-4192-8589-ec781e0ac829,
-        mkg:main_group_20_2843_29 ;
+        mkg:main_group_20_2832_29 ;
     :calls mkg:__errno_location,
         mkg:close,
         mkg:connect,
@@ -87537,9 +87673,12 @@ LAB_00406d2b:
 mkg:sendTCP a :FunctionNode ;
     :atAddress mkg:00406240,
         "00406240" ;
-    :belongsToCommunity mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
-        mkg:e85f0b60-bb41-4192-8589-ec781e0ac829,
-        mkg:main_group_20_2843_29 ;
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:0fc0d48c-feeb-4189-b035-c10c19f39a1d,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
+        mkg:csum_group_20_288_29,
+        mkg:e85f0b60-bb41-4192-8589-ec781e0ac829 ;
     :calls mkg:csum,
         mkg:getHost,
         mkg:getRandomIP,
@@ -88884,9 +89023,12 @@ ssize_t * sendTCP(undefined8 param_1,int param_2,int param_3,int param_4,char *p
 mkg:sendUDP a :FunctionNode ;
     :atAddress mkg:00405cf0,
         "00405cf0" ;
-    :belongsToCommunity mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
-        mkg:e85f0b60-bb41-4192-8589-ec781e0ac829,
-        mkg:main_group_20_2843_29 ;
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:0fc0d48c-feeb-4189-b035-c10c19f39a1d,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
+        mkg:csum_group_20_288_29,
+        mkg:e85f0b60-bb41-4192-8589-ec781e0ac829 ;
     :calls mkg:csum,
         mkg:getHost,
         mkg:getRandomIP,
@@ -90150,7 +90292,7 @@ mkg:sigaddset a :ExternalFunctionNode,
         mkg:ref_00610198_to_EXTERNAL%3A00000033 ;
     :hasReturnType "int" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bint_20_3CRETURN_3E_40EAX_3A4_5D ;
     :updatedAt "2026-07-29T20:03:46.215Z" ;
     :userEdited "False" .
@@ -90178,7 +90320,7 @@ mkg:signal a :ExternalFunctionNode,
         mkg:ref_00610108_to_EXTERNAL%3A00000022 ;
     :hasReturnType "typedef __sighandler_t __sighandler_t *" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5B__sighandler_t_20_3CRETURN_3E_40RAX_3A8_5D ;
     :updatedAt "2026-07-29T20:03:47.575Z" ;
     :userEdited "False" .
@@ -90207,7 +90349,7 @@ mkg:srand a :ExternalFunctionNode,
         mkg:ref_006100e8_to_EXTERNAL%3A0000001e ;
     :hasReturnType "void" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bvoid_20_3CRETURN_3E_40_3CVOID_3E_5D ;
     :updatedAt "2026-07-29T20:03:46.688Z" ;
     :userEdited "False" .
@@ -90242,9 +90384,12 @@ mkg:xmmword_20ptr_20_5BRBP_20_2B_20-0xf0_5D a :Operand ;
 mkg:zprintf a :FunctionNode ;
     :atAddress mkg:004016e0,
         "004016e0" ;
-    :belongsToCommunity mkg:ab1d2298-4c65-4977-992b-aebb58393636,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:ab1d2298-4c65-4977-992b-aebb58393636,
         mkg:f90fb811-2628-4ab9-90b0-46ab130247a0,
-        mkg:main_group_20_2843_29 ;
+        mkg:main_group_20_2832_29 ;
     :calls mkg:print ;
     :containsInstruction mkg:ins_004016e0,
         mkg:ins_004016e1,
@@ -90599,9 +90744,12 @@ mkg:0x73 a :Operand ;
 mkg:StartTheLelz a :FunctionNode ;
     :atAddress mkg:00404050,
         "00404050" ;
-    :belongsToCommunity mkg:376b8464-c243-4558-925e-c9cb006ba671,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:376b8464-c243-4558-925e-c9cb006ba671,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
         mkg:ab1d2298-4c65-4977-992b-aebb58393636,
-        mkg:main_group_20_2843_29 ;
+        mkg:main_group_20_2832_29 ;
     :calls mkg:__errno_location,
         mkg:connect,
         mkg:fcntl,
@@ -90622,6 +90770,7 @@ mkg:StartTheLelz a :FunctionNode ;
         mkg:strlen,
         mkg:strstr,
         mkg:time ;
+    :callsVulnerable mkg:sclose ;
     :containsInstruction mkg:ins_00404050,
         mkg:ins_00404051,
         mkg:ins_00404054,
@@ -93978,12 +94127,14 @@ mkg:getdtablesize a :ExternalFunctionNode,
         mkg:EXTERNAL_3A00000036 ;
     :calls mkg:getdtablesize ;
     :containsInstruction mkg:ins_00401350 ;
-    :createdAt "2026-07-29T20:03:46.206Z" ;
+    :createdAt "2026-07-29T20:03:46.206Z",
+        "2026-07-31T13:44:23.811Z" ;
     :definedIn mkg:_3CEXTERNAL_3E ;
     :hasAnalysisDepth "0" ;
     :hasBinaryID "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e" ;
     :hasDecompiledCode "// External function: getdtablesize" ;
-    :hasID "96d3357a-cd06-4cf9-98ce-5d3be044c782" ;
+    :hasID "96d3357a-cd06-4cf9-98ce-5d3be044c782",
+        "aeb45e85-bc56-4416-91f1-e0609de270ce" ;
     :hasName "getdtablesize" ;
     :hasPrimaryReference mkg:ref_00401350_to_006101b0,
         mkg:ref_00406d65_to_00401350 ;
@@ -93997,9 +94148,11 @@ mkg:getdtablesize a :ExternalFunctionNode,
         mkg:ref_006101b0_to_EXTERNAL%3A00000036 ;
     :hasReturnType "int" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "False",
+        "True" ;
     :returns mkg:_5Bint_20_3CRETURN_3E_40EAX_3A4_5D ;
-    :updatedAt "2026-07-29T20:03:46.206Z" ;
+    :updatedAt "2026-07-29T20:03:46.206Z",
+        "2026-07-31T13:44:23.811Z" ;
     :userEdited "False" .
 
 mkg:getsockname a :ExternalFunctionNode,
@@ -94025,7 +94178,7 @@ mkg:getsockname a :ExternalFunctionNode,
         mkg:ref_00610160_to_EXTERNAL%3A0000002c ;
     :hasReturnType "int" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bint_20_3CRETURN_3E_40EAX_3A4_5D ;
     :updatedAt "2026-07-29T20:03:47.448Z" ;
     :userEdited "False" .
@@ -94056,7 +94209,7 @@ mkg:inet_addr a :ExternalFunctionNode,
         mkg:ref_006100f8_to_EXTERNAL%3A00000020 ;
     :hasReturnType "typedef in_addr_t uint32_t" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bin_addr_t_20_3CRETURN_3E_40EAX_3A4_5D ;
     :updatedAt "2026-07-29T20:03:46.262Z" ;
     :userEdited "False" .
@@ -94160,7 +94313,7 @@ mkg:read a :ExternalFunctionNode,
         mkg:ref_006100d8_to_EXTERNAL%3A0000001c ;
     :hasReturnType "typedef ssize_t __ssize_t" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bssize_t_20_3CRETURN_3E_40RAX_3A8_5D ;
     :updatedAt "2026-07-29T20:03:46.246Z" ;
     :userEdited "False" .
@@ -94189,7 +94342,7 @@ mkg:sigprocmask a :ExternalFunctionNode,
         mkg:ref_00610000_to_EXTERNAL%3A00000001 ;
     :hasReturnType "int" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bint_20_3CRETURN_3E_40EAX_3A4_5D ;
     :updatedAt "2026-07-29T20:03:46.215Z" ;
     :userEdited "False" .
@@ -94221,7 +94374,7 @@ mkg:strchr a :ExternalFunctionNode,
         mkg:ref_00610088_to_EXTERNAL%3A00000012 ;
     :hasReturnType "char *" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bchar_20_2A_20_3CRETURN_3E_40RAX_3A8_5D ;
     :updatedAt "2026-07-29T20:03:46.341Z" ;
     :userEdited "False" .
@@ -94252,7 +94405,7 @@ mkg:toupper a :ExternalFunctionNode,
         mkg:ref_00610030_to_EXTERNAL%3A00000007 ;
     :hasReturnType "int" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bint_20_3CRETURN_3E_40EAX_3A4_5D ;
     :updatedAt "2026-07-29T20:03:46.277Z" ;
     :userEdited "False" .
@@ -94280,7 +94433,7 @@ mkg:write a :ExternalFunctionNode,
         mkg:ref_00610048_to_EXTERNAL%3A0000000a ;
     :hasReturnType "typedef ssize_t __ssize_t" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bssize_t_20_3CRETURN_3E_40RAX_3A8_5D ;
     :updatedAt "2026-07-29T20:03:47.718Z" ;
     :userEdited "False" .
@@ -94459,12 +94612,14 @@ mkg:__errno_location a :ExternalFunctionNode,
         mkg:EXTERNAL_3A00000004 ;
     :calls mkg:__errno_location ;
     :containsInstruction mkg:ins_00401030 ;
-    :createdAt "2026-07-29T20:03:46.216Z" ;
+    :createdAt "2026-07-29T20:03:46.216Z",
+        "2026-07-31T13:44:23.815Z" ;
     :definedIn mkg:_3CEXTERNAL_3E ;
     :hasAnalysisDepth "0" ;
     :hasBinaryID "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e" ;
     :hasDecompiledCode "// External function: __errno_location" ;
-    :hasID "8094faf3-d708-4a37-a2a9-8f861bd06d13" ;
+    :hasID "2a49b56d-d5af-4c1b-9c07-7e0747f2d9aa",
+        "8094faf3-d708-4a37-a2a9-8f861bd06d13" ;
     :hasName "__errno_location" ;
     :hasPrimaryReference mkg:ref_00401030_to_00610018,
         mkg:ref_00406f86_to_00401030 ;
@@ -94480,9 +94635,11 @@ mkg:__errno_location a :ExternalFunctionNode,
         mkg:ref_00610018_to_EXTERNAL%3A00000004 ;
     :hasReturnType "int *" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "False",
+        "True" ;
     :returns mkg:_5Bint_20_2A_20_3CRETURN_3E_40RAX_3A8_5D ;
-    :updatedAt "2026-07-29T20:03:46.216Z" ;
+    :updatedAt "2026-07-29T20:03:46.216Z",
+        "2026-07-31T13:44:23.815Z" ;
     :userEdited "False" .
 
 mkg:byte_20ptr_20_5BRBP_20_2B_20-0x31_5D a :Operand ;
@@ -94619,7 +94776,7 @@ mkg:free a :ExternalFunctionNode,
         mkg:ref_00610008_to_EXTERNAL%3A00000002 ;
     :hasReturnType "void" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bvoid_20_3CRETURN_3E_40_3CVOID_3E_5D ;
     :updatedAt "2026-07-29T20:03:46.166Z" ;
     :userEdited "False" .
@@ -94627,9 +94784,12 @@ mkg:free a :ExternalFunctionNode,
 mkg:getHost a :FunctionNode ;
     :atAddress mkg:004028b0,
         "004028b0" ;
-    :belongsToCommunity mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
         mkg:e85f0b60-bb41-4192-8589-ec781e0ac829,
-        mkg:main_group_20_2843_29 ;
+        mkg:main_group_20_2832_29 ;
     :calls mkg:inet_addr ;
     :containsInstruction mkg:ins_004028b0,
         mkg:ins_004028b1,
@@ -94757,7 +94917,7 @@ mkg:open a :ExternalFunctionNode,
         mkg:ref_00610148_to_EXTERNAL%3A00000029 ;
     :hasReturnType "int" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bint_20_3CRETURN_3E_40EAX_3A4_5D ;
     :updatedAt "2026-07-29T20:03:46.340Z" ;
     :userEdited "False" .
@@ -94804,9 +94964,12 @@ mkg:qword_20ptr_20_5BRDX_20_2B_200x10_5D a :Operand ;
 mkg:rand_cmwc a :FunctionNode ;
     :atAddress mkg:00401520,
         "00401520" ;
-    :belongsToCommunity mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
-        mkg:e85f0b60-bb41-4192-8589-ec781e0ac829,
-        mkg:main_group_20_2843_29 ;
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:0fc0d48c-feeb-4189-b035-c10c19f39a1d,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:683cf0aa-9776-4d09-bba9-f61b346d6c53,
+        mkg:csum_group_20_288_29,
+        mkg:e85f0b60-bb41-4192-8589-ec781e0ac829 ;
     :containsInstruction mkg:ins_00401520,
         mkg:ins_00401521,
         mkg:ins_00401524,
@@ -95017,7 +95180,7 @@ mkg:strcmp a :ExternalFunctionNode,
         mkg:ref_00610100_to_EXTERNAL%3A00000021 ;
     :hasReturnType "int" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bint_20_3CRETURN_3E_40EAX_3A4_5D ;
     :updatedAt "2026-07-29T20:03:46.903Z" ;
     :userEdited "False" .
@@ -95056,7 +95219,7 @@ mkg:strtok a :ExternalFunctionNode,
         mkg:ref_00610150_to_EXTERNAL%3A0000002a ;
     :hasReturnType "char *" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bchar_20_2A_20_3CRETURN_3E_40RAX_3A8_5D ;
     :updatedAt "2026-07-29T20:03:46.904Z" ;
     :userEdited "False" .
@@ -95086,7 +95249,7 @@ mkg:waitpid a :ExternalFunctionNode,
         mkg:ref_00610140_to_EXTERNAL%3A00000028 ;
     :hasReturnType "typedef __pid_t int" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5B__pid_t_20_3CRETURN_3E_40EAX_3A4_5D ;
     :updatedAt "2026-07-29T20:03:46.216Z" ;
     :userEdited "False" .
@@ -95221,12 +95384,14 @@ mkg:fcntl a :ExternalFunctionNode,
         mkg:EXTERNAL_3A00000009 ;
     :calls mkg:fcntl ;
     :containsInstruction mkg:ins_00401080 ;
-    :createdAt "2026-07-29T20:03:46.378Z" ;
+    :createdAt "2026-07-29T20:03:46.378Z",
+        "2026-07-31T13:44:23.815Z" ;
     :definedIn mkg:_3CEXTERNAL_3E ;
     :hasAnalysisDepth "0" ;
     :hasBinaryID "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e" ;
     :hasDecompiledCode "// External function: fcntl" ;
-    :hasID "6c6f059b-706a-4aaa-b864-37afbde74921" ;
+    :hasID "6c6f059b-706a-4aaa-b864-37afbde74921",
+        "7994dd62-71f2-44fa-bcc3-ebe766c9cda1" ;
     :hasName "fcntl" ;
     :hasPrimaryReference mkg:ref_00401080_to_00610040,
         mkg:ref_00406f52_to_00401080 ;
@@ -95248,9 +95413,11 @@ mkg:fcntl a :ExternalFunctionNode,
         mkg:ref_00610040_to_EXTERNAL%3A00000009 ;
     :hasReturnType "int" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "False",
+        "True" ;
     :returns mkg:_5Bint_20_3CRETURN_3E_40EAX_3A4_5D ;
-    :updatedAt "2026-07-29T20:03:46.378Z" ;
+    :updatedAt "2026-07-29T20:03:46.378Z",
+        "2026-07-31T13:44:23.815Z" ;
     :userEdited "False" .
 
 mkg:local_100 a :LocalVariable ;
@@ -95342,7 +95509,7 @@ mkg:recv a :ExternalFunctionNode,
         mkg:ref_00610010_to_EXTERNAL%3A00000003 ;
     :hasReturnType "typedef ssize_t __ssize_t" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bssize_t_20_3CRETURN_3E_40RAX_3A8_5D ;
     :updatedAt "2026-07-29T20:03:46.441Z" ;
     :userEdited "False" .
@@ -95373,7 +95540,7 @@ mkg:strcpy a :ExternalFunctionNode,
         mkg:ref_00610028_to_EXTERNAL%3A00000006 ;
     :hasReturnType "char *" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bchar_20_2A_20_3CRETURN_3E_40RAX_3A8_5D ;
     :updatedAt "2026-07-29T20:03:46.341Z" ;
     :userEdited "False" .
@@ -95572,7 +95739,10 @@ mkg:local_e0 a :LocalVariable ;
 mkg:printchar a :FunctionNode ;
     :atAddress mkg:00408fa0,
         "00408fa0" ;
-    :belongsToCommunity mkg:ab1d2298-4c65-4977-992b-aebb58393636,
+    :belongsToCommunity mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:551b76ee-8e89-44f3-b79e-71ec0c9ed094,
+        mkg:8e0b2e0c-eabe-45b2-bf7d-dedad1310563,
+        mkg:ab1d2298-4c65-4977-992b-aebb58393636,
         mkg:f90fb811-2628-4ab9-90b0-46ab130247a0,
         mkg:prints_group_20_283_29 ;
     :calls mkg:write ;
@@ -95734,7 +95904,7 @@ mkg:setsockopt a :ExternalFunctionNode,
         mkg:ref_00610038_to_EXTERNAL%3A00000008 ;
     :hasReturnType "int" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bint_20_3CRETURN_3E_40EAX_3A4_5D ;
     :updatedAt "2026-07-29T20:03:46.688Z" ;
     :userEdited "False" .
@@ -95746,12 +95916,14 @@ mkg:strlen a :ExternalFunctionNode,
         mkg:EXTERNAL_3A0000000d ;
     :calls mkg:strlen ;
     :containsInstruction mkg:ins_004010c0 ;
-    :createdAt "2026-07-29T20:03:45.909Z" ;
+    :createdAt "2026-07-29T20:03:45.909Z",
+        "2026-07-31T13:44:23.817Z" ;
     :definedIn mkg:_3CEXTERNAL_3E ;
     :hasAnalysisDepth "0" ;
     :hasBinaryID "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e" ;
     :hasDecompiledCode "// External function: strlen" ;
-    :hasID "6aeaaaaf-fddf-41bb-a717-2cf4fbcd28a8" ;
+    :hasID "6aeaaaaf-fddf-41bb-a717-2cf4fbcd28a8",
+        "80a53cd4-f29d-43e1-b2ff-bee2317c2b03" ;
     :hasName "strlen" ;
     :hasPrimaryReference mkg:ref_004010c0_to_00610060,
         mkg:ref_00408b97_to_004010c0 ;
@@ -95782,9 +95954,11 @@ mkg:strlen a :ExternalFunctionNode,
         mkg:ref_00610060_to_EXTERNAL%3A0000000d ;
     :hasReturnType "typedef size_t ulong" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "False",
+        "True" ;
     :returns mkg:_5Bsize_t_20_3CRETURN_3E_40RAX_3A8_5D ;
-    :updatedAt "2026-07-29T20:03:45.909Z" ;
+    :updatedAt "2026-07-29T20:03:45.909Z",
+        "2026-07-31T13:44:23.817Z" ;
     :userEdited "False" .
 
 mkg:time a :ExternalFunctionNode,
@@ -95794,12 +95968,14 @@ mkg:time a :ExternalFunctionNode,
         mkg:EXTERNAL_3A00000025 ;
     :calls mkg:time ;
     :containsInstruction mkg:ins_00401240 ;
-    :createdAt "2026-07-29T20:03:46.688Z" ;
+    :createdAt "2026-07-29T20:03:46.688Z",
+        "2026-07-31T13:44:23.816Z" ;
     :definedIn mkg:_3CEXTERNAL_3E ;
     :hasAnalysisDepth "0" ;
     :hasBinaryID "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e" ;
     :hasDecompiledCode "// External function: time" ;
-    :hasID "9d333817-130e-48cc-8127-fdf4729dd1d4" ;
+    :hasID "9d333817-130e-48cc-8127-fdf4729dd1d4",
+        "f62766a9-0c32-4049-a65e-aad4d2a99f37" ;
     :hasName "time" ;
     :hasPrimaryReference mkg:ref_00401240_to_00610128,
         mkg:ref_00408347_to_00401240 ;
@@ -95834,9 +96010,11 @@ mkg:time a :ExternalFunctionNode,
         mkg:ref_00610128_to_EXTERNAL%3A00000025 ;
     :hasReturnType "typedef time_t __time_t" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "False",
+        "True" ;
     :returns mkg:_5Btime_t_20_3CRETURN_3E_40RAX_3A8_5D ;
-    :updatedAt "2026-07-29T20:03:46.688Z" ;
+    :updatedAt "2026-07-29T20:03:46.688Z",
+        "2026-07-31T13:44:23.816Z" ;
     :userEdited "False" .
 
 mkg:00401030 a :Address .
@@ -95910,12 +96088,14 @@ mkg:connect a :ExternalFunctionNode,
         mkg:EXTERNAL_3A0000002f ;
     :calls mkg:connect ;
     :containsInstruction mkg:ins_004012e0 ;
-    :createdAt "2026-07-29T20:03:46.380Z" ;
+    :createdAt "2026-07-29T20:03:46.380Z",
+        "2026-07-31T13:44:23.815Z" ;
     :definedIn mkg:_3CEXTERNAL_3E ;
     :hasAnalysisDepth "0" ;
     :hasBinaryID "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e" ;
     :hasDecompiledCode "// External function: connect" ;
-    :hasID "fb97dc72-8b97-47a8-b7d9-c8979e8bfe1b" ;
+    :hasID "f3fbdcf0-6edd-4eb5-a08a-d36a6954017b",
+        "fb97dc72-8b97-47a8-b7d9-c8979e8bfe1b" ;
     :hasName "connect" ;
     :hasPrimaryReference mkg:ref_004012e0_to_00610178,
         mkg:ref_0040810c_to_004012e0 ;
@@ -95930,9 +96110,11 @@ mkg:connect a :ExternalFunctionNode,
         mkg:ref_00610178_to_EXTERNAL%3A0000002f ;
     :hasReturnType "int" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "False",
+        "True" ;
     :returns mkg:_5Bint_20_3CRETURN_3E_40EAX_3A4_5D ;
-    :updatedAt "2026-07-29T20:03:46.380Z" ;
+    :updatedAt "2026-07-29T20:03:46.380Z",
+        "2026-07-31T13:44:23.815Z" ;
     :userEdited "False" .
 
 mkg:dword_20ptr_20_5BRBP_20_2B_20-0x118_5D a :Operand ;
@@ -95962,9 +96144,12 @@ mkg:dword_20ptr_20_5BRDX_20_2B_20RCX_2A0x4_5D a :Operand ;
 mkg:fdgets a :FunctionNode ;
     :atAddress mkg:004025d0,
         "004025d0" ;
-    :belongsToCommunity mkg:ab1d2298-4c65-4977-992b-aebb58393636,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:ab1d2298-4c65-4977-992b-aebb58393636,
         mkg:f90fb811-2628-4ab9-90b0-46ab130247a0,
-        mkg:main_group_20_2843_29 ;
+        mkg:main_group_20_2832_29 ;
     :calls mkg:read ;
     :containsInstruction mkg:ins_004025d0,
         mkg:ins_004025d1,
@@ -96223,12 +96408,14 @@ mkg:send a :ExternalFunctionNode,
         mkg:EXTERNAL_3A00000011 ;
     :calls mkg:send ;
     :containsInstruction mkg:ins_00401100 ;
-    :createdAt "2026-07-29T20:03:46.166Z" ;
+    :createdAt "2026-07-29T20:03:46.166Z",
+        "2026-07-31T13:44:23.818Z" ;
     :definedIn mkg:_3CEXTERNAL_3E ;
     :hasAnalysisDepth "0" ;
     :hasBinaryID "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e" ;
     :hasDecompiledCode "// External function: send" ;
-    :hasID "8a71c7a7-6f97-4505-82d8-a334af50b77d" ;
+    :hasID "8a71c7a7-6f97-4505-82d8-a334af50b77d",
+        "da1d37ef-a502-4752-bb3b-59a5a552dbc5" ;
     :hasName "send" ;
     :hasPrimaryReference mkg:ref_00401100_to_00610080,
         mkg:ref_00406ce0_to_00401100 ;
@@ -96251,9 +96438,11 @@ mkg:send a :ExternalFunctionNode,
         mkg:ref_00610080_to_EXTERNAL%3A00000011 ;
     :hasReturnType "typedef ssize_t __ssize_t" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "False",
+        "True" ;
     :returns mkg:_5Bssize_t_20_3CRETURN_3E_40RAX_3A8_5D ;
-    :updatedAt "2026-07-29T20:03:46.166Z" ;
+    :updatedAt "2026-07-29T20:03:46.166Z",
+        "2026-07-31T13:44:23.818Z" ;
     :userEdited "False" .
 
 mkg:sendto a :ExternalFunctionNode,
@@ -96281,7 +96470,7 @@ mkg:sendto a :ExternalFunctionNode,
         mkg:ref_006100b0_to_EXTERNAL%3A00000017 ;
     :hasReturnType "typedef ssize_t __ssize_t" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bssize_t_20_3CRETURN_3E_40RAX_3A8_5D ;
     :updatedAt "2026-07-29T20:03:46.688Z" ;
     :userEdited "False" .
@@ -96388,12 +96577,14 @@ mkg:getsockopt a :ExternalFunctionNode,
         mkg:EXTERNAL_3A0000001f ;
     :calls mkg:getsockopt ;
     :containsInstruction mkg:ins_004011e0 ;
-    :createdAt "2026-07-29T20:03:46.380Z" ;
+    :createdAt "2026-07-29T20:03:46.380Z",
+        "2026-07-31T13:44:23.817Z" ;
     :definedIn mkg:_3CEXTERNAL_3E ;
     :hasAnalysisDepth "0" ;
     :hasBinaryID "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e" ;
     :hasDecompiledCode "// External function: getsockopt" ;
-    :hasID "cf1ec7ea-b256-4f52-b832-989613d6343d" ;
+    :hasID "cf1ec7ea-b256-4f52-b832-989613d6343d",
+        "f3977812-ac03-4ff5-813a-1d7bdc3e94ab" ;
     :hasName "getsockopt" ;
     :hasPrimaryReference mkg:ref_004011e0_to_006100f0,
         mkg:ref_00407103_to_004011e0 ;
@@ -96407,9 +96598,11 @@ mkg:getsockopt a :ExternalFunctionNode,
         mkg:ref_006100f0_to_EXTERNAL%3A0000001f ;
     :hasReturnType "int" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "False",
+        "True" ;
     :returns mkg:_5Bint_20_3CRETURN_3E_40EAX_3A4_5D ;
-    :updatedAt "2026-07-29T20:03:46.380Z" ;
+    :updatedAt "2026-07-29T20:03:46.380Z",
+        "2026-07-31T13:44:23.817Z" ;
     :userEdited "False" .
 
 mkg:htons a :ExternalFunctionNode,
@@ -96419,12 +96612,14 @@ mkg:htons a :ExternalFunctionNode,
         mkg:EXTERNAL_3A0000000f ;
     :calls mkg:htons ;
     :containsInstruction mkg:ins_004010e0 ;
-    :createdAt "2026-07-29T20:03:46.379Z" ;
+    :createdAt "2026-07-29T20:03:46.379Z",
+        "2026-07-31T13:44:23.811Z" ;
     :definedIn mkg:_3CEXTERNAL_3E ;
     :hasAnalysisDepth "0" ;
     :hasBinaryID "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e" ;
     :hasDecompiledCode "// External function: htons" ;
-    :hasID "7da9044a-9f63-45a5-9f0c-11421caf0248" ;
+    :hasID "4600a3aa-3816-4e53-9872-15165a98374b",
+        "7da9044a-9f63-45a5-9f0c-11421caf0248" ;
     :hasName "htons" ;
     :hasPrimaryReference mkg:ref_004010e0_to_00610070,
         mkg:ref_004080f4_to_004010e0 ;
@@ -96447,9 +96642,11 @@ mkg:htons a :ExternalFunctionNode,
         mkg:ref_00610070_to_EXTERNAL%3A0000000f ;
     :hasReturnType "typedef uint16_t ushort" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "False",
+        "True" ;
     :returns mkg:_5Buint16_t_20_3CRETURN_3E_40AX_3A2_5D ;
-    :updatedAt "2026-07-29T20:03:46.379Z" ;
+    :updatedAt "2026-07-29T20:03:46.379Z",
+        "2026-07-31T13:44:23.811Z" ;
     :userEdited "False" .
 
 mkg:local_108 a :LocalVariable ;
@@ -96491,12 +96688,14 @@ mkg:strstr a :ExternalFunctionNode,
         mkg:EXTERNAL_3A00000035 ;
     :calls mkg:strstr ;
     :containsInstruction mkg:ins_00401340 ;
-    :createdAt "2026-07-29T20:03:46.341Z" ;
+    :createdAt "2026-07-29T20:03:46.341Z",
+        "2026-07-31T13:44:23.818Z" ;
     :definedIn mkg:_3CEXTERNAL_3E ;
     :hasAnalysisDepth "0" ;
     :hasBinaryID "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e" ;
     :hasDecompiledCode "// External function: strstr" ;
-    :hasID "bc7f1f53-1c13-4e39-aa03-dd38077cf251" ;
+    :hasID "3b58ce2b-bf5e-4587-b973-8606817bd030",
+        "bc7f1f53-1c13-4e39-aa03-dd38077cf251" ;
     :hasName "strstr" ;
     :hasPrimaryReference mkg:ref_00401340_to_006101a8,
         mkg:ref_00408739_to_00401340 ;
@@ -96520,9 +96719,11 @@ mkg:strstr a :ExternalFunctionNode,
         mkg:ref_006101a8_to_EXTERNAL%3A00000035 ;
     :hasReturnType "char *" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "False",
+        "True" ;
     :returns mkg:_5Bchar_20_2A_20_3CRETURN_3E_40RAX_3A8_5D ;
-    :updatedAt "2026-07-29T20:03:46.341Z" ;
+    :updatedAt "2026-07-29T20:03:46.341Z",
+        "2026-07-31T13:44:23.818Z" ;
     :userEdited "False" .
 
 mkg:00401250 a :Address .
@@ -96583,12 +96784,14 @@ mkg:malloc a :ExternalFunctionNode,
         mkg:EXTERNAL_3A00000027 ;
     :calls mkg:malloc ;
     :containsInstruction mkg:ins_00401260 ;
-    :createdAt "2026-07-29T20:03:46.165Z" ;
+    :createdAt "2026-07-29T20:03:46.165Z",
+        "2026-07-31T13:44:23.812Z" ;
     :definedIn mkg:_3CEXTERNAL_3E ;
     :hasAnalysisDepth "0" ;
     :hasBinaryID "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e" ;
     :hasDecompiledCode "// External function: malloc" ;
-    :hasID "d392d63c-6142-4400-a734-d4781a5061d3" ;
+    :hasID "042cf1c1-27d5-4841-a156-6d2371c16c3d",
+        "d392d63c-6142-4400-a734-d4781a5061d3" ;
     :hasName "malloc" ;
     :hasPrimaryReference mkg:ref_00401260_to_00610138,
         mkg:ref_00408b5b_to_00401260 ;
@@ -96608,9 +96811,11 @@ mkg:malloc a :ExternalFunctionNode,
         mkg:ref_00610138_to_EXTERNAL%3A00000027 ;
     :hasReturnType "void *" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "False",
+        "True" ;
     :returns mkg:_5Bvoid_20_2A_20_3CRETURN_3E_40RAX_3A8_5D ;
-    :updatedAt "2026-07-29T20:03:46.165Z" ;
+    :updatedAt "2026-07-29T20:03:46.165Z",
+        "2026-07-31T13:44:23.812Z" ;
     :userEdited "False" .
 
 mkg:qword_20ptr_20_5BRBP_20_2B_20-0x50_5D a :Operand ;
@@ -96634,12 +96839,14 @@ mkg:socket a :ExternalFunctionNode,
         mkg:EXTERNAL_3A00000038 ;
     :calls mkg:socket ;
     :containsInstruction mkg:ins_00401370 ;
-    :createdAt "2026-07-29T20:03:46.688Z" ;
+    :createdAt "2026-07-29T20:03:46.688Z",
+        "2026-07-31T13:44:23.815Z" ;
     :definedIn mkg:_3CEXTERNAL_3E ;
     :hasAnalysisDepth "0" ;
     :hasBinaryID "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e" ;
     :hasDecompiledCode "// External function: socket" ;
-    :hasID "0714e2fe-e337-452e-bae8-1f68210f0553" ;
+    :hasID "06d13090-121c-4d07-9cab-21c62835411c",
+        "0714e2fe-e337-452e-bae8-1f68210f0553" ;
     :hasName "socket" ;
     :hasPrimaryReference mkg:ref_00401370_to_006101c0,
         mkg:ref_00408096_to_00401370 ;
@@ -96657,9 +96864,11 @@ mkg:socket a :ExternalFunctionNode,
         mkg:ref_006101c0_to_EXTERNAL%3A00000038 ;
     :hasReturnType "int" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "False",
+        "True" ;
     :returns mkg:_5Bint_20_3CRETURN_3E_40EAX_3A4_5D ;
-    :updatedAt "2026-07-29T20:03:46.688Z" ;
+    :updatedAt "2026-07-29T20:03:46.688Z",
+        "2026-07-31T13:44:23.815Z" ;
     :userEdited "False" .
 
 :ModuleNode a owl:Class ;
@@ -96733,7 +96942,7 @@ mkg:close a :ExternalFunctionNode,
         mkg:ref_006100b8_to_EXTERNAL%3A00000018 ;
     :hasReturnType "int" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "True" ;
     :returns mkg:_5Bint_20_3CRETURN_3E_40EAX_3A4_5D ;
     :updatedAt "2026-07-29T20:03:46.206Z" ;
     :userEdited "False" .
@@ -96791,12 +97000,14 @@ mkg:select a :ExternalFunctionNode,
         mkg:EXTERNAL_3A00000026 ;
     :calls mkg:select ;
     :containsInstruction mkg:ins_00401250 ;
-    :createdAt "2026-07-29T20:03:46.380Z" ;
+    :createdAt "2026-07-29T20:03:46.380Z",
+        "2026-07-31T13:44:23.816Z" ;
     :definedIn mkg:_3CEXTERNAL_3E ;
     :hasAnalysisDepth "0" ;
     :hasBinaryID "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e" ;
     :hasDecompiledCode "// External function: select" ;
-    :hasID "747e0875-168e-4c8d-b7e2-5ebfe033b168" ;
+    :hasID "747e0875-168e-4c8d-b7e2-5ebfe033b168",
+        "b750551a-e892-494e-9bff-c30da34bd07a" ;
     :hasName "select" ;
     :hasPrimaryReference mkg:ref_00401250_to_00610130,
         mkg:ref_0040728f_to_00401250 ;
@@ -96814,9 +97025,11 @@ mkg:select a :ExternalFunctionNode,
         mkg:ref_00610130_to_EXTERNAL%3A00000026 ;
     :hasReturnType "int" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "False",
+        "True" ;
     :returns mkg:_5Bint_20_3CRETURN_3E_40EAX_3A4_5D ;
-    :updatedAt "2026-07-29T20:03:46.380Z" ;
+    :updatedAt "2026-07-29T20:03:46.380Z",
+        "2026-07-31T13:44:23.816Z" ;
     :userEdited "False" .
 
 mkg:00401040 a :Address .
@@ -96864,9 +97077,12 @@ mkg:qword_20ptr_20_5BRBP_20_2B_20-0xd8_5D a :Operand ;
 mkg:sockprintf a :FunctionNode ;
     :atAddress mkg:00401fc0,
         "00401fc0" ;
-    :belongsToCommunity mkg:ab1d2298-4c65-4977-992b-aebb58393636,
+    :belongsToCommunity mkg:04b51779-9708-43e4-ac7e-dd21600c51f9,
+        mkg:26d5c483-10da-4c3b-b96e-9342d5bc236b,
+        mkg:62e0ed20-a68b-4e72-a1d4-cb838075f533,
+        mkg:ab1d2298-4c65-4977-992b-aebb58393636,
         mkg:f90fb811-2628-4ab9-90b0-46ab130247a0,
-        mkg:main_group_20_2843_29 ;
+        mkg:main_group_20_2832_29 ;
     :calls mkg:free,
         mkg:malloc,
         mkg:memset,
@@ -97508,12 +97724,14 @@ mkg:memset a :ExternalFunctionNode,
         mkg:EXTERNAL_3A00000015 ;
     :calls mkg:memset ;
     :containsInstruction mkg:ins_00401140 ;
-    :createdAt "2026-07-29T20:03:46.165Z" ;
+    :createdAt "2026-07-29T20:03:46.165Z",
+        "2026-07-31T13:44:23.812Z" ;
     :definedIn mkg:_3CEXTERNAL_3E ;
     :hasAnalysisDepth "0" ;
     :hasBinaryID "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e" ;
     :hasDecompiledCode "// External function: memset" ;
-    :hasID "c4806acf-9523-47e1-95d9-ba668836c767" ;
+    :hasID "c4806acf-9523-47e1-95d9-ba668836c767",
+        "f9d5f4c5-15ab-4275-b124-9388e6faf5f7" ;
     :hasName "memset" ;
     :hasPrimaryReference mkg:ref_00401140_to_006100a0,
         mkg:ref_00408bb0_to_00401140 ;
@@ -97557,9 +97775,11 @@ mkg:memset a :ExternalFunctionNode,
         mkg:ref_006100a0_to_EXTERNAL%3A00000015 ;
     :hasReturnType "void *" ;
     :hasSummaryConfidence "0.0" ;
-    :isStale "False" ;
+    :isStale "False",
+        "True" ;
     :returns mkg:_5Bvoid_20_2A_20_3CRETURN_3E_40RAX_3A8_5D ;
-    :updatedAt "2026-07-29T20:03:46.165Z" ;
+    :updatedAt "2026-07-29T20:03:46.165Z",
+        "2026-07-31T13:44:23.812Z" ;
     :userEdited "False" .
 
 mkg:qword_20ptr_20_5BRAX_20_2B_200x8_5D a :Operand ;

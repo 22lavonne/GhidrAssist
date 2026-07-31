@@ -785,8 +785,8 @@ REFERENCE source=004067ad destination=00401520 operandindex=0 type=UNCONDITIONAL
 REFERENCE source=004067b9 destination=00401520 operandindex=0 type=UNCONDITIONAL_CALL
 PRIMARYREFERENCE source=004067b9 destination=00401520 operandindex=0 type=UNCONDITIONAL_CALL
 FUNCTION func=trim address=004015e0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
-FUNCTIONCALLED func=isspace
 FUNCTIONCALLED func=strlen
+FUNCTIONCALLED func=isspace
 REFERENCE source=Entry Point destination=004015e0 operandindex=-1 type=EXTERNAL
 REFERENCE source=00409c3c destination=004015e0 operandindex=0 type=INDIRECTION
 REFERENCE source=00409e48 destination=004015e0 operandindex=0 type=DATA
@@ -824,13 +824,13 @@ REFERENCE source=00403d8c destination=00401e60 operandindex=0 type=UNCONDITIONAL
 REFERENCE source=00408a28 destination=00401e60 operandindex=0 type=UNCONDITIONAL_CALL
 PRIMARYREFERENCE source=00408a28 destination=00401e60 operandindex=0 type=UNCONDITIONAL_CALL
 FUNCTION func=sockprintf address=00401fc0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
-FUNCTIONCALLED func=send
-FUNCTIONCALLED func=print
+FUNCTIONCALLED func=strlen
+FUNCTIONCALLED func=malloc
 FUNCTIONCALLED func=memset
 FUNCTIONCALLED func=zprintf
 FUNCTIONCALLED func=free
-FUNCTIONCALLED func=malloc
-FUNCTIONCALLED func=strlen
+FUNCTIONCALLED func=send
+FUNCTIONCALLED func=print
 REFERENCE source=Entry Point destination=00401fc0 operandindex=-1 type=EXTERNAL
 REFERENCE source=00409c5c destination=00401fc0 operandindex=0 type=INDIRECTION
 REFERENCE source=00409ec8 destination=00401fc0 operandindex=0 type=DATA
@@ -861,27 +861,27 @@ REFERENCE source=00408718 destination=00401fc0 operandindex=0 type=UNCONDITIONAL
 REFERENCE source=00408a96 destination=00401fc0 operandindex=0 type=UNCONDITIONAL_CALL
 PRIMARYREFERENCE source=00408a96 destination=00401fc0 operandindex=0 type=UNCONDITIONAL_CALL
 FUNCTION func=fdpopen address=004021f0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
-FUNCTIONCALLED func=vfork
-FUNCTIONCALLED func=execl
-FUNCTIONCALLED func=memset
-FUNCTIONCALLED func=pipe
-FUNCTIONCALLED func=getdtablesize
-FUNCTIONCALLED func=close
 FUNCTIONCALLED func=malloc
+FUNCTIONCALLED func=memset
 FUNCTIONCALLED func=dup2
 FUNCTIONCALLED func=_exit
+FUNCTIONCALLED func=vfork
+FUNCTIONCALLED func=close
+FUNCTIONCALLED func=execl
+FUNCTIONCALLED func=pipe
+FUNCTIONCALLED func=getdtablesize
 REFERENCE source=Entry Point destination=004021f0 operandindex=-1 type=EXTERNAL
 REFERENCE source=00409c64 destination=004021f0 operandindex=0 type=INDIRECTION
 REFERENCE source=00409ee8 destination=004021f0 operandindex=0 type=DATA
 REFERENCE source=00408a44 destination=004021f0 operandindex=0 type=UNCONDITIONAL_CALL
 PRIMARYREFERENCE source=00408a44 destination=004021f0 operandindex=0 type=UNCONDITIONAL_CALL
 FUNCTION func=fdpclose address=00402430 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
-FUNCTIONCALLED func=sigprocmask
-FUNCTIONCALLED func=sigaddset
-FUNCTIONCALLED func=close
-FUNCTIONCALLED func=__errno_location
-FUNCTIONCALLED func=waitpid
 FUNCTIONCALLED func=sigemptyset
+FUNCTIONCALLED func=waitpid
+FUNCTIONCALLED func=sigprocmask
+FUNCTIONCALLED func=close
+FUNCTIONCALLED func=sigaddset
+FUNCTIONCALLED func=__errno_location
 REFERENCE source=Entry Point destination=00402430 operandindex=-1 type=EXTERNAL
 REFERENCE source=00409c6c destination=00402430 operandindex=0 type=INDIRECTION
 REFERENCE source=00409f08 destination=00402430 operandindex=0 type=DATA
@@ -903,8 +903,8 @@ REFERENCE source=00409c7c destination=004026a0 operandindex=0 type=INDIRECTION
 REFERENCE source=00409f48 destination=004026a0 operandindex=0 type=DATA
 PRIMARYREFERENCE source=00409f48 destination=004026a0 operandindex=0 type=DATA
 FUNCTION func=wildString address=00402720 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
-FUNCTIONCALLED func=wildString
 FUNCTIONCALLED func=toupper
+FUNCTIONCALLED func=wildString
 REFERENCE source=Entry Point destination=00402720 operandindex=-1 type=EXTERNAL
 REFERENCE source=00409c84 destination=00402720 operandindex=0 type=INDIRECTION
 REFERENCE source=00409f68 destination=00402720 operandindex=0 type=DATA
@@ -933,26 +933,26 @@ REFERENCE source=0040299d destination=00402900 operandindex=0 type=UNCONDITIONAL
 REFERENCE source=00402bdd destination=00402900 operandindex=0 type=UNCONDITIONAL_CALL
 PRIMARYREFERENCE source=00402bdd destination=00402900 operandindex=0 type=UNCONDITIONAL_CALL
 FUNCTION func=getBogos address=00402950 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=uppercase
+FUNCTIONCALLED func=strlen
+FUNCTIONCALLED func=fdgets
 FUNCTIONCALLED func=strchr
 FUNCTIONCALLED func=memset
-FUNCTIONCALLED func=strcpy
-FUNCTIONCALLED func=close
-FUNCTIONCALLED func=strstr
-FUNCTIONCALLED func=fdgets
-FUNCTIONCALLED func=uppercase
 FUNCTIONCALLED func=open
-FUNCTIONCALLED func=strlen
+FUNCTIONCALLED func=close
+FUNCTIONCALLED func=strcpy
+FUNCTIONCALLED func=strstr
 REFERENCE source=Entry Point destination=00402950 operandindex=-1 type=EXTERNAL
 REFERENCE source=00409c9c destination=00402950 operandindex=0 type=INDIRECTION
 REFERENCE source=00409fc8 destination=00402950 operandindex=0 type=DATA
 PRIMARYREFERENCE source=00409fc8 destination=00402950 operandindex=0 type=DATA
 FUNCTION func=getCores address=00402b90 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=uppercase
+FUNCTIONCALLED func=fdgets
 FUNCTIONCALLED func=memset
+FUNCTIONCALLED func=open
 FUNCTIONCALLED func=close
 FUNCTIONCALLED func=strstr
-FUNCTIONCALLED func=fdgets
-FUNCTIONCALLED func=uppercase
-FUNCTIONCALLED func=open
 REFERENCE source=Entry Point destination=00402b90 operandindex=-1 type=EXTERNAL
 REFERENCE source=00409ca4 destination=00402b90 operandindex=0 type=INDIRECTION
 REFERENCE source=00409fe8 destination=00402b90 operandindex=0 type=DATA
@@ -968,33 +968,33 @@ REFERENCE source=00406cba destination=00402c50 operandindex=0 type=UNCONDITIONAL
 PRIMARYREFERENCE source=00406cba destination=00402c50 operandindex=0 type=UNCONDITIONAL_CALL
 FUNCTION func=recvLine address=00402cb0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
 FUNCTIONCALLED func=memset
-FUNCTIONCALLED func=sockprintf
 FUNCTIONCALLED func=zprintf
-FUNCTIONCALLED func=select
 FUNCTIONCALLED func=recv
+FUNCTIONCALLED func=select
+FUNCTIONCALLED func=sockprintf
 REFERENCE source=Entry Point destination=00402cb0 operandindex=-1 type=EXTERNAL
 REFERENCE source=00409cb4 destination=00402cb0 operandindex=0 type=INDIRECTION
 REFERENCE source=0040a028 destination=00402cb0 operandindex=0 type=DATA
 REFERENCE source=00408524 destination=00402cb0 operandindex=0 type=UNCONDITIONAL_CALL
 PRIMARYREFERENCE source=00408524 destination=00402cb0 operandindex=0 type=UNCONDITIONAL_CALL
 FUNCTION func=connectTimeout address=00402fe0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
-FUNCTIONCALLED func=htons
-FUNCTIONCALLED func=memset
-FUNCTIONCALLED func=getsockopt
-FUNCTIONCALLED func=fcntl
 FUNCTIONCALLED func=getHost
-FUNCTIONCALLED func=__errno_location
-FUNCTIONCALLED func=select
+FUNCTIONCALLED func=memset
 FUNCTIONCALLED func=connect
+FUNCTIONCALLED func=getsockopt
+FUNCTIONCALLED func=htons
+FUNCTIONCALLED func=select
+FUNCTIONCALLED func=__errno_location
+FUNCTIONCALLED func=fcntl
 REFERENCE source=Entry Point destination=00402fe0 operandindex=-1 type=EXTERNAL
 REFERENCE source=00409cbc destination=00402fe0 operandindex=0 type=INDIRECTION
 REFERENCE source=0040a048 destination=00402fe0 operandindex=0 type=DATA
 REFERENCE source=0040804c destination=00402fe0 operandindex=0 type=UNCONDITIONAL_CALL
 PRIMARYREFERENCE source=0040804c destination=00402fe0 operandindex=0 type=UNCONDITIONAL_CALL
 FUNCTION func=listFork address=004032c0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
-FUNCTIONCALLED func=free
 FUNCTIONCALLED func=fork
 FUNCTIONCALLED func=malloc
+FUNCTIONCALLED func=free
 REFERENCE source=Entry Point destination=004032c0 operandindex=-1 type=EXTERNAL
 REFERENCE source=00409cc4 destination=004032c0 operandindex=0 type=INDIRECTION
 REFERENCE source=0040a068 destination=004032c0 operandindex=0 type=DATA
@@ -1024,11 +1024,11 @@ REFERENCE source=00403950 destination=00403530 operandindex=0 type=UNCONDITIONAL
 REFERENCE source=00405361 destination=00403530 operandindex=0 type=UNCONDITIONAL_CALL
 PRIMARYREFERENCE source=00405361 destination=00403530 operandindex=0 type=UNCONDITIONAL_CALL
 FUNCTION func=readUntil address=004036c0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
-FUNCTIONCALLED func=matchPrompt
 FUNCTIONCALLED func=negotiate
-FUNCTIONCALLED func=strstr
-FUNCTIONCALLED func=select
+FUNCTIONCALLED func=matchPrompt
 FUNCTIONCALLED func=recv
+FUNCTIONCALLED func=select
+FUNCTIONCALLED func=strstr
 REFERENCE source=Entry Point destination=004036c0 operandindex=-1 type=EXTERNAL
 REFERENCE source=00409cdc destination=004036c0 operandindex=0 type=INDIRECTION
 REFERENCE source=0040a0c8 destination=004036c0 operandindex=0 type=DATA
@@ -1039,18 +1039,18 @@ REFERENCE source=004056d5 destination=004036c0 operandindex=0 type=UNCONDITIONAL
 REFERENCE source=00405afa destination=004036c0 operandindex=0 type=UNCONDITIONAL_CALL
 PRIMARYREFERENCE source=00405afa destination=004036c0 operandindex=0 type=UNCONDITIONAL_CALL
 FUNCTION func=getRandomPublicIP address=004039a0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
-FUNCTIONCALLED func=rand
 FUNCTIONCALLED func=memset
-FUNCTIONCALLED func=inet_addr
 FUNCTIONCALLED func=szprintf
+FUNCTIONCALLED func=inet_addr
+FUNCTIONCALLED func=rand
 REFERENCE source=Entry Point destination=004039a0 operandindex=-1 type=EXTERNAL
 REFERENCE source=00409ce4 destination=004039a0 operandindex=0 type=INDIRECTION
 REFERENCE source=0040a0e8 destination=004039a0 operandindex=0 type=DATA
 REFERENCE source=0040439f destination=004039a0 operandindex=0 type=UNCONDITIONAL_CALL
 PRIMARYREFERENCE source=0040439f destination=004039a0 operandindex=0 type=UNCONDITIONAL_CALL
 FUNCTION func=getRandomIP address=00403db0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
-FUNCTIONCALLED func=rand_cmwc
 FUNCTIONCALLED func=ntohl
+FUNCTIONCALLED func=rand_cmwc
 REFERENCE source=Entry Point destination=00403db0 operandindex=-1 type=EXTERNAL
 REFERENCE source=00409cec destination=00403db0 operandindex=0 type=INDIRECTION
 REFERENCE source=0040a108 destination=00403db0 operandindex=0 type=DATA
@@ -1070,10 +1070,10 @@ REFERENCE source=0040672f destination=00403df0 operandindex=0 type=UNCONDITIONAL
 REFERENCE source=004067fb destination=00403df0 operandindex=0 type=UNCONDITIONAL_CALL
 PRIMARYREFERENCE source=004067fb destination=00403df0 operandindex=0 type=UNCONDITIONAL_CALL
 FUNCTION func=tcpcsum address=00403ea0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
+FUNCTIONCALLED func=csum
+FUNCTIONCALLED func=malloc
 FUNCTIONCALLED func=htons
 FUNCTIONCALLED func=free
-FUNCTIONCALLED func=malloc
-FUNCTIONCALLED func=csum
 REFERENCE source=Entry Point destination=00403ea0 operandindex=-1 type=EXTERNAL
 REFERENCE source=00409cfc destination=00403ea0 operandindex=0 type=INDIRECTION
 REFERENCE source=0040a148 destination=00403ea0 operandindex=0 type=DATA
@@ -1117,50 +1117,50 @@ REFERENCE source=00405bbb destination=00404010 operandindex=0 type=UNCONDITIONAL
 REFERENCE source=00405c9b destination=00404010 operandindex=0 type=UNCONDITIONAL_CALL
 PRIMARYREFERENCE source=00405c9b destination=00404010 operandindex=0 type=UNCONDITIONAL_CALL
 FUNCTION func=StartTheLelz address=00404050 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
-FUNCTIONCALLED func=time
-FUNCTIONCALLED func=matchPrompt
+FUNCTIONCALLED func=strlen
 FUNCTIONCALLED func=memset
-FUNCTIONCALLED func=getRandomPublicIP
-FUNCTIONCALLED func=sockprintf
+FUNCTIONCALLED func=malloc
+FUNCTIONCALLED func=getsockopt
 FUNCTIONCALLED func=readUntil
 FUNCTIONCALLED func=inet_ntoa
-FUNCTIONCALLED func=socket
-FUNCTIONCALLED func=strstr
-FUNCTIONCALLED func=connect
-FUNCTIONCALLED func=strlen
 FUNCTIONCALLED func=htons
-FUNCTIONCALLED func=send
-FUNCTIONCALLED func=getsockopt
-FUNCTIONCALLED func=getdtablesize
-FUNCTIONCALLED func=fcntl
-FUNCTIONCALLED func=__errno_location
-FUNCTIONCALLED func=malloc
 FUNCTIONCALLED func=select
+FUNCTIONCALLED func=__errno_location
+FUNCTIONCALLED func=send
 FUNCTIONCALLED func=sclose
+FUNCTIONCALLED func=getRandomPublicIP
+FUNCTIONCALLED func=connect
+FUNCTIONCALLED func=matchPrompt
+FUNCTIONCALLED func=time
+FUNCTIONCALLED func=sockprintf
+FUNCTIONCALLED func=strstr
+FUNCTIONCALLED func=getdtablesize
+FUNCTIONCALLED func=socket
+FUNCTIONCALLED func=fcntl
 REFERENCE source=Entry Point destination=00404050 operandindex=-1 type=EXTERNAL
 REFERENCE source=00409d14 destination=00404050 operandindex=0 type=INDIRECTION
 REFERENCE source=0040a1a8 destination=00404050 operandindex=0 type=DATA
 REFERENCE source=004074ad destination=00404050 operandindex=0 type=UNCONDITIONAL_CALL
 PRIMARYREFERENCE source=004074ad destination=00404050 operandindex=0 type=UNCONDITIONAL_CALL
 FUNCTION func=sendUDP address=00405cf0 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
-FUNCTIONCALLED func=getRandomIP
-FUNCTIONCALLED func=time
-FUNCTIONCALLED func=makeIPPacket
-FUNCTIONCALLED func=memset
-FUNCTIONCALLED func=sockprintf
-FUNCTIONCALLED func=init_rand
+FUNCTIONCALLED func=csum
 FUNCTIONCALLED func=getHost
 FUNCTIONCALLED func=htonl
-FUNCTIONCALLED func=socket
-FUNCTIONCALLED func=srand
-FUNCTIONCALLED func=makeRandomStr
-FUNCTIONCALLED func=htons
-FUNCTIONCALLED func=rand
-FUNCTIONCALLED func=sendto
-FUNCTIONCALLED func=rand_cmwc
+FUNCTIONCALLED func=memset
 FUNCTIONCALLED func=malloc
+FUNCTIONCALLED func=rand_cmwc
+FUNCTIONCALLED func=htons
+FUNCTIONCALLED func=getRandomIP
+FUNCTIONCALLED func=srand
+FUNCTIONCALLED func=sendto
+FUNCTIONCALLED func=time
+FUNCTIONCALLED func=makeIPPacket
 FUNCTIONCALLED func=setsockopt
-FUNCTIONCALLED func=csum
+FUNCTIONCALLED func=sockprintf
+FUNCTIONCALLED func=rand
+FUNCTIONCALLED func=socket
+FUNCTIONCALLED func=makeRandomStr
+FUNCTIONCALLED func=init_rand
 REFERENCE source=Entry Point destination=00405cf0 operandindex=-1 type=EXTERNAL
 REFERENCE source=00409d1c destination=00405cf0 operandindex=0 type=INDIRECTION
 REFERENCE source=0040a1c8 destination=00405cf0 operandindex=0 type=DATA
@@ -1168,22 +1168,22 @@ REFERENCE source=004079f3 destination=00405cf0 operandindex=0 type=UNCONDITIONAL
 REFERENCE source=00407a83 destination=00405cf0 operandindex=0 type=UNCONDITIONAL_CALL
 PRIMARYREFERENCE source=00407a83 destination=00405cf0 operandindex=0 type=UNCONDITIONAL_CALL
 FUNCTION func=sendTCP address=00406240 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
-FUNCTIONCALLED func=getRandomIP
-FUNCTIONCALLED func=makeIPPacket
-FUNCTIONCALLED func=time
-FUNCTIONCALLED func=memset
-FUNCTIONCALLED func=sockprintf
-FUNCTIONCALLED func=strcmp
+FUNCTIONCALLED func=csum
 FUNCTIONCALLED func=getHost
 FUNCTIONCALLED func=htonl
-FUNCTIONCALLED func=socket
-FUNCTIONCALLED func=htons
-FUNCTIONCALLED func=sendto
-FUNCTIONCALLED func=rand_cmwc
+FUNCTIONCALLED func=memset
 FUNCTIONCALLED func=strtok
+FUNCTIONCALLED func=rand_cmwc
+FUNCTIONCALLED func=htons
+FUNCTIONCALLED func=getRandomIP
 FUNCTIONCALLED func=tcpcsum
+FUNCTIONCALLED func=sendto
+FUNCTIONCALLED func=makeIPPacket
+FUNCTIONCALLED func=time
 FUNCTIONCALLED func=setsockopt
-FUNCTIONCALLED func=csum
+FUNCTIONCALLED func=sockprintf
+FUNCTIONCALLED func=strcmp
+FUNCTIONCALLED func=socket
 REFERENCE source=Entry Point destination=00406240 operandindex=-1 type=EXTERNAL
 REFERENCE source=00409d24 destination=00406240 operandindex=0 type=INDIRECTION
 REFERENCE source=0040a1e8 destination=00406240 operandindex=0 type=DATA
@@ -1191,21 +1191,21 @@ REFERENCE source=00407cd2 destination=00406240 operandindex=0 type=UNCONDITIONAL
 REFERENCE source=00407d75 destination=00406240 operandindex=0 type=UNCONDITIONAL_CALL
 PRIMARYREFERENCE source=00407d75 destination=00406240 operandindex=0 type=UNCONDITIONAL_CALL
 FUNCTION func=sendJUNK address=00406860 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
-FUNCTIONCALLED func=time
-FUNCTIONCALLED func=memset
 FUNCTIONCALLED func=getHost
-FUNCTIONCALLED func=socket
-FUNCTIONCALLED func=connect
-FUNCTIONCALLED func=makeRandomStr
-FUNCTIONCALLED func=htons
-FUNCTIONCALLED func=send
-FUNCTIONCALLED func=getsockopt
-FUNCTIONCALLED func=getdtablesize
-FUNCTIONCALLED func=fcntl
-FUNCTIONCALLED func=__errno_location
-FUNCTIONCALLED func=close
+FUNCTIONCALLED func=memset
 FUNCTIONCALLED func=malloc
+FUNCTIONCALLED func=getsockopt
+FUNCTIONCALLED func=htons
 FUNCTIONCALLED func=select
+FUNCTIONCALLED func=__errno_location
+FUNCTIONCALLED func=send
+FUNCTIONCALLED func=connect
+FUNCTIONCALLED func=time
+FUNCTIONCALLED func=close
+FUNCTIONCALLED func=getdtablesize
+FUNCTIONCALLED func=socket
+FUNCTIONCALLED func=fcntl
+FUNCTIONCALLED func=makeRandomStr
 REFERENCE source=Entry Point destination=00406860 operandindex=-1 type=EXTERNAL
 REFERENCE source=00409d2c destination=00406860 operandindex=0 type=INDIRECTION
 REFERENCE source=0040a208 destination=00406860 operandindex=0 type=DATA
@@ -1213,19 +1213,19 @@ REFERENCE source=0040776c destination=00406860 operandindex=0 type=UNCONDITIONAL
 REFERENCE source=004077f1 destination=00406860 operandindex=0 type=UNCONDITIONAL_CALL
 PRIMARYREFERENCE source=004077f1 destination=00406860 operandindex=0 type=UNCONDITIONAL_CALL
 FUNCTION func=sendHOLD address=00406d50 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
-FUNCTIONCALLED func=time
-FUNCTIONCALLED func=memset
 FUNCTIONCALLED func=getHost
-FUNCTIONCALLED func=socket
-FUNCTIONCALLED func=connect
-FUNCTIONCALLED func=htons
-FUNCTIONCALLED func=getsockopt
-FUNCTIONCALLED func=getdtablesize
-FUNCTIONCALLED func=fcntl
-FUNCTIONCALLED func=__errno_location
-FUNCTIONCALLED func=close
+FUNCTIONCALLED func=memset
 FUNCTIONCALLED func=malloc
+FUNCTIONCALLED func=getsockopt
+FUNCTIONCALLED func=htons
 FUNCTIONCALLED func=select
+FUNCTIONCALLED func=__errno_location
+FUNCTIONCALLED func=connect
+FUNCTIONCALLED func=time
+FUNCTIONCALLED func=close
+FUNCTIONCALLED func=getdtablesize
+FUNCTIONCALLED func=socket
+FUNCTIONCALLED func=fcntl
 REFERENCE source=Entry Point destination=00406d50 operandindex=-1 type=EXTERNAL
 REFERENCE source=00409d34 destination=00406d50 operandindex=0 type=INDIRECTION
 REFERENCE source=0040a228 destination=00406d50 operandindex=0 type=DATA
@@ -1233,55 +1233,55 @@ REFERENCE source=004075c1 destination=00406d50 operandindex=0 type=UNCONDITIONAL
 REFERENCE source=00407646 destination=00406d50 operandindex=0 type=UNCONDITIONAL_CALL
 PRIMARYREFERENCE source=00407646 destination=00406d50 operandindex=0 type=UNCONDITIONAL_CALL
 FUNCTION func=processCmd address=00407300 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
-FUNCTIONCALLED func=kill
+FUNCTIONCALLED func=fork
+FUNCTIONCALLED func=sendTCP
+FUNCTIONCALLED func=inet_ntoa
+FUNCTIONCALLED func=strtok
 FUNCTIONCALLED func=sendHOLD
-FUNCTIONCALLED func=StartTheLelz
+FUNCTIONCALLED func=_exit
+FUNCTIONCALLED func=exit
+FUNCTIONCALLED func=sendJUNK
+FUNCTIONCALLED func=getpid
+FUNCTIONCALLED func=kill
+FUNCTIONCALLED func=atoi
+FUNCTIONCALLED func=sendUDP
+FUNCTIONCALLED func=listFork
+FUNCTIONCALLED func=close
 FUNCTIONCALLED func=sockprintf
 FUNCTIONCALLED func=strcmp
-FUNCTIONCALLED func=sendUDP
-FUNCTIONCALLED func=inet_ntoa
-FUNCTIONCALLED func=sendTCP
-FUNCTIONCALLED func=exit
+FUNCTIONCALLED func=StartTheLelz
 FUNCTIONCALLED func=strstr
-FUNCTIONCALLED func=fork
-FUNCTIONCALLED func=listFork
-FUNCTIONCALLED func=_exit
-FUNCTIONCALLED func=close
-FUNCTIONCALLED func=strtok
-FUNCTIONCALLED func=getpid
-FUNCTIONCALLED func=atoi
-FUNCTIONCALLED func=sendJUNK
 REFERENCE source=Entry Point destination=00407300 operandindex=-1 type=EXTERNAL
 REFERENCE source=00409d3c destination=00407300 operandindex=0 type=INDIRECTION
 REFERENCE source=0040a248 destination=00407300 operandindex=0 type=DATA
 REFERENCE source=00408c12 destination=00407300 operandindex=0 type=UNCONDITIONAL_CALL
 PRIMARYREFERENCE source=00408c12 destination=00407300 operandindex=0 type=UNCONDITIONAL_CALL
 FUNCTION func=initConnection address=00407f00 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
-FUNCTIONCALLED func=strchr
-FUNCTIONCALLED func=memset
-FUNCTIONCALLED func=strcpy
-FUNCTIONCALLED func=close
-FUNCTIONCALLED func=socket
-FUNCTIONCALLED func=atoi
 FUNCTIONCALLED func=connectTimeout
+FUNCTIONCALLED func=memset
+FUNCTIONCALLED func=strchr
+FUNCTIONCALLED func=atoi
+FUNCTIONCALLED func=close
+FUNCTIONCALLED func=strcpy
+FUNCTIONCALLED func=socket
 REFERENCE source=Entry Point destination=00407f00 operandindex=-1 type=EXTERNAL
 REFERENCE source=00409d44 destination=00407f00 operandindex=0 type=INDIRECTION
 REFERENCE source=0040a268 destination=00407f00 operandindex=0 type=DATA
 REFERENCE source=00408491 destination=00407f00 operandindex=0 type=UNCONDITIONAL_CALL
 PRIMARYREFERENCE source=00408491 destination=00407f00 operandindex=0 type=UNCONDITIONAL_CALL
 FUNCTION func=getOurIP address=00408080 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
-FUNCTIONCALLED func=htons
-FUNCTIONCALLED func=memset
-FUNCTIONCALLED func=inet_addr
-FUNCTIONCALLED func=strcpy
-FUNCTIONCALLED func=close
 FUNCTIONCALLED func=ioctl
-FUNCTIONCALLED func=socket
-FUNCTIONCALLED func=strstr
 FUNCTIONCALLED func=fdgets
+FUNCTIONCALLED func=memset
 FUNCTIONCALLED func=connect
 FUNCTIONCALLED func=getsockname
+FUNCTIONCALLED func=inet_addr
 FUNCTIONCALLED func=open
+FUNCTIONCALLED func=htons
+FUNCTIONCALLED func=close
+FUNCTIONCALLED func=strcpy
+FUNCTIONCALLED func=strstr
+FUNCTIONCALLED func=socket
 REFERENCE source=Entry Point destination=00408080 operandindex=-1 type=EXTERNAL
 REFERENCE source=00409d4c destination=00408080 operandindex=0 type=INDIRECTION
 REFERENCE source=0040a288 destination=00408080 operandindex=0 type=DATA
@@ -1294,40 +1294,40 @@ REFERENCE source=0040a2a8 destination=004082f0 operandindex=0 type=DATA
 REFERENCE source=004084d8 destination=004082f0 operandindex=0 type=UNCONDITIONAL_CALL
 PRIMARYREFERENCE source=004084d8 destination=004082f0 operandindex=0 type=UNCONDITIONAL_CALL
 FUNCTION func=main address=00408300 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
-FUNCTIONCALLED func=fdpclose
-FUNCTIONCALLED func=time
-FUNCTIONCALLED func=zprintf
-FUNCTIONCALLED func=toupper
-FUNCTIONCALLED func=init_rand
-FUNCTIONCALLED func=exit
-FUNCTIONCALLED func=strstr
-FUNCTIONCALLED func=srand
-FUNCTIONCALLED func=fork
 FUNCTIONCALLED func=chdir
-FUNCTIONCALLED func=sleep
-FUNCTIONCALLED func=recvLine
-FUNCTIONCALLED func=fdpopen
-FUNCTIONCALLED func=strtok
-FUNCTIONCALLED func=printf
-FUNCTIONCALLED func=sockprintf
-FUNCTIONCALLED func=memset
-FUNCTIONCALLED func=initConnection
-FUNCTIONCALLED func=strcmp
-FUNCTIONCALLED func=strcpy
-FUNCTIONCALLED func=getOurIP
-FUNCTIONCALLED func=waitpid
-FUNCTIONCALLED func=szprintf
-FUNCTIONCALLED func=listFork
-FUNCTIONCALLED func=signal
 FUNCTIONCALLED func=strlen
-FUNCTIONCALLED func=getBuild
-FUNCTIONCALLED func=trim
-FUNCTIONCALLED func=getpid
-FUNCTIONCALLED func=free
 FUNCTIONCALLED func=fdgets
 FUNCTIONCALLED func=malloc
-FUNCTIONCALLED func=setsid
+FUNCTIONCALLED func=szprintf
+FUNCTIONCALLED func=free
+FUNCTIONCALLED func=fdpopen
+FUNCTIONCALLED func=strcpy
+FUNCTIONCALLED func=toupper
+FUNCTIONCALLED func=waitpid
+FUNCTIONCALLED func=time
+FUNCTIONCALLED func=fdpclose
+FUNCTIONCALLED func=sockprintf
+FUNCTIONCALLED func=strcmp
+FUNCTIONCALLED func=init_rand
+FUNCTIONCALLED func=initConnection
+FUNCTIONCALLED func=fork
+FUNCTIONCALLED func=signal
+FUNCTIONCALLED func=printf
+FUNCTIONCALLED func=recvLine
+FUNCTIONCALLED func=memset
+FUNCTIONCALLED func=zprintf
+FUNCTIONCALLED func=getOurIP
+FUNCTIONCALLED func=strtok
+FUNCTIONCALLED func=sleep
 FUNCTIONCALLED func=processCmd
+FUNCTIONCALLED func=exit
+FUNCTIONCALLED func=getpid
+FUNCTIONCALLED func=getBuild
+FUNCTIONCALLED func=srand
+FUNCTIONCALLED func=setsid
+FUNCTIONCALLED func=trim
+FUNCTIONCALLED func=listFork
+FUNCTIONCALLED func=strstr
 REFERENCE source=Entry Point destination=00408300 operandindex=-1 type=EXTERNAL
 REFERENCE source=00409d5c destination=00408300 operandindex=0 type=INDIRECTION
 REFERENCE source=0040a2c8 destination=00408300 operandindex=0 type=DATA
@@ -1363,9 +1363,9 @@ REFERENCE source=00408dda destination=00408fa0 operandindex=0 type=UNCONDITIONAL
 REFERENCE source=00408f36 destination=00408fa0 operandindex=0 type=UNCONDITIONAL_CALL
 PRIMARYREFERENCE source=00408f36 destination=00408fa0 operandindex=0 type=UNCONDITIONAL_CALL
 FUNCTION func=__libc_csu_init address=00409000 returntype=undefined returnvalue=[undefined <RETURN>@<UNASSIGNED>] parent=Global parenttype=NAMESPACE
-FUNCTIONCALLED func=_init
-FUNCTIONCALLED func=__do_global_dtors_aux
 FUNCTIONCALLED func=frame_dummy
+FUNCTIONCALLED func=__do_global_dtors_aux
+FUNCTIONCALLED func=_init
 REFERENCE source=Entry Point destination=00409000 operandindex=-1 type=EXTERNAL
 REFERENCE source=00409d7c destination=00409000 operandindex=0 type=INDIRECTION
 REFERENCE source=0040a348 destination=00409000 operandindex=0 type=DATA

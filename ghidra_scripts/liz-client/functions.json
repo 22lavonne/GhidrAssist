@@ -17,6 +17,9 @@
     "edges": {
       "5d6c46b0-5c4a-47c8-a80a-7a4a22af3f94": "BELONGS_TO_COMMUNITY",
       "2e48df76-c393-4f45-8e63-2128365cfd6d": "BELONGS_TO_COMMUNITY",
+      "177e5605-e1c6-4c79-99f3-7f520e75b99f": "BELONGS_TO_COMMUNITY",
+      "f83e1b65-4ccc-4fc3-a63a-96bea9b1688c": "BELONGS_TO_COMMUNITY",
+      "17961754-e99b-437e-a6ea-6e6b2640be0f": "BELONGS_TO_COMMUNITY",
       "_init_group (6)": "BELONGS_TO_COMMUNITY",
       "__gmon_start__": "CALLS"
     }
@@ -39,7 +42,10 @@
     "edges": {
       "ab1d2298-4c65-4977-992b-aebb58393636": "BELONGS_TO_COMMUNITY",
       "f90fb811-2628-4ab9-90b0-46ab130247a0": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY",
       "__libc_start_main": "CALLS"
     }
   },
@@ -61,6 +67,9 @@
     "edges": {
       "6b471009-7224-4ec2-bb3e-b4c2b4eab448": "BELONGS_TO_COMMUNITY",
       "2e48df76-c393-4f45-8e63-2128365cfd6d": "BELONGS_TO_COMMUNITY",
+      "177e5605-e1c6-4c79-99f3-7f520e75b99f": "BELONGS_TO_COMMUNITY",
+      "f83e1b65-4ccc-4fc3-a63a-96bea9b1688c": "BELONGS_TO_COMMUNITY",
+      "17961754-e99b-437e-a6ea-6e6b2640be0f": "BELONGS_TO_COMMUNITY",
       "_init_group (6)": "BELONGS_TO_COMMUNITY"
     }
   },
@@ -82,6 +91,9 @@
     "edges": {
       "5d6c46b0-5c4a-47c8-a80a-7a4a22af3f94": "BELONGS_TO_COMMUNITY",
       "2e48df76-c393-4f45-8e63-2128365cfd6d": "BELONGS_TO_COMMUNITY",
+      "177e5605-e1c6-4c79-99f3-7f520e75b99f": "BELONGS_TO_COMMUNITY",
+      "f83e1b65-4ccc-4fc3-a63a-96bea9b1688c": "BELONGS_TO_COMMUNITY",
+      "17961754-e99b-437e-a6ea-6e6b2640be0f": "BELONGS_TO_COMMUNITY",
       "_init_group (6)": "BELONGS_TO_COMMUNITY"
     }
   },
@@ -103,6 +115,9 @@
     "edges": {
       "6b471009-7224-4ec2-bb3e-b4c2b4eab448": "BELONGS_TO_COMMUNITY",
       "2e48df76-c393-4f45-8e63-2128365cfd6d": "BELONGS_TO_COMMUNITY",
+      "177e5605-e1c6-4c79-99f3-7f520e75b99f": "BELONGS_TO_COMMUNITY",
+      "f83e1b65-4ccc-4fc3-a63a-96bea9b1688c": "BELONGS_TO_COMMUNITY",
+      "17961754-e99b-437e-a6ea-6e6b2640be0f": "BELONGS_TO_COMMUNITY",
       "_init_group (6)": "BELONGS_TO_COMMUNITY",
       "deregister_tm_clones": "CALLS"
     }
@@ -125,6 +140,9 @@
     "edges": {
       "5d6c46b0-5c4a-47c8-a80a-7a4a22af3f94": "BELONGS_TO_COMMUNITY",
       "2e48df76-c393-4f45-8e63-2128365cfd6d": "BELONGS_TO_COMMUNITY",
+      "177e5605-e1c6-4c79-99f3-7f520e75b99f": "BELONGS_TO_COMMUNITY",
+      "f83e1b65-4ccc-4fc3-a63a-96bea9b1688c": "BELONGS_TO_COMMUNITY",
+      "17961754-e99b-437e-a6ea-6e6b2640be0f": "BELONGS_TO_COMMUNITY",
       "_init_group (6)": "BELONGS_TO_COMMUNITY",
       "register_tm_clones": "CALLS"
     }
@@ -147,7 +165,10 @@
     "edges": {
       "e85f0b60-bb41-4192-8589-ec781e0ac829": "BELONGS_TO_COMMUNITY",
       "683cf0aa-9776-4d09-bba9-f61b346d6c53": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY"
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "0fc0d48c-feeb-4189-b035-c10c19f39a1d": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY"
     }
   },
   {
@@ -168,7 +189,10 @@
     "edges": {
       "e85f0b60-bb41-4192-8589-ec781e0ac829": "BELONGS_TO_COMMUNITY",
       "683cf0aa-9776-4d09-bba9-f61b346d6c53": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY"
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "0fc0d48c-feeb-4189-b035-c10c19f39a1d": "BELONGS_TO_COMMUNITY",
+      "csum_group (8)": "BELONGS_TO_COMMUNITY"
     }
   },
   {
@@ -189,7 +213,10 @@
     "edges": {
       "ab1d2298-4c65-4977-992b-aebb58393636": "BELONGS_TO_COMMUNITY",
       "f90fb811-2628-4ab9-90b0-46ab130247a0": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY",
       "strlen": "CALLS",
       "isspace": "CALLS"
     }
@@ -212,7 +239,10 @@
     "edges": {
       "ab1d2298-4c65-4977-992b-aebb58393636": "BELONGS_TO_COMMUNITY",
       "f90fb811-2628-4ab9-90b0-46ab130247a0": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY",
       "print": "CALLS"
     }
   },
@@ -234,7 +264,10 @@
     "edges": {
       "ab1d2298-4c65-4977-992b-aebb58393636": "BELONGS_TO_COMMUNITY",
       "f90fb811-2628-4ab9-90b0-46ab130247a0": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY",
       "prints": "CALLS",
       "printi": "CALLS",
       "printchar": "NETWORK_SEND"
@@ -258,6 +291,9 @@
     "edges": {
       "ab1d2298-4c65-4977-992b-aebb58393636": "BELONGS_TO_COMMUNITY",
       "f90fb811-2628-4ab9-90b0-46ab130247a0": "BELONGS_TO_COMMUNITY",
+      "551b76ee-8e89-44f3-b79e-71ec0c9ed094": "BELONGS_TO_COMMUNITY",
+      "8e0b2e0c-eabe-45b2-bf7d-dedad1310563": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
       "prints_group (3)": "BELONGS_TO_COMMUNITY",
       "printchar": "NETWORK_SEND"
     }
@@ -280,6 +316,9 @@
     "edges": {
       "ab1d2298-4c65-4977-992b-aebb58393636": "BELONGS_TO_COMMUNITY",
       "f90fb811-2628-4ab9-90b0-46ab130247a0": "BELONGS_TO_COMMUNITY",
+      "551b76ee-8e89-44f3-b79e-71ec0c9ed094": "BELONGS_TO_COMMUNITY",
+      "8e0b2e0c-eabe-45b2-bf7d-dedad1310563": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
       "prints_group (3)": "BELONGS_TO_COMMUNITY",
       "prints": "CALLS",
       "printchar": "NETWORK_SEND"
@@ -318,6 +357,9 @@
     "edges": {
       "ab1d2298-4c65-4977-992b-aebb58393636": "BELONGS_TO_COMMUNITY",
       "f90fb811-2628-4ab9-90b0-46ab130247a0": "BELONGS_TO_COMMUNITY",
+      "551b76ee-8e89-44f3-b79e-71ec0c9ed094": "BELONGS_TO_COMMUNITY",
+      "8e0b2e0c-eabe-45b2-bf7d-dedad1310563": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
       "prints_group (3)": "BELONGS_TO_COMMUNITY",
       "write": "CALLS"
     }
@@ -340,7 +382,10 @@
     "edges": {
       "ab1d2298-4c65-4977-992b-aebb58393636": "BELONGS_TO_COMMUNITY",
       "f90fb811-2628-4ab9-90b0-46ab130247a0": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY"
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY"
     }
   },
   {
@@ -361,7 +406,10 @@
     "edges": {
       "ab1d2298-4c65-4977-992b-aebb58393636": "BELONGS_TO_COMMUNITY",
       "f90fb811-2628-4ab9-90b0-46ab130247a0": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY",
       "print": "CALLS"
     }
   },
@@ -391,7 +439,10 @@
     "edges": {
       "ab1d2298-4c65-4977-992b-aebb58393636": "BELONGS_TO_COMMUNITY",
       "f90fb811-2628-4ab9-90b0-46ab130247a0": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY",
       "malloc": "CALLS",
       "memset": "CALLS",
       "print": "CALLS",
@@ -438,7 +489,10 @@
     "edges": {
       "ab1d2298-4c65-4977-992b-aebb58393636": "BELONGS_TO_COMMUNITY",
       "f90fb811-2628-4ab9-90b0-46ab130247a0": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY",
       "pipe": "CALLS",
       "getdtablesize": "CALLS",
       "malloc": "CALLS",
@@ -483,7 +537,10 @@
     "edges": {
       "ab1d2298-4c65-4977-992b-aebb58393636": "BELONGS_TO_COMMUNITY",
       "f90fb811-2628-4ab9-90b0-46ab130247a0": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY",
       "close": "CALLS",
       "sigemptyset": "CALLS",
       "sigaddset": "CALLS",
@@ -510,7 +567,10 @@
     "edges": {
       "ab1d2298-4c65-4977-992b-aebb58393636": "BELONGS_TO_COMMUNITY",
       "f90fb811-2628-4ab9-90b0-46ab130247a0": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY"
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY"
     }
   },
   {
@@ -546,7 +606,10 @@
     "edges": {
       "ab1d2298-4c65-4977-992b-aebb58393636": "BELONGS_TO_COMMUNITY",
       "f90fb811-2628-4ab9-90b0-46ab130247a0": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY",
       "read": "CALLS",
       "main": "TAINT_FLOWS_TO",
       "getCores": "TAINT_FLOWS_TO",
@@ -580,7 +643,10 @@
     "edges": {
       "e85f0b60-bb41-4192-8589-ec781e0ac829": "BELONGS_TO_COMMUNITY",
       "683cf0aa-9776-4d09-bba9-f61b346d6c53": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY",
       "inet_addr": "CALLS"
     }
   },
@@ -602,7 +668,10 @@
     "edges": {
       "ab1d2298-4c65-4977-992b-aebb58393636": "BELONGS_TO_COMMUNITY",
       "f90fb811-2628-4ab9-90b0-46ab130247a0": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY",
       "wildString": "CALLS",
       "toupper": "CALLS"
     }
@@ -625,7 +694,10 @@
     "edges": {
       "ab1d2298-4c65-4977-992b-aebb58393636": "BELONGS_TO_COMMUNITY",
       "f90fb811-2628-4ab9-90b0-46ab130247a0": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY",
       "toupper": "CALLS"
     }
   },
@@ -668,7 +740,10 @@
     "edges": {
       "ab1d2298-4c65-4977-992b-aebb58393636": "BELONGS_TO_COMMUNITY",
       "f90fb811-2628-4ab9-90b0-46ab130247a0": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY",
       "open": "CALLS",
       "fdgets": "TAINT_FLOWS_TO",
       "uppercase": "CALLS",
@@ -716,7 +791,10 @@
     "edges": {
       "ab1d2298-4c65-4977-992b-aebb58393636": "BELONGS_TO_COMMUNITY",
       "f90fb811-2628-4ab9-90b0-46ab130247a0": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY",
       "open": "CALLS",
       "fdgets": "TAINT_FLOWS_TO",
       "uppercase": "CALLS",
@@ -743,7 +821,10 @@
     "edges": {
       "e85f0b60-bb41-4192-8589-ec781e0ac829": "BELONGS_TO_COMMUNITY",
       "683cf0aa-9776-4d09-bba9-f61b346d6c53": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "0fc0d48c-feeb-4189-b035-c10c19f39a1d": "BELONGS_TO_COMMUNITY",
+      "csum_group (8)": "BELONGS_TO_COMMUNITY",
       "rand_cmwc": "CALLS"
     }
   },
@@ -783,7 +864,10 @@
     "edges": {
       "e85f0b60-bb41-4192-8589-ec781e0ac829": "BELONGS_TO_COMMUNITY",
       "683cf0aa-9776-4d09-bba9-f61b346d6c53": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY",
       "fcntl": "CALLS",
       "htons": "CALLS",
       "getHost": "CALLS",
@@ -817,7 +901,10 @@
     "edges": {
       "e85f0b60-bb41-4192-8589-ec781e0ac829": "BELONGS_TO_COMMUNITY",
       "683cf0aa-9776-4d09-bba9-f61b346d6c53": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY",
       "fork": "CALLS",
       "malloc": "CALLS",
       "free": "CALLS"
@@ -849,7 +936,10 @@
     "edges": {
       "1b75dce9-70e3-41c0-867a-1882d9545c8f": "BELONGS_TO_COMMUNITY",
       "376b8464-c243-4558-925e-c9cb006ba671": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "8e65d4b0-ee60-4226-85d9-b60ae57ee75f": "BELONGS_TO_COMMUNITY",
+      "readUntil_group (3)": "BELONGS_TO_COMMUNITY",
       "send": "CALLS"
     }
   },
@@ -871,7 +961,10 @@
     "edges": {
       "1b75dce9-70e3-41c0-867a-1882d9545c8f": "BELONGS_TO_COMMUNITY",
       "376b8464-c243-4558-925e-c9cb006ba671": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "8e65d4b0-ee60-4226-85d9-b60ae57ee75f": "BELONGS_TO_COMMUNITY",
+      "readUntil_group (3)": "BELONGS_TO_COMMUNITY",
       "strlen": "CALLS"
     }
   },
@@ -902,7 +995,10 @@
     "edges": {
       "ab1d2298-4c65-4977-992b-aebb58393636": "BELONGS_TO_COMMUNITY",
       "f90fb811-2628-4ab9-90b0-46ab130247a0": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY",
       "memset": "CALLS",
       "select": "CALLS",
       "sockprintf": "TAINT_FLOWS_TO",
@@ -938,7 +1034,10 @@
     "edges": {
       "1b75dce9-70e3-41c0-867a-1882d9545c8f": "BELONGS_TO_COMMUNITY",
       "376b8464-c243-4558-925e-c9cb006ba671": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "8e65d4b0-ee60-4226-85d9-b60ae57ee75f": "BELONGS_TO_COMMUNITY",
+      "readUntil_group (3)": "BELONGS_TO_COMMUNITY",
       "select": "CALLS",
       "recv": "CALLS",
       "negotiate": "NETWORK_SEND",
@@ -978,7 +1077,10 @@
     "edges": {
       "ab1d2298-4c65-4977-992b-aebb58393636": "BELONGS_TO_COMMUNITY",
       "f90fb811-2628-4ab9-90b0-46ab130247a0": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY",
       "memset": "CALLS",
       "szprintf": "CALLS",
       "inet_addr": "CALLS",
@@ -1003,7 +1105,10 @@
     "edges": {
       "e85f0b60-bb41-4192-8589-ec781e0ac829": "BELONGS_TO_COMMUNITY",
       "683cf0aa-9776-4d09-bba9-f61b346d6c53": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY"
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "0fc0d48c-feeb-4189-b035-c10c19f39a1d": "BELONGS_TO_COMMUNITY",
+      "csum_group (8)": "BELONGS_TO_COMMUNITY"
     }
   },
   {
@@ -1032,7 +1137,10 @@
     "edges": {
       "e85f0b60-bb41-4192-8589-ec781e0ac829": "BELONGS_TO_COMMUNITY",
       "683cf0aa-9776-4d09-bba9-f61b346d6c53": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "0fc0d48c-feeb-4189-b035-c10c19f39a1d": "BELONGS_TO_COMMUNITY",
+      "csum_group (8)": "BELONGS_TO_COMMUNITY",
       "htons": "CALLS",
       "malloc": "CALLS",
       "csum": "CALLS",
@@ -1057,7 +1165,10 @@
     "edges": {
       "e85f0b60-bb41-4192-8589-ec781e0ac829": "BELONGS_TO_COMMUNITY",
       "683cf0aa-9776-4d09-bba9-f61b346d6c53": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "0fc0d48c-feeb-4189-b035-c10c19f39a1d": "BELONGS_TO_COMMUNITY",
+      "csum_group (8)": "BELONGS_TO_COMMUNITY",
       "rand_cmwc": "CALLS"
     }
   },
@@ -1093,7 +1204,10 @@
     "edges": {
       "ab1d2298-4c65-4977-992b-aebb58393636": "BELONGS_TO_COMMUNITY",
       "376b8464-c243-4558-925e-c9cb006ba671": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY",
       "close": "CALLS"
     }
   },
@@ -1123,7 +1237,10 @@
     "edges": {
       "e85f0b60-bb41-4192-8589-ec781e0ac829": "BELONGS_TO_COMMUNITY",
       "683cf0aa-9776-4d09-bba9-f61b346d6c53": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "0fc0d48c-feeb-4189-b035-c10c19f39a1d": "BELONGS_TO_COMMUNITY",
+      "csum_group (8)": "BELONGS_TO_COMMUNITY",
       "ntohl": "CALLS",
       "rand_cmwc": "CALLS"
     }
@@ -1162,7 +1279,10 @@
     "edges": {
       "e85f0b60-bb41-4192-8589-ec781e0ac829": "BELONGS_TO_COMMUNITY",
       "683cf0aa-9776-4d09-bba9-f61b346d6c53": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "0fc0d48c-feeb-4189-b035-c10c19f39a1d": "BELONGS_TO_COMMUNITY",
+      "csum_group (8)": "BELONGS_TO_COMMUNITY",
       "rand_cmwc": "CALLS",
       "htons": "CALLS",
       "getHost": "CALLS",
@@ -1213,7 +1333,10 @@
     "edges": {
       "e85f0b60-bb41-4192-8589-ec781e0ac829": "BELONGS_TO_COMMUNITY",
       "683cf0aa-9776-4d09-bba9-f61b346d6c53": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "0fc0d48c-feeb-4189-b035-c10c19f39a1d": "BELONGS_TO_COMMUNITY",
+      "csum_group (8)": "BELONGS_TO_COMMUNITY",
       "rand_cmwc": "CALLS",
       "htons": "CALLS",
       "getHost": "CALLS",
@@ -1272,7 +1395,10 @@
     "edges": {
       "e85f0b60-bb41-4192-8589-ec781e0ac829": "BELONGS_TO_COMMUNITY",
       "683cf0aa-9776-4d09-bba9-f61b346d6c53": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY",
       "getdtablesize": "CALLS",
       "htons": "CALLS",
       "getHost": "CALLS",
@@ -1329,7 +1455,10 @@
     "edges": {
       "e85f0b60-bb41-4192-8589-ec781e0ac829": "BELONGS_TO_COMMUNITY",
       "683cf0aa-9776-4d09-bba9-f61b346d6c53": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY",
       "getdtablesize": "CALLS",
       "htons": "CALLS",
       "getHost": "CALLS",
@@ -1382,7 +1511,10 @@
     "edges": {
       "e85f0b60-bb41-4192-8589-ec781e0ac829": "BELONGS_TO_COMMUNITY",
       "683cf0aa-9776-4d09-bba9-f61b346d6c53": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY",
       "strcmp": "CALLS",
       "sockprintf": "TAINT_FLOWS_TO",
       "inet_ntoa": "CALLS",
@@ -1419,7 +1551,10 @@
     "edges": {
       "ab1d2298-4c65-4977-992b-aebb58393636": "BELONGS_TO_COMMUNITY",
       "376b8464-c243-4558-925e-c9cb006ba671": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY",
       "getdtablesize": "CALLS",
       "htons": "CALLS",
       "memset": "CALLS",
@@ -1429,7 +1564,7 @@
       "fcntl": "CALLS",
       "connect": "CALLS",
       "__errno_location": "CALLS",
-      "sclose": "CALLS",
+      "sclose": "CALLS_VULNERABLE",
       "time": "CALLS",
       "select": "CALLS",
       "getsockopt": "CALLS",
@@ -1479,7 +1614,10 @@
     "edges": {
       "e85f0b60-bb41-4192-8589-ec781e0ac829": "BELONGS_TO_COMMUNITY",
       "683cf0aa-9776-4d09-bba9-f61b346d6c53": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY",
       "memset": "CALLS",
       "close": "CALLS",
       "strcpy": "CALLS",
@@ -1539,7 +1677,10 @@
     "edges": {
       "ab1d2298-4c65-4977-992b-aebb58393636": "BELONGS_TO_COMMUNITY",
       "f90fb811-2628-4ab9-90b0-46ab130247a0": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY",
       "socket": "CALLS",
       "memset": "CALLS",
       "inet_addr": "CALLS",
@@ -1572,7 +1713,10 @@
     "edges": {
       "ab1d2298-4c65-4977-992b-aebb58393636": "BELONGS_TO_COMMUNITY",
       "f90fb811-2628-4ab9-90b0-46ab130247a0": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY"
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY"
     }
   },
   {
@@ -1607,7 +1751,10 @@
     "edges": {
       "ab1d2298-4c65-4977-992b-aebb58393636": "BELONGS_TO_COMMUNITY",
       "f90fb811-2628-4ab9-90b0-46ab130247a0": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY",
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY",
       "time": "CALLS",
       "getpid": "CALLS",
       "srand": "CALLS",
@@ -1651,9 +1798,9 @@
       "connectTimeout": "VULNERABLE_VIA",
       "getRandomPublicIP": "VULNERABLE_VIA",
       "sendHOLD": "VULNERABLE_VIA",
-      "sclose": "VULNERABLE_VIA",
       "getBogos": "VULNERABLE_VIA",
-      "getCores": "VULNERABLE_VIA"
+      "getCores": "VULNERABLE_VIA",
+      "sclose": "VULNERABLE_VIA"
     }
   },
   {
@@ -1674,6 +1821,9 @@
     "edges": {
       "5d6c46b0-5c4a-47c8-a80a-7a4a22af3f94": "BELONGS_TO_COMMUNITY",
       "2e48df76-c393-4f45-8e63-2128365cfd6d": "BELONGS_TO_COMMUNITY",
+      "177e5605-e1c6-4c79-99f3-7f520e75b99f": "BELONGS_TO_COMMUNITY",
+      "f83e1b65-4ccc-4fc3-a63a-96bea9b1688c": "BELONGS_TO_COMMUNITY",
+      "17961754-e99b-437e-a6ea-6e6b2640be0f": "BELONGS_TO_COMMUNITY",
       "_init_group (6)": "BELONGS_TO_COMMUNITY",
       "_init": "CALLS",
       "frame_dummy": "CALLS",
@@ -1698,7 +1848,10 @@
     "edges": {
       "ab1d2298-4c65-4977-992b-aebb58393636": "BELONGS_TO_COMMUNITY",
       "f90fb811-2628-4ab9-90b0-46ab130247a0": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY"
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY"
     }
   },
   {
@@ -1719,7 +1872,10 @@
     "edges": {
       "ab1d2298-4c65-4977-992b-aebb58393636": "BELONGS_TO_COMMUNITY",
       "f90fb811-2628-4ab9-90b0-46ab130247a0": "BELONGS_TO_COMMUNITY",
-      "main_group (43)": "BELONGS_TO_COMMUNITY"
+      "62e0ed20-a68b-4e72-a1d4-cb838075f533": "BELONGS_TO_COMMUNITY",
+      "04b51779-9708-43e4-ac7e-dd21600c51f9": "BELONGS_TO_COMMUNITY",
+      "26d5c483-10da-4c3b-b96e-9342d5bc236b": "BELONGS_TO_COMMUNITY",
+      "main_group (32)": "BELONGS_TO_COMMUNITY"
     }
   }
 ]

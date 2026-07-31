@@ -1,5 +1,215 @@
 [
   {
+    "name": "getdtablesize",
+    "id": "aeb45e85-bc56-4416-91f1-e0609de270ce",
+    "binaryID": "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e",
+    "rawContent": "// External function: getdtablesize",
+    "decompiledCode": "// External function: getdtablesize",
+    "summaryConfidence": 0.0,
+    "analysisDepth": 0,
+    "createdAt": "2026-07-31T13:44:23.811Z",
+    "updatedAt": "2026-07-31T13:44:23.811Z",
+    "isStale": false,
+    "isUserEdited": false,
+    "edges": {}
+  },
+  {
+    "name": "htons",
+    "id": "4600a3aa-3816-4e53-9872-15165a98374b",
+    "binaryID": "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e",
+    "rawContent": "// External function: htons",
+    "decompiledCode": "// External function: htons",
+    "summaryConfidence": 0.0,
+    "analysisDepth": 0,
+    "createdAt": "2026-07-31T13:44:23.811Z",
+    "updatedAt": "2026-07-31T13:44:23.811Z",
+    "isStale": false,
+    "isUserEdited": false,
+    "edges": {}
+  },
+  {
+    "name": "memset",
+    "id": "f9d5f4c5-15ab-4275-b124-9388e6faf5f7",
+    "binaryID": "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e",
+    "rawContent": "// External function: memset",
+    "decompiledCode": "// External function: memset",
+    "summaryConfidence": 0.0,
+    "analysisDepth": 0,
+    "createdAt": "2026-07-31T13:44:23.812Z",
+    "updatedAt": "2026-07-31T13:44:23.812Z",
+    "isStale": false,
+    "isUserEdited": false,
+    "edges": {}
+  },
+  {
+    "name": "malloc",
+    "id": "042cf1c1-27d5-4841-a156-6d2371c16c3d",
+    "binaryID": "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e",
+    "rawContent": "// External function: malloc",
+    "decompiledCode": "// External function: malloc",
+    "summaryConfidence": 0.0,
+    "analysisDepth": 0,
+    "createdAt": "2026-07-31T13:44:23.812Z",
+    "updatedAt": "2026-07-31T13:44:23.812Z",
+    "isStale": false,
+    "isUserEdited": false,
+    "edges": {}
+  },
+  {
+    "name": "socket",
+    "id": "06d13090-121c-4d07-9cab-21c62835411c",
+    "binaryID": "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e",
+    "rawContent": "// External function: socket",
+    "decompiledCode": "// External function: socket",
+    "summaryConfidence": 0.0,
+    "analysisDepth": 0,
+    "createdAt": "2026-07-31T13:44:23.815Z",
+    "updatedAt": "2026-07-31T13:44:23.815Z",
+    "isStale": false,
+    "isUserEdited": false,
+    "edges": {}
+  },
+  {
+    "name": "fcntl",
+    "id": "7994dd62-71f2-44fa-bcc3-ebe766c9cda1",
+    "binaryID": "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e",
+    "rawContent": "// External function: fcntl",
+    "decompiledCode": "// External function: fcntl",
+    "summaryConfidence": 0.0,
+    "analysisDepth": 0,
+    "createdAt": "2026-07-31T13:44:23.815Z",
+    "updatedAt": "2026-07-31T13:44:23.815Z",
+    "isStale": false,
+    "isUserEdited": false,
+    "edges": {}
+  },
+  {
+    "name": "connect",
+    "id": "f3fbdcf0-6edd-4eb5-a08a-d36a6954017b",
+    "binaryID": "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e",
+    "rawContent": "// External function: connect",
+    "decompiledCode": "// External function: connect",
+    "summaryConfidence": 0.0,
+    "analysisDepth": 0,
+    "createdAt": "2026-07-31T13:44:23.815Z",
+    "updatedAt": "2026-07-31T13:44:23.815Z",
+    "isStale": false,
+    "isUserEdited": false,
+    "edges": {}
+  },
+  {
+    "name": "__errno_location",
+    "id": "2a49b56d-d5af-4c1b-9c07-7e0747f2d9aa",
+    "binaryID": "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e",
+    "rawContent": "// External function: __errno_location",
+    "decompiledCode": "// External function: __errno_location",
+    "summaryConfidence": 0.0,
+    "analysisDepth": 0,
+    "createdAt": "2026-07-31T13:44:23.815Z",
+    "updatedAt": "2026-07-31T13:44:23.815Z",
+    "isStale": false,
+    "isUserEdited": false,
+    "edges": {}
+  },
+  {
+    "name": "time",
+    "id": "f62766a9-0c32-4049-a65e-aad4d2a99f37",
+    "binaryID": "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e",
+    "rawContent": "// External function: time",
+    "decompiledCode": "// External function: time",
+    "summaryConfidence": 0.0,
+    "analysisDepth": 0,
+    "createdAt": "2026-07-31T13:44:23.816Z",
+    "updatedAt": "2026-07-31T13:44:23.816Z",
+    "isStale": false,
+    "isUserEdited": false,
+    "edges": {}
+  },
+  {
+    "name": "select",
+    "id": "b750551a-e892-494e-9bff-c30da34bd07a",
+    "binaryID": "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e",
+    "rawContent": "// External function: select",
+    "decompiledCode": "// External function: select",
+    "summaryConfidence": 0.0,
+    "analysisDepth": 0,
+    "createdAt": "2026-07-31T13:44:23.816Z",
+    "updatedAt": "2026-07-31T13:44:23.816Z",
+    "isStale": false,
+    "isUserEdited": false,
+    "edges": {}
+  },
+  {
+    "name": "getsockopt",
+    "id": "f3977812-ac03-4ff5-813a-1d7bdc3e94ab",
+    "binaryID": "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e",
+    "rawContent": "// External function: getsockopt",
+    "decompiledCode": "// External function: getsockopt",
+    "summaryConfidence": 0.0,
+    "analysisDepth": 0,
+    "createdAt": "2026-07-31T13:44:23.817Z",
+    "updatedAt": "2026-07-31T13:44:23.817Z",
+    "isStale": false,
+    "isUserEdited": false,
+    "edges": {}
+  },
+  {
+    "name": "strlen",
+    "id": "80a53cd4-f29d-43e1-b2ff-bee2317c2b03",
+    "binaryID": "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e",
+    "rawContent": "// External function: strlen",
+    "decompiledCode": "// External function: strlen",
+    "summaryConfidence": 0.0,
+    "analysisDepth": 0,
+    "createdAt": "2026-07-31T13:44:23.817Z",
+    "updatedAt": "2026-07-31T13:44:23.817Z",
+    "isStale": false,
+    "isUserEdited": false,
+    "edges": {}
+  },
+  {
+    "name": "send",
+    "id": "da1d37ef-a502-4752-bb3b-59a5a552dbc5",
+    "binaryID": "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e",
+    "rawContent": "// External function: send",
+    "decompiledCode": "// External function: send",
+    "summaryConfidence": 0.0,
+    "analysisDepth": 0,
+    "createdAt": "2026-07-31T13:44:23.818Z",
+    "updatedAt": "2026-07-31T13:44:23.818Z",
+    "isStale": false,
+    "isUserEdited": false,
+    "edges": {}
+  },
+  {
+    "name": "strstr",
+    "id": "3b58ce2b-bf5e-4587-b973-8606817bd030",
+    "binaryID": "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e",
+    "rawContent": "// External function: strstr",
+    "decompiledCode": "// External function: strstr",
+    "summaryConfidence": 0.0,
+    "analysisDepth": 0,
+    "createdAt": "2026-07-31T13:44:23.818Z",
+    "updatedAt": "2026-07-31T13:44:23.818Z",
+    "isStale": false,
+    "isUserEdited": false,
+    "edges": {}
+  },
+  {
+    "name": "inet_ntoa",
+    "id": "327fcf27-d7af-4578-bded-2a990e31ae94",
+    "binaryID": "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e",
+    "rawContent": "// External function: inet_ntoa",
+    "decompiledCode": "// External function: inet_ntoa",
+    "summaryConfidence": 0.0,
+    "analysisDepth": 0,
+    "createdAt": "2026-07-31T13:44:23.821Z",
+    "updatedAt": "2026-07-31T13:44:23.821Z",
+    "isStale": false,
+    "isUserEdited": false,
+    "edges": {}
+  },
+  {
     "name": "__gmon_start__",
     "id": "252bf1c9-e452-4470-b052-20f0fabeda58",
     "binaryID": "6fd3a04242a487b29a5893474e346f4a9eab5f88d280061a01eb2d266a43608e",
@@ -9,7 +219,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:45.768Z",
     "updatedAt": "2026-07-29T20:03:45.768Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -23,7 +233,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:45.783Z",
     "updatedAt": "2026-07-29T20:03:45.783Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -37,7 +247,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:45.909Z",
     "updatedAt": "2026-07-29T20:03:45.909Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -51,7 +261,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:45.910Z",
     "updatedAt": "2026-07-29T20:03:45.910Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -65,7 +275,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.165Z",
     "updatedAt": "2026-07-29T20:03:46.165Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -79,7 +289,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.165Z",
     "updatedAt": "2026-07-29T20:03:46.165Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -93,7 +303,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.166Z",
     "updatedAt": "2026-07-29T20:03:46.166Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -107,7 +317,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.166Z",
     "updatedAt": "2026-07-29T20:03:46.166Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -121,7 +331,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.205Z",
     "updatedAt": "2026-07-29T20:03:46.205Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -135,7 +345,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.206Z",
     "updatedAt": "2026-07-29T20:03:46.206Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -149,7 +359,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.206Z",
     "updatedAt": "2026-07-29T20:03:46.206Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -163,7 +373,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.206Z",
     "updatedAt": "2026-07-29T20:03:46.206Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -177,7 +387,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.207Z",
     "updatedAt": "2026-07-29T20:03:46.207Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -191,7 +401,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.207Z",
     "updatedAt": "2026-07-29T20:03:46.207Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -205,7 +415,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.207Z",
     "updatedAt": "2026-07-29T20:03:46.207Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -219,7 +429,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.215Z",
     "updatedAt": "2026-07-29T20:03:46.215Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -233,7 +443,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.215Z",
     "updatedAt": "2026-07-29T20:03:46.215Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -247,7 +457,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.215Z",
     "updatedAt": "2026-07-29T20:03:46.215Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -261,7 +471,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.216Z",
     "updatedAt": "2026-07-29T20:03:46.216Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -275,7 +485,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.216Z",
     "updatedAt": "2026-07-29T20:03:46.216Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -289,7 +499,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.246Z",
     "updatedAt": "2026-07-29T20:03:46.246Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -303,7 +513,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.262Z",
     "updatedAt": "2026-07-29T20:03:46.262Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -317,7 +527,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.277Z",
     "updatedAt": "2026-07-29T20:03:46.277Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -331,7 +541,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.340Z",
     "updatedAt": "2026-07-29T20:03:46.340Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -345,7 +555,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.341Z",
     "updatedAt": "2026-07-29T20:03:46.341Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -359,7 +569,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.341Z",
     "updatedAt": "2026-07-29T20:03:46.341Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -373,7 +583,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.341Z",
     "updatedAt": "2026-07-29T20:03:46.341Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -387,7 +597,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.378Z",
     "updatedAt": "2026-07-29T20:03:46.378Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -401,7 +611,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.379Z",
     "updatedAt": "2026-07-29T20:03:46.379Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -415,7 +625,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.380Z",
     "updatedAt": "2026-07-29T20:03:46.380Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -429,7 +639,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.380Z",
     "updatedAt": "2026-07-29T20:03:46.380Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -443,7 +653,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.380Z",
     "updatedAt": "2026-07-29T20:03:46.380Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -457,7 +667,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.391Z",
     "updatedAt": "2026-07-29T20:03:46.391Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -471,7 +681,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.441Z",
     "updatedAt": "2026-07-29T20:03:46.441Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -485,7 +695,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.508Z",
     "updatedAt": "2026-07-29T20:03:46.508Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -499,7 +709,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.553Z",
     "updatedAt": "2026-07-29T20:03:46.553Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -513,7 +723,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.688Z",
     "updatedAt": "2026-07-29T20:03:46.688Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -527,7 +737,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.688Z",
     "updatedAt": "2026-07-29T20:03:46.688Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -541,7 +751,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.688Z",
     "updatedAt": "2026-07-29T20:03:46.688Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -555,7 +765,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.688Z",
     "updatedAt": "2026-07-29T20:03:46.688Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -569,7 +779,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.688Z",
     "updatedAt": "2026-07-29T20:03:46.688Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -583,7 +793,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.689Z",
     "updatedAt": "2026-07-29T20:03:46.689Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -597,7 +807,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.903Z",
     "updatedAt": "2026-07-29T20:03:46.903Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -611,7 +821,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:46.904Z",
     "updatedAt": "2026-07-29T20:03:46.904Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -625,7 +835,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:47.392Z",
     "updatedAt": "2026-07-29T20:03:47.392Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -639,7 +849,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:47.392Z",
     "updatedAt": "2026-07-29T20:03:47.392Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -653,7 +863,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:47.393Z",
     "updatedAt": "2026-07-29T20:03:47.393Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -667,7 +877,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:47.394Z",
     "updatedAt": "2026-07-29T20:03:47.394Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -681,7 +891,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:47.394Z",
     "updatedAt": "2026-07-29T20:03:47.394Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -695,7 +905,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:47.448Z",
     "updatedAt": "2026-07-29T20:03:47.448Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -709,7 +919,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:47.448Z",
     "updatedAt": "2026-07-29T20:03:47.448Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -723,7 +933,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:47.575Z",
     "updatedAt": "2026-07-29T20:03:47.575Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -737,7 +947,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:47.575Z",
     "updatedAt": "2026-07-29T20:03:47.575Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -751,7 +961,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:47.575Z",
     "updatedAt": "2026-07-29T20:03:47.575Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -765,7 +975,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:47.610Z",
     "updatedAt": "2026-07-29T20:03:47.610Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -779,7 +989,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:47.611Z",
     "updatedAt": "2026-07-29T20:03:47.611Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   },
@@ -793,7 +1003,7 @@
     "analysisDepth": 0,
     "createdAt": "2026-07-29T20:03:47.718Z",
     "updatedAt": "2026-07-29T20:03:47.718Z",
-    "isStale": false,
+    "isStale": true,
     "isUserEdited": false,
     "edges": {}
   }

@@ -38,6 +38,7 @@ public class SemanticGraphController {
     private final GhidrAssistPlugin plugin;
     private final AnalysisDB analysisDB;
     private SemanticGraphTab semanticGraphTab;
+    private GenerateKGWorker generateKGWorker;
 
     // Background workers for non-blocking analysis
     private volatile ReindexWorker reindexWorker;
@@ -985,6 +986,44 @@ public class SemanticGraphController {
             }
         };
         TaskLauncher.launch(task);
+    }
+    
+    // ==== Knowledge Graph Generation Operation ====
+    public void handleGenerateKG() {
+        if (plugin.getCurrentProgram() == null) {
+            Msg.showWarn(this, null, "No Program", "No program loaded");
+            return;
+        }
+        if (generateKGWorker != null && !generateKGWorker.isDone()) {
+            generateKGWorker.requestCancel();
+            return;
+        }
+
+        generateKGWorker = new GenerateKGWorker(plugin.getCurrentProgram());
+
+        generateKGWorker.setProgressCallback(progress ->
+            semanticGraphTab.showProgress(progress.getPercentage(), progress.message));
+
+        generateKGWorker.setCompletedCallback(result -> {
+            semanticGraphTab.hideProgress();
+            semanticGraphTab.setGenerateKGRunning(false);
+            Msg.showInfo(this, null, "Generate KG", "Knowledge graph written to: " + result.outputPath);
+        });
+
+        generateKGWorker.setCancelledCallback(() -> {
+            semanticGraphTab.hideProgress();
+            semanticGraphTab.setGenerateKGRunning(false);
+        });
+
+        generateKGWorker.setFailedCallback(error -> {
+            semanticGraphTab.hideProgress();
+            semanticGraphTab.setGenerateKGRunning(false);
+            Msg.showError(this, null, "Error", "KG generation failed: " + error);
+        });
+
+        semanticGraphTab.setGenerateKGRunning(true);
+        semanticGraphTab.showProgress(0, "Starting KG generation...");
+        generateKGWorker.execute();
     }
 
     // ==== Helper Methods ====

@@ -40,6 +40,7 @@ public class SemanticGraphTab extends JPanel {
     private JButton semanticAnalysisButton;
     private JLabel statsLabel;
     private JProgressBar progressBar;
+    private JButton generateKGButton;
 
     // State
     private String currentNodeId;
@@ -82,6 +83,9 @@ public class SemanticGraphTab extends JPanel {
 
         semanticAnalysisButton = new JButton("Semantic Analysis");
         semanticAnalysisButton.setToolTipText("Use LLM to generate summaries for all stale/unsummarized nodes");
+        
+        generateKGButton = new JButton("Generate KG");
+        generateKGButton.setToolTipText("Run extraction + materialization scripts to build the external knowledge graph");
 
         statsLabel = new JLabel("Graph Stats: Not loaded");
 
@@ -124,6 +128,7 @@ public class SemanticGraphTab extends JPanel {
         buttonRow.add(resetGraphButton);
         buttonRow.add(reindexButton);
         buttonRow.add(semanticAnalysisButton);
+        buttonRow.add(generateKGButton);
 
         // Stats and progress row
         JPanel statusRow = new JPanel(new BorderLayout(5, 0));
@@ -151,6 +156,8 @@ public class SemanticGraphTab extends JPanel {
 
         // Semantic Analysis button
         semanticAnalysisButton.addActionListener(e -> handleSemanticAnalysis());
+        
+        generateKGButton.addActionListener(e -> handleGenerateKG());
 
         // Sub-tab change listener
         subTabbedPane.addChangeListener(e -> {
@@ -318,6 +325,30 @@ public class SemanticGraphTab extends JPanel {
         if (options != null) {
             controller.handleSemanticGraphSemanticAnalysis(options);
         }
+    }
+    
+//    logic to handle the button to generate the outside KG
+    private void handleGenerateKG() {
+        if (isGenerateKGRunning()) {
+        	controller.handleSemanticGraphGenerateKG();
+            return;
+        }
+        int result = JOptionPane.showConfirmDialog(this,
+                "Generate the knowledge graph for this binary?",
+                "Generate KG",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE);
+        if (result == JOptionPane.YES_OPTION) {
+        	controller.handleSemanticGraphGenerateKG();
+        }
+    }
+
+    public void setGenerateKGRunning(boolean running) {
+        generateKGButton.setText(running ? "Stop" : "Generate KG");
+    }
+
+    private boolean isGenerateKGRunning() {
+        return "Stop".equals(generateKGButton.getText());
     }
 
     // ===== Manual Analysis Panel Handlers =====

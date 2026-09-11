@@ -32,8 +32,6 @@ WHERE {
     ?source :taintFlowsTo ?sink .
 }
 
-SELECT 
-
 # get instances of vulnerableVia relations for functions
 SELECT ?vulnerableFunction ?caller
 WHERE {

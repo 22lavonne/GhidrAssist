@@ -2595,6 +2595,14 @@ public class TabController {
     public void handleSemanticGraphNavigate(long address) {
         semanticGraphController.handleNavigate(address);
     }
+    
+    /**
+     * Handle Generate KG button.
+     * Delegates to SemanticGraphController.
+     */
+    public void handleSemanticGraphGenerateKG() {
+        semanticGraphController.handleGenerateKG();
+    }
 
     /**
      * Navigate to an address using GoToService.

@@ -2,14 +2,14 @@
 # rdflib documentation: https://rdflib.readthedocs.io/en/stable/
 
 import sys
-import json
+
+from symbol_data_parser import *
 from pathlib import Path
 from urllib.parse import quote
 
 ##### Graph stuff
 from rdflib import URIRef, Graph, Namespace, Literal
 from rdflib import OWL, RDF, RDFS, XSD, TIME
-
 # Prefixes
 name_space = "https://kastle-lab.org/"
 pfs = {
@@ -99,8 +99,8 @@ graph = init_kg()
 # parse the ontology file
 # ontology = "ontology/combined-ontology.ttl"
 script_dir = Path(__file__).resolve().parent
-ontology_path = script_dir.parent / "ontology" / "combined-ontology.ttl"
-with open(ontology_path, "r", encoding="utf-8") as f:
+ontology_path = "../ontology/combined-ontology.ttl"
+with open(ontology_path, "r") as f:
     graph.parse(f, format="turtle")
 
 # ask the user from what file name they want to make a knowledge graph for
@@ -112,33 +112,34 @@ else:
     print("Directory does not exist. Exiting...")
     sys.exit()
 
-def load_json(file_path):
-    if file_path.exists():
-        with file_path.open("r", encoding="utf-8") as f:
-            return json.load(f)
-    return []
-
 # Data files, and lists of dictionaries containing the data based on the directory given
-parameters_list = load_json(dir_path / "parameter.json")
-local_var_list = load_json(dir_path / "local_variable.json")
-function_list = load_json(dir_path / "function.json")
-label_list = load_json(dir_path / "label.json")
-class_list = load_json(dir_path / "class.json")
-dll_list = load_json(dir_path / "dll.json")
-namespace_list = load_json(dir_path / "namespace.json")
-instruction_list = load_json(dir_path / "instruction.json")
+parameter_file = dir_name + "/parameter-output.txt"
+parameters_list = parse_parameters(parameter_file)
+local_file = dir_name + "/local-variable-output.txt"
+local_var_list = parse_local(local_file)
+function_file = dir_name + "/function-output.txt"
+function_list = parse_functions(function_file)
+label_file = dir_name + "/label-output.txt"
+label_list = parse_labels(label_file)
+class_file = dir_name + "/class-output.txt"
+class_list = parse_classes(class_file)
+dll_file = dir_name + "/dll-output.txt"
+dll_list = parse_dlls(dll_file)
+namespace_file = dir_name + "/namespace-output.txt"
+namespace_list = parse_namespaces(namespace_file)
+instruction_file = dir_name + "/instruction-output.txt"
+instruction_list = parse_instructions(instruction_file)    
 
 # method to add references triples for multiple kinds of objects
 # takes in the object instance URI, the reference object,
 # and a boolean for if the current reference is considered primary
-def add_reference(object_instance, reference, isPrimary=False):
+def add_reference(object_instance, reference, isPrimary):
     # name the reference based on both the source and destination addresses
     ref = pfs["mkg"]["ref_" + quote(str(reference['source'])) + "_to_" + quote(str(reference['destination']))]
     graph.add((ref, a, REFERENCE))
     
     # make a slightly different triple based on if the current reference is primary
-    is_primary_ref = isPrimary or reference.get('is_primary', False)
-    if is_primary_ref:
+    if isPrimary:
         graph.add((object_instance, hasPrimaryReference, ref))
     else:
         graph.add((object_instance, hasReference, ref))
@@ -146,28 +147,27 @@ def add_reference(object_instance, reference, isPrimary=False):
     # add other information about reference
     src_add = pfs["mkg"][quote(str(reference['source']))]
     dest_add = pfs["mkg"][quote(str(reference['destination']))]
-    op_index = Literal(reference.get('operand_index', reference.get('operandindex')))
+    op_index = Literal(reference['operandindex'])
     ref_type = Literal(reference['type'])
     
     graph.add((ref, hasSourceAddress, src_add))
     graph.add((ref, hasDestinationAddress, dest_add))
     graph.add((ref, hasOperandIndex, op_index))
     graph.add((ref, hasReferenceType, ref_type))
-
+    
 # use the quote function, but remove other special characters from the string so the URI can be in a valid turtle syntax
 def quote_for_turtle(obj_string):
     quoted_string = quote(obj_string)
     return_string = quoted_string.replace('%', '_')
     return_string = return_string.replace('.', '_')
     return return_string
+        
 
 # Local variable format example: 
 # {'var': 'local_8', 'datatype': 'undefined4', 'parent': 'FUN_00401090'}
 for l in local_var_list:
-    var_name = l.get('name', l.get('var'))
-    data_type = l.get('data_type', l.get('datatype'))
     
-    local_var = pfs["mkg"][quote_for_turtle(var_name)]
+    local_var = pfs["mkg"][quote_for_turtle(l['var'])]
     parent_func = pfs["mkg"][quote_for_turtle(l['parent'])]
     
     graph.add((local_var, a, LOCAL_VARIABLE))
@@ -176,15 +176,13 @@ for l in local_var_list:
     graph.add((parent_func, hasName, Literal(str(l['parent']))))
     
     graph.add((parent_func, defines, local_var))
-    graph.add((local_var, hasDataType, Literal(str(data_type))))
-
+    graph.add((local_var, hasDataType, Literal(str(l['datatype']))))
+    
+    
 # Parameter format example:
 # {'var': 'hModule', 'datatype': 'typedef HMODULE HINSTANCE', 'parent': 'GetProcAddress'}
 for p in parameters_list:
-    param_name = p.get('name', p.get('var'))
-    data_type = p.get('data_type', p.get('datatype'))
-    
-    param = pfs["mkg"][quote_for_turtle(param_name)]
+    param = pfs["mkg"][quote_for_turtle(p['var'])]
     parent_func = pfs["mkg"][quote_for_turtle(p['parent'])]
     
     graph.add((param, a, PARAMETER))
@@ -192,95 +190,94 @@ for p in parameters_list:
     graph.add((parent_func, hasName, Literal(str(p['parent']))))
     
     graph.add((param, passesInto, parent_func))
-    graph.add((param, hasDataType, Literal(str(data_type))))
+    graph.add((param, hasDataType, Literal(str(p['datatype']))))
+
 
 # Namespace format example:
 # {'namespace': 'switchD_0040f727', 'address': 'NO ADDRESS', 'parent': 'Global', 'references': [], 'primary_reference': None}
 for n in namespace_list:
-    ns_name = n.get('name', n.get('namespace'))
-    parent_type = n.get('parent_type', n.get('parenttype'))
-    
-    n_instance = pfs["mkg"][quote_for_turtle(ns_name)]
-    graph.add((n_instance, a, NAMESPACE))
+    n_instance = pfs["mkg"][quote_for_turtle(n['namespace'])]
+    graph.add( (n_instance, a, NAMESPACE))
     
     # add the address of namespace KG (both the address as an ADDRESS object, and the atAddress relation)
     if n['address'] != "NO ADDRESS":
         n_address = pfs["mkg"][quote_for_turtle(n['address'])]
         graph.add((n_address, a, ADDRESS))
-        graph.add((n_instance, atAddress, n_address))
+        graph.add( (n_instance, atAddress, n_address))
         
     # get the parent namespace of the current object
     n_parent = pfs["mkg"][quote_for_turtle(n['parent'])]
     # get the parent namespace type
+    parent_type = n['parenttype']
     # if the given parent type is a type of symbol defined in the symbol class dictionary
-    if parent_type in class_dict:
+    if(parent_type in class_dict):
         # then get the URIRef for that type of class and make the triple defining the parent as that type of class.
         graph.add((n_parent, a, class_dict[parent_type]))
     # then add the definedIn relation for the current namespace and its parent namespace
     graph.add((n_instance, definedIn, n_parent))
     
     # if the namespace has any references, add them
-    if n.get('references'):
+    if n['references']:
         for r in n['references']:
             # method that will add a reference to the given object instance
             # false indicates that it's not a primary reference
             add_reference(n_instance, r, False)
 
     # add primary reference if it exists
-    if n.get('primary_reference'):
-        # same as previous, except now it's a primary reference so the third value is True
-        add_reference(n_instance, n['primary_reference'], True)
+    if n['primary_reference']:
+            # same as previous, except now it's a parimary reference so the third value is True
+            add_reference(n_instance, n['primary_reference'], True)
 
+   
 # Class format example:
 # {'class': 'type_info (GhidraClass)', 'address': 'NO ADDRESS', 'parent': 'Global', 'references': [], 'primary_reference': None} 
-if class_list:
+if (class_list):
     for c in class_list:
-        c_name = c.get('name', c.get('class'))
-        parent_type = c.get('parent_type', c.get('parenttype'))
-        
-        c_instance = pfs["mkg"][quote_for_turtle(c_name)]
-        graph.add((c_instance, a, CLASS_))
+        c_instance = pfs["mkg"][quote_for_turtle(c['class'])]
+        graph.add( (c_instance, a, CLASS_))
         
         if c['address'] != "NO ADDRESS":
             c_address = pfs["mkg"][quote_for_turtle(c['address'])]
             graph.add((c_address, a, ADDRESS))
-            graph.add((c_instance, atAddress, c_address))
+            graph.add( (c_instance, atAddress, c_address))
             
         c_parent = pfs["mkg"][quote_for_turtle(c['parent'])]    
-        if parent_type in class_dict:
-            graph.add((c_parent, a, class_dict[parent_type]))
+        parent_type = c['parenttype']
+        if(parent_type in class_dict):
+            graph.add((n_parent, a, class_dict[parent_type]))
         graph.add((c_instance, definedIn, c_parent)) 
         
-        if c.get('references'):
+        if c['references']:
             for r in c['references']:
-                add_reference(c_instance, r, False)
+                ref = pfs["mkg"]["ref_" + str(r['source'])]
+                graph.add( (c_instance, hasReference, ref))
             
-        if c.get('primary_reference'):
-            add_reference(c_instance, c['primary_reference'], True)
+        if c['primary_reference']:
+            ref = pfs["mkg"]["ref_" + str(c['primary_reference']['source'])]
+            c_primary_ref = pfs["mkg"][quote_for_turtle(ref)]
+            graph.add( (c_instance, hasPrimaryReference, c_primary_ref))         
 
 # DLL format example:
 # {'dll': 'KERNEL32.DLL', 'address': 'NO ADDRESS parent:Global', 'references': [], 'primary_reference': None}
 for l in dll_list:
-    dll_name = l.get('name', l.get('dll'))
-    parent_type = l.get('parent_type', l.get('parenttype'))
-    
-    l_instance = pfs["mkg"][quote_for_turtle(dll_name)]
-    graph.add((l_instance, a, EXTERNAL_FUNCTION_NODE))
+    l_instance = pfs["mkg"][quote_for_turtle(l['dll'])]
+    graph.add( (l_instance, a, EXTERNAL_FUNCTION_NODE))
     
     if l['address'] != "NO ADDRESS":
         l_address = pfs["mkg"][quote_for_turtle(l['address'])]
         graph.add((l_address, a, ADDRESS))
-        graph.add((l_instance, atAddress, l_address))
+        graph.add( (l_instance, atAddress, l_address))
         
     l_parent = pfs["mkg"][quote_for_turtle(l['parent'])]
-    if parent_type in class_dict:
+    parent_type = l['parenttype']
+    if(parent_type in class_dict):
         graph.add((l_parent, a, class_dict[parent_type])) 
     graph.add((l_instance, definedIn, l_parent))    
     
-    if l.get('references'):
+    if l['references']:
         for r in l['references']:
             add_reference(l_instance, r, False)
-    if l.get('primary_reference'):
+    if l['primary_reference']:
         add_reference(l_instance, l['primary_reference'], True)
 
 # Function format example:
@@ -290,80 +287,72 @@ for l in dll_list:
 # {'source': '004012f0', 'destination': 'EXTERNAL:00000005', 'operandindex': '-1', 'type': 'COMPUTED_CALL'}], 
 # 'primary_reference': {'source': '004012f0', 'destination': 'EXTERNAL:00000005', 'operandindex': '-1', 'type': 'COMPUTED_CALL'}} 
 for f in function_list:
-    f_name = f.get('name', f.get('func'))
-    parent_type = f.get('parent_type', f.get('parenttype'))
-    ret_type = f.get('return_type', f.get('returntype'))
-    ret_val = f.get('return_value', f.get('returnvalue'))
-    
-    f_instance = pfs["mkg"][quote_for_turtle(f_name)]
-    graph.add((f_instance, a, FUNCTION_NODE))
-    graph.add((f_instance, hasName, Literal(str(f_name))))
+    f_instance = pfs["mkg"][quote_for_turtle(f['func'])]
+    graph.add( (f_instance, a, FUNCTION_NODE))
+    graph.add((f_instance, hasName, Literal(str(f['func']))))
     
     if f['address'] != "NO ADDRESS":
         f_address = pfs["mkg"][quote_for_turtle(f['address'])]
         graph.add((f_address, a, ADDRESS))
-        graph.add((f_instance, atAddress, f_address))
+        graph.add( (f_instance, atAddress, f_address))
         
     f_parent = pfs["mkg"][quote_for_turtle(f['parent'])]    
-    if parent_type in class_dict:
+    parent_type = f['parenttype']
+    if(parent_type in class_dict):
         graph.add((f_parent, a, class_dict[parent_type]))
     graph.add((f_instance, definedIn, f_parent))
      
     # get all the functions called from this function
-    called_funcs = f.get('called_functions', f.get('functions_called', []))
-    if called_funcs:
-        for fc in called_funcs:
+    if f['functions_called']:
+        for fc in f['functions_called']:
             # make the URI of the function since it is seen elsewhere
-            fc_name = fc if isinstance(fc, str) else fc.get('func')
-            func_called = pfs["mkg"][quote_for_turtle(fc_name)]
+            func_called = pfs["mkg"][quote_for_turtle(fc['func'])]
             graph.add((func_called, a, FUNCTION_NODE))
-            graph.add((func_called, hasName, Literal(str(fc_name))))
+            graph.add((func_called, hasName, Literal(str(fc['func']))))
             graph.add((f_instance, calls, func_called))
             
     # return type
-    graph.add((f_instance, hasReturnType, Literal(str(ret_type))))
+    graph.add((f_instance, hasReturnType, Literal(str(f['returntype']))))
     
     # return value (as a parameter)
-    if ret_val:
-        f_return_value = pfs["mkg"][quote_for_turtle(ret_val)]
-        graph.add((f_return_value, a, PARAMETER))
-        graph.add((f_instance, returns, f_return_value))
+    f_return_value = pfs["mkg"][quote_for_turtle(f['returnvalue'])]
+    graph.add((f_return_value, a, PARAMETER))
+    graph.add((f_instance, returns, f_return_value))
+    
     
     # if any references exist, add them as triples
-    if f.get('references'):
+    if f['references']:
         for r in f['references']:
             add_reference(f_instance, r, False)
             
-    if f.get('primary_reference'):
+    if f['primary_reference']:
         add_reference(f_instance, f['primary_reference'], True)
 
 # Label format example:
 # {'label': 'shift', 'address': '00000000', 'parent': 'Global', 'parenttype': 'NAMESPACE', 'references': [], 'primary_reference': None}
 for l in label_list:
-    l_name = l.get('name', l.get('label'))
-    parent_type = l.get('parent_type', l.get('parenttype'))
-    
     # add address to the name to diffrentiate different labels with the same name
     # and do 2 underscores to differentiate between namespace names
-    l_instance = pfs["mkg"][quote_for_turtle(l_name + "__" + l['address'])]
-    graph.add((l_instance, a, LABEL))
+    l_instance = pfs["mkg"][quote_for_turtle(l['label'] + "__" + l['address'])]
+    graph.add( (l_instance, a, LABEL))
     
     if l['address'] != "NO ADDRESS":
         l_address = pfs["mkg"][quote_for_turtle(l['address'])]
         graph.add((l_address, a, ADDRESS))
-        graph.add((l_instance, atAddress, l_address))
+        graph.add( (l_instance, atAddress, l_address))
         
     l_parent = pfs["mkg"][quote_for_turtle(l['parent'])]
-    if parent_type in class_dict:
+    parent_type = l['parenttype']
+    if(parent_type in class_dict):
         graph.add((l_parent, a, class_dict[parent_type]))
     graph.add((l_instance, definedIn, l_parent)) 
        
-    if l.get('references'):
+    if l['references']:
         for r in l['references']:
             add_reference(l_instance, r, False)
-    if l.get('primary_reference'):
-        add_reference(l_instance, l["primary_reference"], True)
-
+    if l['primary_reference']:
+            add_reference(l_instance, l["primary_reference"], True)
+        
 # Instruction format example:
 # {'min_address': '00401090', 'opcode': 'PUSH', 'in_function': 'FUN_00401090', 'numoperands': '1', 
 # 'source_operands': [{'operand': 'EBP', 'type': 'REGISTER'}], 
@@ -380,21 +369,26 @@ for i in instruction_list:
     opcode = Literal(i["opcode"])
     graph.add((i_instance, hasOpcode, opcode))
     
-    # Process structured operands from JSON
-    operands = i.get('operands', [])
-    for op in operands:
-        operand = pfs["mkg"][quote_for_turtle(op['representation'])]
+    if i['source_operands']:
+        for s in i['source_operands']:
+            operand = pfs["mkg"][quote_for_turtle(s['operand'])]
+            graph.add((operand, a, OPERAND))
+            
+            op_type = Literal(str(s["type"]))
+            graph.add((operand, hasOperandType, op_type))
+            graph.add((operand, hasOperandValue, Literal(s['operand'])))
+            
+            graph.add((i_instance, hasSourceOperand, operand))
+            
+    if i['destination_operand']:
+        operand = pfs["mkg"][quote_for_turtle(i['destination_operand']['operand'])]
         graph.add((operand, a, OPERAND))
         
-        op_type = Literal(str(op["type"]))
+        op_type = Literal(str(s["type"]))
         graph.add((operand, hasOperandType, op_type))
-        graph.add((operand, hasOperandValue, Literal(op['representation'])))
+        graph.add((operand, hasOperandValue, Literal(i['destination_operand']['operand'])))
         
-        role = op.get('role', '')
-        if role in ['SOURCE', 'SOURCE_AND_DESTINATION']:
-            graph.add((i_instance, hasSourceOperand, operand))
-        if role in ['DESTINATION', 'SOURCE_AND_DESTINATION']:
-            graph.add((i_instance, hasDestinationOperand, operand))
+        graph.add((i_instance, hasDestinationOperand, operand))
         
     # get whatever function has this instruction
     func = pfs["mkg"][quote_for_turtle(i['in_function'])]
@@ -404,6 +398,6 @@ for i in instruction_list:
     graph.add((func, containsInstruction, i_instance))    
 
 # then serialize the graph
-output_file = dir_path / "symbol-output.ttl"
-temp = graph.serialize(format="turtle", encoding="utf-8", destination=str(output_file))
+output_file = dir_name + "/symbol-output.ttl"
+temp = graph.serialize(format="turtle", encoding="utf-8", destination=output_file)
 print("Finished materializing. Exiting...")

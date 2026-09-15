@@ -370,7 +370,7 @@ def parse_instructions(filename):
 def main():
     
     dir_name = input("Enter directory name for data:")
-    if not (os.path.isdir("my_directory")):
+    if not (os.path.isdir(dir_name)):
         print("Error: directory not found. Exiting...")
         exit()
     

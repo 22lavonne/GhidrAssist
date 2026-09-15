@@ -171,7 +171,7 @@ directory.mkdir(parents=True, exist_ok=True)
 with open(data_dir + "/binaries.json", "w") as f:
     json.dump(binary_list, f, indent=2)
     
-with open(data_dir + "/functions.json", "w") as f:
+with open(data_dir + "/function-node.json", "w") as f:
     json.dump(func_list, f, indent=2)
     
 with open(data_dir + "/externals.json", "w") as f:

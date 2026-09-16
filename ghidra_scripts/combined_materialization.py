@@ -324,17 +324,30 @@ graph = init_kg()
 # ontology = "ontology/combined-ontology.ttl"
 script_dir = Path(__file__).resolve().parent
 ontology_path = script_dir.parent / "ontology" / "combined-ontology.ttl"
+if not ontology_path.is_file():
+    print("Ontology not found at: %s" % ontology_path)
+    print("Expected 'ontology/combined-ontology.ttl' one level above the scripts directory.")
+    sys.exit(1)
 with open(ontology_path, "r", encoding="utf-8") as f:
     graph.parse(f, format="turtle")
 
-# ask the user from what file name they want to make a knowledge graph for
-dir_name = input("What directory do you want to make a knowledge graph from? (needs to exist in the ghidra-scripts directory): ")
-dir_path = Path(dir_name)
+# Directory name comes from argv when launched by the GhidrAssist "Generate KG"
+# button; fall back to prompting when run by hand. It is resolved against this
+# script's own directory rather than the current working directory, which is not
+# reliable when the process is started by Ghidra (and is not usable at all when
+# the scripts live on a UNC/WSL path).
+if len(sys.argv) > 1:
+    dir_name = sys.argv[1].strip()
+else:
+    dir_name = input("What directory do you want to make a knowledge graph from? (needs to exist in the ghidra-scripts directory): ").strip()
+
+dir_path = script_dir / dir_name
 if dir_path.is_dir():
     print("Directory exists, generating knowledge graph from the files in that directory...")
 else:
-    print("Directory does not exist. Exiting...")
-    sys.exit()
+    # Exit non-zero so the caller can distinguish this from a successful run.
+    print("Directory does not exist: %s. Exiting..." % dir_path)
+    sys.exit(1)
 
 # ===================== symbol materialization =====================
 
@@ -593,18 +606,18 @@ for i in instruction_list:
 
 # =================== Knowledge node materialization ========================
 # get all the list of dictionaries from the json files
-script_dir = Path(__file__).resolve().parent / dir_name
-
-binary_path = script_dir / "binaries.json"
+# (reuse dir_path — reassigning script_dir here shadowed the scripts directory
+# computed above, which is needed for anything resolved relative to the script)
+binary_path = dir_path / "binaries.json"
 binary_list = load_nodes(str(binary_path))
 
-func_path = script_dir / "function-node.json"
+func_path = dir_path / "function-node.json"
 func_list = load_nodes(str(func_path))
 
-ext_path = script_dir / "externals.json"
+ext_path = dir_path / "externals.json"
 ext_list = load_nodes(str(ext_path))
 
-module_path = script_dir / "modules.json"
+module_path = dir_path / "modules.json"
 module_list = load_nodes(str(module_path))
 
 # Then add the triples for all 4 kinds of knowledge nodes
@@ -621,6 +634,7 @@ for binary in binary_list:
     materialize_knowledge_node(binary, "BINARY")
 
 # then serialize the graph
-output_file = dir_name + "/combined-output.ttl"
+output_file = str(dir_path / "combined-output.ttl")
 temp = graph.serialize(format="turtle", encoding="utf-8", destination=output_file)
+print("Wrote: %s" % output_file)
 print("Finished materializing. Exiting...")

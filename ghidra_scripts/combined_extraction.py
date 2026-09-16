@@ -471,8 +471,12 @@ def knowledge_extraction(dir_name):
 
 
 def main():
-    new_dir_name = askString("Input Required", "Please enter name to create new directory to store knowledge node information: ", "default_json_output")
-    
+    # new_dir_name = askString("Input Required", "Please enter name to create new directory to store knowledge node information: ", "default_json_output")
+    _handoff = Path(__file__).resolve().parent / ".kg_output_dir"
+    if _handoff.exists():
+        new_dir_name = _handoff.read_text().strip()
+    else:
+        new_dir_name = askString("Input Required", "Please enter name to create new directory to store knowledge node information: ", "default_json_output")
     symbol_extraction(new_dir_name)
     knowledge_extraction(new_dir_name)
     

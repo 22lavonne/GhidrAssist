@@ -999,7 +999,19 @@ public class SemanticGraphController {
             return;
         }
 
-        generateKGWorker = new GenerateKGWorker(plugin.getCurrentProgram());
+        String defaultName = "kg_run_" +
+            plugin.getCurrentProgram().getName().replaceAll("[^a-zA-Z0-9_-]", "_");
+
+        String runDirName = JOptionPane.showInputDialog(
+            semanticGraphTab,
+            "Directory name for this run (created under ghidra_scripts if it doesn't exist):",
+            defaultName);
+
+        if (runDirName == null || runDirName.isBlank()) {
+            return; // user cancelled
+        }
+
+        generateKGWorker = new GenerateKGWorker(plugin.getCurrentProgram(), runDirName);
 
         generateKGWorker.setProgressCallback(progress ->
             semanticGraphTab.showProgress(progress.getPercentage(), progress.message));

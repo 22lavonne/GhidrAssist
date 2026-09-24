@@ -185,31 +185,24 @@ public class GenerateKGWorker extends AnalysisWorker<GenerateKGWorker.Result> {
     }
 
     /**
-     * Runs the materialization script inside WSL, using WSL's own python3 — the
-     * environment where rdflib and everything else this script needs are already
-     * installed, matching how it's been run manually up to now.
+     * Runs the materialization script with a Python interpreter, choosing how based
+     * on the OS this JVM (i.e. Ghidra) is actually running on:
      *
-     * Launching straight into WSL rather than a Windows-side python3 also sidesteps
-     * the "SRE module mismatch" failure from before: that came from the JVM's
-     * PYTHONHOME/PYTHONPATH (set by PyGhidra's own embedded CPython) leaking into
-     * a Windows python3 subprocess. wsl.exe does not forward arbitrary Windows
-     * environment variables into the guest shell unless they're explicitly listed
-     * in WSLENV, so that particular contamination shouldn't recur here — PYTHONHOME/
-     * PYTHONPATH are stripped from wsl.exe's own environment anyway as a safety net.
+     * - Native Linux/macOS (e.g. Kali, or any non-Windows box): there is no WSL —
+     *   the scripts directory is already a normal Unix path, so python3 is called
+     *   directly, the same as running the script by hand in a terminal there.
+     * - Windows, with the scripts directory itself living inside a WSL filesystem
+     *   (a \\wsl$\<Distro>\... or \\wsl.localhost\<Distro>\... path — this is how
+     *   this project has been run so far): launched via wsl.exe, using WSL's own
+     *   python3 where rdflib etc. are actually installed.
+     * - Windows, with the scripts directory on the native Windows filesystem (a
+     *   plain C:\... path): a Windows-side python3/python/py is used directly.
      *
-     * The script itself is invoked by its WSL-side path (translated below), and
-     * takes its output directory name as a plain argument — it no longer depends
-     * on the process's working directory (see combined_materialization.py), which
-     * matters because Windows can't reliably set a UNC path like \\wsl$\... as a
-     * working directory in the first place.
-     *
-     * Set WSL_DISTRO if you have more than one distro installed and need a specific
-     * one; leave it null to use whichever wsl.exe picks by default. If you'd rather
-     * skip WSL entirely and use a Windows interpreter (with rdflib etc. installed
-     * there instead), set PYTHON_OVERRIDE to its absolute path and WSL is bypassed.
+     * Set PYTHON_OVERRIDE to bypass all of this and always use one specific
+     * interpreter (absolute path) regardless of OS.
      */
-    private static final String WSL_DISTRO = null; // e.g. "Ubuntu"
-    private static final String PYTHON_OVERRIDE = null; // e.g. "C:\\Python311\\python.exe"
+    private static final String WSL_DISTRO = null; // e.g. "Ubuntu" — only consulted on Windows+WSL
+    private static final String PYTHON_OVERRIDE = null; // e.g. "/usr/bin/python3.11" or "C:\\Python311\\python.exe"
 
     private Process startMaterialization(Path scriptsDir, String runDirName) throws Exception {
         Path scriptPath = scriptsDir.resolve("combined_materialization.py");
@@ -218,26 +211,75 @@ public class GenerateKGWorker extends AnalysisWorker<GenerateKGWorker.Result> {
         }
 
         if (PYTHON_OVERRIDE != null) {
-            return startWithWindowsInterpreter(PYTHON_OVERRIDE, scriptPath, scriptsDir, runDirName);
+            return startWithInterpreter(
+                new String[] { PYTHON_OVERRIDE }, scriptPath, scriptsDir, runDirName, false);
         }
-        return startInWsl(scriptPath, runDirName);
+
+        if (!isWindows()) {
+            // Plain Linux/macOS: no WSL involved at all, just run python3 directly.
+            return startWithInterpreter(
+                new String[] { "python3", "python" }, scriptPath, scriptsDir, runDirName, false);
+        }
+
+        String pathStr = scriptPath.toString();
+        boolean isWslPath = stripUncPrefixIgnoreCase(pathStr, "\\\\wsl$\\") != null
+            || stripUncPrefixIgnoreCase(pathStr, "\\\\wsl.localhost\\") != null;
+        if (isWslPath) {
+            return startInWsl(scriptPath, runDirName);
+        }
+        // Windows, but scripts are on a native Windows path (e.g. C:\...).
+        return startWithInterpreter(
+            new String[] { "python3", "python", "py" }, scriptPath, scriptsDir, runDirName, true);
     }
 
-    private Process startWithWindowsInterpreter(
-            String exe, Path scriptPath, Path scriptsDir, String runDirName) throws Exception {
-        // -E ignores PYTHON* environment variables, -u makes output unbuffered so
-        // progress lines arrive as the script runs rather than all at once.
-        ProcessBuilder pb = new ProcessBuilder(exe, "-E", "-u", scriptPath.toString(), runDirName);
-        pb.directory(scriptsDir.toFile());
-        pb.redirectErrorStream(true);
-        pb.environment().remove("PYTHONHOME");
-        pb.environment().remove("PYTHONPATH");
-        pb.environment().remove("PYTHONSTARTUP");
-        pb.environment().put("PYTHONIOENCODING", "utf-8");
+    private static boolean isWindows() {
+        return System.getProperty("os.name", "").toLowerCase(java.util.Locale.ROOT).contains("win");
+    }
 
-        Process proc = pb.start();
-        publishProgress(-1, 100, "Using interpreter: " + exe);
-        return proc;
+    /**
+     * Runs the script with the first interpreter name that actually launches,
+     * trying each candidate in order. Used for both native-Windows and Linux/macOS
+     * paths — the only difference between them is which flags/candidates make sense.
+     */
+    private Process startWithInterpreter(
+            String[] candidates, Path scriptPath, Path scriptsDir, String runDirName,
+            boolean windowsFlags) throws Exception {
+        IOException lastFailure = null;
+        for (String exe : candidates) {
+            List<String> cmd = new ArrayList<>();
+            cmd.add(exe);
+            if (windowsFlags) {
+                // -E ignores inherited PYTHON* environment variables (relevant on
+                // Windows, where PyGhidra's own embedded CPython sets them on this
+                // JVM's environment, which a naive subprocess would otherwise inherit
+                // and load a mismatched stdlib from — "SRE module mismatch").
+                cmd.add("-E");
+            }
+            cmd.add("-u"); // unbuffered, so progress lines arrive as the script runs
+            cmd.add(scriptPath.toString());
+            cmd.add(runDirName);
+
+            ProcessBuilder pb = new ProcessBuilder(cmd);
+            pb.directory(scriptsDir.toFile());
+            pb.redirectErrorStream(true);
+            pb.environment().remove("PYTHONHOME");
+            pb.environment().remove("PYTHONPATH");
+            pb.environment().remove("PYTHONSTARTUP");
+            pb.environment().put("PYTHONIOENCODING", "utf-8");
+
+            try {
+                Process proc = pb.start();
+                publishProgress(-1, 100, "Using interpreter: " + exe);
+                return proc;
+            } catch (IOException e) {
+                lastFailure = e; // this name isn't on PATH; try the next one
+            }
+        }
+
+        throw new RuntimeException(
+            "Could not start a Python interpreter (tried " + String.join(", ", candidates) +
+            ") in " + scriptsDir + ". Make sure Python 3 is installed and on PATH, or set " +
+            "PYTHON_OVERRIDE in GenerateKGWorker to an absolute interpreter path.", lastFailure);
     }
 
     private Process startInWsl(Path scriptPath, String runDirName) throws Exception {

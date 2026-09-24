@@ -115,6 +115,7 @@ public class GhidrAssistPlugin extends ProgramPlugin {
                 return provider;
             }
         }
+        
 
         return null;
     }

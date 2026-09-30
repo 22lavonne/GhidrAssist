@@ -42,6 +42,60 @@ public class GenerateKGWorker extends AnalysisWorker<GenerateKGWorker.Result> {
         this.runDirName = runDirName;
     }
 
+    /**
+     * The REAL directory extraction/materialization output ends up in, from
+     * this (Windows) JVM's point of view. Two cases:
+     *
+     * - scriptsDir lives on a WSL filesystem (\\wsl$\<Distro>\home\<user>\...):
+     *   the actual files live in WSL's own ~/.local/share, which Windows can
+     *   still read/write through the \\wsl$\<Distro>\... UNC mount. We rebuild
+     *   that UNC form directly from scriptsDir's own path rather than asking
+     *   wsl.exe, since the distro and username are already right there in it.
+     * - Otherwise (native Windows, or this JVM itself running on Linux/macOS):
+     *   same OS-detection get_app_data_dir() uses on the Python side.
+     *
+     * NOTE: only used for the Windows-host+WSL-scripts case above; a native
+     * Linux/macOS JVM needs no special-casing since there's no split filesystem.
+     */
+    private static Path resolveAppDataDirFor(Path scriptsDir) {
+        String s = scriptsDir.toString();
+        String rest = stripUncPrefixIgnoreCase(s, "\\\\wsl$\\");
+        if (rest == null) {
+            rest = stripUncPrefixIgnoreCase(s, "\\\\wsl.localhost\\");
+        }
+        if (rest != null) {
+            // rest looks like "Ubuntu\home\emiller\GhidrAssist\ghidra_scripts".
+            String[] parts = rest.split("\\\\");
+            if (parts.length >= 3 && parts[1].equals("home")) {
+                String distro = parts[0], user = parts[2];
+                Path unc = Path.of("\\\\wsl$\\" + distro + "\\home\\" + user
+                    + "\\.local\\share\\GhidrAssist\\semgraph");
+                unc.toFile().mkdirs();
+                return unc;
+            }
+        }
+        return getAppDataDir(); // native Windows, or this JVM is on Linux/macOS itself
+    }
+
+    /** Same OS-detection get_app_data_dir() uses on the Python side, for this JVM's own OS. */
+    private static Path getAppDataDir() {
+        String os = System.getProperty("os.name").toLowerCase();
+        Path base;
+        if (os.contains("win")) {
+            String appData = System.getenv("APPDATA");
+            base = Path.of(appData != null ? appData : System.getProperty("user.home"));
+        } else if (os.contains("mac")) {
+            base = Path.of(System.getProperty("user.home"), "Library", "Application Support");
+        } else {
+            String xdg = System.getenv("XDG_DATA_HOME");
+            base = (xdg != null) ? Path.of(xdg)
+                    : Path.of(System.getProperty("user.home"), ".local", "share");
+        }
+        Path path = base.resolve("GhidrAssist").resolve("semgraph");
+        path.toFile().mkdirs();
+        return path;
+    }
+
     @Override
     protected Result doInBackground() throws Exception {
         ResourceFile scriptFile = GhidraScriptUtil.findScriptByName("combined_extraction.py");
@@ -91,6 +145,15 @@ public class GenerateKGWorker extends AnalysisWorker<GenerateKGWorker.Result> {
         Path handoff = scriptsDir.resolve(".kg_output_dir");
         Files.write(handoff, runDirName.getBytes(StandardCharsets.UTF_8));
 
+        // Extraction runs IN-PROCESS in this (Windows) JVM even when the scripts
+        // live on a WSL filesystem, so its own sys.platform-based app-data guess
+        // would land on Windows %APPDATA% -- a different filesystem than where
+        // materialization (a genuine WSL subprocess) actually looks. Hand it the
+        // real target explicitly instead of letting the two sides disagree.
+        Path baseOverride = resolveAppDataDirFor(scriptsDir);
+        Path baseHandoff = scriptsDir.resolve(".kg_output_base");
+        Files.write(baseHandoff, baseOverride.toString().getBytes(StandardCharsets.UTF_8));
+
         try {
             // Passing null for tool/project — if your script calls getState().getTool()
             // or does project-folder operations, swap these for the real PluginTool/
@@ -103,6 +166,7 @@ public class GenerateKGWorker extends AnalysisWorker<GenerateKGWorker.Result> {
             // can never silently hijack a later manual run of the script.
             try {
                 Files.deleteIfExists(handoff);
+                Files.deleteIfExists(baseHandoff);
             } catch (IOException ignored) {
                 // Non-fatal: worst case the next manual run reuses this name.
             }
@@ -112,7 +176,9 @@ public class GenerateKGWorker extends AnalysisWorker<GenerateKGWorker.Result> {
         // script.execute() can return normally even if the script errored
         // internally (Ghidra logs script exceptions to its own Console rather
         // than propagating them here), so check for real instead of assuming.
-        Path outDir = scriptsDir.resolve(runDirName);
+        // NOTE: extraction now writes under the per-user app-data dir, not
+        // next to the script — must match what we told it via .kg_output_base.
+        Path outDir = baseOverride.resolve(runDirName);
         String[] required = { "binaries.json", "function-node.json", "externals.json", "modules.json", "class.json", "dll.json", "function.json", "instruction.json", "label.json", "local_variable.json", "namespace.json", "parameter.json" };
         for (String name : required) {
             if (!Files.exists(outDir.resolve(name))) {
@@ -128,9 +194,10 @@ public class GenerateKGWorker extends AnalysisWorker<GenerateKGWorker.Result> {
      * process, so feeding it stdin here is safe (it does NOT touch Ghidra's
      * own console/System.in) — no script changes needed for this stage.
      *
-     * Working directory is set to your ghidra_scripts folder so the script's
-     * own `Path(__file__).resolve().parent / dir_name` resolves the same way
-     * it does when you run it manually.
+     * Working directory is set to your ghidra_scripts folder for finding the
+     * ontology file (still resolved relative to the script itself) — the
+     * output directory itself is resolved independently via get_app_data_dir(),
+     * not via this working directory.
      *
      * Still requires symbol-output.ttl to already exist in runDirName (from
      * your separate symbol materialization script) — that's a known next step,
@@ -172,7 +239,7 @@ public class GenerateKGWorker extends AnalysisWorker<GenerateKGWorker.Result> {
                 (output.length() == 0 ? "(no output)" : output.toString()));
         }
 
-        Path result = scriptsDir.resolve(runDirName).resolve("combined-output.ttl");
+        Path result = resolveAppDataDirFor(scriptsDir).resolve(runDirName).resolve("combined-output.ttl");
         // The script calls a bare sys.exit() on some failure paths, which exits
         // with status 0 — so a zero exit code alone doesn't prove it wrote anything.
         if (!Files.exists(result)) {

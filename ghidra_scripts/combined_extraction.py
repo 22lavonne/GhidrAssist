@@ -10,7 +10,6 @@ import sys
 import json
 from pathlib import Path
 
-from pathlib import Path
 from ghidra.program.model.symbol import SymbolType
 from ghidra.program.model.lang import OperandType
 
@@ -20,6 +19,38 @@ from ghidrassist.graphrag.nodes import KnowledgeNode, NodeType, EdgeType
 
 # NOTE: the decompilation is in C, meaning there are not classes in the traditional sense, 
 # so functions are only defined in DLLs or Namespaces
+
+# get a directory for where the json files will be outputted to
+def get_app_data_dir():
+    """Per-user app-data directory for generated output.
+ 
+    Prefers the .kg_output_base handoff file, written by GenerateKGWorker.java
+    right before launching this script, over guessing from sys.platform.
+    This matters specifically when extraction runs in-process inside Ghidra's
+    JVM (Windows) while the scripts themselves live on a WSL filesystem: this
+    process's own sys.platform would say Windows, but the files need to end up
+    where materialization (a real WSL subprocess) will actually look for them.
+    Falls back to OS auto-detection when no override is present (e.g. native
+    Windows/macOS/Linux, or running this script by hand outside GhidrAssist).
+    """
+    override = Path(__file__).resolve().parent / ".kg_output_base"
+    if override.exists():
+        path = override.read_text().strip()
+    else:
+        if sys.platform.startswith("win"):
+            base = os.environ.get("APPDATA", os.path.expanduser("~"))
+        elif sys.platform == "darwin":
+            base = os.path.expanduser("~/Library/Application Support")
+        else:
+            base = os.environ.get("XDG_DATA_HOME", os.path.expanduser("~/.local/share"))
+        path = os.path.join(base, "GhidrAssist", "semgraph")
+ 
+    if not os.path.exists(path):
+        os.makedirs(path)
+    return path
+
+
+
 
 # ======================= symbol extraction helper methods =======================
 
@@ -167,9 +198,12 @@ def add_list_property(node_dict, key, value):
 
 # # ======================= symbol extraction method =======================
 def symbol_extraction(dir_name):
-    script_dir = Path(getSourceFile().getAbsolutePath()).parent
-    new_dir = script_dir / dir_name
+    # script_dir = Path(getSourceFile().getAbsolutePath()).parent
+    # new_dir = script_dir / dir_name
     
+    # get the app directory and use that to put the json files in 
+    script_dir_str = get_app_data_dir()  # instead of Path(getSourceFile()...).parent
+    new_dir = Path(script_dir_str) / dir_name 
     try:
         os.mkdir(new_dir)
         print("Directory '{}' created successfully.".format(new_dir))
@@ -447,7 +481,11 @@ def knowledge_extraction(dir_name):
     print("Total functions: {}".format(len(func_list)))
 
     # get the directory for where the json files will be stored, based on the name the user gives from the input earlier
-    script_dir_str = str(Path(getSourceFile().getAbsolutePath()).parent)
+    # also using the app data for the file so it can be accessed to those without the ghidrassist repo forked
+    # script_dir_str = str(Path(getSourceFile().getAbsolutePath()).parent)
+    # data_dir = script_dir_str + "/" + dir_name
+    
+    script_dir_str = get_app_data_dir()  # instead of Path(getSourceFile()...).parent
     data_dir = script_dir_str + "/" + dir_name
 
     # get the path for that directory

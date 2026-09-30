@@ -20,3 +20,5 @@ CLAUDE.md
 __pycache__
 .venv
 ghidra_scripts/*.json
+ghidra_scripts/old-testing
+ghidra_scripts/old-scripts

@@ -2,6 +2,7 @@
 # rdflib documentation: https://rdflib.readthedocs.io/en/stable/
 
 import sys
+import os
 import json
 from pathlib import Path
 from urllib.parse import quote
@@ -120,6 +121,21 @@ def materialize_knowledge_node(node, node_type):
         else:
             print("Error: the following edge type was not found:", value)
     
+# helper method that gets the app directory, which is where we will look for the json files 
+# and where we will output the resulting ttl file into.
+def get_app_data_dir():
+    """Per-user, OS-correct base directory for GhidrAssist's generated data.
+    Same convention used everywhere else (extraction script, ttl_mcp_server)."""
+    if sys.platform.startswith("win"):
+        base = os.environ.get("APPDATA", os.path.expanduser("~"))
+    elif sys.platform == "darwin":
+        base = os.path.expanduser("~/Library/Application Support")
+    else:
+        base = os.environ.get("XDG_DATA_HOME", os.path.expanduser("~/.local/share"))
+    path = os.path.join(base, "GhidrAssist", "semgraph")
+    if not os.path.exists(path):
+        os.makedirs(path)
+    return Path(path)
 
 
 
@@ -339,15 +355,18 @@ with open(ontology_path, "r", encoding="utf-8") as f:
 if len(sys.argv) > 1:
     dir_name = sys.argv[1].strip()
 else:
-    dir_name = input("What directory do you want to make a knowledge graph from? (needs to exist in the ghidra-scripts directory): ").strip()
-
-dir_path = script_dir / dir_name
+    dir_name = input(
+        "What directory do you want to make a knowledge graph from? "
+        "(needs to exist in the app-data output directory): "
+    ).strip()
+ 
+dir_path = get_app_data_dir() / dir_name 
 if dir_path.is_dir():
     print("Directory exists, generating knowledge graph from the files in that directory...")
 else:
-    # Exit non-zero so the caller can distinguish this from a successful run.
     print("Directory does not exist: %s. Exiting..." % dir_path)
     sys.exit(1)
+
 
 # ===================== symbol materialization =====================
 
